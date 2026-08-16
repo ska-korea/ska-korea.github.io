@@ -42,27 +42,30 @@
 <footer class="foot">
   <div class="wrap">
     <div class="cols">
-      <div>
+      <div class="foot-brand">
         <div class="brand">{{ site.title }}</div>
-        <p>{{ site.description }}</p>
+        <p>{{ site.description | sentences }}</p>
       </div>
-      <div>
-        <h3>바로가기</h3>
-        <ul>
-          {% for item in nav[1:5] %}<li><a href="{{ item.path }}">{{ item.title }}</a></li>{% endfor %}
-        </ul>
-      </div>
-      <div>
-        <h3>외부</h3>
-        <ul>
-          {% for l in site.external %}
-          <li><a href="{{ l.url }}" rel="noopener">{{ l.label }}</a></li>
-          {% endfor %}
-        </ul>
-      </div>
-      <div>
-        <h3>문의</h3>
-        <ul><li><a href="/contacts">연락처</a></li></ul>
+      {# 링크 세 칸은 내용만큼만 차지하고 오른쪽에 모인다 #}
+      <div class="foot-links">
+        <div>
+          <h3>바로가기</h3>
+          <ul>
+            {% for item in nav[1:5] %}<li><a href="{{ item.path }}">{{ item.title }}</a></li>{% endfor %}
+          </ul>
+        </div>
+        <div>
+          <h3>외부</h3>
+          <ul>
+            {% for l in site.external %}
+            <li><a href="{{ l.url }}" rel="noopener">{{ l.label }}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div>
+          <h3>문의</h3>
+          <ul><li><a href="/contacts">연락처</a></li></ul>
+        </div>
       </div>
     </div>
     <div class="base">
