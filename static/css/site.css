@@ -34,6 +34,22 @@
   --gut: 24px;
   --radius: 14px;
 
+  /* ── 글자 크기 규칙 ─────────────────────────────────────────
+     ★ 한글이 들어가는 텍스트는 13px 아래로 내려가지 않는다.
+       한글은 한 글자 안에 자모 2~4개를 담아 같은 px에서도 라틴 문자보다
+       획이 조밀하다. 라틴 기준으로 잡은 11~12px는 한글에서 뭉개진다.
+       나이 든 이용자까지 생각하면 더 그렇다.
+     보조 설명이라도 '내용'이면 작게 두지 않는다 — 카드·상자 안의 글은
+     그 위아래 본문과 중요도가 다르지 않다.
+     ────────────────────────────────────────────────────────── */
+  --fs-body: 17px;     /* 본문 */
+  --fs-lead: 16.5px;   /* 리드·부제 */
+  --fs-card: 15.5px;   /* 카드·상자 본문 — 본문과 같은 층위 */
+  --fs-ui: 15px;       /* 내비·버튼·메뉴 */
+  --fs-aux: 14.5px;    /* 보조 설명 */
+  --fs-meta: 14px;     /* 날짜·메타 */
+  --fs-label: 13px;    /* 라벨·태그 — 최소값. 이보다 작게 쓰지 않는다 */
+
   /* 본문 폭을 따로 제한하지 않는다 — 넓은 화면에서 굳이 좁게 줄 이유가 없고,
      좁은 화면은 반응형이 이미 감당한다. 글줄이 길어지는 만큼 글자를 키우고
      줄 간격을 넓혀 읽기를 지킨다(아래 body). 조각·본문이 같은 폭이라
@@ -86,7 +102,7 @@ img { max-width: 100%; height: auto; display: block; }
 .mono, .tl-date, .figure .n, .upnext .dday, .upnext .meta, .pagehead .crumb
   { font-variant-numeric: tabular-nums; }
 .eyebrow {
-  font-size: 11px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase;
+  font-size: 13px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase;
   color: var(--magenta);
 }
 
@@ -106,13 +122,13 @@ img { max-width: 100%; height: auto; display: block; }
   box-shadow: 0 0 0 4px rgba(231, 0, 104, .25);
   align-self: center;
 }
-.brand small { font-size: 10px; letter-spacing: .14em; color: #9d9dd8; font-weight: 500; }
+.brand small { font-size: 12px; letter-spacing: .14em; color: #9d9dd8; font-weight: 500; }
 
 .nav { margin-left: auto; display: flex; align-items: stretch; }
 .nav > li { list-style: none; position: relative; }
 .nav > li > a {
   display: flex; align-items: center; height: 60px; padding: 0 13px;
-  font-size: 14.5px; font-weight: 600; color: #d7d7f0;
+  font-size: 15px; font-weight: 600; color: #d7d7f0;
   border-bottom: 3px solid transparent;
   transition: color .15s, border-color .15s;
 }
@@ -141,12 +157,12 @@ img { max-width: 100%; height: auto; display: block; }
 .submenu li { list-style: none; }
 .submenu a {
   display: block; padding: 9px 12px; border-radius: 8px;
-  font-size: 14px; font-weight: 500; color: var(--ink); line-height: 1.45;
+  font-size: 15px; font-weight: 500; color: var(--ink); line-height: 1.45;
 }
 .submenu a:hover { background: var(--wash); color: var(--navy); }
-.submenu a span { display: block; font-size: 12px; color: var(--faint); font-weight: 400; }
+.submenu a span { display: block; font-size: 13px; color: var(--faint); font-weight: 400; }
 
-.navtoggle { display: none; margin-left: auto; background: none; border: 1px solid #4a45a0; color: #fff; border-radius: 8px; padding: 7px 12px; font: inherit; font-size: 14px; cursor: pointer; }
+.navtoggle { display: none; margin-left: auto; background: none; border: 1px solid #4a45a0; color: #fff; border-radius: 8px; padding: 7px 12px; font: inherit; font-size: 15px; cursor: pointer; }
 
 /* ============================================================
    히어로 — 문장이 주인공, 오른쪽에 실제 일정
@@ -179,19 +195,19 @@ img { max-width: 100%; height: auto; display: block; }
   padding: 6px 18px 14px;
   backdrop-filter: blur(4px);
 }
-.upnext h2 { font-size: 11px; font-weight: 600; letter-spacing: .18em;
+.upnext h2 { font-size: 13px; font-weight: 600; letter-spacing: .18em;
   text-transform: uppercase; color: #a8a8dd; padding: 14px 0 10px;
 }
 .upnext li { list-style: none; padding: 13px 0; border-top: 1px solid rgba(255, 255, 255, .14); }
 .upnext a { display: block; }
 .upnext .dday {
-  display: block; font-size: 12px; font-weight: 600; letter-spacing: .04em;
+  display: block; font-size: 13px; font-weight: 600; letter-spacing: .04em;
   color: var(--signal);
 }
-.upnext .name { display: block; font-weight: 700; font-size: 15.5px; margin-top: 4px; line-height: 1.4; }
+.upnext .name { display: block; font-weight: 700; font-size: 16px; margin-top: 4px; line-height: 1.4; }
 .upnext a:hover .name { color: #ff86bb; }
-.upnext .meta { display: block; font-size: 12px; color: #a8a8dd; margin-top: 5px; line-height: 1.5; }
-.upnext .all { display: inline-block; margin-top: 14px; font-size: 13px; font-weight: 600; color: #ff86bb; }
+.upnext .meta { display: block; font-size: 13.5px; color: #a8a8dd; margin-top: 5px; line-height: 1.5; }
+.upnext .all { display: inline-block; margin-top: 14px; font-size: 14px; font-weight: 600; color: #ff86bb; }
 
 /* ============================================================
    ★ 자료 창구 — 이 사이트의 서명 요소
@@ -200,7 +216,7 @@ img { max-width: 100%; height: auto; display: block; }
 .desk { background: var(--navy-deep); color: #fff; padding: 46px 0 52px; }
 .desk .head { display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; margin-bottom: 22px; }
 .desk h2 { font-size: clamp(20px, 2.4vw, 26px); font-weight: 800; letter-spacing: -.02em; }
-.desk .head p { color: #a8a8dd; font-size: 14px; }
+.desk .head p { color: #a8a8dd; font-size: 15px; }
 
 .desk-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(238px, 1fr)); gap: 14px; }
 .desk-card {
@@ -212,10 +228,10 @@ img { max-width: 100%; height: auto; display: block; }
   transition: background .16s, border-color .16s, transform .16s;
 }
 .desk-card:hover { background: rgba(255, 255, 255, .11); border-color: rgba(255, 158, 27, .5); transform: translateY(-2px); }
-.desk-card .task { font-size: 15.5px; font-weight: 700; letter-spacing: -.01em; line-height: 1.45; }
-.desk-card .what { font-size: 13px; color: #a8a8dd; margin-top: 6px; line-height: 1.6; }
+.desk-card .task { font-size: 16.5px; font-weight: 700; letter-spacing: -.01em; line-height: 1.45; }
+.desk-card .what { font-size: 14.5px; color: #a8a8dd; margin-top: 6px; line-height: 1.6; }
 .desk-links { margin-top: 14px; padding-top: 12px; border-top: 1px solid rgba(255, 255, 255, .12); display: flex; flex-direction: column; gap: 7px; }
-.desk-links a { font-size: 12.5px; color: #cfcfef;
+.desk-links a { font-size: 14px; color: #cfcfef;
   display: flex; align-items: center; gap: 7px;
 }
 .desk-links a::before { content: "→"; color: var(--signal); }
@@ -248,6 +264,10 @@ h1, h2, h3, .hero h1, .pagehead h1 { text-wrap: balance; }
 .prose li { margin: 6px 0; }
 .prose a { color: var(--magenta); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
 .prose a:hover { color: var(--magenta-deep); }
+/* 조각 안의 링크는 조각 전체가 누를 자리라 밑줄을 긋지 않는다.
+   (원고에서 .journey·.cards 같은 조각을 본문 안에 직접 쓰기 때문에 필요하다) */
+.prose .journey a, .prose .cards a, .prose .btnrow a, .prose a.card { text-decoration: none; color: inherit; }
+.prose .btnrow a.btn.primary { color: #fff; }
 .prose strong { color: var(--navy); }
 .prose img { border-radius: 10px; margin: 22px 0; }
 
@@ -257,8 +277,8 @@ h1, h2, h3, .hero h1, .pagehead h1 { text-wrap: balance; }
 .figures { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 2px; background: var(--line); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; margin-top: 26px; }
 .figure { background: var(--paper); padding: 20px 18px; }
 .figure .n { font-size: 27px; font-weight: 600; color: var(--navy); letter-spacing: -.03em; line-height: 1.1; }
-.figure .n small { font-size: 14px; font-weight: 500; color: var(--muted); margin-left: 3px; }
-.figure .k { font-size: 13px; color: var(--muted); margin-top: 6px; line-height: 1.5; }
+.figure .n small { font-size: 15px; font-weight: 500; color: var(--muted); margin-left: 3px; }
+.figure .k { font-size: 14.5px; color: var(--muted); margin-top: 6px; line-height: 1.5; }
 
 /* 카드 */
 .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; margin-top: 26px; }
@@ -269,8 +289,8 @@ h1, h2, h3, .hero h1, .pagehead h1 { text-wrap: balance; }
 }
 a.card:hover { border-color: var(--navy); box-shadow: 0 14px 34px rgba(7, 0, 104, .1); transform: translateY(-3px); }
 .card h3 { font-size: 17px; font-weight: 700; color: var(--navy); letter-spacing: -.015em; }
-.card p { font-size: 14px; color: var(--muted); margin-top: 8px; line-height: 1.65; }
-.card .go { margin-top: auto; padding-top: 15px; font-size: 12.5px; font-weight: 600; color: var(--magenta); }
+.card p { font-size: 15.5px; color: var(--muted); margin-top: 8px; line-height: 1.65; }
+.card .go { margin-top: auto; padding-top: 15px; font-size: 13.5px; font-weight: 600; color: var(--magenta); }
 
 /* ============================================================
    여정형 단계 — SRC 섹션은 실제로 순서가 있는 내용이라 번호를 쓴다
@@ -282,10 +302,10 @@ a.card:hover { border-color: var(--navy); box-shadow: 0 14px 34px rgba(7, 0, 104
 }
 .journey a:hover { background: var(--wash); }
 .journey a::before {
-  content: counter(j, decimal-leading-zero); font-size: 13px; font-weight: 600; color: var(--magenta);
+  content: counter(j, decimal-leading-zero); font-size: 13.5px; font-weight: 600; color: var(--magenta);
 }
 .journey h3 { font-size: 17px; font-weight: 700; color: var(--navy); }
-.journey p { font-size: 14px; color: var(--muted); margin-top: 4px; }
+.journey p { font-size: 15px; color: var(--muted); margin-top: 4px; }
 .journey .arrow { color: var(--faint); }
 .journey a:hover .arrow { color: var(--magenta); }
 
@@ -296,7 +316,7 @@ a.card:hover { border-color: var(--navy); box-shadow: 0 14px 34px rgba(7, 0, 104
 .timeline:first-child { margin-top: 0; }
 .timeline:first-child .tl-year:first-child { margin-top: 0; }
 .tl-year {
-  display: flex; align-items: center; gap: 14px; margin: 34px 0 4px; font-size: 13px; font-weight: 600; color: var(--faint); letter-spacing: .1em;
+  display: flex; align-items: center; gap: 14px; margin: 34px 0 4px; font-size: 14px; font-weight: 600; color: var(--faint); letter-spacing: .1em;
 }
 .tl-year::after { content: ""; flex: 1; height: 1px; background: var(--line); }
 .tl-item {
@@ -305,11 +325,11 @@ a.card:hover { border-color: var(--navy); box-shadow: 0 14px 34px rgba(7, 0, 104
   transition: background .14s;
 }
 .tl-item:hover { background: var(--wash); }
-.tl-date { font-size: 13px; color: var(--muted); white-space: nowrap; }
+.tl-date { font-size: 14px; color: var(--muted); white-space: nowrap; }
 .tl-name { font-size: 16px; font-weight: 600; color: var(--ink); letter-spacing: -.012em; }
 .tl-item:hover .tl-name { color: var(--navy); }
-.tl-where { font-size: 13.5px; color: var(--muted); margin-top: 3px; }
-.tag { font-size: 10.5px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
+.tl-where { font-size: 14.5px; color: var(--muted); margin-top: 3px; }
+.tag { font-size: 13px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
   padding: 3px 9px; border-radius: 20px; white-space: nowrap;
 }
 .tag.open { color: #7a4200; background: #fff2dc; border: 1px solid #ffd79b; }
@@ -329,7 +349,7 @@ ol.steps li {
 ol.steps li:last-child { border-bottom: 1px solid var(--line); }
 ol.steps li::before {
   content: counter(s, decimal-leading-zero);
-  position: absolute; left: 0; top: 19px; font-size: 13px; font-weight: 600; color: var(--magenta);
+  position: absolute; left: 0; top: 19px; font-size: 13.5px; font-weight: 600; color: var(--magenta);
 }
 /* 항목 맨 앞의 굵은 글씨만 제목으로 세운다.
    문장 도중의 강조까지 블록으로 만들면 그 자리에서 줄이 끊긴다. */
@@ -339,12 +359,12 @@ ol.steps b { color: var(--navy); }
 /* 두 편을 나란히 두고 견주는 자리 */
 .split { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin: 26px 0; }
 .panel { background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px 22px 24px; }
-.panel h3 { font-size: 16.5px; font-weight: 700; color: var(--navy); margin: 0 0 12px; }
+.panel h3 { font-size: 17px; font-weight: 700; color: var(--navy); margin: 0 0 12px; }
 .panel.dark { background: linear-gradient(140deg, var(--navy), #3d1a6b); border: none; color: #fff; }
 .panel.dark h3 { color: #fff; }
 .panel.dark li { color: #d3d3ee; }
 .panel ul { list-style: none; margin: 0; padding: 0; }
-.panel li { position: relative; padding-left: 18px; margin: 9px 0; font-size: 14.5px; line-height: 1.6; }
+.panel li { position: relative; padding-left: 18px; margin: 9px 0; font-size: 15.5px; line-height: 1.6; }
 .panel li::before {
   content: ""; position: absolute; left: 0; top: 10px;
   width: 6px; height: 6px; border-radius: 50%; background: var(--magenta);
@@ -353,13 +373,13 @@ ol.steps b { color: var(--navy); }
 
 .chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0; }
 .chip {
-  font-size: 13px; font-weight: 500; color: var(--navy);
+  font-size: 14px; font-weight: 500; color: var(--navy);
   background: var(--wash); border: 1px solid var(--line);
   padding: 6px 13px; border-radius: 20px;
 }
 
 .soon {
-  display: inline-block; vertical-align: middle; margin-left: 10px; font-size: 10.5px; font-weight: 600; letter-spacing: .1em;
+  display: inline-block; vertical-align: middle; margin-left: 10px; font-size: 13px; font-weight: 600; letter-spacing: .1em;
   color: #7a4200; background: #fff2dc; border: 1px solid #ffd79b;
   padding: 3px 10px; border-radius: 20px;
 }
@@ -383,11 +403,11 @@ ol.steps b { color: var(--navy); }
   padding: 20px;
 }
 .talk-side dl { margin-bottom: 16px; }
-.talk-side dt { font-size: 10.5px; font-weight: 600; letter-spacing: .14em;
+.talk-side dt { font-size: 13px; font-weight: 600; letter-spacing: .14em;
   text-transform: uppercase; color: var(--faint); margin-top: 14px;
 }
 .talk-side dt:first-child { margin-top: 0; }
-.talk-side dd { font-size: 14.5px; color: var(--ink); margin-top: 4px; line-height: 1.6; }
+.talk-side dd { font-size: 15px; color: var(--ink); margin-top: 4px; line-height: 1.6; }
 .talk-side .btn { display: block; text-align: center; }
 
 .talk-shots { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin-top: 32px; }
@@ -405,7 +425,7 @@ ol.steps b { color: var(--navy); }
 .subtabs { border-bottom: 1px solid var(--line); background: var(--paper); position: sticky; top: 60px; z-index: 40; }
 .subtabs .wrap { display: flex; gap: 4px; overflow-x: auto; }
 .subtabs a {
-  padding: 14px 14px 11px; font-size: 14.5px; font-weight: 600; color: var(--muted);
+  padding: 14px 14px 11px; font-size: 15px; font-weight: 600; color: var(--muted);
   border-bottom: 3px solid transparent; white-space: nowrap;
 }
 .subtabs a:hover { color: var(--navy); }
@@ -415,29 +435,29 @@ ol.steps b { color: var(--navy); }
    페이지 머리 (본문 페이지)
    ============================================================ */
 .pagehead { background: var(--navy); color: #fff; padding: 40px 0 36px; }
-.pagehead .crumb { font-size: 12px; color: #9d9dd8; margin-bottom: 10px; }
+.pagehead .crumb { font-size: 13.5px; color: #9d9dd8; margin-bottom: 10px; }
 .pagehead .crumb a:hover { color: #fff; }
 .pagehead h1 { font-size: clamp(25px, 3.6vw, 38px); font-weight: 800; letter-spacing: -.032em; line-height: 1.25; }
-.pagehead .sub { margin-top: 12px; color: #c9c9ea; max-width: none; font-size: 15.5px; }
+.pagehead .sub { margin-top: 12px; color: #c9c9ea; max-width: none; font-size: 16.5px; }
 
 /* ============================================================
    표 · 콜아웃
    ============================================================ */
 .tablewrap { overflow-x: auto; margin: 22px 0; border: 1px solid var(--line); border-radius: var(--radius); }
-table { border-collapse: collapse; width: 100%; min-width: 480px; font-size: 14.5px; }
+table { border-collapse: collapse; width: 100%; min-width: 480px; font-size: 15.5px; }
 th, td { padding: 12px 15px; text-align: left; border-bottom: 1px solid var(--line); vertical-align: top; }
 thead th { background: var(--wash); color: var(--navy); font-weight: 700; white-space: nowrap; border-bottom: 2px solid var(--line); }
 tbody tr:last-child td { border-bottom: none; }
 
 .callout {
   border-left: 3px solid var(--magenta); background: var(--wash);
-  border-radius: 0 10px 10px 0; padding: 16px 20px; margin: 22px 0; font-size: 14.5px;
+  border-radius: 0 10px 10px 0; padding: 16px 20px; margin: 22px 0; font-size: 15.5px;
 }
 .callout .eyebrow { margin-bottom: 6px; display: block; }
 
 /* 버튼 */
 .btnrow { display: flex; gap: 11px; flex-wrap: wrap; margin-top: 26px; }
-.btn { display: inline-block; font-size: 14.5px; font-weight: 700; padding: 12px 22px; border-radius: 10px; transition: .15s; }
+.btn { display: inline-block; font-size: 15px; font-weight: 700; padding: 12px 22px; border-radius: 10px; transition: .15s; }
 .btn.primary { background: var(--magenta); color: #fff; }
 .btn.primary:hover { background: var(--magenta-deep); }
 .btn.ghost { border: 1.5px solid rgba(255, 255, 255, .4); color: #fff; }
@@ -467,21 +487,21 @@ tbody tr:last-child td { border-bottom: none; }
 
 .harvest-note {
   margin-top: 44px; padding-top: 18px; border-top: 1px solid var(--line);
-  font-size: 13px; color: var(--faint);
+  font-size: 13.5px; color: var(--faint);
 }
 .harvest-note a { color: var(--muted); text-decoration: underline; }
 
 /* ============================================================
    푸터
    ============================================================ */
-.foot { background: var(--navy-deep); color: #a8a8dd; padding: 44px 0 34px; margin-top: 60px; font-size: 14px; }
+.foot { background: var(--navy-deep); color: #a8a8dd; padding: 44px 0 34px; margin-top: 60px; font-size: 15px; }
 .foot .cols { display: grid; grid-template-columns: minmax(0, 1.5fr) repeat(auto-fit, minmax(140px, 1fr)); gap: 30px; }
-.foot h3 { font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: #7e7eb8; margin-bottom: 12px; font-weight: 600; }
+.foot h3 { font-size: 13px; letter-spacing: .16em; text-transform: uppercase; color: #7e7eb8; margin-bottom: 12px; font-weight: 600; }
 .foot .brand { color: #fff; margin-bottom: 12px; }
-.foot p { line-height: 1.7; font-size: 13.5px; }
+.foot p { line-height: 1.7; font-size: 14.5px; }
 .foot li { list-style: none; margin: 7px 0; }
 .foot a:hover { color: #fff; }
-.foot .base { margin-top: 32px; padding-top: 20px; border-top: 1px solid rgba(255, 255, 255, .1); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-size: 12.5px; color: #7e7eb8; }
+.foot .base { margin-top: 32px; padding-top: 20px; border-top: 1px solid rgba(255, 255, 255, .1); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-size: 13px; color: #7e7eb8; }
 
 /* ============================================================
    반응형
