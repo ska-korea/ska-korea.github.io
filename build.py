@@ -17,6 +17,7 @@ import json
 import re
 import shutil
 import socketserver
+import subprocess
 import sys
 from datetime import date
 from pathlib import Path
@@ -56,6 +57,24 @@ def sentences(text) -> Markup:
     if len(parts) < 2:
         return Markup(escape(text))
     return Markup(" ".join(f'<span class="sent">{escape(p)}</span>' for p in parts))
+
+
+def mark_dropbox_ignored(path: Path) -> None:
+    """이 폴더를 Dropbox가 동기화하지 않게 표시한다(macOS).
+
+    빌드는 _site를 통째로 지웠다 다시 만든다. 그 폴더가 Dropbox 안에 있으면
+    동기화와 부딪혀 '충돌된 사본'이 생기고, 원래 index.html이 밀려나 페이지가
+    사라지기도 한다. 빌드 산출물은 언제든 다시 만들 수 있으니 동기화 대상이 아니다.
+    폴더를 지우면 속성도 사라지므로 빌드할 때마다 다시 붙인다.
+    CI(리눅스)나 Dropbox 밖에서는 아무 일도 하지 않는다.
+    """
+    if sys.platform != "darwin" or "CloudStorage/Dropbox" not in str(path):
+        return
+    try:
+        subprocess.run(["xattr", "-w", "com.dropbox.ignored", "1", str(path)],
+                       check=True, capture_output=True, timeout=10)
+    except Exception:
+        pass  # 표시에 실패해도 빌드는 계속한다
 
 
 def image_map() -> dict[str, str]:
@@ -239,8 +258,15 @@ def collect_meetings(meta_cfg: dict) -> list[dict]:
             "month": ym[1] if ym else None,
             "when": info.get("when"),
             "where": info.get("where"),
+            "category": info.get("category"),
             "status": info.get("status"),
         })
+    # 날짜를 적어 둔 미팅은 그 날짜를 정렬 기준으로 삼는다.
+    # 제목에서 뽑은 연·월(예: 'Nov 2023 EASKA')보다 정확하다.
+    for p in pages:
+        m = re.match(r"(\d{4})\.(\d{1,2})", p["when"] or "")
+        if m:
+            p["year"], p["month"] = int(m.group(1)), int(m.group(2))
     return pages
 
 
@@ -322,6 +348,7 @@ def main() -> int:
     if OUT.exists():
         shutil.rmtree(OUT)
     OUT.mkdir(parents=True)
+    mark_dropbox_ignored(OUT)
 
     imgs = image_map()
     content = collect_content(md)

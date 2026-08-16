@@ -7,15 +7,27 @@
   </div>
 </div>
 
+{# 거르개. 기본은 '전체'이고, 고르면 그 갈래만 남는다.
+   자바스크립트가 없는 환경에서는 그냥 전체 목록이 보인다. #}
+<nav class="filters" aria-label="모임 갈래">
+  <div class="wrap">
+    <button type="button" class="filter on" data-cat="all" aria-pressed="true">전체</button>
+    {% for f in site.meeting_filters %}
+    <button type="button" class="filter" data-cat="{{ f.key }}" aria-pressed="false"
+            {% if f.note %}title="{{ f.note }}"{% endif %}>{{ f.label }}</button>
+    {% endfor %}
+  </div>
+</nav>
+
 <div class="band">
   <div class="wrap">
     {% if page.html %}<div class="prose" style="margin-bottom:8px">{{ page.html | safe }}</div>{% endif %}
 
     <div class="timeline">
       {% for group in meetings.years %}
-      <div class="tl-year">{{ group.year }}</div>
+      <div class="tl-year" data-year="{{ group.year }}">{{ group.year }}</div>
       {% for m in group.entries %}
-      <a class="tl-item" href="{{ m.path }}">
+      <a class="tl-item" href="{{ m.path }}" data-cat="{{ m.category or '' }}" data-year="{{ group.year }}">
         <span class="tl-date">{{ m.when or ('%04d.%02d' % (m.year, m.month)) }}</span>
         <span>
           <span class="tl-name">{{ m.title }}</span>
@@ -26,6 +38,42 @@
       {% endfor %}
       {% endfor %}
     </div>
+    <p class="filter-empty" hidden>고른 갈래에 해당하는 모임이 없습니다.</p>
   </div>
 </div>
+
+<script>
+(function () {
+  var buttons = document.querySelectorAll('.filter');
+  var items = document.querySelectorAll('.tl-item');
+  var years = document.querySelectorAll('.tl-year');
+  var empty = document.querySelector('.filter-empty');
+
+  function apply(cat) {
+    var shown = 0;
+    items.forEach(function (el) {
+      var hit = cat === 'all' || el.dataset.cat === cat;
+      el.hidden = !hit;
+      if (hit) shown++;
+    });
+    // 남은 항목이 없는 연도 머리글은 감춘다
+    years.forEach(function (y) {
+      var any = [].some.call(items, function (el) {
+        return !el.hidden && el.dataset.year === y.dataset.year;
+      });
+      y.hidden = !any;
+    });
+    empty.hidden = shown > 0;
+    buttons.forEach(function (b) {
+      var on = b.dataset.cat === cat;
+      b.classList.toggle('on', on);
+      b.setAttribute('aria-pressed', on);
+    });
+  }
+
+  buttons.forEach(function (b) {
+    b.addEventListener('click', function () { apply(b.dataset.cat); });
+  });
+})();
+</script>
 {% endblock %}

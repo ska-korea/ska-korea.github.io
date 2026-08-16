@@ -1,18 +1,109 @@
-# 미팅 목록에 쓰이는 날짜·장소.
+# 미팅 목록에 쓰이는 제목·날짜·장소·분류.
 #
-# 본문은 조직위원회가 Google Sites에서 관리하므로 여기서 건드리지 않는다.
-# 이 파일은 목록 화면과 '다가오는 일정'에 쓸 날짜·장소만 담는다.
-# 값이 없으면 제목에서 연·월만 뽑아 쓴다(예: "Oct 2026 SPARCS XIV" → 2026.10).
+# 본문은 조직위원회가 Google Sites에서 관리한다. 여기서는 목록 화면에 쓸
+# 정보만 다룬다.
 #
-# ⚠️ 아래 두 건은 원문을 직접 확인한 값이다.
-#    나머지 지난 모임의 날짜·장소는 아직 채우지 않았다 —
-#    원문에서 확인한 뒤 같은 형식으로 추가할 것.
+# title    목록에 보일 제목. 적지 않으면 Google Sites 페이지 제목을 그대로 쓴다.
+#          ★ 제목 앞에 'Dec 2025' 같은 연·월을 넣지 않는다 — 왼쪽 날짜 칸과 겹치고
+#            공식 명칭도 아니다. SKA Korea Workshop은 계절로 통일한다.
+# when     'YYYY.MM.DD–DD' 또는 'YYYY.MM.DD–MM.DD'. 정렬 기준이자 표시값.
+# where    장소. 확인된 것만 적는다.
+# category site.yaml의 meeting_filters 키. 비우면 '전체'에만 나온다.
+#
+# 명칭·날짜의 출처: 기존 홈페이지 ska.kasi.re.kr/meetings 의 분류 목록.
 
 meetings:
+  # ── 2026 ────────────────────────────────────────────────
   /meetings/oct-2026-sparcs-xiv:
+    title: SPARCS XIV
     when: "2026.10.19–23"
     where: "서울 MICE Plaza"
+    category: international
 
   /meetings/aug-2026-ska-korea-summer-workshop:
+    title: SKA Korea Summer Workshop
     when: "2026.08.19–21"
     where: "대전 KAIST 자연과학대학 E6-1"
+    category: workshop
+
+  # ── 2025 ────────────────────────────────────────────────
+  /meetings/dec-2025-ska-korea-workshop:
+    title: SKA Korea Winter Workshop
+    when: "2025.12.17–18"
+    category: workshop
+
+  /meetings/sep-2025-ska-korea-workshop:
+    title: SKA Korea Fall Workshop
+    when: "2025.09.26"
+    category: workshop
+
+  /meetings/jun-2025-ska-korea-workshop:
+    title: SKA Korea Summer Workshop
+    when: "2025.06.25–26"
+    category: workshop
+
+  /meetings/april-2025-kas-spring-ska-special-session:
+    title: KAS Spring Meeting — SKA Special Session
+    when: "2025.04.09"
+    where: "경주 화백컨벤션센터"
+    category: kas
+
+  /meetings/april-2025-korea-spring-meeting:
+    title: SKA Korea Spring Workshop
+    when: "2025.04.02"
+    where: "한국천문연구원 은하수홀"
+    category: workshop
+
+  # ── 2024 ────────────────────────────────────────────────
+  /meetings/dec-2024-ska-korea-winter-meeting:
+    title: SKA Korea Winter Workshop
+    when: "2024.12.18–19"
+    category: workshop
+
+  /meetings/oct-2024-ska-vlbi-workshop:
+    title: SKA-VLBI Workshop
+    when: "2024.10.21–25"
+    where: "대전"
+    category: international
+
+  /meetings/2024jul-ska-korea:
+    title: SKA Korea Summer Workshop
+    when: "2024.07.25–26"
+    category: workshop
+
+  /meetings/april-2024-kas-spring-ska-special-session:
+    title: KAS Spring Meeting — SKA Special Session
+    when: "2024.04.19"
+    category: kas
+
+  /meetings/2024feb-ska-korea:
+    title: SKA Korea Winter Workshop
+    when: "2024.02.20–21"
+    category: workshop
+
+  # ── 2023 ────────────────────────────────────────────────
+  /meetings/easka-2023:
+    title: East-Asia SKA Workshop (EASKA)
+    when: "2023.10.30–11.03"
+    where: "서귀포"
+    category: international
+
+  /meetings/2023aug-ska-korea:
+    title: SKA Korea Summer Workshop
+    when: "2023.08.23–24"
+    category: workshop
+
+  # ⚠️ 분류 미정 — SKA Korea Workshop 계열도, KAS도, 국제회의도 아니다.
+  #    지금은 '전체'에만 나온다. 어디에 넣을지 정해지면 category를 적을 것.
+  /meetings/2023-korsdc-workshop:
+    title: KorSDC Lightning Workshop
+
+  /meetings/april-2023-kas-spring-ska-special-session:
+    title: KAS Spring Meeting — SKA Special Session
+    when: "2023.04.12"
+    category: kas
+
+  /meetings/jan-2023-ska-korea-winter-meeting:
+    title: SKA Korea Winter Workshop
+    when: "2023.01.18–19"
+    category: workshop
