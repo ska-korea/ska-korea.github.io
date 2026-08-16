@@ -117,6 +117,16 @@ def clean(node: Tag, page_path: str, images: dict) -> None:
                 continue
             del t[attr]
 
+    # Google Sites 원고에는 Arial·Roboto·Lato 같은 글꼴이 인라인으로 박혀 온다.
+    # 이 사이트의 글꼴은 Noto Sans KR 하나이므로 글꼴 지정만 걷어낸다.
+    # (정렬·굵기 등 나머지 인라인 스타일은 원고의 뜻이므로 그대로 둔다.)
+    for t in node.find_all(style=True):
+        st = re.sub(r"font-family\s*:[^;]*;?", "", t["style"]).strip().strip(";").strip()
+        if st:
+            t["style"] = st
+        else:
+            del t["style"]
+
     for img in node.find_all("img", src=True):
         src = img["src"]
         if src.startswith("//"):

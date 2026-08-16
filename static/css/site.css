@@ -5,8 +5,9 @@
    브랜드: SKAO 네이비 #070068 · 마젠타 #E70068 (아껴 쓴다)
    ============================================================ */
 
-@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.css');
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+/* 이 사이트의 글꼴은 Noto Sans KR 하나다. 한글과 영문을 한 벌로 담고 있어
+   한·영이 섞이는 본문에 적합하다. 아래가 유일한 웹폰트 선언이다. */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap');
 
 :root {
   /* 브랜드 */
@@ -27,8 +28,7 @@
   --paper: #ffffff;
   --wash: #f6f6fb;
 
-  --sans: 'Pretendard Variable', Pretendard, 'Noto Sans KR', system-ui, -apple-system, sans-serif;
-  --mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  --sans: 'Noto Sans KR', system-ui, -apple-system, 'Apple SD Gothic Neo', sans-serif;
 
   --wrap: 1140px;
   --gut: 24px;
@@ -38,14 +38,14 @@
 *, *::before, *::after { box-sizing: border-box; }
 * { margin: 0; padding: 0; }
 
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+/* 문서 뿌리에서 한 번 정한다. 아래로는 모두 물려받는다. */
+html { font-family: var(--sans); scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
 }
 
 body {
-  font-family: var(--sans);
   color: var(--ink);
   background: var(--paper);
   line-height: 1.75;
@@ -73,9 +73,9 @@ img { max-width: 100%; height: auto; display: block; }
 .skip:focus { left: 0; }
 
 /* 데이터·라벨 조판 — 계측기의 어휘 */
-.mono { font-family: var(--mono); font-feature-settings: 'tnum' 1; }
+.mono, .tl-date, .figure .n, .upnext .dday, .upnext .meta, .pagehead .crumb
+  { font-variant-numeric: tabular-nums; }
 .eyebrow {
-  font-family: var(--mono);
   font-size: 11px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase;
   color: var(--magenta);
 }
@@ -96,7 +96,7 @@ img { max-width: 100%; height: auto; display: block; }
   box-shadow: 0 0 0 4px rgba(231, 0, 104, .25);
   align-self: center;
 }
-.brand small { font-family: var(--mono); font-size: 10px; letter-spacing: .14em; color: #9d9dd8; font-weight: 500; }
+.brand small { font-size: 10px; letter-spacing: .14em; color: #9d9dd8; font-weight: 500; }
 
 .nav { margin-left: auto; display: flex; align-items: stretch; }
 .nav > li { list-style: none; position: relative; }
@@ -169,20 +169,18 @@ img { max-width: 100%; height: auto; display: block; }
   padding: 6px 18px 14px;
   backdrop-filter: blur(4px);
 }
-.upnext h2 {
-  font-family: var(--mono); font-size: 11px; font-weight: 600; letter-spacing: .18em;
+.upnext h2 { font-size: 11px; font-weight: 600; letter-spacing: .18em;
   text-transform: uppercase; color: #a8a8dd; padding: 14px 0 10px;
 }
 .upnext li { list-style: none; padding: 13px 0; border-top: 1px solid rgba(255, 255, 255, .14); }
 .upnext a { display: block; }
 .upnext .dday {
-  display: block;
-  font-family: var(--mono); font-size: 12px; font-weight: 600; letter-spacing: .04em;
+  display: block; font-size: 12px; font-weight: 600; letter-spacing: .04em;
   color: var(--signal);
 }
 .upnext .name { display: block; font-weight: 700; font-size: 15.5px; margin-top: 4px; line-height: 1.4; }
 .upnext a:hover .name { color: #ff86bb; }
-.upnext .meta { display: block; font-family: var(--mono); font-size: 12px; color: #a8a8dd; margin-top: 5px; line-height: 1.5; }
+.upnext .meta { display: block; font-size: 12px; color: #a8a8dd; margin-top: 5px; line-height: 1.5; }
 .upnext .all { display: inline-block; margin-top: 14px; font-size: 13px; font-weight: 600; color: #ff86bb; }
 
 /* ============================================================
@@ -207,8 +205,7 @@ img { max-width: 100%; height: auto; display: block; }
 .desk-card .task { font-size: 15.5px; font-weight: 700; letter-spacing: -.01em; line-height: 1.45; }
 .desk-card .what { font-size: 13px; color: #a8a8dd; margin-top: 6px; line-height: 1.6; }
 .desk-links { margin-top: 14px; padding-top: 12px; border-top: 1px solid rgba(255, 255, 255, .12); display: flex; flex-direction: column; gap: 7px; }
-.desk-links a {
-  font-family: var(--mono); font-size: 12.5px; color: #cfcfef;
+.desk-links a { font-size: 12.5px; color: #cfcfef;
   display: flex; align-items: center; gap: 7px;
 }
 .desk-links a::before { content: "→"; color: var(--signal); }
@@ -243,7 +240,7 @@ h2.sec { font-size: clamp(22px, 2.9vw, 31px); font-weight: 800; color: var(--nav
 /* 수치 — 계측기 조판 */
 .figures { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 2px; background: var(--line); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; margin-top: 26px; }
 .figure { background: var(--paper); padding: 20px 18px; }
-.figure .n { font-family: var(--mono); font-size: 27px; font-weight: 600; color: var(--navy); letter-spacing: -.03em; line-height: 1.1; }
+.figure .n { font-size: 27px; font-weight: 600; color: var(--navy); letter-spacing: -.03em; line-height: 1.1; }
 .figure .n small { font-size: 14px; font-weight: 500; color: var(--muted); margin-left: 3px; }
 .figure .k { font-size: 13px; color: var(--muted); margin-top: 6px; line-height: 1.5; }
 
@@ -257,7 +254,7 @@ h2.sec { font-size: clamp(22px, 2.9vw, 31px); font-weight: 800; color: var(--nav
 a.card:hover { border-color: var(--navy); box-shadow: 0 14px 34px rgba(7, 0, 104, .1); transform: translateY(-3px); }
 .card h3 { font-size: 17px; font-weight: 700; color: var(--navy); letter-spacing: -.015em; }
 .card p { font-size: 14px; color: var(--muted); margin-top: 8px; line-height: 1.65; }
-.card .go { margin-top: auto; padding-top: 15px; font-family: var(--mono); font-size: 12.5px; font-weight: 600; color: var(--magenta); }
+.card .go { margin-top: auto; padding-top: 15px; font-size: 12.5px; font-weight: 600; color: var(--magenta); }
 
 /* ============================================================
    여정형 단계 — SRC 섹션은 실제로 순서가 있는 내용이라 번호를 쓴다
@@ -269,12 +266,11 @@ a.card:hover { border-color: var(--navy); box-shadow: 0 14px 34px rgba(7, 0, 104
 }
 .journey a:hover { background: var(--wash); }
 .journey a::before {
-  content: counter(j, decimal-leading-zero);
-  font-family: var(--mono); font-size: 13px; font-weight: 600; color: var(--magenta);
+  content: counter(j, decimal-leading-zero); font-size: 13px; font-weight: 600; color: var(--magenta);
 }
 .journey h3 { font-size: 17px; font-weight: 700; color: var(--navy); }
 .journey p { font-size: 14px; color: var(--muted); margin-top: 4px; }
-.journey .arrow { font-family: var(--mono); color: var(--faint); }
+.journey .arrow { color: var(--faint); }
 .journey a:hover .arrow { color: var(--magenta); }
 
 /* ============================================================
@@ -284,8 +280,7 @@ a.card:hover { border-color: var(--navy); box-shadow: 0 14px 34px rgba(7, 0, 104
 .timeline:first-child { margin-top: 0; }
 .timeline:first-child .tl-year:first-child { margin-top: 0; }
 .tl-year {
-  display: flex; align-items: center; gap: 14px; margin: 34px 0 4px;
-  font-family: var(--mono); font-size: 13px; font-weight: 600; color: var(--faint); letter-spacing: .1em;
+  display: flex; align-items: center; gap: 14px; margin: 34px 0 4px; font-size: 13px; font-weight: 600; color: var(--faint); letter-spacing: .1em;
 }
 .tl-year::after { content: ""; flex: 1; height: 1px; background: var(--line); }
 .tl-item {
@@ -294,12 +289,11 @@ a.card:hover { border-color: var(--navy); box-shadow: 0 14px 34px rgba(7, 0, 104
   transition: background .14s;
 }
 .tl-item:hover { background: var(--wash); }
-.tl-date { font-family: var(--mono); font-size: 13px; color: var(--muted); white-space: nowrap; }
+.tl-date { font-size: 13px; color: var(--muted); white-space: nowrap; }
 .tl-name { font-size: 16px; font-weight: 600; color: var(--ink); letter-spacing: -.012em; }
 .tl-item:hover .tl-name { color: var(--navy); }
 .tl-where { font-size: 13.5px; color: var(--muted); margin-top: 3px; }
-.tag {
-  font-family: var(--mono); font-size: 10.5px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
+.tag { font-size: 10.5px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
   padding: 3px 9px; border-radius: 20px; white-space: nowrap;
 }
 .tag.open { color: #7a4200; background: #fff2dc; border: 1px solid #ffd79b; }
@@ -319,8 +313,7 @@ ol.steps li {
 ol.steps li:last-child { border-bottom: 1px solid var(--line); }
 ol.steps li::before {
   content: counter(s, decimal-leading-zero);
-  position: absolute; left: 0; top: 19px;
-  font-family: var(--mono); font-size: 13px; font-weight: 600; color: var(--magenta);
+  position: absolute; left: 0; top: 19px; font-size: 13px; font-weight: 600; color: var(--magenta);
 }
 ol.steps b { color: var(--navy); display: block; margin-bottom: 3px; }
 
@@ -347,8 +340,7 @@ ol.steps b { color: var(--navy); display: block; margin-bottom: 3px; }
 }
 
 .soon {
-  display: inline-block; vertical-align: middle; margin-left: 10px;
-  font-family: var(--mono); font-size: 10.5px; font-weight: 600; letter-spacing: .1em;
+  display: inline-block; vertical-align: middle; margin-left: 10px; font-size: 10.5px; font-weight: 600; letter-spacing: .1em;
   color: #7a4200; background: #fff2dc; border: 1px solid #ffd79b;
   padding: 3px 10px; border-radius: 20px;
 }
@@ -378,8 +370,7 @@ ol.steps b { color: var(--navy); display: block; margin-bottom: 3px; }
   padding: 20px;
 }
 .talk-side dl { margin-bottom: 16px; }
-.talk-side dt {
-  font-family: var(--mono); font-size: 10.5px; font-weight: 600; letter-spacing: .14em;
+.talk-side dt { font-size: 10.5px; font-weight: 600; letter-spacing: .14em;
   text-transform: uppercase; color: var(--faint); margin-top: 14px;
 }
 .talk-side dt:first-child { margin-top: 0; }
@@ -411,7 +402,7 @@ ol.steps b { color: var(--navy); display: block; margin-bottom: 3px; }
    페이지 머리 (본문 페이지)
    ============================================================ */
 .pagehead { background: var(--navy); color: #fff; padding: 40px 0 36px; }
-.pagehead .crumb { font-family: var(--mono); font-size: 12px; color: #9d9dd8; margin-bottom: 10px; }
+.pagehead .crumb { font-size: 12px; color: #9d9dd8; margin-bottom: 10px; }
 .pagehead .crumb a:hover { color: #fff; }
 .pagehead h1 { font-size: clamp(25px, 3.6vw, 38px); font-weight: 800; letter-spacing: -.032em; line-height: 1.25; }
 .pagehead .sub { margin-top: 12px; color: #c9c9ea; max-width: 58ch; font-size: 15.5px; }
@@ -447,6 +438,9 @@ tbody tr:last-child td { border-bottom: none; }
    ============================================================ */
 /* 조직위원회가 가운데 정렬로 쓴 원고가 많다. 글줄 폭은 제한하되 단을 가운데 둔다. */
 .harvested { max-width: 74ch; margin-inline: auto; }
+/* Google Sites 원고에는 Arial·Roboto 같은 글꼴이 인라인으로 박혀 온다.
+   수확 때 걷어내지만, 새 글꼴이 섞여 들어와도 지면이 흔들리지 않도록 막아 둔다. */
+.harvested, .harvested * { font-family: var(--sans) !important; }
 .harvested .gs-section + .gs-section { margin-top: 34px; }
 .harvested p { margin: 0 0 14px; }
 .harvested h1, .harvested h2 { font-size: clamp(19px, 2.3vw, 25px); font-weight: 800; color: var(--navy); letter-spacing: -.022em; margin: 36px 0 12px; }
@@ -469,7 +463,7 @@ tbody tr:last-child td { border-bottom: none; }
    ============================================================ */
 .foot { background: var(--navy-deep); color: #a8a8dd; padding: 44px 0 34px; margin-top: 60px; font-size: 14px; }
 .foot .cols { display: grid; grid-template-columns: minmax(0, 1.5fr) repeat(auto-fit, minmax(140px, 1fr)); gap: 30px; }
-.foot h3 { font-family: var(--mono); font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: #7e7eb8; margin-bottom: 12px; font-weight: 600; }
+.foot h3 { font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: #7e7eb8; margin-bottom: 12px; font-weight: 600; }
 .foot .brand { color: #fff; margin-bottom: 12px; }
 .foot p { line-height: 1.7; font-size: 13.5px; }
 .foot li { list-style: none; margin: 7px 0; }
