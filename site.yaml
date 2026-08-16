@@ -60,6 +60,8 @@ site:
     - {n: "197", unit: "대", k: "SKA-Mid 접시 — 최종 지향 규모. 현재 확보된 재원으로는 그 중간 단계까지 건설합니다"}
     - {n: "131,072", unit: "개", k: "SKA-Low 안테나 — 최종 지향 규모"}
 
+  journey_note: SKA 관측 자료는 지역센터(SRC) 네트워크를 통해 연구자에게 전달됩니다. 아래 순서로 읽으면 처음 접하는 분도 무엇을 어떻게 쓸 수 있는지 파악할 수 있습니다.
+
   journey:
     - {path: /src/srcnet-overview, title: "SRCNet이란", note: "자료가 관측소에서 연구자에게 닿기까지의 흐름"}
     - {path: /src/data-resources, title: "무엇을 쓸 수 있나", note: "자료의 규모와 제공되는 계산·저장 자원"}

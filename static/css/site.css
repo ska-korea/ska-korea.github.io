@@ -75,6 +75,11 @@ img { max-width: 100%; height: auto; display: block; }
 
 .wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 var(--gut); }
 
+/* 리드·부제는 문장마다 이 상자에 담겨 나온다(build.py의 sentences 필터).
+   상자가 통째로 움직이므로, 줄이 바뀌어야 하면 구절 한가운데가 아니라
+   문장과 문장 사이에서 바뀐다. 문장이 한 줄보다 길면 그 안에서는 평소대로 바뀐다. */
+.sent { display: inline-block; }
+
 .skip {
   position: absolute; left: -9999px; top: 0; z-index: 200;
   background: var(--magenta); color: #fff; padding: 12px 18px; font-weight: 700;
@@ -231,6 +236,12 @@ img { max-width: 100%; height: auto; display: block; }
 .band > .wrap > .eyebrow + h2 { margin-top: 8px; }
 h2.sec { font-size: clamp(22px, 2.9vw, 31px); font-weight: 800; color: var(--navy); letter-spacing: -.028em; line-height: 1.3; }
 .sec-note { color: var(--muted); margin-top: 10px; max-width: var(--measure-lede); }
+
+/* 본문은 문장 단위로 자르지 않는다 — 문단이 여러 줄이라 그렇게 하면
+   줄 끝이 크게 비어 되레 지저분해진다. 대신 브라우저에게 줄 나눔을
+   더 잘 고르게 시킨다(끝줄에 한 단어만 남는 것 등을 피한다). */
+.prose p, .harvested p, .prose li, .card p, .desk-card .what { text-wrap: pretty; }
+h1, h2, h3, .hero h1, .pagehead h1 { text-wrap: balance; }
 
 .prose { max-width: var(--measure); }
 .prose h2 { font-size: clamp(20px, 2.4vw, 26px); font-weight: 800; color: var(--navy); letter-spacing: -.022em; margin: 42px 0 12px; }

@@ -23,6 +23,7 @@ from pathlib import Path
 import markdown
 import yaml
 from jinja2 import Environment, FileSystemLoader, select_autoescape
+from markupsafe import Markup, escape
 
 ROOT = Path(__file__).resolve().parent
 HARVEST = ROOT / "harvest"
@@ -34,6 +35,26 @@ MONTHS = {m: i for i, m in enumerate(
 
 def load_yaml(path: Path) -> dict:
     return yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+
+
+# 한글 종결어미 뒤의 마침표에서만 자른다.
+# '15.4 GHz'나 'Dr. Kim'처럼 마침표가 문장 끝이 아닌 경우를 건드리지 않기 위함.
+SENTENCE_SPLIT = re.compile(r"(?<=[가-힣][.!?])\s+")
+
+
+def sentences(text) -> Markup:
+    """문장마다 <span>에 담아, 줄이 바뀐다면 문장 사이에서 바뀌게 한다.
+
+    한 문장이 통째로 움직이므로 '아래 순서로 / 읽으면'처럼 구절 한가운데서
+    끊기지 않는다. 문장이 한 줄보다 길면 그 안에서는 평소대로 줄을 바꾼다.
+    짧은 리드·부제에만 쓴다 — 긴 본문에 쓰면 줄 끝이 크게 비어 되레 지저분해진다.
+    """
+    if not text:
+        return Markup("")
+    parts = [p for p in SENTENCE_SPLIT.split(str(text).strip()) if p]
+    if len(parts) < 2:
+        return Markup(escape(text))
+    return Markup(" ".join(f'<span class="sent">{escape(p)}</span>' for p in parts))
 
 
 def image_map() -> dict[str, str]:
@@ -291,6 +312,7 @@ def main() -> int:
     md = markdown.Markdown(extensions=["extra", "attr_list", "toc", "sane_lists"])
     env = Environment(loader=FileSystemLoader(ROOT / "templates"),
                       autoescape=select_autoescape(["html"]), trim_blocks=True, lstrip_blocks=True)
+    env.filters["sentences"] = sentences
 
     if OUT.exists():
         shutil.rmtree(OUT)

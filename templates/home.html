@@ -7,7 +7,7 @@
     <div>
       <span class="eyebrow">Square Kilometre Array · Korea</span>
       <h1>{{ site.hero.headline | safe }}</h1>
-      <p class="lede">{{ site.hero.lede }}</p>
+      <p class="lede">{{ site.hero.lede | sentences }}</p>
       <div class="btnrow">
         <a class="btn primary" href="/src">SRC 시작하기</a>
         <a class="btn ghost" href="/ska-korea/ska">SKA란 무엇인가</a>
@@ -44,7 +44,7 @@
     <div class="head">
       <span class="eyebrow" style="color:var(--signal)">자료 창구</span>
       <h2>{{ site.desk.title }}</h2>
-      <p>{{ site.desk.note }}</p>
+      <p>{{ site.desk.note | sentences }}</p>
     </div>
     <div class="desk-grid">
       {% for card in site.desk.cards %}
@@ -89,7 +89,7 @@
   <div class="wrap">
     <span class="eyebrow">SKA Regional Centre</span>
     <h2 class="sec">SKA 데이터를 쓰기까지</h2>
-    <p class="sec-note">SKA 관측 자료는 지역센터(SRC) 네트워크를 통해 연구자에게 전달됩니다. 아래 순서로 읽으면 처음 접하는 분도 무엇을 어떻게 쓸 수 있는지 파악할 수 있습니다.</p>
+    <p class="sec-note">{{ site.journey_note | sentences }}</p>
     <nav class="journey">
       {% for s in site.journey %}
       <a href="{{ s.path }}">
