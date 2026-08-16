@@ -21,6 +21,7 @@ import subprocess
 import sys
 from datetime import date
 from pathlib import Path
+from urllib.parse import urlparse
 
 import markdown
 import yaml
@@ -57,6 +58,66 @@ def sentences(text) -> Markup:
     if len(parts) < 2:
         return Markup(escape(text))
     return Markup(" ".join(f'<span class="sent">{escape(p)}</span>' for p in parts))
+
+
+# 우리 사이트로 취급할 호스트. 맞춤 도메인으로 옮긴 뒤에도 그대로 두면
+# 예전 주소로 걸린 링크가 '외부'로 잘못 잡히지 않는다.
+SELF_HOSTS = {"ska-korea.github.io", "ska.kasi.re.kr", "www.ska.kasi.re.kr"}
+# 같은 사이트에 있어도 '문서'는 새 창으로 연다 — 눌렀다고 보던 페이지가
+# 사라지면 곤란하고, 뒤로 가기로 돌아오는 것도 뷰어에 따라 어색하다.
+DOC_EXT = (".pdf", ".pptx", ".ppt", ".key", ".zip", ".xlsx", ".docx", ".hwp", ".hwpx")
+
+A_TAG = re.compile(r"<a\b([^>]*)>", re.I)
+HREF = re.compile(r'href\s*=\s*"([^"]*)"', re.I)
+TARGET = re.compile(r'\s*target\s*=\s*"[^"]*"', re.I)
+REL = re.compile(r'\s*rel\s*=\s*"([^"]*)"', re.I)
+
+
+def link_targets(html: str) -> str:
+    """내부 링크는 제자리에서, 외부 링크는 새 창에서 열리게 맞춘다.
+
+    템플릿이 아니라 완성된 HTML에 한 번 적용한다. 그래야 우리가 쓴 원고뿐 아니라
+    조직위원회가 Google Sites에서 쓴 미팅 본문까지 빠짐없이 같은 규칙을 따른다.
+    """
+    def fix(m):
+        attrs = m.group(1)
+        href_m = HREF.search(attrs)
+        if not href_m:
+            return m.group(0)
+        href = href_m.group(1).strip()
+
+        if href.lower().startswith(("mailto:", "tel:")):
+            # 메일·전화는 새 창을 열 일이 아니다. Google Sites가 붙여 보낸
+            # target="_blank"는 빈 탭만 만들었다 사라지므로 걷어낸다.
+            return f"<a{TARGET.sub('', attrs)}>"
+        if href.lower().startswith("javascript:"):
+            return m.group(0)
+
+        if re.match(r"https?://", href, re.I):
+            host = (urlparse(href).hostname or "").lower()
+            external = host not in SELF_HOSTS
+        else:
+            # /경로 · #앵커 · 상대경로 = 우리 사이트
+            external = False
+
+        new_tab = external or href.lower().split("?")[0].endswith(DOC_EXT)
+
+        attrs = TARGET.sub("", attrs)
+        rel_m = REL.search(attrs)
+        rel = set((rel_m.group(1) if rel_m else "").split())
+        attrs = REL.sub("", attrs)
+
+        if new_tab:
+            rel |= {"noopener", "noreferrer"}
+            attrs = attrs.rstrip() + ' target="_blank"'
+        else:
+            rel -= {"noopener", "noreferrer"}
+
+        if rel:
+            attrs += f' rel="{" ".join(sorted(rel))}"'
+        return f"<a{attrs}>"
+
+    return A_TAG.sub(fix, html)
 
 
 def mark_dropbox_ignored(path: Path) -> None:
@@ -348,7 +409,7 @@ def render(env, pages, nav_cfg, site, extra=None):
     for p in pages:
         tpl = env.get_template(p["template"])
         nav = build_nav(nav_cfg, p["path"])
-        html = tpl.render(page=p, nav=nav, site=site, **(extra or {}))
+        html = link_targets(tpl.render(page=p, nav=nav, site=site, **(extra or {})))
         dest = OUT / (p["path"].strip("/") or ".") / "index.html"
         dest.parent.mkdir(parents=True, exist_ok=True)
         dest.write_text(html, encoding="utf-8")
