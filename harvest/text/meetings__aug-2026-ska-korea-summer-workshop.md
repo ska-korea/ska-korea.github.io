@@ -24,7 +24,7 @@ Registration + Abstract Submission
                   - There is no registration fee.
                   - (CLOSED) Free accommodation for student /postdocs is available on a first-come, first-served basis. Please indicate your request in the registration form (Planned: Toyoko-inn Daejeon).
                   - Lunch will be provided on Day 2 (Aug 20 Thu, on campus).
-                  - Dinner will be provided on Day 2 (Aug 20 Thu, on campus); if you wish to attend, kindly indicate your participation when filling out the registration form.
+                  - Dinner will be provided on Day 2 (Aug 20 Thu, on campus). If you plan to attend, kindly indicate your participation when filling out the registration form.
 
 Contact: Hyein Yoon, hiyoon (at) kasi.re.kr
 
@@ -108,6 +108,7 @@ Participants (last update: Aug 16)
                   - Bao Truong (KASI/UST)*
                   - Chandra Shekhar Saraf (KASI)*
                   - David Parkinson (KASI)*
+                  - Ho Lee (Stanford Univ.)
                   - Jane Kaczmarek (SKAO)*
                   - Jeffrey Hodgson (Sejong Univ.)*
                   - Ngan LE (KASI)
@@ -123,8 +124,8 @@ Participants (last update: Aug 16)
                   - 김대현 (Sejong Univ.)*
                   - 김두환 (UNIST)
                   - 김민수 (Sejong Univ./KASI)
-                  - 김민재 (KAIST)
 
+                  - 김민재 (KAIST)
                   - 김민지 (UST/KASI)*
                   - 김신영 (KASI)
                   - 김유식 (UNIST)*
@@ -144,8 +145,8 @@ Participants (last update: Aug 16)
                   - 박종호 (KHU)
                   - 박현배 (IBS)
                   - 백준현 (KASI)
-                  - 백현 (UST/KASI)
 
+                  - 백현 (UST/KASI)
                   - 손봉원 (KASI)*
                   - 손혜원 (Sejong Univ.)
                   - 안경진 (Chosun Univ.)
@@ -165,8 +166,8 @@ Participants (last update: Aug 16)
                   - 이영민 (KNU)
                   - 이우진 (UNIST)
                   - 이유라 (Sejong Univ.)
-                  - 이윤정 (KHU)*
 
+                  - 이윤정 (KHU)*
                   - 이은찬 (KAIST)*
                   - ­이학진 (KAIST)
                   - 이혜승 (CNU)
@@ -177,7 +178,6 @@ Participants (last update: Aug 16)
                   - 정호준 (UNIST)*
                   - 조경석 (KASI)*
                   - 조성훈 (KNU)
-
                   - 조일제 (KNU)
                   - 조정연 (CNU)
                   - 조용욱 (UST/KASI)
