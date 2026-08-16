@@ -306,6 +306,66 @@ a.card:hover { border-color: var(--navy); box-shadow: 0 14px 34px rgba(7, 0, 104
 .tag.done { color: var(--faint); background: var(--wash); border: 1px solid var(--line); }
 
 /* ============================================================
+   본문 안에서 쓰는 조각들
+   — 원고(Markdown)에서 이 클래스로 직접 불러 쓴다
+   ============================================================ */
+
+/* 순서가 실제로 의미 있는 절차에만 쓴다 */
+ol.steps { counter-reset: s; list-style: none; margin: 24px 0; padding: 0; }
+ol.steps li {
+  counter-increment: s; position: relative;
+  padding: 18px 0 18px 56px; border-top: 1px solid var(--line);
+}
+ol.steps li:last-child { border-bottom: 1px solid var(--line); }
+ol.steps li::before {
+  content: counter(s, decimal-leading-zero);
+  position: absolute; left: 0; top: 19px;
+  font-family: var(--mono); font-size: 13px; font-weight: 600; color: var(--magenta);
+}
+ol.steps b { color: var(--navy); display: block; margin-bottom: 3px; }
+
+/* 두 편을 나란히 두고 견주는 자리 */
+.split { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin: 26px 0; }
+.panel { background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px 22px 24px; }
+.panel h3 { font-size: 16.5px; font-weight: 700; color: var(--navy); margin: 0 0 12px; }
+.panel.dark { background: linear-gradient(140deg, var(--navy), #3d1a6b); border: none; color: #fff; }
+.panel.dark h3 { color: #fff; }
+.panel.dark li { color: #d3d3ee; }
+.panel ul { list-style: none; margin: 0; padding: 0; }
+.panel li { position: relative; padding-left: 18px; margin: 9px 0; font-size: 14.5px; line-height: 1.6; }
+.panel li::before {
+  content: ""; position: absolute; left: 0; top: 10px;
+  width: 6px; height: 6px; border-radius: 50%; background: var(--magenta);
+}
+.panel.dark li::before { background: #ff86bb; }
+
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0; }
+.chip {
+  font-size: 13px; font-weight: 500; color: var(--navy);
+  background: var(--wash); border: 1px solid var(--line);
+  padding: 6px 13px; border-radius: 20px;
+}
+
+.soon {
+  display: inline-block; vertical-align: middle; margin-left: 10px;
+  font-family: var(--mono); font-size: 10.5px; font-weight: 600; letter-spacing: .1em;
+  color: #7a4200; background: #fff2dc; border: 1px solid #ffd79b;
+  padding: 3px 10px; border-radius: 20px;
+}
+
+/* 조각을 쓰는 페이지는 지면을 넓게 잡되, 읽는 글줄은 68ch로 묶어 둔다.
+   (원고 frontmatter에 wide: true) */
+.prose.wide { max-width: none; }
+.prose.wide > p,
+.prose.wide > ul:not([class]),
+.prose.wide > ol:not([class]),
+.prose.wide > blockquote { max-width: 68ch; }
+
+@media (max-width: 760px) {
+  .split { grid-template-columns: 1fr; }
+}
+
+/* ============================================================
    발표 (Talks)
    ============================================================ */
 .talk-item { grid-template-columns: 108px 1fr auto; }

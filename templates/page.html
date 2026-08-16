@@ -14,7 +14,7 @@
 <div class="band">
   <div class="wrap">
     {% if page.html %}
-    <article class="prose">{{ page.html | safe }}</article>
+    <article class="prose{% if page.meta.wide %} wide{% endif %}">{{ page.html | safe }}</article>
     {% else %}
     <div class="callout">
       <span class="eyebrow">준비 중</span>
