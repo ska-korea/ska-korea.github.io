@@ -66,6 +66,27 @@ Google이 Sites 마크업을 바꾸면 추출이 조용히 망가질 수 있습�
 cd harvest && python harvest.py --no-guard
 ```
 
+### 수확은 결정적이어야 합니다
+
+내용이 안 바뀌었으면 수확 결과도 한 글자도 바뀌지 않아야 합니다. 그래야 헛커밋과 헛배포가 돌지 않습니다.
+Google이 이미지에 붙이는 주소는 요청할 때마다 값이 달라지므로, 이미지는 모두 내려받아
+로컬 경로로 고정하고 그 주소를 기록에 남기지 않습니다.
+
+**수확기를 손댔다면 반드시 이 시험을 하세요** — 두 번 돌려서 결과가 같아야 합니다.
+
+```bash
+cd harvest
+python harvest.py && cp -R html /tmp/h1 && cp inventory.json /tmp/inv1.json
+python harvest.py
+diff -rq /tmp/h1 html && diff -q /tmp/inv1.json inventory.json && echo OK
+```
+
+이미 받아 둔 이미지는 다시 받지 않습니다. 조직위가 같은 자리의 사진만 바꿔 끼웠다면:
+
+```bash
+cd harvest && python harvest.py --refresh-images
+```
+
 ### 알아둘 것
 
 - **예약 실행은 저장소가 60일간 조용하면 GitHub이 자동으로 끕니다.** 오래 손대지 않았다면

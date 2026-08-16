@@ -291,11 +291,21 @@ def harvest_page(path: str, session: requests.Session, images: dict,
     }, found)
 
 
-def download_images(images: dict, session: requests.Session) -> int:
-    ok = 0
+def download_images(images: dict, session: requests.Session, refresh: bool = False) -> tuple[int, int]:
+    """없는 이미지만 내려받는다.
+
+    이미지 키는 페이지·순서에서 만들어지므로, 본문이 그대로면 키도 그대로다.
+    이미 받아 둔 파일을 30분마다 다시 받을 이유가 없다.
+    조직위가 같은 자리의 사진만 바꿔 끼운 경우에는 --refresh-images로 다시 받는다.
+    """
+    ok, skipped = 0, 0
     ext_map = {"image/png": ".png", "image/jpeg": ".jpg", "image/gif": ".gif",
                "image/webp": ".webp", "image/svg+xml": ".svg"}
+    have = {f.stem for f in IMG_DIR.iterdir() if f.is_file()} if IMG_DIR.exists() else set()
     for key, url in images.items():
+        if key in have and not refresh:
+            skipped += 1
+            continue
         try:
             r = session.get(url, headers={"User-Agent": UA}, timeout=30)
             r.raise_for_status()
@@ -304,13 +314,15 @@ def download_images(images: dict, session: requests.Session) -> int:
             ok += 1
         except Exception as e:
             print(f"  ! 이미지 실패 {key}: {e}", file=sys.stderr)
-    return ok
+    return ok, skipped
 
 
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--only", help="경로에 이 문자열이 포함된 페이지만 수확")
     ap.add_argument("--no-images", action="store_true")
+    ap.add_argument("--refresh-images", action="store_true",
+                    help="이미 받아 둔 이미지도 다시 내려받는다")
     ap.add_argument("--no-guard", action="store_true",
                     help="본문이 줄어도 그대로 반영(원본에서 실제로 지운 경우)")
     ap.add_argument("--delay", type=float, default=0.5)
@@ -365,8 +377,8 @@ def main() -> int:
         time.sleep(args.delay)
 
     if not args.no_images and images:
-        print(f"\n이미지 {len(images)}개 내려받는 중...")
-        print(f"  성공 {download_images(images, session)}/{len(images)}")
+        got, skipped = download_images(images, session, args.refresh_images)
+        print(f"\n이미지 {len(images)}개 — 새로 받음 {got} · 이미 있음 {skipped}")
 
     # 페이지 수가 크게 줄면 발견 자체가 망가진 것이다 — 아무것도 덮어쓰지 않고 멈춘다.
     if prev_count and len(results) < prev_count * 0.8:
@@ -375,8 +387,12 @@ def main() -> int:
         return 2
 
     results.sort(key=lambda r: r["path"])
+    # ★ 구글 이미지 URL은 요청마다 값이 달라지므로 여기에 남기지 않는다.
+    #   남기면 내용이 그대로여도 매 수확이 '변경'으로 잡혀 헛커밋이 돈다.
+    #   빌드는 images/ 폴더를 직접 읽으므로 이 목록에 URL이 필요하지도 않다.
     (OUT / "inventory.json").write_text(
-        json.dumps({"pages": results, "failures": failures, "images": images},
+        json.dumps({"pages": results, "failures": failures,
+                    "images": sorted(images)},
                    ensure_ascii=False, indent=2), encoding="utf-8")
 
     held = [r for r in results if r["held"]]
