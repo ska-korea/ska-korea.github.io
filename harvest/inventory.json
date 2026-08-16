@@ -27,7 +27,7 @@
       "sections": 3,
       "text_chars": 3003,
       "fetched_chars": 3003,
-      "html_bytes": 7102,
+      "html_bytes": 6875,
       "subnav": []
     },
     {
@@ -42,7 +42,7 @@
       "sections": 5,
       "text_chars": 1002,
       "fetched_chars": 1002,
-      "html_bytes": 11050,
+      "html_bytes": 10829,
       "subnav": []
     },
     {
@@ -57,7 +57,7 @@
       "sections": 3,
       "text_chars": 337,
       "fetched_chars": 337,
-      "html_bytes": 3669,
+      "html_bytes": 3446,
       "subnav": [
         {
           "path": "/view/ska-korea/meetings/aug-2026-ska-korea-summer-workshop",
@@ -125,7 +125,7 @@
       "sections": 4,
       "text_chars": 1525,
       "fetched_chars": 1525,
-      "html_bytes": 19331,
+      "html_bytes": 19130,
       "subnav": []
     },
     {
@@ -140,7 +140,7 @@
       "sections": 9,
       "text_chars": 2764,
       "fetched_chars": 2764,
-      "html_bytes": 35487,
+      "html_bytes": 35283,
       "subnav": []
     },
     {
@@ -155,7 +155,7 @@
       "sections": 8,
       "text_chars": 3016,
       "fetched_chars": 3016,
-      "html_bytes": 42724,
+      "html_bytes": 42520,
       "subnav": []
     },
     {
@@ -170,7 +170,7 @@
       "sections": 11,
       "text_chars": 3148,
       "fetched_chars": 3148,
-      "html_bytes": 54867,
+      "html_bytes": 54663,
       "subnav": []
     },
     {
@@ -185,7 +185,7 @@
       "sections": 3,
       "text_chars": 107,
       "fetched_chars": 107,
-      "html_bytes": 3218,
+      "html_bytes": 3038,
       "subnav": []
     },
     {
@@ -200,7 +200,7 @@
       "sections": 3,
       "text_chars": 110,
       "fetched_chars": 110,
-      "html_bytes": 3061,
+      "html_bytes": 2881,
       "subnav": []
     },
     {
@@ -215,7 +215,7 @@
       "sections": 3,
       "text_chars": 150,
       "fetched_chars": 150,
-      "html_bytes": 2026,
+      "html_bytes": 1849,
       "subnav": []
     },
     {
@@ -230,7 +230,7 @@
       "sections": 2,
       "text_chars": 660,
       "fetched_chars": 660,
-      "html_bytes": 7676,
+      "html_bytes": 7486,
       "subnav": []
     },
     {
@@ -245,7 +245,7 @@
       "sections": 12,
       "text_chars": 10412,
       "fetched_chars": 10412,
-      "html_bytes": 123201,
+      "html_bytes": 123014,
       "subnav": []
     },
     {
@@ -260,7 +260,7 @@
       "sections": 9,
       "text_chars": 1452,
       "fetched_chars": 1452,
-      "html_bytes": 27689,
+      "html_bytes": 27452,
       "subnav": []
     },
     {
@@ -275,7 +275,7 @@
       "sections": 10,
       "text_chars": 6115,
       "fetched_chars": 6115,
-      "html_bytes": 49825,
+      "html_bytes": 49634,
       "subnav": []
     },
     {
@@ -330,7 +330,7 @@
       "sections": 7,
       "text_chars": 3301,
       "fetched_chars": 3301,
-      "html_bytes": 24076,
+      "html_bytes": 23814,
       "subnav": [
         {
           "path": "/view/ska-korea/meetings/easka-2023",
@@ -410,7 +410,7 @@
       "sections": 2,
       "text_chars": 231,
       "fetched_chars": 231,
-      "html_bytes": 2713,
+      "html_bytes": 2601,
       "subnav": [
         {
           "path": "/view/ska-korea/meetings/easka-2023",
@@ -530,7 +530,7 @@
       "sections": 10,
       "text_chars": 2809,
       "fetched_chars": 2809,
-      "html_bytes": 39421,
+      "html_bytes": 39233,
       "subnav": []
     },
     {
@@ -545,7 +545,7 @@
       "sections": 10,
       "text_chars": 1437,
       "fetched_chars": 1437,
-      "html_bytes": 10881,
+      "html_bytes": 10574,
       "subnav": []
     },
     {
@@ -560,7 +560,7 @@
       "sections": 11,
       "text_chars": 7156,
       "fetched_chars": 7156,
-      "html_bytes": 76013,
+      "html_bytes": 75818,
       "subnav": []
     },
     {
@@ -695,7 +695,7 @@
       "sections": 3,
       "text_chars": 112,
       "fetched_chars": 112,
-      "html_bytes": 1961,
+      "html_bytes": 1926,
       "subnav": [
         {
           "path": "/view/ska-korea/meetings/oct-2026-sparcs-xiv",
@@ -815,7 +815,7 @@
       "sections": 7,
       "text_chars": 2366,
       "fetched_chars": 2366,
-      "html_bytes": 29651,
+      "html_bytes": 29460,
       "subnav": []
     },
     {
@@ -830,7 +830,7 @@
       "sections": 4,
       "text_chars": 289,
       "fetched_chars": 289,
-      "html_bytes": 6631,
+      "html_bytes": 6337,
       "subnav": []
     },
     {
@@ -845,7 +845,7 @@
       "sections": 1,
       "text_chars": 7,
       "fetched_chars": 7,
-      "html_bytes": 640,
+      "html_bytes": 416,
       "subnav": []
     },
     {
@@ -860,7 +860,7 @@
       "sections": 1,
       "text_chars": 13,
       "fetched_chars": 13,
-      "html_bytes": 646,
+      "html_bytes": 437,
       "subnav": []
     },
     {
@@ -875,7 +875,7 @@
       "sections": 2,
       "text_chars": 460,
       "fetched_chars": 460,
-      "html_bytes": 4228,
+      "html_bytes": 4032,
       "subnav": []
     },
     {
@@ -890,7 +890,7 @@
       "sections": 5,
       "text_chars": 1079,
       "fetched_chars": 1079,
-      "html_bytes": 6183,
+      "html_bytes": 5896,
       "subnav": []
     },
     {
@@ -905,7 +905,7 @@
       "sections": 1,
       "text_chars": 19,
       "fetched_chars": 19,
-      "html_bytes": 406,
+      "html_bytes": 386,
       "subnav": []
     },
     {
@@ -920,7 +920,7 @@
       "sections": 2,
       "text_chars": 167,
       "fetched_chars": 167,
-      "html_bytes": 1370,
+      "html_bytes": 1159,
       "subnav": []
     },
     {
@@ -935,7 +935,7 @@
       "sections": 6,
       "text_chars": 1556,
       "fetched_chars": 1556,
-      "html_bytes": 5541,
+      "html_bytes": 5313,
       "subnav": []
     },
     {
@@ -950,7 +950,7 @@
       "sections": 1,
       "text_chars": 16,
       "fetched_chars": 16,
-      "html_bytes": 653,
+      "html_bytes": 441,
       "subnav": []
     },
     {
@@ -965,7 +965,7 @@
       "sections": 1,
       "text_chars": 9,
       "fetched_chars": 9,
-      "html_bytes": 643,
+      "html_bytes": 426,
       "subnav": []
     },
     {
@@ -980,7 +980,7 @@
       "sections": 1,
       "text_chars": 15,
       "fetched_chars": 15,
-      "html_bytes": 647,
+      "html_bytes": 436,
       "subnav": []
     },
     {
@@ -995,7 +995,7 @@
       "sections": 1,
       "text_chars": 9,
       "fetched_chars": 9,
-      "html_bytes": 643,
+      "html_bytes": 426,
       "subnav": []
     },
     {
@@ -1010,7 +1010,7 @@
       "sections": 1,
       "text_chars": 12,
       "fetched_chars": 12,
-      "html_bytes": 646,
+      "html_bytes": 432,
       "subnav": []
     },
     {
@@ -1025,64 +1025,109 @@
       "sections": 8,
       "text_chars": 7600,
       "fetched_chars": 7600,
-      "html_bytes": 24998,
+      "html_bytes": 24775,
       "subnav": []
     }
   ],
   "failures": [],
   "images": {
-    "ska-korea__ska_00": "https://lh3.googleusercontent.com/sitesv/AG8ngQXt5n1gEhLnc77cs0MBVFO1Z6nfSbQyySF3VwuGZx0Ddz6o9sYqvttnJOM1xrrrC7STK1Ow3fbEiG7ycv_EljkVPSysBAWi3vNg_8U118BeY70A4ZkNsDdmpXHps_hMZ6sYXXh7N7mOYGbaEU_NlFXm0TwN0tD7hzCM_BFptci6Wc0V9KFMxwISzLDNTFUmcZxh-Q7ZPherxqs5j1zSNFF7CUe5sTOyYPlwjLigq3M=w1280",
-    "ska-korea__ska_01": "https://lh3.googleusercontent.com/sitesv/AG8ngQWdbLelCrnkRUYPmFMsow8nKI7K_luOBg8ZlQdnbJIPqUBVZwR_pCJF9oIrdTYUxM_4pxQkNB4Rzl7FkHBzI737hWfRKNAZAAy8pJ8vXUvKT1ecY6wwJpDrdygs8CLlxaXPqWtdDCGgsZLeSJqXD7qq4tuXh2TE8zyyCtrC3d56IuCk1XVveDhbNB7VLAN_GOlJdcjcnWRzovfztoNcZGMV3N6dnr4_pduTqQNlC3A=w1280",
-    "ska-korea__ska_02": "https://www.google.com/images/icons/product/drive-32.png",
-    "science__ska-science-working-groups_03": "https://lh3.googleusercontent.com/sitesv/AG8ngQXHCit7sHiJUN2mT_0JKiMrsT6kMtMsI5beQYvAH9Ia-e5H1COnPettpeSEXnGnhtjkI5BeIwqlEaU91P2YaPQ96dgoigOcE75Y7zwHhVeW1TfiIhrTJ-MTgaELqLgjjCnfhOk1cx-l9Z3MRvJoNv2oOVF9DzeyTaKi2X_oLPmaRu7a_2couxXG0MhZeLSmD8d1PiMZFIOtuVYBjSMW1GOlJ9ms46h5Tju7_1D7=w1280",
-    "src_04": "https://lh3.googleusercontent.com/sitesv/AG8ngQXbAI1CrUQ4IOupecaUmEKbCEPDichEgEqEdVCIlq_BEpAO9rS8KQiPhdLdmMrm3st7qy4dZHzwqmmV2fGLWoI7p_Qm59EDAgKXEyoGUKQuJl6gI0-kldk4hktCOCv6peKz_ac1hq1SCxkHENfgydsRTSXVYDIGZuXvHpl8ppV3X51q8Xi8aOWd2DEMxRzhdzrA5mewZC8g87N6z4l84yYZPqkCi29BISjs7LjBtO4=w1280",
-    "src_05": "https://lh3.googleusercontent.com/sitesv/AG8ngQWYjrp-qVC_v3WTxpCUBVzq6iP-7F0v5DSjYyVG7axsYw8nfukGpFsbroh_FjOvL0SSg9i5AkbdMbLuQqPEvW0SWbknPiPWMKg19DNddHFhjxPoGZ_ynfjlGyLQqhOPCJApCrEhImS-__Xlq8sbHOXgtaxp5dytIAzrYbGATQIo8ogdm_A0SJizHc6Djjl3yx0gg03UXyE9yxJGClDxlNWIak7zPlCibynDYEpqCVs=w1280",
-    "meetings__oct-2026-sparcs-xiv_06": "https://lh3.googleusercontent.com/sitesv/AG8ngQVw_MPFut4PTM9E3VBmeKllldWtrubV8sYiso0_MTsnJENwBzRsgCSwhbUwqX68J_914_eHCdK_ZKNcrUrdg056G0uSOy93dAO9xVuYZY5yan_9DhauRRJP5sSt99gxRgsgu9YyMrnDoRUP5rDC6cAxz6K7V7az1Z3brgfu12ezrSepDJTD1fg4HKljZMPy7Afqx8zN5gGqm4b_jGSKrzSLf1bX2J5jYlu_xQa3Zcs=w1280",
-    "meetings__oct-2026-sparcs-xiv_07": "https://lh3.googleusercontent.com/sitesv/AG8ngQU3A_28gwDOYpH_J6A0PNVqNri-giFbq0-SIX9HVe0RpSjuhLgpxDpmzjH4abvkvjbBGYkNFVuWSLfkVlpbjvgjsKG4pxZUzuA9nz1sVTHrynnSv_pz_NMoIKp4iehb4u7i2lHsptWo2p2L86Bk0Mu2NbVBFLf2AHkn4ks7OJxqZ0tDtvTA6bKuZEDvMUFQmRDF5Et_M90Rclthr-0sevy1qIW1nviJNTed8xWy=w1280",
-    "meetings__oct-2026-sparcs-xiv_08": "https://lh3.googleusercontent.com/sitesv/AG8ngQUJZLxo_kafKxmAR85Su-5Z4uSepXDpFctr9vnX-ddirQAbhKIMfQeAceRFv122HtVUK-xCni_NR9GNc0AnrldF2ZEsFI5ecxnKej9Vw56GPwiFl1Hw8YQ_8JojBcY0Y-ioNC6QzrjZP6MxSlCEVcfeEnaKc1lbA389qxa4ILYQdWbGbApq6Xx_2umVvhhtvmD0babsb36ELp_ooBtm9jHJvl9wqO-Klk-OpRmkUWs=w1280",
-    "meetings__oct-2026-sparcs-xiv_09": "https://lh3.googleusercontent.com/sitesv/AG8ngQVINnv1jpdHcIlJ6JPO5aH1NdFHa3A5oHXzLCcwtXWWgmBDTGHL5002vS3R8b-mDUSGp06_7WF8DkVptUEVp3KpZYCWENYd3oqe7LXK0T3C0kabcplliwVVy_--ewib0ASbPD1vS74ondKh0ZjMlVpShlaPhOpLXY4GeUgWPmIjR7m7XTiI7bJZYxl-LVJIe_etF_z96VC6MFGBp8AK6eMfcyXUBs_o3b95N1NPaT8=w1280",
-    "meetings__oct-2026-sparcs-xiv_10": "https://lh3.googleusercontent.com/sitesv/AG8ngQXKJwz0Wx0Gyo3BK3VRO5Pn60B5EedXwcdce7Mesc7EZ2WHNVKnQyJjp0OFJleg4jSPmyA-cjZ0u71PsQqpMOuPPGQivGIEQq5bkUv1kuYGIP_SyPZUGcpdABKOxZG0t0ADBX0MWX2loEmz-RctEsuJbwI2L7bGnfT799c2QmZveuBDxz5sH5HCRoUTZOvFSLOAVXv0ZKj4xebAadC6L0jTTshPJemfSHay8ZZxR0s=w1280",
-    "meetings__aug-2026-ska-korea-summer-workshop_11": "https://lh3.googleusercontent.com/sitesv/AG8ngQWXHWNPzmHrqeNDLbpGJ5P3VxFXtMq956FjF_QYQT2saJfDKuEP6WmWiUcYD-TjkIBdHzdix9tJGwdWve4qSn66x11gm1rUFSrzdrflG4AuQ-kBsCAELNT_jYSRramXd9fBCai4Ue2wBDk-QXI-WOl3sHHeOgrzfO1Lx93671EZ1p12YGbvBPrWzjq3JPhe9oSH4bQVmcV6356gv2JAzgxymzvO8yZyWSKbIPoiZHE=w1280",
-    "meetings__aug-2026-ska-korea-summer-workshop_12": "https://lh3.googleusercontent.com/sitesv/AG8ngQU_67EdEvnNtkzQc0HvYgvcrn59IDzfveP7H28SJRCwMe-TPbKx3xirXPiIBuJx77o37y_kDmaVTkK4xHbT6u3gptJLUsT2sVRXigDsxqgehc_HWfEBIA5CmrKaoy2EROdyqJF972CR-edfuIbhURBH5weXkTzXmovI7F_HobzjqJXpMUgasZOrV0WeabRYOUc6XY14XJ4t_5O31vww8jaNn6YzseCgOLYFOv23=w1280",
-    "meetings__aug-2026-ska-korea-summer-workshop_13": "https://lh3.googleusercontent.com/sitesv/AG8ngQVNCRon-DKjiXKH3Fje7BQOqYQMwOKjIv8qAsZLhvZ9uzSlHhprcB58IoYdzr1THFm8G47TvuE8lLvUmNtfeZee-T5FEXuePUB8ZlkPTdEPHmeoGl8OCSJxPTorX3ZMsRM1uKwZSHixm5F9Fk_M6QJmD6YWlUWSQUm0N4i-XUnDqxbaAYjyphJYsbrObiyowGcvT0ycdZTnqW1MxL_WJXhccLnRFnszPOECK2xiafw=w1280",
-    "meetings__dec-2025-ska-korea-workshop_14": "https://lh3.googleusercontent.com/sitesv/AG8ngQUOblB1rwLA71Mcgf-ivMx41OfO5mqvsdVZ-LOlXZ5lLssKh52qrQhqxBL66_DnDE90AsSEKEUGsvGFs88A7x4obzgHZmUwXcfLJtvBlOixT7c5KDv6xzyfM-HecSfUoM2LS30IsrnJLJ3MzbflxXvgyNdOBWDowILYV_0dTGkVAeO5ueT-9fPdOgxY1ZQARzvMnWrm0ZNx2054xsT8GknLa_hzdLBiMYyzcY0N=w1280",
-    "meetings__jun-2025-ska-korea-workshop_15": "https://www.gstatic.com/images/icons/material/product/1x/sheets_32dp.png",
-    "meetings__jun-2025-ska-korea-workshop_16": "https://www.gstatic.com/images/icons/material/product/1x/sheets_32dp.png",
-    "meetings__jun-2025-ska-korea-workshop_17": "https://lh3.googleusercontent.com/sitesv/AG8ngQUuR54vFcGks-7YFYMXF0MBbPBD_jVUnkdCkaTjP-ouca347dSlHKii5EGQd49vAK2m8WtuMdSk4Me7QeGYRzd18ApNtlENApsoKtcXDsUKq48jvxRgqIe4MnBT0WbR4524gLEjl8p-T8LbfAtsUJOYZOfPb_I-YdYMr0sQYDaSA8wViCB1XKfeL9hW6u4Xa8GDmpCfSfcRqWK5ecYfKAI1vnobbfb_gUrkBnC-hGI=w1280",
-    "meetings__jun-2025-ska-korea-workshop_18": "https://lh3.googleusercontent.com/sitesv/AG8ngQXEISUM7f90FaegZXhFAbrUnyJ6weYWJ1WANaENKDdRDaYbvl2LKRCvD9gZoUQJRk7JvD0kbqbP8LIrE2Um23g4zpAcPrwsikFZyODe3Z1pinZrgk0c3bE8YHJ2_ruWKUgNWnWyG6k3s4IDeWzYVn9OzptTw9p5jwn6odQt8V02rIn0ecIzyiOPuSQJsAdWQG12Zge7eUn1-BqxEQWvBnrdOOviIaukHFMZ2JmnEyY=w1280",
-    "meetings__jun-2025-ska-korea-workshop_19": "https://lh3.googleusercontent.com/sitesv/AG8ngQVv61Lw3Op3Cz8yWDzh2SfDbrKXCciw___5d7n1oYhdUZNwqCaCDTvEhLCZvIpwK4CQxsYlM71CYfAqqCX_S7-ch08mxM6W7GaiWmID-AxgrQO1sjSTR6hpplK8KgMD9AqDfysepOTQgXr-xqb1jeZjPcm0qNE2iTPOLCGgIiKXE7u3abPkEKjBEvaCAUV5XKkabnZ4OC7p36Kbvk4nEydK1oHMaV5BmOStP_h8=w1280",
-    "meetings__april-2025-kas-spring-ska-special-session_20": "https://lh3.googleusercontent.com/sitesv/AG8ngQUpVcHlo83iZ6b4M38qOlNZ7Vd8n7DUvX_ZYkv_n4zUq8apE_trAVizxL1dD8PiLy3OHwa48oxZEksxYnZm0zSpaqSy2xj2k9-6dEOw3ig2fbwfrQZ0sRI6kskZDpupFoHullwVcHt-Zht4ZMr5NyLUsJ869rjV6e265l8AEwxN8Zq4hdow_PIwuTMxGNDSXjVScuuFGfPFnfP4Q9Zi0R7oqIk6UqIT7Zcsrqrs0TQ=w1280",
-    "meetings__dec-2024-ska-korea-winter-meeting_21": "https://www.gstatic.com/images/icons/material/product/1x/sheets_32dp.png",
-    "meetings__dec-2024-ska-korea-winter-meeting_22": "https://lh3.googleusercontent.com/sitesv/AG8ngQV_52PuJ1PJyh_M5G3QXCYU9v9RXeHc_nyj58Z_GIswQfqaL8VUkL1vcZpC1yH3UH1zO_nulaxW42ci0XyeDuZHw2bAmUyQ44pDj6i6mGcZ6S3c4DM66FK80D77RhfecM3nPRH7ZDXS6NbHyRWocwbJmkHFElN2BokqmiA8_J5nyeRPqKuir1RHTSXWOc1WIIiGqTVErfjBcJy7oznqY0oRRux4-Ffab5XsztcUP00=w1280",
-    "meetings__dec-2024-ska-korea-winter-meeting_23": "https://lh3.googleusercontent.com/sitesv/AG8ngQWXavSBZQdAHqS0Ks1gY9Pz9kRq3wYwkIVhTQ_INv_eyxNu_bVNPUKkKDCI1ICthZHOiBJnsax7PZmZA_vDMiVZrx5UAUlMrG5nGbQCyp_hh-z-VG8DMlFt9d7b38nyXOeu9-rU0sAW3YDoPx7qQ0GOXNlWGFRAG-QITik6gC7U8zf1If336cKFntge5-vnF8dHaYQ5vIhC15J4sVdMuW7uG3czpHGxGoWp7nDX=w1280",
-    "meetings__dec-2024-ska-korea-winter-meeting_24": "https://lh3.googleusercontent.com/sitesv/AG8ngQWf292TNHSAYFJ64NDEqiqvQ-JAngRwlhh5nAhsXXrKQVyPoAc6IEh03PoQ_eMtA-VNh1L7jOAIyntDov_8H1QPF_Utdr8QMDQkyR39hbRgmiVI64Rl-MOhDEgmtgbKNp9GRUt7uP3OVLjB4WLLxWz6HOCpPBJYffIv8Q-TPZQrUeZ5ASk5_0PXCR8iewG6SB9UEq-N118Y9WNKwrxdWs-U3AMWuiRefWSvvPUk=w1280",
-    "meetings__oct-2024-ska-vlbi-workshop_25": "https://lh3.googleusercontent.com/sitesv/AG8ngQW9wU4fWhcSLCoxf-vqdPbLFjwTcglydOWMrHHJY7W7_wGjrPrXay6D3UvE7fMIJtELCben40cFOVAZonD9xAXkCPIZXetUCTpSdu5f2pLfdEGZrVbwO4rcxkx9iMt5lVRWwZvoEoRArLJWjTQWLJ0T0jREGZrsM63E4ZMUeKRul1kT6KlCpwJPXeXtNQcnXEe4IPlRteKgd9IN0hHaWBpHLhV-HV-_NVUWXqEw4Tg=w1280",
-    "meetings__2024jul-ska-korea_26": "https://lh3.googleusercontent.com/sitesv/AG8ngQVdWlzaMpg7S6lyMaOmczLuFRG6sEdtoxHeL5FDoSFWLqNWTJUZDR9kSq-9AxWoRSgWMoZESwE_1BmCF9owGhyJV0v6C6s3mjEIdNAzY1J5FN_u2fv64fnK_XFj56omy2RnxWKBm4y7bFJZaD0fmkcYgBEhuSQqqzaj8Sv_rGeSFQSUsYqy58h_eSUdx6KCYhIEw1_AzcHfo1My8XquMVzUQ0sj_eTK1NE4JwruglY=w1280",
-    "meetings__2024jul-ska-korea_27": "https://lh3.googleusercontent.com/sitesv/AG8ngQXSFBYUyNlbkzEWIxF6bpG2GqwyyVv6yCcz9YSXcn4VWqDrYepbit3ahXYJRZ1qLySPLk6L2EXokjaeEQ_qnKX4-zd3eDioRT5SrkDlS66WjNamf7g8-8Mh33PkHpzPbJlVgLZNs8bhG6_JZHEZO-J25vL8CfUM5-5Tg5kKwnINg3EAGcizD5aWIAdmMCu0WXQwQGdbfxYPAfsfwnDXqBGpvuF5ha8BSJdpqLvO=w1280",
-    "meetings__april-2024-kas-spring-ska-special-session_28": "https://lh3.googleusercontent.com/sitesv/AG8ngQWEaRkiI5O12kvSb3CMqkPLcACi6tnaILOf-viY6Ct-YbUDS9HjlGN46jB29BtMcg5QaKwyk0gNRc2gOvbYkhZT8J2AFapw6na0Eh_QHlmA_JDOH8F-WSKfINy-4miQQgon1F6tP0xaObnI_L1bqnPJ7KgiZr04Os5h47jgt2N0qwBLM21ib8-Ji6dmRhLFQP7eJKMAozk6LP4BTaPKTXMtfl8R5JB62n4yMulr=w1280",
-    "meetings__april-2024-kas-spring-ska-special-session_29": "https://lh3.googleusercontent.com/sitesv/AG8ngQVp9B5YNHFO3XXluoHeHJH1xrC1phPxa5CS5lt_mZ1Qk1nhuWm0EoBLnx-7g3Db-YXJXCNq6n1MIHeOVOS9RxmT9ajHOfRPXTWZ8dNOWMFEO0yWZh49qIZGceRMkiJEVc05Ax-oiYqtHQjjCad9O-xJz_1qQmmNiurhe09bOhrbQDB2B5kP69pDy1Ec5m1VVl-dBJ8GgqTqERXsM4dBb8Td0nNyxmjVw-Gi2KrQ=w1280",
-    "meetings__easka-2023_30": "https://lh3.googleusercontent.com/sitesv/AG8ngQWqwFP1H8J-Mw90ppHewaHgjn8TNbvzwQL4hKMv1jvGwAZyWvXdsgWLLI7Kqq7FX4Akj5mqTCfZlA_Sfc7PfeV6bMTVbdrCCktPq54lJiD3Oh1u6LzIEKaVzAbyXSZQnAbohpw7X4tjKW72_zfQQ3DHHuMraplYz6beSVUVzDZJNtpCpzQZKzctMmGlPms=w1280",
-    "meetings__easka-2023_31": "https://lh3.googleusercontent.com/sitesv/AG8ngQVz6nw_r8UVKUYfMcSoB1Wm4iKPBF42ImdJWjwuFZpqzZdWo4ngnIfpi3VlB-qLLP1ydMauZgu4FJIBuEYksEVGUb_vibnC4qDlX3ATKeKpi3U3jNxuuTYMNRrgE4vTetwrSkQJFSNBAWHVvYgQuxmOrHepMvTnO-0k7fUG6F7cNWFJo-FhB0WVsq9Xs5q7yHzYxTTiv8H1MY6Bd8GAe6F5WrmT0jO5NcdZgWML=w1280",
-    "meetings__easka-2023_32": "https://lh3.googleusercontent.com/sitesv/AG8ngQXD9Dg9f2XOlFvwhDC4r98rSocLw6U68FjPReyqA5zqzDUXbSjiE4braiDH8KRAA3NpWRAT17wa5rVtFo-1GYOieFUWZp_VNLsAURvpA0yQCd8o9hJQS-aocPUdc6QS3Xe2aRVvgzds8RgROcqEWJTef5ifAjma_CIZHYXCCb4T11_n4183LjHPhVTAtjOCtIisHWY32ELeluGSKIsYri8HaVEs8EzfJVDvZJrXBNc=w1280",
-    "meetings__2023aug-ska-korea_33": "https://lh3.googleusercontent.com/sitesv/AG8ngQVYOBJmMui9l1GMNINDmawi20FViTD6EXcnqO_BH58H2qiFmulf6wVjRshlEhbB36Ooyig0grC58um9BGhG8m2Kg70P0h2vQ_aRuB7VYzIGAJlfS8UMWEF6ia_CuqxpkN3YjWBV6i1PQ0oJhMGblYmQSU_EZaNNkG_cNzodO76qWlo2LiMqi_jwq0kirriGeSbACDgrAf7tvmrN-55Omhe06-4tgRbTpRdvYy2h6Jk=w1280",
-    "meetings__2023aug-ska-korea_34": "https://lh3.googleusercontent.com/sitesv/AG8ngQWxiiW5ZLvyvv_PGIab3eRdEo3fO5ENCG5KCkmqSgDOENnWdmjbIruZx_CwCdeepGp-Uk-dy_nFa9ZQ4C3fgApacvyyzTXDMvd61Y5IJX_DwCtnJ7YzRGi2M06e9gOS941cO4RzgufVMDptYi1ChgCpt_mcb7PSIkRFF0fw1Za4rKLVAx5NVfmDMtL_B7YAmDE7cvs-HlhmCn6rLf-G37yxKDlfMtDS5eVSWyvwMSY=w1280",
-    "meetings__2023-korsdc-workshop_35": "https://lh3.googleusercontent.com/sitesv/AG8ngQXDddBgLtXfE951qW-YBxk9gAH0FiCF124ecAmupEaUut-sFcbmaVAnp14Ng1Nuo4g1R_dHLq13XUZmohFw2qh2vEvIkQDU1CHVoeSTFrYTurB2LJz3QwWqllGKho1HWtlgugNq1cRzmFbovMEaZiq3UuNacMtb2y0JLn05d950FzIm2EErI08mnOOO9e4lPsyWGHBIX86lcv3fsZrfVUqmfaij_sDLuZSXu7cThiI=w1280",
-    "meetings__april-2023-kas-spring-ska-special-session_36": "https://lh3.googleusercontent.com/sitesv/AG8ngQV1d13pbdZKGFyTLP99kPS1morxHByWgpfRO82SaVI1FpE3s2XyU-iY4QuQFQRgGW5W3oxWmIxp2uR67VWbmdWoKx1KMQPZrC_cWWx76-ie7eS52iFW13y24rbrrAoosMdxIr4JJ1UkrwkhhS9WR4FpjlJN4_XuKO6QUHSlZhSDyWEh1tlkYz10SJ_0RRRi0-rCK2-AwUdRMZaks3yuHFrdpkHAqmssK5_AdGrw=w1280",
-    "meetings__jan-2023-ska-korea-winter-meeting_37": "https://lh3.googleusercontent.com/sitesv/AG8ngQVa_30crWgjvId6Rx9ptQib8GPAMrj6h2Qm_Him6f5dE5b5RjQ7XGo3XtuFlQfOIHKdG-QtaCYd-Y4A7VExaBhm1rsSQJLFPrbNRCKqUz-1aVg2XE5C1hg9Hl_jKzVMjcLvdcA6awHBFdPOTKHZ5ioUONzcjb0f5UPzSt0A9tQchBYsCNf-OHQ6Qs51CmzJBUzSpefONnS9SY_r0BJfd1waopHA6W6FT1f10z2LLv0=w1280",
-    "newsletters_38": "https://www.google.com/images/icons/product/drive-32.png",
-    "links_39": "https://lh3.googleusercontent.com/sitesv/AG8ngQVlT4o3cmMMzEr02_Ee-TWywwr_blQqPy2ARg80w1OZxQzIy6vkKPspI3GhiLh5vBwFwYQ8I4mB2GStlZdPOPjICu6Oxgoq03YATnA6v4aMazK3WxFM9CTqo0HR7FNxuYKbvW1-pYylTJqByP6-MmN8MTlaj_Fxw-Vh_tZFRqMTNCfimPVfl-gtMVBnkhEo8F8Y_cHIkKGTBQAtFX8DkjsKf9wPUbFrRlB_kw0L=w1280",
-    "links_40": "https://lh3.googleusercontent.com/sitesv/AG8ngQWo9q0Ay6voVn1TOH4RJfX_46Q0mXk5cMcgzQAVQuRjvRaYOiH48s_IPhYusWo0Gjl9Kt7R9JOWGdrguXBska38fDDudtNsbNfmjrpZUwFkgvZn4v3hsjxrm2AXBjyddJSeqN5m7ZL-OZgMMNOOhFe-v-pt6Q7rTO2omjhOon2Mdv9k5mOoFIKwVcbT1bICqWYEJquLPbtrPcwXTgrd1rG39d88VeuPlqyPTgyA3lg=w1280",
-    "links_41": "https://lh3.googleusercontent.com/sitesv/AG8ngQVZVGJ7TbM4Bs3D7OR3TlASpY0UsRe6cqmY_6gok87Hqm8_ecAy_IlnyRpx-ixULFguo2Ljk_M2s6mVDkbZaisZ3KiHbGenQNVMOauYWMpZkdV9AuOb-lBAxnuXLI6QEeiwPVa4wu8dBdu10hdd2o-hkFFzx3JvLHlc86P7ncBuB6E7f7UhdOajX63TBCfq481kiM4vNMShA1Qld3wmpWXKA1BjlBkGlt79dEb8hZ0=w1280",
-    "links_42": "https://lh3.googleusercontent.com/sitesv/AG8ngQWCGXwvO38A1dXtloEY3x1mgnwdE1quKU8lEiD32NF8R48zbe0GsGFN3I9jRw3aRSqXwNxWU_vpwnG1-On_uJQfEYq-zEqYINIdBj2I1gSO66nWO3dV54zHWYMMz8H1dMpfSxLS2wVJzACkdvQtY_QqoJtW3a63Gh_kqM_wyXYcQAvmJJqx3QsCwQmMBfB7IaehshTVppeaQiuJsy2JYdr-eWbVYYQ5Y2jS7fSiz40=w1280",
-    "meetings__oct-2026-sparcs-xiv__program-sparcs-xiv_43": "https://www.google.com/images/icons/product/drive-32.png",
-    "meetings__oct-2026-sparcs-xiv__sparcs-sparcs-xiv_44": "https://lh3.googleusercontent.com/sitesv/AG8ngQVvITUxbJGUY6iuHC1ntkNHIXU_ioHU6JF7QPsTPleFF3H3eyAIhTTWzB1xohGNXzYaRQbiY6rZxG62xgIGpQElku13-TnQs_CXdLrRVmWnraJplCuqcUPF81Lg4CdriYgTIjMncqUzysorjz3bgANrJdcIl4BB75vbhlquFL1_u-HwikY61XKNksoaTneBbfAX1U-cSKIebXoduKq2D8NUa-xUeJkTgJIDJBiG=w1280",
-    "meetings__oct-2026-sparcs-xiv__logistics-sparcs-xiv_45": "https://lh3.googleusercontent.com/sitesv/AG8ngQWIgJHvMYzVD8zNrZOGQt2ufl_ZixNLUtC2i4crq6EsnCl-QKNiXsZUbC_5D-WbpP3uNHDqU08onKwWk5zzxbT9GVPLBsa1_ZpVuQA7w0R4c6JshTRBArPircU1VD2WJE-Ihq8heYBaTpxKyAvbpH6RqyL8o_4WsJYNtGMM4ETr5ujguAUHBnqCn1T046O0p-LIYN3ZkARsQYdjIefvRdp9sRlX8Cwcc3rkSkgYDfU=w1280",
-    "meetings__easka-2023__program_46": "https://www.google.com/images/icons/product/drive-32.png",
-    "meetings__easka-2023__program_47": "https://www.google.com/images/icons/product/drive-32.png",
-    "meetings__easka-2023__logistics_48": "https://www.google.com/images/icons/product/drive-32.png",
-    "meetings__easka-2023__logistics_49": "https://www.google.com/images/icons/product/drive-32.png",
-    "meetings__easka-2023__logistics_50": "https://www.google.com/images/icons/product/drive-32.png",
-    "meetings__easka-2023__logistics_51": "https://www.google.com/images/icons/product/drive-32.png",
-    "meetings__easka-2023__logistics_52": "https://www.google.com/images/icons/product/drive-32.png"
+    "home_bg00": "https://lh3.googleusercontent.com/sitesv/AG8ngQXQdIQTb0QJLU5C-e-4yEdupaIqgf5oXM50B2e-vgTDEE6wyDJHDgVU1_H96B8kxZ5coVbjn2Cx9QKYbMdO3gaPwdz4JmrrDKy8Vplxj7y8vCI-1Uu-fx2uLH3H84sxZgct7oHdm4RVIhG1OAzUjRZw-xB0GQgLSXkz71rTe9Bhht7prB3hcsw62VMVZ6U=w16383",
+    "ska-korea__ska_bg01": "https://lh3.googleusercontent.com/sitesv/AG8ngQX1TjPj0WKRewmw_eGKsOeZ1CCKVGGPf5L7D9hj8Ekm71QFvIRQMq9iW8U46-6Q22ZJdrgCiBjQb8Zp5d0KxL-JGx9tusf99OO1rXswd08WecywB5lcoiqvdt8A3jdIJpnFUvcJW791kqeaa_dDHjDOgyeC5UDhvorScyQ4lv1Bskz92GSwLGRMn4nStKo=w16383",
+    "ska-korea__ska_02": "https://lh3.googleusercontent.com/sitesv/AG8ngQVaV5l12769tncYFgNsrjxVKgyaBj0n8llnHxkhzfm_hnAmHt3B_7Ir68_o6fbpC9mlTudsGp-k9Ksj_Fcj2pBpBm6xIm42PIgh5VDVosJ72BhZNrL5OVyiXpjQIJk2QulJtjULhnzWZr92TIQok8OQ0QJsU3hOrc9UukHhDk5eq9Hj3qzWhQK5xyYNSA9k5_zcGn2Qy-oFmRC48J9GMqlk_wbnf2DSblZ_6tk2LyQ=w1280",
+    "ska-korea__ska_03": "https://lh3.googleusercontent.com/sitesv/AG8ngQW-esBglzi_DPkEw23dWdGnvmtiMeskyPpeogY_fgTHcPoqO2v4fIiTYCbtwjPqb6-t19cC61ji75VdrJ9XegmWKq18klnCpSmLZkeQSTKw33N4ywm1pTySbK34r7X3oQXOpHKjR36uHPGdPu_QsltYBKS_Z1QFufajTHmwV9fubql-VFz3gYTjmUCwr9DAbziCrFXXm5nJSDQMgjS3_yqA8DG_Vz9_bhukQZFow2Y=w1280",
+    "ska-korea__ska_04": "https://www.google.com/images/icons/product/drive-32.png",
+    "ska-korea__ska_bg05": "https://drive.google.com/thumbnail?id=1YvsyXIqwxEYBn6G78bm-Z376RlomqKSS&sz=w1469-h914-p-k-nu",
+    "ska-korea__ska-korea_bg06": "https://lh3.googleusercontent.com/sitesv/AG8ngQXQdIQTb0QJLU5C-e-4yEdupaIqgf5oXM50B2e-vgTDEE6wyDJHDgVU1_H96B8kxZ5coVbjn2Cx9QKYbMdO3gaPwdz4JmrrDKy8Vplxj7y8vCI-1Uu-fx2uLH3H84sxZgct7oHdm4RVIhG1OAzUjRZw-xB0GQgLSXkz71rTe9Bhht7prB3hcsw62VMVZ6U=w16383",
+    "ska-korea__ska-in-korean-media_bg07": "https://ssl.gstatic.com/atari/images/simple-header-blended.png",
+    "science_bg08": "https://lh3.googleusercontent.com/sitesv/AG8ngQXQdIQTb0QJLU5C-e-4yEdupaIqgf5oXM50B2e-vgTDEE6wyDJHDgVU1_H96B8kxZ5coVbjn2Cx9QKYbMdO3gaPwdz4JmrrDKy8Vplxj7y8vCI-1Uu-fx2uLH3H84sxZgct7oHdm4RVIhG1OAzUjRZw-xB0GQgLSXkz71rTe9Bhht7prB3hcsw62VMVZ6U=w16383",
+    "science__ska-science-working-groups_bg09": "https://lh3.googleusercontent.com/sitesv/AG8ngQU5tbV9hQj3fRzdSJYRyC1MC3x2lPoZ2wFIJlN447ouuS-FVKax6_m35vSi_PinI-oRQAYuH4Z0xgUgSwoinU-JKFDfpY4-9lH5LatiZkGpg5ecL_HzlSWs3lDkP6oceMixm_yvLX6OkuIP0fEO6_3-TJ8TV9TfpAVmjO_6fZo6HiCbi_6K1oBlRW1TTvA=w16383",
+    "science__ska-science-working-groups_10": "https://lh3.googleusercontent.com/sitesv/AG8ngQXD5lZ5QBwqVgqGYPO9LksV1Oc6qrcybgD-cxNbQJo6avJhytJ8hGE_MRqJC9s-jYYE8YnWcGdF1S-pqkRafN4c_KsubOJnQGOY2VclzHtJefL9q-ysRk6UlAyQTRFPegKpA2-RLQA1gYuF-TD6vTX9UYFh2cBpBScjWDHjIwBuV5ZFPF82mWRm8IKusWJxYnHqGtBSL2xGUYTwfpfruyke9SJ0dJuhunSspa4E=w1280",
+    "science__data-archives_bg11": "https://lh3.googleusercontent.com/sitesv/AG8ngQU5tbV9hQj3fRzdSJYRyC1MC3x2lPoZ2wFIJlN447ouuS-FVKax6_m35vSi_PinI-oRQAYuH4Z0xgUgSwoinU-JKFDfpY4-9lH5LatiZkGpg5ecL_HzlSWs3lDkP6oceMixm_yvLX6OkuIP0fEO6_3-TJ8TV9TfpAVmjO_6fZo6HiCbi_6K1oBlRW1TTvA=w16383",
+    "src_bg12": "https://lh3.googleusercontent.com/sitesv/AG8ngQU5tbV9hQj3fRzdSJYRyC1MC3x2lPoZ2wFIJlN447ouuS-FVKax6_m35vSi_PinI-oRQAYuH4Z0xgUgSwoinU-JKFDfpY4-9lH5LatiZkGpg5ecL_HzlSWs3lDkP6oceMixm_yvLX6OkuIP0fEO6_3-TJ8TV9TfpAVmjO_6fZo6HiCbi_6K1oBlRW1TTvA=w16383",
+    "src_13": "https://lh3.googleusercontent.com/sitesv/AG8ngQVIkWJnL9r79Ft-9Mbdpfg9t9Iv1ZH-GRzlmPz_EpvusbKJUbXtL5Hi2OB79G4QAqegE55YsbJuI5OjJXPExG49ffH3cY-TEIN47BK_adU70Ei2p6uY58GckR5tr0ID5MQDRvOmuQN9G47VMqWgLrzM6C9JyHdzNEM93bwKcHvPxeVMjecDbieVBTtviI6RxfsRZgAo3z82ClJ2TRL8u00VaBBm4FPT2u8D7O2Wzrk=w1280",
+    "src_14": "https://lh3.googleusercontent.com/sitesv/AG8ngQUnYEu56Fu2s5k0LbQf3Ysf8YDwle9XftR7SoCn7TnXTzqqu2W3zbYasmJ3c8CNv3rERFB0Uhym0kTUKphXPTtoXD0yUKNabmrcWYA2tsKq8yfflyBbxnH3BZ9V8iDerwgJawHepIAVW0IG355bLZTCGcZ0s6OOEoY3RqiHFnvZUwLtEfYnbzmK0NvsqkU2253U0BFk1UpULoP1uOzkc5y_FXlUS_ks3_b85_7va_4=w1280",
+    "src__srcnet-overview_bg15": "https://lh3.googleusercontent.com/sitesv/AG8ngQU5tbV9hQj3fRzdSJYRyC1MC3x2lPoZ2wFIJlN447ouuS-FVKax6_m35vSi_PinI-oRQAYuH4Z0xgUgSwoinU-JKFDfpY4-9lH5LatiZkGpg5ecL_HzlSWs3lDkP6oceMixm_yvLX6OkuIP0fEO6_3-TJ8TV9TfpAVmjO_6fZo6HiCbi_6K1oBlRW1TTvA=w16383",
+    "src__data-resources_bg16": "https://lh3.googleusercontent.com/sitesv/AG8ngQU5tbV9hQj3fRzdSJYRyC1MC3x2lPoZ2wFIJlN447ouuS-FVKax6_m35vSi_PinI-oRQAYuH4Z0xgUgSwoinU-JKFDfpY4-9lH5LatiZkGpg5ecL_HzlSWs3lDkP6oceMixm_yvLX6OkuIP0fEO6_3-TJ8TV9TfpAVmjO_6fZo6HiCbi_6K1oBlRW1TTvA=w16383",
+    "src__using-srcnet_bg17": "https://lh3.googleusercontent.com/sitesv/AG8ngQU5tbV9hQj3fRzdSJYRyC1MC3x2lPoZ2wFIJlN447ouuS-FVKax6_m35vSi_PinI-oRQAYuH4Z0xgUgSwoinU-JKFDfpY4-9lH5LatiZkGpg5ecL_HzlSWs3lDkP6oceMixm_yvLX6OkuIP0fEO6_3-TJ8TV9TfpAVmjO_6fZo6HiCbi_6K1oBlRW1TTvA=w16383",
+    "src__korea-src_bg18": "https://lh3.googleusercontent.com/sitesv/AG8ngQU5tbV9hQj3fRzdSJYRyC1MC3x2lPoZ2wFIJlN447ouuS-FVKax6_m35vSi_PinI-oRQAYuH4Z0xgUgSwoinU-JKFDfpY4-9lH5LatiZkGpg5ecL_HzlSWs3lDkP6oceMixm_yvLX6OkuIP0fEO6_3-TJ8TV9TfpAVmjO_6fZo6HiCbi_6K1oBlRW1TTvA=w16383",
+    "src__tutorials_bg19": "https://lh3.googleusercontent.com/sitesv/AG8ngQU5tbV9hQj3fRzdSJYRyC1MC3x2lPoZ2wFIJlN447ouuS-FVKax6_m35vSi_PinI-oRQAYuH4Z0xgUgSwoinU-JKFDfpY4-9lH5LatiZkGpg5ecL_HzlSWs3lDkP6oceMixm_yvLX6OkuIP0fEO6_3-TJ8TV9TfpAVmjO_6fZo6HiCbi_6K1oBlRW1TTvA=w16383",
+    "meetings_bg20": "https://lh3.googleusercontent.com/sitesv/AG8ngQWmUcG_3Wi-gS6cCNmltBj3AoU7MMGXdfBzNFk-7pKakpOZFU1_IzWNV_fGqsokgeXA7HG9p3cM4b2cO3O42_gCQ_PhyLMLZdIHW9KcA15hkfQe1WhP8S5-4Z4vPuYk_QxNMYiCyBJtFivApBW8LMxMmWlKYaa5toUaHB6_l52Qu_SQ_4svaDhpVYUYEfc=w16383",
+    "meetings__oct-2026-sparcs-xiv_21": "https://lh3.googleusercontent.com/sitesv/AG8ngQXk4lWbIvmS6ik-wpmXGv9q_HtJ1kJZyudccHX8D_cQTM_MY-fkyGamgos-hN781MIWFP5OC4b0_ugv6X2BGuyCSbRXmG2ok6ouJMt8HDRAQYFWbI7WkpatSUZeLP75JPt9BtEdokmAr9tWdQaPU5gAHEAqAzArZCPQ4O8M5SK5ZbBtNx5hUGmFLEAUuQQL9ci3KTs-N1gfyDhqeIBfJnH4DCEVmpTNr9yV8CAC8KI=w1280",
+    "meetings__oct-2026-sparcs-xiv_22": "https://lh3.googleusercontent.com/sitesv/AG8ngQWxzhxm4FcW8qV3YmIi_u3UQ5dt5Q_mwjjQID-6i20UNTc76D_5OowHEji0XQHOTiis-NR9qCovfy0sn2JVdI-YrXB323HViFlfZEp7baaUXLKs_2hA-SecfDJ0vOPJ_ibKn7sv-1BbjAKNlzXHVUGPuUK7d8PmGshjbpis0snog37F5uEgYnZw-ZKZnm9qKC31-0AJJcFd3rJGq-LBxkW-NV7LCnP3went7cr_=w1280",
+    "meetings__oct-2026-sparcs-xiv_23": "https://lh3.googleusercontent.com/sitesv/AG8ngQVgOIAAYy_TwCqe540RwNYsF2wU1F-wmFsDYgHeb9RPAPwRfenTPCrhlKHF6lbxq4OjjSRVFICMQqML2VR4Lcqtpk5unMUBaVkkMeema6B3r38Qm1u0dfDzTIrogzvaHttzolDA_FOKYT7M7ss3dKOlOEVzHqeglBn3c8tGPEjE-kaoO7xUi4ZnXaNSdFxmSuWMj58JoEIf1G3w29NzciCxQS9ADlhwM7aQ4A-TyDo=w1280",
+    "meetings__oct-2026-sparcs-xiv_24": "https://lh3.googleusercontent.com/sitesv/AG8ngQU5pjNyMUVaa68ZQYWpjXX613PXPD57ITOtSOM8YzKAl5IzHSXe2hodr7_zhRygzXItjEfCADJXJYFsfO167j5vyPnMDJmFpwSGkAkAL2F2ZLh9nzFyCkfhbTecNASqpUzJEi04h1im0OyIb1f9S-FSTthgVlRm2K6xM8BXG4qcihbrH3B8uJ6GHJQoET79RwX28bbtnxy0HLxtadgFhf0xbqV-WXTbPiZQkDfVzD8=w1280",
+    "meetings__oct-2026-sparcs-xiv_25": "https://lh3.googleusercontent.com/sitesv/AG8ngQVUR-iPNowbCD_sl7JQSJh-TlZTwxqNvEqPCnAd5HFsO1KqqVGA4f1MjzxtAb8wrKT0gfeJFSi_N6FjE6YUiuIdjNtsgqCXTRmszEqPZ25-xusaeQ_1UdRHein3qHTcSSE9jx2_xT4L6jhS6OHnyJrw-IzEAhRspSYWvzwYp8QKCtM_fwV2ef4QFnhdHH8VXUr6ugBCI8NyLv-HW2YmOsKfiUVlb3ll1nuQlH9AOno=w1280",
+    "meetings__aug-2026-ska-korea-summer-workshop_bg26": "https://lh3.googleusercontent.com/sitesv/AG8ngQX3GoTTiTM_zr-3YHu13Ieu7s3OhDLy14LfEfFGaxwVX2yGWRtBHO0nlunuzGjsVOAa721ksCfW5SkWlPlRD4hdaLNqc6DWj1kVU0E2dCm7oLKGBo0nM6vaLV3rkLXih4Y6NQopinSpPJ5h85eBRQRDoYgv_wx4wrc21R-5R-CjnddlDrQUaKivH9t_6q4=w16383",
+    "meetings__aug-2026-ska-korea-summer-workshop_27": "https://lh3.googleusercontent.com/sitesv/AG8ngQWCXAkfLA_uSCRSNffrq2riZHPVEvh3zqETWcHkrSju-pRkZQaWRtlmCjYlS-YkilIxmFnmlg1iUlflH7_M1VeUkS5Yi4bHwY-hSRo3EXo_pEWGZgtFq9g2MW4VRrqPnEtbczYDAA_FlxGN4n2xEFkr7tLHsYcfs4sfoi0tsTyn31rlwsnK3DtPUdVCzqvKZ8tB69Gm1EBCT778LDPADApLHElCkSd8eCdxHVeWHx4=w1280",
+    "meetings__aug-2026-ska-korea-summer-workshop_28": "https://lh3.googleusercontent.com/sitesv/AG8ngQVMRjjofVjbKIIb7r4prQd9AwlV57FHJNLl0VV0htaJFoqpx6ct29T5TqSjOdnKXIdFJ9WW7rohJ0jOGtO9rB6131WfKEz4d_GIZ6EEzXe9VoaTP1jg74sMxOXobRwod3lCunVFYkN9opnmcE2JoxmJroFDxR--q8D70BFBA8GpIqrgmfnrz_MAfinqKNqkxaTldRawzJZHDLBPSu7ruuStsi8L3KvrHWa5tZrK=w1280",
+    "meetings__aug-2026-ska-korea-summer-workshop_29": "https://lh3.googleusercontent.com/sitesv/AG8ngQXrxu9Og32j-wk-h9EUALjFvBdMG8s5QP2YY1vUQ61avM1QcDpxovNVQTWlhwXXQ6Z2lBLuUQFskhSMxoyTeZz1LWJHwkUkKaHUIE9B-Qnz8lJkipLVJkGIK83SUT8VXJXqajdryydRg4F6bY7HrSuBsjuLEbAVbMYM97TM7cWwnI00LCACaPDQBPXrQPOahtOMptcDcRi_5d2SmBCFcjqy7JsdLclKmJVpFaIcGlU=w1280",
+    "meetings__dec-2025-ska-korea-workshop_bg30": "https://lh3.googleusercontent.com/sitesv/AG8ngQVjXXLowV5JlHW0n2UTYDARDeecVOA08LNG9_5Ii6bAc4Z64RzFbgl8yPsRfKlyM68xRGmT1FoZrcRSc-pF7IkDuHIqq33bKUT6pp-Um6zf-FP9rJJ5CyN3i1hM2XG9_TuA7Tb3ubN_Ha-8AZMifnMMQQRThiuy3lw2jHOK2zA66N2pToGILkSvbiWl=w16383",
+    "meetings__dec-2025-ska-korea-workshop_31": "https://lh3.googleusercontent.com/sitesv/AG8ngQU_nKMZ5uGs0ezNANmpAB2b3HIGRMt1nq3WwdtGof64VXI6mGFnBjCvBwWgsdU9XVEcOVlv6yLkEin2_k3eKJ_lvAp27nK9GBujtGNdDxZy_NRzz7rWVoon5TKPI4njgnceTuoAx4ZDbmJErf65E2DgtohT3vcPj4QeshYr83zk4gFzv1m9swhoBne53MPwHlLMc5uvYMjt6Nf57FDo-O6j5ZJ1X242d3mOp1Qp=w1280",
+    "meetings__sep-2025-ska-korea-workshop_bg32": "https://lh3.googleusercontent.com/sitesv/AG8ngQVjXXLowV5JlHW0n2UTYDARDeecVOA08LNG9_5Ii6bAc4Z64RzFbgl8yPsRfKlyM68xRGmT1FoZrcRSc-pF7IkDuHIqq33bKUT6pp-Um6zf-FP9rJJ5CyN3i1hM2XG9_TuA7Tb3ubN_Ha-8AZMifnMMQQRThiuy3lw2jHOK2zA66N2pToGILkSvbiWl=w16383",
+    "meetings__jun-2025-ska-korea-workshop_bg33": "https://lh3.googleusercontent.com/sitesv/AG8ngQVjXXLowV5JlHW0n2UTYDARDeecVOA08LNG9_5Ii6bAc4Z64RzFbgl8yPsRfKlyM68xRGmT1FoZrcRSc-pF7IkDuHIqq33bKUT6pp-Um6zf-FP9rJJ5CyN3i1hM2XG9_TuA7Tb3ubN_Ha-8AZMifnMMQQRThiuy3lw2jHOK2zA66N2pToGILkSvbiWl=w16383",
+    "meetings__jun-2025-ska-korea-workshop_34": "https://www.gstatic.com/images/icons/material/product/1x/sheets_32dp.png",
+    "meetings__jun-2025-ska-korea-workshop_bg35": "https://drive.google.com/thumbnail?id=16h-af3kZbBI8z-PmNZ9moV2O88REqe87MHcuWwSEgOQ&sz=w1469-h565-p-k-nu",
+    "meetings__jun-2025-ska-korea-workshop_36": "https://www.gstatic.com/images/icons/material/product/1x/sheets_32dp.png",
+    "meetings__jun-2025-ska-korea-workshop_bg37": "https://drive.google.com/thumbnail?id=1RHi2yeXtQh0QhWNumct5YhlA79mEY1AFXFpHZGYDN24&sz=w1469-h565-p-k-nu",
+    "meetings__jun-2025-ska-korea-workshop_38": "https://lh3.googleusercontent.com/sitesv/AG8ngQWwmT10pIi3fyt9CeQfGAE6GMKMr8YvwXUF0E1sGtnzuaBY2N3BeYCiS4Ph_QfDUscxRFvufqmt8wV1FYz9NE5VCtwfDHcyCNp8uMJ4UIf5agvMOqCunDXn9An1XVmYbTtQtQE9bxh05w-XeK0H-zDbGoYn3aE0V4X43TJlHvlPj95TC4OOquKIs03BjvqMvDI1ij7BMwvm9TB8Oq1b-DAz7NRBXmQ578G5Mb4amYc=w1280",
+    "meetings__jun-2025-ska-korea-workshop_39": "https://lh3.googleusercontent.com/sitesv/AG8ngQUij_MUDPP0LflL2mLsxqXylDSlfLgjF0hQze71iW0YFTb5L74Eu_RonoAQ3Q8cz4k7OsTBzwf88-asLbHn9UId-9pbQYD9aaO-50ooU9UQz6CVcNYaA3fZ0QcMyaQhmR22nhRH4a3tuEc88kLdKAkOITdXRaXCCQDPAwHsdWlCWdyPGmscBUmaaUpQSJMtCWJM4Ke_s_z67s1qp-pc2XOTjiVoFyv617gHfsr4q8A=w1280",
+    "meetings__jun-2025-ska-korea-workshop_40": "https://lh3.googleusercontent.com/sitesv/AG8ngQX9ltf-8e0xedGBUkCAyYs45Wg4RDnUvqRcFQZC5bBlml6eY5Wzz6J2B4tCxEbhqrQZFyPtc6OB91rf7kg75yYinUB20rY3-59AGxmtmFsUA_U8ws99hR7q3G6vXvqfb4D2jTQyrOxaaQgD-H1Tfllmhwb3BzBnhTOs_KxjVIDYzjdA2n7PzP2hGwuUObhrckooTbdXhrYap-ptrEWNZ1ESExZEhAlH4AUTBpbW=w1280",
+    "meetings__april-2025-kas-spring-ska-special-session_bg41": "https://lh3.googleusercontent.com/sitesv/AG8ngQVJ55U_Ya_RW7keQOmgspvJVRjA-sSnP9zkt7ah3VQPNbdaNKUnALwZQ5ujc2MBwHSERRONdP2P3kWdIWPm3LfQSRTsBKXNsP6IkdeGGPOjaX6HLlUH6KwivtC-3x6GIUMwLG9epmRq520l_SGkI8p1bcAqh6hnH0zKDnYmu3zbBHJ-omsJn5Q98FyV=w16383",
+    "meetings__april-2025-kas-spring-ska-special-session_42": "https://lh3.googleusercontent.com/sitesv/AG8ngQV2BBlGpTXLa2o6jQeohEl82qkLPIfqKCHnIYfM4LJrshuJg3F7UD0aIRdl98WibLrV4zlWQY48ZN6xT4AaLJKqZDvXuzHRkUCeXd9KULdCR6ugkeJkTY7qviTd0FIAQlaOnvsT9ZZTfWMQUUpbNzFToyBEsjQtxLzx7gZULB4q-oWVT_GsHH32CA9JGE6zg-wHyQNO6nOZ5fY2qhyuiBslDmeQfrxCLIDMN5JFMWQ=w1280",
+    "meetings__april-2025-korea-spring-meeting_bg43": "https://lh3.googleusercontent.com/sitesv/AG8ngQVxCEV8Xu5L94oRCAaf7vgK1ysTNlKPMLiqn_YUp5thcalxuhxIfsQss2DWUo0vRafHBWRAl91zMW6T9lyQA2r_Q7s96-mjryjXMS0ydPLyuwOHqcihXAmVEXg6Uhr5RZDV6GAazNA_RPAFQbB6vvcfw3tishovtYyaym7zWiAhJT_uWAdHwX299VJxCT0=w16383",
+    "meetings__dec-2024-ska-korea-winter-meeting_bg44": "https://lh3.googleusercontent.com/sitesv/AG8ngQX2DKHvI0hb-_eywwPawLsAI8R-VyVWRb1ReVM5cXnz8hg9gYsoZ18hd1TNoVpWG7rNMR_GPrDI7nyGa2Z244tm6YY-TqffCWZW2uXcL9UMtbzG6dzOCEbSmlE848-756GFgbwyD6-sFWJZDVTXHNXX_P4NvFrTSf0TpXIDOdBeHNxIUHNXJTd8GZi2=w16383",
+    "meetings__dec-2024-ska-korea-winter-meeting_45": "https://www.gstatic.com/images/icons/material/product/1x/sheets_32dp.png",
+    "meetings__dec-2024-ska-korea-winter-meeting_bg46": "https://drive.google.com/thumbnail?id=1JslrmJ78rJoDWTrqxby0DwVutW1jJcurecPfAwN48xI&sz=w1469-h565-p-k-nu",
+    "meetings__dec-2024-ska-korea-winter-meeting_47": "https://lh3.googleusercontent.com/sitesv/AG8ngQWQSEUf5LelfwiNcHPPvlwBIAVAZHPi0yZgAdH-TCVOOv1nwVTKG0yAxNHXTarxlRY-9kzmb9e0UCIIVKLscwwa7q3x1E5rWNTjkQumM2gI2QRqitAzxfffLCDmC8hFGmB3hsNs6Oq2JV3Asz7qiuArNhpCQztl3xRLvCF1zmYSUHUa2kDY6QueGmM2_uqV6ulVPHISwExBnmptSYLmchfQO0JzaMb3HcXA95AKApM=w1280",
+    "meetings__dec-2024-ska-korea-winter-meeting_48": "https://lh3.googleusercontent.com/sitesv/AG8ngQUzF5JpbrhGoVF2mtOv6rXrOhg0xW2saSr6vyK0dV4GIHAVgJsX6p_9GWtPPPNn5hJ9ZHnR-91LR9yJEr1uF_ZN9cIm-_wCtM2yP1Wjywf2A3K7sJRTEufM6AVCUiuqoJm_hH_R66SwRde--s8PwGg7njodLWpSWqs2NXTGIEB71ZjEjxZq6Y0rxJwNKvm6vinyr3Lo1Dw3KstaOCSYA5HUc1n4B-GDjTaT9JdY=w1280",
+    "meetings__dec-2024-ska-korea-winter-meeting_49": "https://lh3.googleusercontent.com/sitesv/AG8ngQV4aXjqkap9kxMWjxjgCYQswHunOdx5y9YnLodTAAJlJM9gMC-5FhbR7Ue2XZIrKisxuw6jwMBNJA7FUNkaAnQBEw6AxAOugKG4cxeiSete7hRDScUwQXY7iEZdxSv0luK-iyVnMhav8Uq0AtVNNRF6qLA05FhaKJFJ3Mr9S1dEsBNfM7L_RdTMNovZjRY1xP5bzCvBvy_5jXwbit_XkEmXNH15hpzHC57-O7zI=w1280",
+    "meetings__oct-2024-ska-vlbi-workshop_bg50": "https://lh3.googleusercontent.com/sitesv/AG8ngQVfpqjzynLF7g3e55bZBQoaolwXg3Famo6b2JCC8BaflsZNgMUyXqVXx7h5sqI9bciKs5RbJTjILkQQi20E4SsBsR_TEhoVDFavRw-j0sf8Qnh62HN6hsKpRCA_og5w8HNm7zNetk80qa5kKGRAR5hLfvM_ckPKJwvwKtjvnxOBDZmS0bMh7gTGXUH18SQ=w16383",
+    "meetings__oct-2024-ska-vlbi-workshop_51": "https://lh3.googleusercontent.com/sitesv/AG8ngQWPYnCko5rwvokH87UF-ZXm9WOSFMAj67iYDiP2TFmSW8ZWQFUW8YCSry6gIQcUV5PCMIM4w2ZAgc6TBjK7-c-9_nvvFe1FQ1sVoS1ykKMKmP-8wvN-8Dez3jmhG7anAxcmt8XZRc_MZNgLeK6QutjoenSHUU4zdIYA2Pwc_Ed4tqdsmdTJ1zuXrGAxwbo0boSUtLEyBwPCTYg5Deg0h5q5mamzg12i0mOazEs_9Pg=w1280",
+    "meetings__2024jul-ska-korea_bg52": "https://lh3.googleusercontent.com/sitesv/AG8ngQVI5oV_lgvu0uB8yl4JbjTVQ9iF5ChKTvHTxRKohQebwsJRO1zVb9nJw215bTBwXo9y8Q1UXzhS5aEBZiQZ8M2H8A6pG_Gn99HO_vEDtKqgHxGxyCLDYGNnZIm_hgGiaPCIPJuWhYAmCkv4EURT34lQ-OYGmxWXLnxTSCPeVts0Rj6qhbtFzsZ4c9VV6Ho=w16383",
+    "meetings__2024jul-ska-korea_53": "https://lh3.googleusercontent.com/sitesv/AG8ngQX-EOZuzd0SNW5nPmbXLtb7G_qfNn66br7odT2jNjVOhJHczRDZdDXa5rbfFN58cM-xJD2ZfONig4193wyZ1bUx4mIMtbm0T_k5eGNbwOP8YiTPUj1pQJp2WaS4q3h2fxKCz1vIT-1MjKVz6vhfJWNq0UKHDl3DxfNZnPZcHKxMVECER67hkmt-fE2W6k_UnEhcGBZm5R4ofNqKlm7QfxMKs6R1KH6ddOv1obuu0Mc=w1280",
+    "meetings__2024jul-ska-korea_54": "https://lh3.googleusercontent.com/sitesv/AG8ngQXokywF_vbS-4Qoz55Sg_6atIeE0BNQY77XvnGgtaKmbzjff5kaNNGRtjkxIvZI6WVv4zpW_0u8idmLtpZDSiea4C2Qo2Eb4T-31QV0ystbcZdnTh2fHsfxZqOACvg-vSNbGG_TlWh7Bft21D3CztjhBa_5A0je_FcvvGsqFcyBS_zqTgp0c53sycHcqK0jO-8M3qRbTIysgM3YzOVfARVofragyaX3PSCp95U8=w1280",
+    "meetings__april-2024-kas-spring-ska-special-session_bg55": "https://lh3.googleusercontent.com/sitesv/AG8ngQVYG5OSeL8-2_9Jr7lDEGcAGANv2Ld9h9_jwNSPAHehCFwUPtp1DVTzV2gqhkJUTXB2BOLFjvy93NnrdET5hz5_m9ujHyxIbX42u5E0dNvknCI1U1SsnOXoq5x40SPHzlGPdCEGHL8svYoWLdlXwSwKyi3207nm8UBgRIB8upj66x0EoP60rsbtw_f88sg=w16383",
+    "meetings__april-2024-kas-spring-ska-special-session_56": "https://lh3.googleusercontent.com/sitesv/AG8ngQV1K7AG5rBeUxaUfOItoQ_yV8d702Ez0ApLxQ5bxW6mPvLp4bQklx9z-4kv361dGl1N3yNEr0bbNBj3mzmomPJXSeONJjmRkUY8RmyhI2PJOzaYZdExTl11fZkh9jwwWv-eHTEdcOq6uWuIoTLvKS03B_M39hSC0iClviuPlobyCmOG_BFecCvrLPlrdeJt0PHFr5_SmDMohJECjYEm5LViWckEdlNqWa96omNi=w1280",
+    "meetings__april-2024-kas-spring-ska-special-session_57": "https://lh3.googleusercontent.com/sitesv/AG8ngQXFTv_rVpVAGB7X_6UgUgJkIS8MrRA5I8D48zVLVt2O9eSIPpdoFpaBCxL4LlaCBg8kNbEthu1VnMfDfkNgKvWkpLxZSxk2CiOcnSuIRCIDTnvyT4HnBWRGriOwG0tDlY6Vr8U51jTbNZSZdpM5RpP99eCjPg1hTmAYjl-Wzv5N2uTylfHDge_uZw-VhhhJoIfKo9aC02bLt4VEplwiG14Lcbty2EkK3zB0BEvi=w1280",
+    "meetings__2024feb-ska-korea_bg58": "https://lh3.googleusercontent.com/sitesv/AG8ngQX1TjPj0WKRewmw_eGKsOeZ1CCKVGGPf5L7D9hj8Ekm71QFvIRQMq9iW8U46-6Q22ZJdrgCiBjQb8Zp5d0KxL-JGx9tusf99OO1rXswd08WecywB5lcoiqvdt8A3jdIJpnFUvcJW791kqeaa_dDHjDOgyeC5UDhvorScyQ4lv1Bskz92GSwLGRMn4nStKo=w16383",
+    "meetings__easka-2023_59": "https://lh3.googleusercontent.com/sitesv/AG8ngQWr71g6rtiPtxOlNXu_Aw2PFw4j6RDMT0B0YPzDfynqrbNe3VaHWzgJug4_EM80aprfuhNdt4MLep2Q2nlxNl5cDbNOa-ehXycK_BqmqJR0cfJbKiNPmWqhkQlG5pFVV92inJqDjizIXbV73pcFVJOLgY9sRQprhkeZEXUqomjcOLTZkac8RB2vC1CPzVE=w1280",
+    "meetings__easka-2023_60": "https://lh3.googleusercontent.com/sitesv/AG8ngQVflRzL40cWnSJf3wnV03zkYCHKWBLsKI4sq-fx-qZ99HpLJAaK-EAraHrqakb-AcsmpKQiXA2fB2Edk_0QV6VllQxI9L543q55TEMfen_ANw4bNyMEkFnGWMYglYPPCowfao-p6L5XEWGU811vIeBoPc92hZpbrPm5BijHTd463c0Y163DTMegQrX5XxSU2hJEDkmS7U_k0RUYlkY_X07CFbmx2fHdWeVHIXPW=w1280",
+    "meetings__easka-2023_61": "https://lh3.googleusercontent.com/sitesv/AG8ngQX2bBXkxYhhG07okEYiG4JswZHqOyQGOnjtFUYaNYL2_TlsANB26Y3Kpi4CYu7Ekn7V7YD1LkUqNf_ya6S8iSZ2xy-vUgUp0MTQx6_oCvQ3U19ylwwyleOYC-3Z4PuNh99EAb8wbeCr7S0-SRdmkhVAyKZ8DhJm1_JNGXAck1iP7bi7G2LvPgDtLs7tc9KeYP4NIgAmxU41WQCKEbvos0C7_6NiHZgT0YJdNQy2U_I=w1280",
+    "meetings__2023aug-ska-korea_bg62": "https://lh3.googleusercontent.com/sitesv/AG8ngQX1TjPj0WKRewmw_eGKsOeZ1CCKVGGPf5L7D9hj8Ekm71QFvIRQMq9iW8U46-6Q22ZJdrgCiBjQb8Zp5d0KxL-JGx9tusf99OO1rXswd08WecywB5lcoiqvdt8A3jdIJpnFUvcJW791kqeaa_dDHjDOgyeC5UDhvorScyQ4lv1Bskz92GSwLGRMn4nStKo=w16383",
+    "meetings__2023aug-ska-korea_63": "https://lh3.googleusercontent.com/sitesv/AG8ngQUESgxiouAeV6XN5x2tzCixczFguRr9ImIY0ogBctiJ6k7JPhQMmpga-lsCyf8bbzHQ_0fvF0b_zSa-Unu-8Doobnp1SRmgRIXNpp9tizVwJ4RDyWYAXod-hqx3RvfuvY-Sm4K4LAm9Unajo1BKiRfFC1GiN5xoCePsbgyIjG_QOvlFYhKmZwRsMOSnppRnTYlxQ5Qlf1AVUOic65lyEJzKlGhn5WJa8pV4pa_f-oY=w1280",
+    "meetings__2023aug-ska-korea_64": "https://lh3.googleusercontent.com/sitesv/AG8ngQVxXxA2BhykzVd6FylDIPJguKp8b7j0s0rq0Uvb7wbNbMs6lD4qstGENNCwdQ4Uzn_Wl9LXZk0ePWMHgh5kiVxGH2TQ_84IIPzthtm8-ISCYTjhLTM4uta0nibrxeM9NRJUksGf2OJRHGnhIzjnD9OeTvHxy7jK0QNjlyTNgNJjGCbv6Z5BMSq1wcQeZmHOjS2gbyytlTJr05DJwes3-Wc94RZ3xeHhZ8NIJBMFtPY=w1280",
+    "meetings__2023-korsdc-workshop_bg65": "https://lh3.googleusercontent.com/sitesv/AG8ngQX1TjPj0WKRewmw_eGKsOeZ1CCKVGGPf5L7D9hj8Ekm71QFvIRQMq9iW8U46-6Q22ZJdrgCiBjQb8Zp5d0KxL-JGx9tusf99OO1rXswd08WecywB5lcoiqvdt8A3jdIJpnFUvcJW791kqeaa_dDHjDOgyeC5UDhvorScyQ4lv1Bskz92GSwLGRMn4nStKo=w16383",
+    "meetings__2023-korsdc-workshop_66": "https://lh3.googleusercontent.com/sitesv/AG8ngQVHBm-WeYySGwb5PNjlILbzFVNSXgCzg86HIjd4-Pi5WnmCTY06qD7xXfkmrseMCkptKhLES42wxK0CBgWLypXFDNM0GD888TiAYhrHG5ML04K93bRDKKEtNBVMhK5QebSJ6CwOkYQbhMIZuYYqhCdryMym0ztjktsNqKOhzl9YvnfyAY4rYfhBzZLC68MhpViNFlYHs6C4Z1sdhYHQbuU9Zb2wAvFDIaYjcV0wfVc=w1280",
+    "meetings__april-2023-kas-spring-ska-special-session_bg67": "https://lh3.googleusercontent.com/sitesv/AG8ngQWwVWgtdaA-5Wy5c7cC6xu0C_bFRrWo-xdawB0EGfpiNyc9HdpiJujtTOM7AB8Bt8wW3pvIcUroAhpruDicuukgLUr0Hc4rgyVJxVHpD4aAQkIsuu3dHh74ivzd4XEr5jYBwynCTG7ubQkVlS5MmQfKnJirWmS3wJ2nuJL0vSSeqSGd6MlGERnPkiS73zY=w16383",
+    "meetings__april-2023-kas-spring-ska-special-session_68": "https://lh3.googleusercontent.com/sitesv/AG8ngQWQAmg-ucFZrl4i1DAKgCMCm1mIRJDoO1Ge38ETfrhY5azNuKw4gVoKasy_54dwsfI8gZLWlfHCCWLal-8W1DCDEfBYgXblH1T-yhuuV7ML38xOHHcECkn3ClU2DdVgaAk8m72m__VGNcMwBB0PBM6278FaHrRejYXztcztTJqsSDvexE4jAID5TYCl-UeSnoQVnHcXw5Eq3bDAxs-DycECaZKEj1mR5W2nDNbx=w1280",
+    "meetings__jan-2023-ska-korea-winter-meeting_bg69": "https://lh3.googleusercontent.com/sitesv/AG8ngQX1TjPj0WKRewmw_eGKsOeZ1CCKVGGPf5L7D9hj8Ekm71QFvIRQMq9iW8U46-6Q22ZJdrgCiBjQb8Zp5d0KxL-JGx9tusf99OO1rXswd08WecywB5lcoiqvdt8A3jdIJpnFUvcJW791kqeaa_dDHjDOgyeC5UDhvorScyQ4lv1Bskz92GSwLGRMn4nStKo=w16383",
+    "meetings__jan-2023-ska-korea-winter-meeting_70": "https://lh3.googleusercontent.com/sitesv/AG8ngQWGCn9iT47w12UYZyI6M5e3uaWt4ceV-crzBYmnFTxomu8zyLse_2aFCRSdub3xXsUXf9DAL4gHbrWOnAjmO3C4itqo2B3GArGC82esmOz5IFIM3DnmKg8pxpTgZTsOqLfk0rgFBqY4a1jFC6JgtnFdxna2NivAw2lQFVZu07_HKI0Wx7PXk3s8A5I8jyksk-4X6DbonQotbAMvK7qdZ6vO05q6VCnoKFymS17mKo8=w1280",
+    "newsletters_bg71": "https://lh3.googleusercontent.com/sitesv/AG8ngQWOOPWsJhPw8jlXomh8pYdWD4U71stGBcA12SqajUp3WoF23ndmze5ywDe7Q7iuo4xLNeS_ASd5x5IXLgxys2AfZq0PW-ckp16FpCiG2WgwgyMdm_H5ibc5l8FokcEpeoG0abT93GAsDgv7wIzkpV5R0hiN4V4dLfJn2O1JBohw7k24eSnDRGWdBdpoG4Y=w16383",
+    "newsletters_72": "https://www.google.com/images/icons/product/drive-32.png",
+    "newsletters_bg73": "https://drive.google.com/thumbnail?id=140emodFI5g8sFrxddsTDpo6uv443UL47&sz=w1344-h1051-p-k-nu",
+    "talks_bg74": "https://lh3.googleusercontent.com/sitesv/AG8ngQUOaasS6hZH45rFnMA2tMPkUYpZJRJGaz-1sTzXKqA0rTQTJ6nYIJKM6mxvl18NCGt3Pc4VP2imiL50160-sPFKVLgSQ-FEobN7z6GeNY8N5pNxQhJakMBqTROnHIe8kt5gahG9XVcAb6UeGuYcNnsOo2T31R8BJGIn3MKtdu7pl2zhepXEi8yOEU_2=w16383",
+    "links_bg75": "https://lh3.googleusercontent.com/sitesv/AG8ngQVdGhRoE2LfdQ2SZ_-0mpwtzKKiWj3G5wBNe9SXrxAQlCIkcC32Klueh9RCp72MK2fw1nXmrU5MQHIFyZ6yoila_pWenRsFGvW7zjrNodKLoIkkZgzOrAl_l0GIwyvBCA-QX1c06QMrFFgWFPYhSNu3VbdKV84L_2ayKk963ylhZAIz5muZI7nW6g=w16383",
+    "links_76": "https://lh3.googleusercontent.com/sitesv/AG8ngQUtg_IwW8YpyBo7yQdWsA4waNgRDXbrbZ_9UsaTriYJ--ci72HSaClejoi-YhREUwVY_zzT-r3N5hW4DmD7kTl5B3ql96IFvMUcW_xK--M8n_sNow5PlqRIrc98T4ObW3WR0R5_27kAx1ITybYBZMA4eqZbVGaUiCF8LWHjHOh1mURaKeL8Gnp1_QecYY6m8CIW958upSOQy5HdsWZVDWpwejy9YNVbhlYFUmSL=w1280",
+    "links_77": "https://lh3.googleusercontent.com/sitesv/AG8ngQUW8owV4O2Yy4HIQ8rzit5pmIUkZgJTIKHHrx0BzcsplWgf12BoEZoAIUNHbc28Ae4hseN3vltW9TQJF6OGjhT3Dp4bcUTZTvNjat0KWKFLLj2fXOh20PrT_08HdlOg74weqXoMCw85453157xVmtJfWrgA7q74s_qzvQSig1TptJrUC_RvgMpKEFp0vrakM2hkpKcg1DrkdhYrUwI5VvXGdIBFhQk2IEmlqnWOm_E=w1280",
+    "links_78": "https://lh3.googleusercontent.com/sitesv/AG8ngQX4xQfWfzcgJoqlnb_4UNQ9XZ_J8jO4o-CeYi6824d1onyIi1V1sqWBNZlJf92p2mQlWEH7DXp8c_U0UDTKZHZiZz8UYK1wXr3QJ2xAo77ZelXa1xuB65zK_DbrMQ4dT3M1XqhA_t0E4EDt0dyvGyOkOArCWbDOPUIZbnsFFBXOp6Vse-RZZL_A5LdH24Zwg9qiK4XSdaxTbblh4A9vht-lsk6lU1uPUsALl1jD9oE=w1280",
+    "links_79": "https://lh3.googleusercontent.com/sitesv/AG8ngQXIiVZEoqLr6iMHtoxOAbr8szqGIPQyvDb_YN5LtVQxGCPZIVJc8TQ1Z1eCZBMS78uvENoo1Pd55DLkiM_tYUIPyDadVYRxmRiV-boAlYretxPparn42lCiQPIu9Z2bVbeuJJtvrtI-opgX8a1Vt5FmNXJ8rhnws1HohS5LLpgO_2WUy1jFqu8l9YViWNYFczn4ayKtHz2iqicM3EusTNH2itqisaikMWCldpc5S-0=w1280",
+    "meetings__oct-2026-sparcs-xiv__program-sparcs-xiv_80": "https://www.google.com/images/icons/product/drive-32.png",
+    "meetings__oct-2026-sparcs-xiv__program-sparcs-xiv_bg81": "https://drive.google.com/thumbnail?id=1jthpXjSodS_KBGqGfGbSPCncEk8D-0HR&sz=w1469-h736-p-k-nu",
+    "meetings__oct-2026-sparcs-xiv__sparcs-sparcs-xiv_82": "https://lh3.googleusercontent.com/sitesv/AG8ngQUFocHqyc9woCJX0gcwOeDuzXcXvhbM9DoB0Z-Fnfr6Aexjtt6ekJBs6vkA6RZvLhxNXFIzOes361hbhUHcOzMBhLLgglfJoHdqvRUpt5MFS1ZNomWEnSI1b3kIcOLlkCzXbvQEA1Tr0PkP11y44arR5fubiwdtXyW6Zcr2_IH3h36UYAlJhVzXaUkyp46O92gVSOG3UrXYmH5ad6bMcXFHUxg9Ax1cSgR1g4Al=w1280",
+    "meetings__oct-2026-sparcs-xiv__logistics-sparcs-xiv_83": "https://lh3.googleusercontent.com/sitesv/AG8ngQW7rk03Bzn9SPp3dvliv7uuldPUvPYv1UZehHjEVlL0InW8Xd3IhW5DU_FLuw1WBVcAjrX-lKlTuoLRP87VmKlK-3nypwxzxhBYYIA7RI9yce_3TBQEu8DXSdgpXEq4QmoH0n6AuDQsfcNdn_-kAVi6nkad7xvVa3n7K1EjgCu6MQSODXU9olAhCwFgY8pTnqGZbusgZvjPPRg07x79APvjI7Sv5hRTXPrSZ8t6bwc=w1280",
+    "meetings__easka-2023__program_84": "https://www.google.com/images/icons/product/drive-32.png",
+    "meetings__easka-2023__program_85": "https://www.google.com/images/icons/product/drive-32.png",
+    "meetings__easka-2023__program_bg86": "https://drive.google.com/thumbnail?id=1m6vjAD7gfyh8WgNIo0t-mReaD106ZkB7&sz=w1469-h1309-p-k-nu",
+    "meetings__easka-2023__program_bg87": "https://drive.google.com/thumbnail?id=1Tkzm98e97vHPxVUxkPDRiPuBcsRu-Fz8&sz=w1469-h1300-p-k-nu",
+    "meetings__easka-2023__logistics_88": "https://www.google.com/images/icons/product/drive-32.png",
+    "meetings__easka-2023__logistics_bg89": "https://drive.google.com/thumbnail?id=1ME8D7EhhcUCps-XBEmUAPXOVDUfUP5oh&sz=w1469-h638-p-k-nu",
+    "meetings__easka-2023__logistics_90": "https://www.google.com/images/icons/product/drive-32.png",
+    "meetings__easka-2023__logistics_bg91": "https://drive.google.com/thumbnail?id=1cwMhJi_smh9Jfg_XA6aqeytxgaE95qyp&sz=w1469-h722-p-k-nu",
+    "meetings__easka-2023__logistics_92": "https://www.google.com/images/icons/product/drive-32.png",
+    "meetings__easka-2023__logistics_93": "https://www.google.com/images/icons/product/drive-32.png",
+    "meetings__easka-2023__logistics_94": "https://www.google.com/images/icons/product/drive-32.png",
+    "meetings__easka-2023__logistics_bg95": "https://drive.google.com/thumbnail?id=1VpmDOOqMPZSHuh19KuoEJ7o8gMJAkvhW&sz=w967-h656-p-k-nu",
+    "meetings__easka-2023__logistics_bg96": "https://drive.google.com/thumbnail?id=1FU7MjtmPfEY5eefNyRPQjrH_gVVasKUH&sz=w967-h677-p-k-nu",
+    "meetings__easka-2023__logistics_bg97": "https://drive.google.com/thumbnail?id=1JmyoXiQcebDlzKWwxsI5lMdXqPmJPeNE&sz=w967-h539-p-k-nu"
   }
 }

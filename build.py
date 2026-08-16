@@ -48,6 +48,7 @@ def fix_images(html: str, imgs: dict[str, str]) -> str:
         name = imgs.get(m.group(1))
         return f'"/img/{name}"' if name else '""'
     html = re.sub(r'"images/([\w.-]+)"', sub, html)
+    # 마크다운 이미지 ![](images/KEY) 와 CSS background-image: url(images/KEY)
     html = re.sub(r'\(images/([\w.-]+)\)',
                   lambda m: f'(/img/{imgs[m.group(1)]})' if m.group(1) in imgs else '()', html)
     # 내려받지 못한 이미지는 빈 태그로 남기지 않는다

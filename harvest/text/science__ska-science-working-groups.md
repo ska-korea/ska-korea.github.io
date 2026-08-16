@@ -27,4 +27,4 @@
 
 [https://www.skao.int/en/science-users/science-working-groups](https://www.skao.int/en/science-users/science-working-groups)
 
-![](images/science__ska-science-working-groups_03)
+![](images/science__ska-science-working-groups_10)

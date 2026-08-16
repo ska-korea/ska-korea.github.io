@@ -138,6 +138,21 @@ def clean(node: Tag, page_path: str, images: dict) -> None:
         img["src"] = f"images/{key}"
         img["loading"] = "lazy"
 
+    # 배경 이미지도 내려받아 로컬 경로로 바꾼다.
+    # ★ Google의 서명 URL은 같은 이미지라도 요청할 때마다 값이 달라진다. 그대로 두면
+    #   내용이 하나도 안 바뀐 날에도 매 수확이 '변경'으로 잡혀 30분마다 커밋·재배포가 돈다.
+    for t in node.find_all(style=True):
+        def swap(m):
+            url = m.group(1).strip("'\" ")
+            if not url.startswith("http"):
+                return m.group(0)
+            key = f"{slug_of(page_path)}_bg{len(images):02d}"
+            images[key] = url
+            return f"url(images/{key})"
+        new = re.sub(r"url\(([^)]+)\)", swap, t["style"])
+        if new != t["style"]:
+            t["style"] = new
+
     for a in node.find_all("a", href=True):
         p = norm(a["href"])
         if p is not None:

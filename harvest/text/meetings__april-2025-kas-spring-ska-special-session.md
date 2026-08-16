@@ -12,4 +12,4 @@
 
 봄 학술대회 전체 프로그램과 초록 링크 https://wevicl.com/s/8q3LGN7ycM
 
-![](images/meetings__april-2025-kas-spring-ska-special-session_20)
+![](images/meetings__april-2025-kas-spring-ska-special-session_42)

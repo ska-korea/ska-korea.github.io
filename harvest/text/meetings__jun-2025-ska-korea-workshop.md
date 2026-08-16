@@ -19,17 +19,17 @@ Program (as of June 24)
 
 Link for the presentation files: https://drive.google.com/drive/folders/1Rne8i7QSG3gmzOClmTLwa87ByVTQuU3y?usp=sharing
 
-![](images/meetings__jun-2025-ska-korea-workshop_15)
+![](images/meetings__jun-2025-ska-korea-workshop_34)
 2025 SKA-Korea Summer Workshop Program
 
 Participants (as of June 24)
 
-![](images/meetings__jun-2025-ska-korea-workshop_16)
+![](images/meetings__jun-2025-ska-korea-workshop_36)
 2025 SKA-Korea Summer Workshop Participants
 
 Group Photo
 
-![](images/meetings__jun-2025-ska-korea-workshop_17)
+![](images/meetings__jun-2025-ska-korea-workshop_38)
 
 Scientific Organizing Committee
 
@@ -60,7 +60,7 @@ Contact Min-Young Lee (mlee@kasi.re.kr)
 
 Sponsors
 
-![](images/meetings__jun-2025-ska-korea-workshop_18)
+![](images/meetings__jun-2025-ska-korea-workshop_39)
 Sponsors
 
-![](images/meetings__jun-2025-ska-korea-workshop_19)
+![](images/meetings__jun-2025-ska-korea-workshop_40)

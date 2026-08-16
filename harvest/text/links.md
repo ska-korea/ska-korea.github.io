@@ -4,7 +4,7 @@
 
 # Useful links
 
-![](images/links_39)
+![](images/links_76)
 
 # SKAO
 
@@ -18,7 +18,7 @@ SKAO website: [https://www.skao.int/en](https://www.skao.int/en)
 
 (image credit: SKAO)
 
-![](images/links_40)
+![](images/links_77)
 
 # ASKAP
 
@@ -33,7 +33,7 @@ ASKAP website: [https://www.csiro.au/en/about/facilities-collections/ATNF/ASKAP-
 
 (image credit: CSIRO)
 
-![](images/links_41)
+![](images/links_78)
 
 # MeerKAT
 
@@ -46,7 +46,7 @@ MeerKAT website: [https://www.sarao.ac.za/science/meerkat/](https://www.sarao.ac
 
 (image credit: SARAO)
 
-![](images/links_42)
+![](images/links_79)
 
 # CARTA
 

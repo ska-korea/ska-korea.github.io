@@ -219,8 +219,8 @@ Contact: hiyoon (at) kasi.re.kr
 
 Sponsors
 
-![](images/meetings__aug-2026-ska-korea-summer-workshop_11)
-![](images/meetings__aug-2026-ska-korea-summer-workshop_12)
-![](images/meetings__aug-2026-ska-korea-summer-workshop_13)
+![](images/meetings__aug-2026-ska-korea-summer-workshop_27)
+![](images/meetings__aug-2026-ska-korea-summer-workshop_28)
+![](images/meetings__aug-2026-ska-korea-summer-workshop_29)
 
 Last edit: 16 Aug 2026 Hyein Yoon
