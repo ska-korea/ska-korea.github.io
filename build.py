@@ -11,6 +11,7 @@
 """
 
 import argparse
+import hashlib
 import http.server
 import json
 import re
@@ -308,6 +309,10 @@ def main() -> int:
     meet_cfg = load_yaml(ROOT / "meetings.yaml") if (ROOT / "meetings.yaml").exists() else {}
     today = date.today()
     site["built"] = today.isoformat()
+    # 스타일시트 주소에 내용 해시를 붙인다. 고치면 주소가 바뀌므로 방문자가
+    # 옛 CSS를 붙들고 있는 일이 없다(GitHub Pages는 10분간 캐시하라고 응답한다).
+    css = ROOT / "static" / "css" / "site.css"
+    site["css_v"] = hashlib.sha1(css.read_bytes()).hexdigest()[:8] if css.exists() else ""
 
     md = markdown.Markdown(extensions=["extra", "attr_list", "toc", "sane_lists"])
     env = Environment(loader=FileSystemLoader(ROOT / "templates"),
