@@ -217,6 +217,37 @@ def collect_talks(md: markdown.Markdown) -> list[dict]:
     return out
 
 
+def collect_newsletters() -> list[dict]:
+    """newsletters.yaml + tools/newsletters.py가 만든 파일에서 소식지 목록을 만든다.
+
+    PDF와 표지·썸네일은 repo에 들어 있다 — 구글 드라이브가 아니라 우리 사이트에서
+    받아가게 하기 위함이다. 파일이 없는 호는 목록에서 조용히 빠진다.
+    """
+    conf_file = ROOT / "newsletters.yaml"
+    files = ROOT / "content" / "newsletters" / "files"
+    if not conf_file.exists() or not files.is_dir():
+        return []
+    conf = load_yaml(conf_file)
+    out = []
+    for issue in conf.get("issues", []):
+        stem = str(issue["date"])
+        pdf = files / f"{stem}.pdf"
+        if not pdf.exists():
+            print(f"  ! 소식지 {stem}: PDF가 없어 목록에서 제외", file=sys.stderr)
+            continue
+        cover, thumb = files / f"{stem}.jpg", files / f"{stem}_t.jpg"
+        out.append({
+            "date": stem,
+            "label": issue.get("label") or stem.replace("-", "년 ") + "월",
+            "pdf": f"/newsletters/files/{pdf.name}",
+            "cover": f"/newsletters/files/{cover.name}" if cover.exists() else None,
+            "thumb": f"/newsletters/files/{thumb.name}" if thumb.exists() else None,
+            "size_mb": round(pdf.stat().st_size / 1024 / 1024, 1),
+        })
+    out.sort(key=lambda i: i["date"], reverse=True)
+    return out
+
+
 def talk_index(talks: list[dict]) -> list[dict]:
     years: list[dict] = []
     for t in talks:
@@ -357,6 +388,7 @@ def main() -> int:
     content = collect_content(md)
     meetings = collect_meetings(meet_cfg.get("meetings", {}) if meet_cfg else {})
     talks = collect_talks(md)
+    newsletters = collect_newsletters()
     for p in content + meetings:
         p["html"] = fix_images(p["html"], imgs)
     index = meeting_index(meetings, today)
@@ -373,7 +405,8 @@ def main() -> int:
             if label:
                 m["title"] = label
 
-    shared = {"meetings": index, "talks": talks, "talk_years": talk_index(talks)}
+    shared = {"meetings": index, "talks": talks, "talk_years": talk_index(talks),
+              "newsletters": newsletters}
     render(env, content, nav_cfg, site, shared)
     render(env, meetings, nav_cfg, site, shared)
     render(env, talks, nav_cfg, site, shared)
@@ -396,9 +429,15 @@ def main() -> int:
         (OUT / "CNAME").write_text(site["domain"] + "\n", encoding="utf-8")
         print(f"  CNAME → {site['domain']}")
 
+    # 소식지 PDF·표지 배포
+    src_nl = ROOT / "content" / "newsletters" / "files"
+    if src_nl.is_dir():
+        shutil.copytree(src_nl, OUT / "newsletters" / "files", dirs_exist_ok=True)
+
     total = len(content) + len(meetings) + len(talks)
     print(f"빌드 완료: {total}쪽 (본문 {len(content)} · 미팅 {len(meetings)} · 발표 {len(talks)}) → {OUT}")
-    print(f"  미팅 {index['count']}건 · 다가오는 일정 {len(index['upcoming'])}건 · 발표 {len(talks)}건")
+    print(f"  미팅 {index['count']}건 · 다가오는 일정 {len(index['upcoming'])}건 · "
+          f"발표 {len(talks)}건 · 소식지 {len(newsletters)}호")
 
     if args.serve:
         import os

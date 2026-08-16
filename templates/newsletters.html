@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block main %}
+<div class="pagehead">
+  <div class="wrap">
+    <h1>{{ page.title }}</h1>
+    {% if page.sub %}<p class="sub">{{ page.sub | sentences }}</p>{% endif %}
+  </div>
+</div>
+
+<div class="band">
+  <div class="wrap">
+    {% if not newsletters %}
+    <div class="callout"><span class="eyebrow">준비 중</span>등록된 소식지가 없습니다.</div>
+    {% else %}
+    {% set latest = newsletters[0] %}
+
+    {# 최신호 — 첫 쪽을 그대로 크게 보여 준다 #}
+    <section class="nl-latest">
+      <a class="nl-cover" href="{{ latest.pdf }}">
+        {% if latest.cover %}<img src="{{ latest.cover }}" alt="{{ latest.label }} 소식지 표지">{% endif %}
+      </a>
+      <div class="nl-meta">
+        <span class="eyebrow">최신호</span>
+        <h2>{{ latest.label }}</h2>
+        <p>SKA Korea 소식지는 SKAO와 국내 커뮤니티 소식, 다가오는 일정과 공고를 전합니다.</p>
+        <div class="btnrow">
+          <a class="btn primary" href="{{ latest.pdf }}">PDF 열기</a>
+        </div>
+        <p class="nl-size mono">PDF · {{ latest.size_mb }} MB</p>
+      </div>
+    </section>
+
+    {% if newsletters | length > 1 %}
+    <section class="nl-past">
+      <span class="eyebrow">지난 호</span>
+      <h2 class="sec">{{ newsletters | length - 1 }}개의 지난 소식지</h2>
+      <div class="nl-grid">
+        {% for n in newsletters[1:] %}
+        <a class="nl-card" href="{{ n.pdf }}">
+          <span class="nl-thumb">
+            {% if n.thumb %}<img src="{{ n.thumb }}" alt="{{ n.label }} 소식지" loading="lazy">{% endif %}
+          </span>
+          <span class="nl-label">{{ n.label }}</span>
+        </a>
+        {% endfor %}
+      </div>
+    </section>
+    {% endif %}
+    {% endif %}
+  </div>
+</div>
+{% endblock %}

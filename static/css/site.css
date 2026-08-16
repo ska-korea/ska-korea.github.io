@@ -411,6 +411,41 @@ ol.steps b { color: var(--navy); }
 }
 
 /* ============================================================
+   소식지 (Newsletters)
+   최신호는 첫 쪽을 그대로 크게, 지난 호는 첫 쪽에서 딴 사진을 썸네일로.
+   ============================================================ */
+.nl-latest { display: grid; grid-template-columns: minmax(0, 380px) minmax(0, 1fr); gap: 44px; align-items: start; }
+.nl-cover {
+  display: block; border: 1px solid var(--line); border-radius: var(--radius);
+  overflow: hidden; box-shadow: 0 18px 44px rgba(7, 0, 104, .13);
+  transition: transform .18s, box-shadow .18s;
+}
+.nl-cover:hover { transform: translateY(-3px); box-shadow: 0 24px 56px rgba(7, 0, 104, .2); }
+.nl-cover img { width: 100%; }
+.nl-meta h2 { font-size: clamp(24px, 3vw, 32px); font-weight: 800; color: var(--navy); letter-spacing: -.028em; margin: 8px 0 12px; }
+.nl-meta p { color: var(--muted); }
+.nl-size { color: var(--faint); font-size: var(--fs-label); margin-top: 16px; }
+
+.nl-past { margin-top: 72px; padding-top: 44px; border-top: 1px solid var(--line); }
+.nl-past h2.sec { margin-bottom: 26px; }
+.nl-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 22px; }
+.nl-card { display: flex; flex-direction: column; gap: 10px; }
+.nl-thumb {
+  display: block; aspect-ratio: 4 / 3; overflow: hidden;
+  border: 1px solid var(--line); border-radius: 12px; background: var(--wash);
+  transition: border-color .16s, box-shadow .16s, transform .16s;
+}
+.nl-thumb img { width: 100%; height: 100%; object-fit: cover; }
+.nl-card:hover .nl-thumb { border-color: var(--navy); box-shadow: 0 12px 28px rgba(7, 0, 104, .14); transform: translateY(-2px); }
+.nl-label { font-size: var(--fs-card); font-weight: 600; color: var(--ink); }
+.nl-card:hover .nl-label { color: var(--magenta); }
+
+@media (max-width: 780px) {
+  .nl-latest { grid-template-columns: 1fr; gap: 26px; }
+  .nl-grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 16px; }
+}
+
+/* ============================================================
    발표 (Talks)
    ============================================================ */
 .talk-item { grid-template-columns: 108px 1fr auto; }

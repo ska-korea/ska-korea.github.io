@@ -1,0 +1,99 @@
+# SKA Korea 소식지 목록.
+#
+# id     구글 드라이브 파일 ID (공유 링크의 /file/d/<여기>/view)
+# date   YYYY-MM. 정렬 기준이자 표시용. 합본호는 시작 달을 적는다.
+# label  화면에 보일 이름. 비우면 date에서 만든다.
+# crop   (선택) 썸네일로 쓸 영역 [x0, y0, x1, y1] — PDF 좌표(pt, A4는 595x842).
+#        비우면 첫 쪽에서 가장 큰 사진을 자동으로 찾아 쓴다.
+#
+# 새 호를 올리려면 맨 위에 세 줄만 추가하고 tools/newsletters.py 를 돌리면 된다.
+
+issues:
+  # id 를 적지 않으면 files/<date>.pdf 가 이미 있는 것으로 보고 그대로 쓴다.
+  # (구글 드라이브에 없고 손으로 받은 호)
+  - date: 2026-06
+    label: 2026년 6월
+
+  - id: 140emodFI5g8sFrxddsTDpo6uv443UL47
+    date: 2026-04
+    label: 2026년 4월
+
+  - id: 1Qllm-8b4swz_CXVTmdZBTB1o3618-SuO
+    date: 2024-09
+    label: 2024년 9/10월
+
+  - id: 1Nur54GUbiutkibT6n_dhSAtzUk9yA2bC
+    date: 2024-07
+    label: 2024년 7/8월
+
+  - id: 1xq1SkWcldX8Wmdx_ii3o958ZsMgVL04e
+    date: 2024-06
+    label: 2024년 6월
+
+  - id: 1tD4ghiaQgZTZ_l9RxvdnHUJ_mSn1fd-S
+    date: 2024-04
+    label: 2024년 4월
+
+  - id: 1iyXs0ypP5UJ96Tdk3Y1ul2uRWk1qIUro
+    date: 2024-03
+    label: 2024년 3월
+
+  - id: 1qc0Tsn40pMleqvWCh0WhFA2Ltlk2xjKS
+    date: 2024-01
+    label: 2024년 1월
+
+  - id: 10hzvcz5KU5QaH2DwuC1-6Dh17CrZZ6t4
+    date: 2023-10
+    label: 2023년 10/11월
+
+  - id: 10G6AM92-kPsMHLltZqzIH7hSelaU-UPA
+    date: 2023-08
+    label: 2023년 8/9월
+
+  - id: 1MBsCKhYfE5FmbejVUYsZqcDfT5hlMb1M
+    date: 2023-07
+    label: 2023년 7월
+
+  - id: 1a-iTXDQDEWcoI-MSGWwAE87rUxpvtfS_
+    date: 2023-06
+    label: 2023년 6월
+
+  - id: 1KpsbvxRGL53Njk-z7sceRkSftveqE8TI
+    date: 2023-05
+    label: 2023년 5월
+
+  - id: 17zCpKCsSYGV33xTL6qnjpvfaz0h6YwYq
+    date: 2023-03
+    label: 2023년 3월
+
+  - id: 1GOX8tOQFhSnnWG-_-5F6F24vC4u_JrGJ
+    date: 2023-02
+    label: 2023년 2월
+
+  - id: 1OoaOTzs7yXA8tD_E7vO9X_3VnT9QDbGE
+    date: 2023-01
+    label: 2023년 1월
+
+  - id: 1MooleduSwDNPRLXtPaEPYvScl8hvnoJb
+    date: 2022-12
+    label: 2022년 12월
+
+  - id: 1Wu2eiJRgzEboNRF0pgT-lFhln99U0ciK
+    date: 2022-10
+    label: 2022년 10월
+
+  - id: 1M9DqVF08Ix-tm3l279rIZSAgDasQ6lwq
+    date: 2022-09
+    label: 2022년 9월
+
+  - id: 1d2ovTg0NUEdFAPY4AWLNWk0MD5SVRxRC
+    date: 2022-08
+    label: 2022년 8월
+
+  - id: 15zNHlB_hZlzsNmbrw_3CSaQWNFIMnGUE
+    date: 2022-07
+    label: 2022년 7월
+
+  - id: 1Zbou_rgiiN6gwVj_BczeIdzr_SmkUDm6
+    date: 2022-06
+    label: 2022년 6월
