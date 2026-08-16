@@ -33,6 +33,15 @@
   --wrap: 1140px;
   --gut: 24px;
   --radius: 14px;
+
+  /* 읽는 글줄의 폭. 글이 담긴 블록은 종류를 가리지 않고 이 폭을 쓴다 —
+     블록마다 폭이 다르면 문단만 일찍 끊긴 것처럼 보인다.
+     ★ rem을 쓴다. ch는 그 요소의 글자 크기를 따라가서, 같은 값이라도
+       제목(26px)에서는 본문(16px)보다 1.6배 넓어진다. 그러면 '한 폭'이 아니다.
+     42rem = 672px ≒ 한글 46자/줄 */
+  --measure: 42rem;
+  /* 리드·부제는 큰 글씨로 짧게 놓는 자리. 이 폭 하나만 쓴다. */
+  --measure-lede: 36rem;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -156,7 +165,7 @@ img { max-width: 100%; height: auto; display: block; }
   font-size: clamp(30px, 4.6vw, 50px); font-weight: 800; line-height: 1.22; letter-spacing: -.035em;
 }
 .hero h1 em { font-style: normal; color: #ff86bb; }
-.hero .lede { margin-top: 18px; font-size: clamp(15px, 1.7vw, 18px); color: #c9c9ea; max-width: 46ch; }
+.hero .lede { margin-top: 18px; font-size: clamp(15px, 1.7vw, 18px); color: #c9c9ea; max-width: var(--measure-lede); }
 .hero .eyebrow { color: #ff9ec9; }
 
 /* ============================================================
@@ -221,9 +230,9 @@ img { max-width: 100%; height: auto; display: block; }
 
 .band > .wrap > .eyebrow + h2 { margin-top: 8px; }
 h2.sec { font-size: clamp(22px, 2.9vw, 31px); font-weight: 800; color: var(--navy); letter-spacing: -.028em; line-height: 1.3; }
-.sec-note { color: var(--muted); margin-top: 10px; max-width: 62ch; }
+.sec-note { color: var(--muted); margin-top: 10px; max-width: var(--measure-lede); }
 
-.prose { max-width: 68ch; }
+.prose { max-width: var(--measure); }
 .prose h2 { font-size: clamp(20px, 2.4vw, 26px); font-weight: 800; color: var(--navy); letter-spacing: -.022em; margin: 42px 0 12px; }
 .prose h3 { font-size: 17.5px; font-weight: 700; color: var(--navy); margin: 30px 0 8px; }
 .prose p { margin: 0 0 15px; }
@@ -235,7 +244,7 @@ h2.sec { font-size: clamp(22px, 2.9vw, 31px); font-weight: 800; color: var(--nav
 .prose strong { color: var(--navy); }
 .prose img { border-radius: 10px; margin: 22px 0; }
 
-.lede-lg { font-size: clamp(17px, 2vw, 20px); line-height: 1.66; color: var(--navy); font-weight: 500; max-width: 60ch; }
+.lede-lg { font-size: clamp(17px, 2vw, 20px); line-height: 1.66; color: var(--navy); font-weight: 500; max-width: var(--measure-lede); }
 
 /* 수치 — 계측기 조판 */
 .figures { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 2px; background: var(--line); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; margin-top: 26px; }
@@ -315,7 +324,10 @@ ol.steps li::before {
   content: counter(s, decimal-leading-zero);
   position: absolute; left: 0; top: 19px; font-size: 13px; font-weight: 600; color: var(--magenta);
 }
-ol.steps b { color: var(--navy); display: block; margin-bottom: 3px; }
+/* 항목 맨 앞의 굵은 글씨만 제목으로 세운다.
+   문장 도중의 강조까지 블록으로 만들면 그 자리에서 줄이 끊긴다. */
+ol.steps li > b:first-child { color: var(--navy); display: block; margin-bottom: 3px; }
+ol.steps b { color: var(--navy); }
 
 /* 두 편을 나란히 두고 견주는 자리 */
 .split { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin: 26px 0; }
@@ -345,13 +357,25 @@ ol.steps b { color: var(--navy); display: block; margin-bottom: 3px; }
   padding: 3px 10px; border-radius: 20px;
 }
 
-/* 조각을 쓰는 페이지는 지면을 넓게 잡되, 읽는 글줄은 68ch로 묶어 둔다.
-   (원고 frontmatter에 wide: true) */
+/* 조각을 쓰는 페이지(원고 frontmatter에 wide: true)는 지면을 넓게 잡는다.
+   다만 글이 담긴 블록은 종류를 가리지 않고 모두 같은 글줄 폭을 쓴다 —
+   문단만 좁고 목록·단계는 끝까지 뻗으면 엉뚱한 데서 줄이 바뀐 것처럼 보인다.
+   폭을 풀어 주는 것은 카드·수치·표처럼 '읽는 글'이 아닌 조각뿐이다. */
 .prose.wide { max-width: none; }
 .prose.wide > p,
-.prose.wide > ul:not([class]),
-.prose.wide > ol:not([class]),
-.prose.wide > blockquote { max-width: 68ch; }
+.prose.wide > ul,
+.prose.wide > ol,
+.prose.wide > h2,
+.prose.wide > h3,
+.prose.wide > .callout,
+.prose.wide > blockquote { max-width: var(--measure); }
+.prose.wide > .cards,
+.prose.wide > .figures,
+.prose.wide > .split,
+.prose.wide > .journey,
+.prose.wide > .chips,
+.prose.wide > .btnrow,
+.prose.wide > .tablewrap { max-width: none; }
 
 @media (max-width: 760px) {
   .split { grid-template-columns: 1fr; }
@@ -405,7 +429,7 @@ ol.steps b { color: var(--navy); display: block; margin-bottom: 3px; }
 .pagehead .crumb { font-size: 12px; color: #9d9dd8; margin-bottom: 10px; }
 .pagehead .crumb a:hover { color: #fff; }
 .pagehead h1 { font-size: clamp(25px, 3.6vw, 38px); font-weight: 800; letter-spacing: -.032em; line-height: 1.25; }
-.pagehead .sub { margin-top: 12px; color: #c9c9ea; max-width: 58ch; font-size: 15.5px; }
+.pagehead .sub { margin-top: 12px; color: #c9c9ea; max-width: var(--measure-lede); font-size: 15.5px; }
 
 /* ============================================================
    표 · 콜아웃
@@ -437,7 +461,7 @@ tbody tr:last-child td { border-bottom: none; }
    원본의 인라인 스타일은 살리되, 조판만 우리 지면에 맞춘다.
    ============================================================ */
 /* 조직위원회가 가운데 정렬로 쓴 원고가 많다. 글줄 폭은 제한하되 단을 가운데 둔다. */
-.harvested { max-width: 74ch; margin-inline: auto; }
+.harvested { max-width: var(--measure); margin-inline: auto; }
 /* Google Sites 원고에는 Arial·Roboto 같은 글꼴이 인라인으로 박혀 온다.
    수확 때 걷어내지만, 새 글꼴이 섞여 들어와도 지면이 흔들리지 않도록 막아 둔다. */
 .harvested, .harvested * { font-family: var(--sans) !important; }
