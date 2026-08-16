@@ -345,10 +345,13 @@ def main() -> int:
                       autoescape=select_autoescape(["html"]), trim_blocks=True, lstrip_blocks=True)
     env.filters["sentences"] = sentences
 
-    if OUT.exists():
-        shutil.rmtree(OUT)
-    OUT.mkdir(parents=True)
+    # _site 폴더 자체는 남기고 안의 것만 비운다.
+    # 폴더를 지웠다 다시 만들면 Dropbox 무시 표시도 함께 사라져, 표시를 붙이기 전
+    # 잠깐 사이에 동기화가 끼어들어 index.html이 밀려나는 일이 있었다.
+    OUT.mkdir(parents=True, exist_ok=True)
     mark_dropbox_ignored(OUT)
+    for child in OUT.iterdir():
+        shutil.rmtree(child) if child.is_dir() else child.unlink()
 
     imgs = image_map()
     content = collect_content(md)

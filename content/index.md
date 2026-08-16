@@ -5,10 +5,21 @@ template: home.html
 description: 한국의 SKA 참여를 잇는 연구자 커뮤니티. SKA 과학, 지역센터(SRC), 국내 모임과 자료 창구를 안내합니다.
 ---
 
-SKA는 영국에 본부를 두고 호주와 남아프리카공화국에 건설되고 있는 차세대 초대형 전파간섭계 국제 협력 프로젝트입니다. 총 유효 면적이 약 1 평방 킬로미터(square kilometre)에 이르도록 설계되었으며, 기존 전파망원경보다 월등히 뛰어난 감도와 넓은 관측 대역을 바탕으로 방대한 관측 자료를 선보일 예정입니다.
+<!-- ★ 아래 국·영문 네 문단은 윤혜인 박사가 작성한 원고다.
+     기존 홈페이지(ska.kasi.re.kr) 첫 화면의 글을 그대로 옮긴 것이며,
+     임의로 고치거나 줄이지 않는다. 고쳐야 하면 작성자와 상의할 것. -->
 
-SKA는 21세기 천문학의 핵심 과제를 겨냥합니다. 빅뱅 이후 물질과 암흑물질의 분포 규명, 별과 은하의 생성 및 진화, 우리은하의 "모든" 펄서를 이용한 중력파 검출, 우주 자기장의 기원과 진화, 그리고 외계 생명체 탐색과 생명의 기원 규명입니다. SKA가 생산할 방대한 관측 자료는 인공지능(AI), 고성능 컴퓨팅(HPC), 데이터 과학 등 첨단 빅데이터 기술의 발전에도 크게 기여할 것으로 기대됩니다.
+SKA는 영국에 본부를 두고 호주와 남아프리카공화국에 건설되고 있는 차세대 초대형 전파간섭계 국제 협력 프로젝트입니다. 천문학, 천체물리학, 우주론은 물론 우주생물학 분야에 새로운 전환점을 가져올 것으로 기대되며, 총 유효 면적이 약 1 평방 킬로미터 (square kilometre)에 이르도록 설계되었습니다. 기존 전파망원경보다 월등히 뛰어난 감도와 넓은 관측 대역을 바탕으로 과학적으로 의미있는 방대한 관측 자료를 선보일 예정입니다. SKA는 21세기 천문학의 핵심 과제인 빅뱅 이후 물질과 암흑물질의 분포 규명, 별과 은하의 생성 및 진화 연구, 우리은하의 "모든" 펄사를 이용한 중력파 검출, 우주 자기장의 기원과 진화 연구, 외계 생명체 탐색과 생명의 기원 규명을 주요 목표로 하고 있습니다. 또한 SKA가 생산할 방대한 규모의 관측 자료는 인공지능 (AI), 고성능 컴퓨팅 (HPC), 데이터 과학 등 첨단 빅데이터 기술의 발전에도 크게 기여할 것으로 예상합니다.
 
-**SKA Korea**는 한국의 SKA 사업 참여를 지원하고 국내 연구 역량을 강화하기 위해 구성된 연구자와 개발자들의 협력 모임입니다. SKA 관련 과학 연구와 기술 개발을 촉진하고, 국내외 공동 연구를 활성화하며, 차세대 연구·기술 인력 양성과 SKA 활용 기반 구축을 목표로 다양한 학술 활동을 수행하고 있습니다.
+### SKA Korea
 
-전파천문학에 국한하지 않습니다. 천문학 및 관련 전 분야의 연구자와 학생, 산업계 기술 전문가 여러분의 참여를 환영합니다.
+SKA Korea는 한국의 SKA 사업 참여를 지원하고 국내 연구 역량을 강화하기 위해 구성된 연구자와 개발자들의 협력 모임입니다. SKA 관련 과학 연구와 기술 개발을 촉진하고, 국내외 공동 연구를 활성화하며, 차세대 연구·기술 인력 양성과 SKA 활용 기반 구축을 목표로 다양한 학술 활동을 수행하고 있습니다. 전파천문학에 국한하지 않고, 천문학 및 관련 전 분야 연구자와 학생, 산업계 기술 전문가 여러분의 적극적인 참여를 환영합니다.
+
+<div class="lang-en" lang="en">
+<span class="eyebrow">English</span>
+
+The Square Kilometre Array (SKA) is a next-generation international radio interferometer project, headquartered in the United Kingdom and currently under construction in Australia and South Africa. Designed with a total effective collecting area of approximately one square kilometre, SKA is expected to transform astronomy, astrophysics, cosmology, and astrobiology. With unprecedented sensitivity and wide frequency coverage, it will deliver scientifically transformative datasets that far surpass the capabilities of existing radio telescopes. SKA aims to address some of the most fundamental questions in 21st-century astronomy, including the distribution of matter and dark matter since the Big Bang, the formation and evolution of stars and galaxies, the detection of gravitational waves through precision timing of pulsars across the Milky Way, the origin and evolution of cosmic magnetic fields, and the search for extraterrestrial life and the origins of life. The enormous volume of data produced by SKA is also expected to drive advances in artificial intelligence (AI), high-performance computing (HPC), data science, and other cutting-edge big data technologies.
+
+SKA Korea is a collaborative network of researchers and developers dedicated to supporting Korea's participation in the SKA project and strengthening the community's research capabilities. It promotes SKA-related science and technology, facilitates national and international collaborations, and organizes a wide range of academic activities to foster the next generation of researchers and technical specialists while advancing the scientific and technical foundations for SKA. We welcome the active participation of researchers, students, and industry experts from astronomy and all related disciplines, not only radio astronomy, but also the broader scientific and technological communities that will contribute to and benefit from SKA.
+
+</div>
