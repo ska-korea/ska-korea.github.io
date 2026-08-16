@@ -1,0 +1,101 @@
+site:
+  title: SKA Korea
+  tagline: 한국 SKA 커뮤니티
+
+  # 맞춤 도메인 — 비워 두면 ska-korea.github.io로 배포된다.
+  # ⚠️ KASI IT가 ska.kasi.re.kr의 CNAME을 ska-korea.github.io로 바꾼 뒤에만 채울 것.
+  #    먼저 채우면 아직 Google을 가리키는 주소로 배포돼 검수를 못 한다.
+  # domain: ska.kasi.re.kr
+
+  tagline_en: SKA KOREA
+  description: 한국의 SKA 참여를 잇는 연구자 커뮤니티입니다. SKA 과학, 지역센터(SRC), 국내 모임과 자료 창구를 한곳에서 안내합니다.
+  owner: 한국천문연구원 · SKA Korea
+
+  hero:
+    headline: SKA를 쓰려는<br>한국 연구자를 위한 <em>창구</em>
+    lede: 인류 최대의 전파망원경이 곧 관측을 시작합니다. 자료를 어떻게 받고 무엇을 할 수 있는지, 국내 커뮤니티가 어디에 모이는지 여기서 확인하세요.
+
+  # ── 서명 요소 ────────────────────────────────────────────
+  # 기존 사이트에서 Links 안쪽에 묻혀 있던 실무 링크를 목적별로 첫 화면에 올린다.
+  # 링크는 전부 기존 홈페이지에서 확인된 것만 쓴다.
+  desk:
+    title: 무엇을 하려 하십니까
+    note: 목적을 고르면 창구로 바로 이어집니다.
+    cards:
+      - task: SKA 자료를 쓰고 싶다
+        what: SKA 관측 자료는 지역센터(SRC) 네트워크를 통해 전달됩니다. 개념부터 접속 방법까지.
+        links:
+          - {label: SRC란 무엇인가, url: /src}
+          - {label: SRCNet 사용하기, url: /src/using-srcnet}
+          - {label: 한국 지역센터(KRSRC), url: /src/korea-src}
+      - task: ASKAP 자료를 받고 싶다
+        what: 호주의 SKA 선행망원경. 관측 자료는 CASDA에서 공개됩니다.
+        links:
+          - {label: CASDA 자료 검색, url: "https://data.csiro.au/domain/casdaObservation"}
+          - {label: CASDA Cutout 서비스, url: "https://data.csiro.au/domain/casdaCutoutService"}
+          - {label: CASDA 사용 안내, url: "https://research.csiro.au/casda/casda-user-guide/"}
+          - {label: 관측 제안서 제출(OPAL), url: "https://opal.atnf.csiro.au"}
+      - task: MeerKAT 자료를 받고 싶다
+        what: 남아프리카공화국의 SKA 선행망원경. SKA-Mid에 그대로 편입됩니다.
+        links:
+          - {label: MeerKAT 자료 보관소, url: "https://archive.sarao.ac.za"}
+          - {label: MeerKAT 문서, url: "https://skaafrica.atlassian.net/wiki/spaces/ESDKB/overview?homepageId=41025669"}
+          - {label: MeerKAT 소개, url: "https://www.sarao.ac.za/science/meerkat/"}
+      - task: 전파 자료를 열어 보고 싶다
+        what: 전파천문 자료방(데이터큐브)을 보고 분석하는 표준 도구.
+        links:
+          - {label: CARTA 내려받기, url: "https://cartavis.org"}
+          - {label: CARTA 사용 설명서, url: "https://carta.readthedocs.io/en/latest/"}
+  # 자료 창구에 넣지 않고 푸터로 뺀 링크 — '자료를 받는' 일이 아니라 '소식을 따라가는' 일이라서.
+  external:
+    - {label: SKAO, url: "https://www.skao.int/"}
+    - {label: SKAO 소식지·웨비나, url: "https://www.skao.int/en/science-users/670/newsletters-and-webinars"}
+    - {label: 과학 워킹그룹, url: "https://www.skao.int/en/science-users/science-working-groups"}
+    - {label: SKAO 채용, url: "https://recruitment.skao.int/vacancies.html"}
+    - {label: 한국천문연구원, url: "https://www.kasi.re.kr/"}
+
+  # 수치는 위키 검증값. 197대·131,072개는 최종 지향(AA4) 규모이므로 반드시 그렇게 적는다.
+  figures:
+    - {n: "300", unit: "PB", k: "정상운영에 들어가면 해마다 생성될 관측 자료"}
+    - {n: "197", unit: "대", k: "SKA-Mid 접시 — 최종 지향 규모. 현재 확보된 재원으로는 그 중간 단계까지 건설합니다"}
+    - {n: "131,072", unit: "개", k: "SKA-Low 안테나 — 최종 지향 규모"}
+
+  journey:
+    - {path: /src/srcnet-overview, title: "SRCNet이란", note: "자료가 관측소에서 연구자에게 닿기까지의 흐름"}
+    - {path: /src/data-resources, title: "무엇을 쓸 수 있나", note: "자료의 규모와 제공되는 계산·저장 자원"}
+    - {path: /src/using-srcnet, title: "어떻게 접속하나", note: "계정 발급, 분석 환경, 시작 안내"}
+    - {path: /src/korea-src, title: "한국 지역센터", note: "KRSRC 구축 현황과 국내 사용자 지원"}
+    - {path: /src/tutorials, title: "직접 해보기", note: "한글 실습 자료"}
+
+  explore:
+    - {path: /meetings, title: "모임", note: "국내 워크숍과 학회 SKA 세션. 조직위원회가 직접 운영합니다.", cta: "일정 보기"}
+    - {path: /talks, title: "발표 자료", note: "지난 모임에서 발표된 강연과 슬라이드.", cta: "자료 찾기"}
+    - {path: /newsletters, title: "소식지", note: "SKA Korea 소식지 지난 호.", cta: "지난 호 보기"}
+    - {path: /science/ska-science-working-groups, title: "과학 워킹그룹", note: "SKA 과학 주제별 국제 연구 모임과 국내 참여.", cta: "참여 안내"}
+
+nav:
+  - {title: Home, path: /}
+  - title: SKA Korea
+    path: /ska-korea
+    children:
+      - {path: /ska-korea/ska, title: SKA, note: 망원경과 과학 목표}
+      - {path: /ska-korea/ska-korea, title: SKA-Korea, note: 국내 커뮤니티 소개}
+      - {path: /ska-korea/ska-in-korean-media, title: SKA in Korean media, note: 국내 언론 보도}
+  - title: Science
+    path: /science
+    children:
+      - {path: /science/ska-science-working-groups, title: SKA Science Working Groups, note: 주제별 국제 연구 모임}
+      - {path: /science/data-archives, title: Data Archives, note: 선행망원경 자료 보관소}
+  - title: SRC
+    path: /src
+    children:
+      - {path: /src/srcnet-overview, title: SRCNet Overview, note: 지역센터 네트워크 개요}
+      - {path: /src/data-resources, title: Data & Resources, note: 자료 규모와 제공 자원}
+      - {path: /src/using-srcnet, title: Using SRCNet, note: 접속과 분석 환경}
+      - {path: /src/korea-src, title: Korea SRC, note: 한국 지역센터(KRSRC)}
+      - {path: /src/tutorials, title: Tutorials, note: 한글 실습 자료}
+  - {title: Meetings, path: /meetings}
+  - {title: Newsletters, path: /newsletters}
+  - {title: Talks, path: /talks}
+  - {title: Links, path: /links}
+  - {title: Contacts, path: /contacts}

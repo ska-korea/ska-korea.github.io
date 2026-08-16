@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block title %}{{ page.title }} · Talks · {{ site.title }}{% endblock %}
+
+{% block main %}
+<div class="pagehead">
+  <div class="wrap">
+    <div class="crumb"><a href="/talks">Talks</a> / {{ page.date.strftime('%Y.%m.%d') }}</div>
+    <h1>{{ page.title }}</h1>
+    {% if page.speaker %}
+    <p class="sub">{{ page.speaker }}{% if page.affiliation %} <span style="opacity:.75">({{ page.affiliation }})</span>{% endif %}</p>
+    {% endif %}
+  </div>
+</div>
+
+<div class="band">
+  <div class="wrap talk-body">
+    <article class="prose">
+      {% if page.html %}
+      {{ page.html | safe }}
+      {% else %}
+      <p class="muted">초록이 등록되지 않았습니다.</p>
+      {% endif %}
+
+      {% if page.images %}
+      <div class="talk-shots">
+        {% for src in page.images %}
+        <a href="{{ src }}"><img src="{{ src }}" alt="{{ page.title }} 발표 사진 {{ loop.index }}" loading="lazy"></a>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </article>
+
+    <aside class="talk-side">
+      <dl>
+        <dt>일시</dt>
+        <dd class="mono">{{ page.when or page.date.strftime('%Y.%m.%d') }}</dd>
+        {% if page.where %}
+        <dt>장소</dt>
+        <dd>{{ page.where }}{% if page.mode %} <span class="tag done">{{ page.mode }}</span>{% endif %}</dd>
+        {% elif page.mode %}
+        <dt>형식</dt>
+        <dd><span class="tag done">{{ page.mode }}</span></dd>
+        {% endif %}
+      </dl>
+      {% if page.slides %}
+      <a class="btn primary" href="{{ page.slides }}">슬라이드 내려받기</a>
+      {% endif %}
+    </aside>
+  </div>
+</div>
+{% endblock %}

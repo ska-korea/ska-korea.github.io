@@ -1,0 +1,79 @@
+name: 수확 · 빌드 · 배포
+
+# 하나의 워크플로로 묶은 이유:
+#   GITHUB_TOKEN이 만든 커밋은 다른 워크플로를 다시 트리거하지 않는다(무한루프 방지).
+#   수확과 배포를 따로 두면 수확 커밋이 배포를 못 부른다. 그래서 한 흐름으로 잇는다.
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    # 30분마다 미팅 페이지를 확인한다. GitHub 사정으로 지연될 수 있어
+    # 조직위원회에는 "반영까지 최대 1시간"으로 안내한다.
+    - cron: '*/30 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write   # 수확 결과 커밋
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      # push로 들어온 실행은 사람이 원고를 고친 것이므로 수확을 건너뛴다.
+      - name: 미팅 수확
+        if: github.event_name != 'push'
+        id: harvest
+        continue-on-error: true   # 수확이 실패해도 직전 내용으로 배포는 계속한다
+        working-directory: harvest
+        run: python harvest.py
+
+      - name: 수확 결과 커밋
+        if: github.event_name != 'push'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add harvest/
+          if git diff --staged --quiet; then
+            echo "미팅 변경 없음"
+          else
+            git commit -m "chore: 미팅 페이지 갱신"
+            git push
+          fi
+
+      - name: 수확 경고 표시
+        if: steps.harvest.outcome == 'failure'
+        run: |
+          echo "::warning::수확기가 경고와 함께 끝났습니다. 로그를 확인하세요." \
+               "본문이 급감한 페이지는 직전 내용을 유지했습니다."
+
+      - run: python build.py
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block main %}
+<div class="pagehead">
+  <div class="wrap">
+    <div class="crumb"><a href="/meetings">Meetings</a> / {{ page.title }}</div>
+    <h1>{{ page.title }}</h1>
+    {% if page.when or page.where %}
+    <p class="sub mono">{{ page.when }}{% if page.when and page.where %} · {% endif %}{{ page.where }}</p>
+    {% endif %}
+  </div>
+</div>
+
+{% if page.subnav %}
+<nav class="subtabs" aria-label="{{ page.title }} 하위 메뉴">
+  <div class="wrap">
+    {% for t in page.subnav %}
+    <a href="{{ t.path }}"{% if t.path == page.path %} aria-current="page"{% endif %}>{{ t.title }}</a>
+    {% endfor %}
+  </div>
+</nav>
+{% endif %}
+
+<div class="band">
+  <div class="wrap">
+    {# 본문은 LOC가 Google Sites에서 관리하는 원고를 그대로 옮긴 것 #}
+    <article class="harvested">{{ page.html | safe }}</article>
+    <p class="harvest-note">
+      이 페이지의 본문은 조직위원회가 Google Sites에서 관리합니다 ·
+      <a href="{{ page.origin }}" rel="noopener">원본 보기 ↗</a>
+    </p>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block main %}
+<div class="pagehead">
+  <div class="wrap">
+    <h1>{{ page.title }}</h1>
+    {% if page.sub %}<p class="sub">{{ page.sub }}</p>{% endif %}
+  </div>
+</div>
+
+<div class="band">
+  <div class="wrap">
+    {% if page.html %}<div class="prose" style="margin-bottom:26px">{{ page.html | safe }}</div>{% endif %}
+
+    {% if not talks %}
+    <div class="callout"><span class="eyebrow">준비 중</span>등록된 발표가 없습니다.</div>
+    {% else %}
+    <div class="timeline">
+      {% for group in talk_years %}
+      <div class="tl-year">{{ group.year }}</div>
+      {% for t in group.entries %}
+      <a class="tl-item talk-item" href="{{ t.path }}">
+        <span class="tl-date">{{ t.date.strftime('%Y.%m.%d') }}</span>
+        <span>
+          <span class="tl-name">{{ t.title }}</span>
+          <span class="tl-where">
+            {%- if t.speaker %}{{ t.speaker }}{% endif -%}
+            {%- if t.affiliation %} · {{ t.affiliation }}{% endif -%}
+          </span>
+        </span>
+        <span class="talk-marks">
+          {% if t.slides %}<span class="tag done">슬라이드</span>{% endif %}
+          {% if t.images %}<span class="tag done">사진 {{ t.images | length }}</span>{% endif %}
+        </span>
+      </a>
+      {% endfor %}
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}

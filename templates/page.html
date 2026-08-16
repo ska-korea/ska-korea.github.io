@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block main %}
+<div class="pagehead">
+  <div class="wrap">
+    {% set parent = nav | selectattr('active') | selectattr('children') | first %}
+    {% if parent and not parent.exact %}
+    <div class="crumb"><a href="{{ parent.path }}">{{ parent.title }}</a> / {{ page.title }}</div>
+    {% endif %}
+    <h1>{{ page.title }}</h1>
+    {% if page.sub %}<p class="sub">{{ page.sub }}</p>{% endif %}
+  </div>
+</div>
+
+<div class="band">
+  <div class="wrap">
+    {% if page.html %}
+    <article class="prose">{{ page.html | safe }}</article>
+    {% else %}
+    <div class="callout">
+      <span class="eyebrow">준비 중</span>
+      이 페이지는 아직 내용을 준비하고 있습니다.
+      문의는 <a href="/contacts">연락처</a>로 부탁드립니다.
+    </div>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}

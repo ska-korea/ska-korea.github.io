@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% block title %}{{ page.title }} · {{ site.title }}{% endblock %}</title>
+<meta name="description" content="{{ page.meta.description if page.meta and page.meta.description else site.description }}">
+<link rel="stylesheet" href="/static/css/site.css">
+<link rel="icon" href="/static/img/favicon.png">
+</head>
+<body>
+<a class="skip" href="#main">본문으로 건너뛰기</a>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="/">
+      <span class="mark"></span>{{ site.title }}
+      <small>{{ site.tagline_en }}</small>
+    </a>
+    <button class="navtoggle" aria-expanded="false" aria-controls="nav">메뉴</button>
+    <ul class="nav" id="nav">
+      {% for item in nav %}
+      <li class="{% if item.active %}on {% endif %}{% if item.children %}has-sub{% endif %}"{% if item.exact %} aria-current="page"{% endif %}>
+        <a href="{{ item.path }}">{{ item.title }}</a>
+        {% if item.children %}
+        <ul class="submenu">
+          {% for kid in item.children %}
+          <li><a href="{{ kid.path }}">{{ kid.title }}{% if kid.note %}<span>{{ kid.note }}</span>{% endif %}</a></li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</header>
+
+<main id="main">
+{% block main %}{% endblock %}
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <div class="brand">{{ site.title }}</div>
+        <p>{{ site.description }}</p>
+      </div>
+      <div>
+        <h3>바로가기</h3>
+        <ul>
+          {% for item in nav[1:5] %}<li><a href="{{ item.path }}">{{ item.title }}</a></li>{% endfor %}
+        </ul>
+      </div>
+      <div>
+        <h3>외부</h3>
+        <ul>
+          {% for l in site.external %}
+          <li><a href="{{ l.url }}" rel="noopener">{{ l.label }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div>
+        <h3>문의</h3>
+        <ul><li><a href="/contacts">연락처</a></li></ul>
+      </div>
+    </div>
+    <div class="base">
+      <span>{{ site.owner }}</span>
+      <span class="mono">최종 갱신 {{ site.built }}</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.querySelector('.navtoggle').addEventListener('click', function () {
+  var nav = document.getElementById('nav');
+  var open = nav.classList.toggle('open');
+  this.setAttribute('aria-expanded', open);
+});
+</script>
+</body>
+</html>

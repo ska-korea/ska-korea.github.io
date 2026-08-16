@@ -1,0 +1,126 @@
+{% extends "base.html" %}
+{% block title %}{{ site.title }} — {{ site.tagline }}{% endblock %}
+
+{% block main %}
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Square Kilometre Array · Korea</span>
+      <h1>{{ site.hero.headline | safe }}</h1>
+      <p class="lede">{{ site.hero.lede }}</p>
+      <div class="btnrow">
+        <a class="btn primary" href="/src">SRC 시작하기</a>
+        <a class="btn ghost" href="/ska-korea/ska">SKA란 무엇인가</a>
+      </div>
+    </div>
+
+    <aside class="upnext">
+      <h2>다가오는 일정</h2>
+      {% if meetings.upcoming %}
+      <ul>
+        {% for m in meetings.upcoming %}
+        <li>
+          <a href="{{ m.path }}">
+            <span class="dday">{% if m.running %}진행 중{% elif m.dday == 0 %}오늘{% else %}D-{{ m.dday }}{% endif %}</span>
+            <span class="name">{{ m.title }}</span>
+            <span class="meta">{{ m.when or (m.year ~ '.' ~ '%02d' % m.month) }}{% if m.where %} · {{ m.where }}{% endif %}</span>
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+      {% else %}
+      <p class="meta">예정된 일정이 없습니다.</p>
+      {% endif %}
+      <a class="all" href="/meetings">지난 모임 {{ meetings.count }}건 전체 보기 →</a>
+    </aside>
+  </div>
+</section>
+
+{# ── 서명 요소: 자료 창구 ─────────────────────────────────
+   목적별로 "무엇을 하려는가"에서 창구까지 한 번에 잇는다.
+   기존 사이트에서 Links 안쪽 깊이 묻혀 있던 자산을 첫 화면으로 끌어올린 것. #}
+<section class="desk">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow" style="color:var(--signal)">자료 창구</span>
+      <h2>{{ site.desk.title }}</h2>
+      <p>{{ site.desk.note }}</p>
+    </div>
+    <div class="desk-grid">
+      {% for card in site.desk.cards %}
+      <div class="desk-card">
+        <span class="task">{{ card.task }}</span>
+        <p class="what">{{ card.what }}</p>
+        <div class="desk-links">
+          {% for l in card.links %}
+          <a href="{{ l.url }}"{% if l.url.startswith('http') %} rel="noopener" data-ext{% endif %}>{{ l.label }}</a>
+          {% endfor %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <span class="eyebrow">SKA</span>
+    <h2 class="sec">하나의 관측소, 두 대의 망원경, 세 대륙</h2>
+    <div style="display:grid;grid-template-columns:minmax(0,1.6fr) minmax(260px,1fr);gap:44px;margin-top:22px;align-items:start" class="home-split">
+      <div class="prose">
+        {{ page.html | safe }}
+      </div>
+      <div>
+        <div class="figures" style="grid-template-columns:1fr">
+          {% for f in site.figures %}
+          <div class="figure">
+            <div class="n">{{ f.n }}{% if f.unit %}<small>{{ f.unit }}</small>{% endif %}</div>
+            <div class="k">{{ f.k }}</div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# SRC 섹션은 실제로 순서가 있는 여정이라 번호를 매긴다 #}
+<section class="band wash">
+  <div class="wrap">
+    <span class="eyebrow">SKA Regional Centre</span>
+    <h2 class="sec">SKA 데이터를 쓰기까지</h2>
+    <p class="sec-note">SKA 관측 자료는 지역센터(SRC) 네트워크를 통해 연구자에게 전달됩니다. 아래 순서로 읽으면 처음 접하는 분도 무엇을 어떻게 쓸 수 있는지 파악할 수 있습니다.</p>
+    <nav class="journey">
+      {% for s in site.journey %}
+      <a href="{{ s.path }}">
+        <div>
+          <h3>{{ s.title }}</h3>
+          <p>{{ s.note }}</p>
+        </div>
+        <span class="arrow">→</span>
+      </a>
+      {% endfor %}
+    </nav>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <span class="eyebrow">커뮤니티</span>
+    <h2 class="sec">함께 보기</h2>
+    <div class="cards">
+      {% for c in site.explore %}
+      <a class="card" href="{{ c.path }}">
+        <h3>{{ c.title }}</h3>
+        <p>{{ c.note }}</p>
+        <span class="go">{{ c.cta }} →</span>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<style>
+@media (max-width: 880px) { .home-split { grid-template-columns: 1fr !important; gap: 30px !important; } }
+</style>
+{% endblock %}

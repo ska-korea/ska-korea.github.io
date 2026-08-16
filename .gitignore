@@ -1,0 +1,18 @@
+# 빌드 산출물 — Actions가 매번 새로 만든다
+_site/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# macOS · Dropbox
+.DS_Store
+*conflicted copy*
+.dropbox*
+
+# 편집기
+.idea/
+.vscode/
+*.swp

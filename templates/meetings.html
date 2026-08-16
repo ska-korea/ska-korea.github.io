@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block main %}
+<div class="pagehead">
+  <div class="wrap">
+    <h1>{{ page.title }}</h1>
+    <p class="sub">{{ page.sub }}</p>
+  </div>
+</div>
+
+<div class="band">
+  <div class="wrap">
+    {% if page.html %}<div class="prose" style="margin-bottom:8px">{{ page.html | safe }}</div>{% endif %}
+
+    <div class="timeline">
+      {% for group in meetings.years %}
+      <div class="tl-year">{{ group.year }}</div>
+      {% for m in group.entries %}
+      <a class="tl-item" href="{{ m.path }}">
+        <span class="tl-date">{{ m.when or ('%04d.%02d' % (m.year, m.month)) }}</span>
+        <span>
+          <span class="tl-name">{{ m.title }}</span>
+          {% if m.where %}<span class="tl-where">{{ m.where }}</span>{% endif %}
+        </span>
+        {% if m.upcoming %}<span class="tag open">예정</span>{% else %}<span class="tag done">종료</span>{% endif %}
+      </a>
+      {% endfor %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endblock %}
