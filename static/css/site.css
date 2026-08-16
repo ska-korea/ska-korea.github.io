@@ -523,8 +523,9 @@ tbody tr:last-child td { border-bottom: none; }
 .foot { background: var(--navy-deep); color: #a8a8dd; padding: 44px 0 34px; margin-top: 60px; font-size: 15px; }
 .foot { flex-shrink: 0; }
 .foot .cols { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 76px; align-items: start; }
-.foot-links { display: flex; gap: 60px; }
-.foot-links > div { min-width: 0; }
+/* 세 칸을 가장 넓은 칸에 맞춰 같은 폭으로. 폭이 auto인 그리드에서 1fr 트랙은
+   가장 큰 max-content에 맞춰 균등해진다 — 넓이를 손으로 정할 필요가 없다. */
+.foot-links { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 60px; }
 .foot h3 { font-size: 13px; letter-spacing: .16em; text-transform: uppercase; color: #7e7eb8; margin-bottom: 12px; font-weight: 600; }
 .foot .brand { color: #fff; margin-bottom: 12px; }
 .foot p { line-height: 1.7; font-size: 14.5px; }
@@ -538,7 +539,7 @@ tbody tr:last-child td { border-bottom: none; }
 @media (max-width: 940px) {
   .hero .wrap { grid-template-columns: 1fr; gap: 30px; }
   .foot .cols { grid-template-columns: 1fr; gap: 34px; }
-  .foot-links { gap: 44px; flex-wrap: wrap; }
+  .foot-links { gap: 44px; }
 }
 
 @media (max-width: 780px) {
@@ -564,5 +565,6 @@ tbody tr:last-child td { border-bottom: none; }
   .tl-date { grid-column: 1 / -1; }
   .journey a { grid-template-columns: 34px 1fr auto; gap: 12px; }
   .subtabs { top: 0; }
-  .foot-links { gap: 32px; }
+  /* 좁은 화면에서는 세 칸을 한 줄에 못 넣는다 — 두 줄로 흐르게 한다 */
+  .foot-links { grid-auto-flow: row; grid-template-columns: 1fr 1fr; gap: 28px 32px; }
 }
