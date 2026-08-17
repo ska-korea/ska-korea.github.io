@@ -7,7 +7,6 @@ site:
   #    먼저 채우면 아직 Google을 가리키는 주소로 배포돼 검수를 못 한다.
   # domain: ska.kasi.re.kr
 
-  tagline_en: SKA KOREA
   description: 한국의 SKA 참여를 잇는 연구자 커뮤니티입니다. SKA 과학, 지역센터(SRC), 국내 모임과 자료 창구를 한곳에서 안내합니다.
   owner: 한국천문연구원 · SKA Korea
 

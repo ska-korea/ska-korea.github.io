@@ -13,6 +13,7 @@
   /* 브랜드 */
   --navy: #070068;
   --navy-deep: #04003c;
+  --navy-deep-rgb: 4, 0, 60;   /* 위 색을 반투명하게 쓸 때 (상단 메뉴 바탕) */
   --navy-soft: #1b1580;
   --magenta: #e70068;
   --magenta-deep: #b8004f;
@@ -125,24 +126,61 @@ img { max-width: 100%; height: auto; display: block; }
   background: var(--navy);
   color: #fff;
 }
-.topbar .wrap { display: flex; align-items: center; gap: 28px; min-height: 60px; }
 
-.brand { display: flex; align-items: baseline; gap: 9px; font-weight: 800; font-size: 19px; letter-spacing: -.02em; flex-shrink: 0; }
+/* ── 배너 위에 얹힌 메뉴 ─────────────────────────────────────
+   기존 홈페이지에서 배너 그림은 메뉴줄 뒤까지 이어졌다. 그 연속감을 되살린다.
+   배너를 메뉴 높이(60px)만큼 위로 끌어올리고, 메뉴는 바탕을 비운다.
+   ★ 얹히는 것은 **맨 위에 있을 때뿐**이다. 내리기 시작하면 바탕을 채운다 —
+     그러지 않으면 지면이 메뉴 뒤로 비쳐 지나가 글자끼리 겹쳐 읽힌다.
+
+   ★★ 바탕은 **스크롤에 맞춰 서서히** 짙어진다(base.html이 --bar-a를 0→1로 올린다).
+     한 번에 켜면 색이 튄다. 실측: 맨 위의 띠는 배너가 비쳐 #07033d인데
+     `--navy`(#070068)로 채우면 파랑이 61→100으로 뛰고 휘도가 두 배가 됐다.
+     그래서 (1) 채우는 색을 더 어두운 `--navy-deep`으로 낮추고
+          (2) 100px에 걸쳐 서서히 올려 '바뀌는 순간'이 없게 했다.
+     ⚠ 여기에 transition을 걸지 말 것 — 스크롤을 뒤늦게 따라와 도리어 비친다.
+
+   ★ 전체가 html.js에 걸려 있다 — 스크립트가 없으면 되돌릴 방법이 없으니
+     아예 얹지 않고 지금까지처럼 네이비 띠로 남긴다.
+   ────────────────────────────────────────────────────────── */
+.js.navover .topbar { background: rgba(var(--navy-deep-rgb), var(--bar-a, 0)); }
+.js.navover.menu-open .topbar { background: var(--navy-deep); }
+
+.js.navover .hero.has-bg,
+.js.navover .pagehead.has-bg,
+.js.navover .posterhead { margin-top: -60px; }
+/* 끌어올린 만큼 안쪽 여백을 돌려준다 — 글이 메뉴에 가리지 않게 */
+.js.navover .pagehead.has-bg { padding-top: 112px; }
+.js.navover .pagehead.big.has-bg { padding-top: 138px; }
+.js.navover .hero.has-bg > .wrap { padding-top: 118px; }
+/* 대문 그림에는 여백을 돌려주지 않는다 — 그림이 메뉴줄 뒤까지 그대로 이어진다.
+   조직위원회가 메뉴줄 자리를 감안해 만든 그림이라 가려서 잃는 것이 없다. */
+/* 간격은 gap이 아니라 로고의 오른쪽 여백으로 준다 — '더 보기' 단추가 메뉴 바로 옆에
+   붙어야 하고, 스크립트가 폭을 잴 때도 셈이 하나로 단순해진다(base.html의 GAP). */
+.topbar .wrap { display: flex; align-items: center; min-height: 60px; }
+
+.brand { display: flex; align-items: baseline; gap: 9px; font-weight: 800; font-size: 19px; letter-spacing: -.02em; flex-shrink: 0; white-space: nowrap; margin-right: 28px; }
 .brand .mark {
   width: 9px; height: 9px; border-radius: 50%; background: var(--magenta);
   box-shadow: 0 0 0 4px rgba(231, 0, 104, .25);
   align-self: center;
 }
-.brand small { font-size: 12px; letter-spacing: .14em; color: #9d9dd8; font-weight: 500; }
+/* 한글이므로 13px 아래로 내리지 않는다(위 글자 크기 규칙). 자간도 넓히지 않는다 —
+   자간 넓히기는 대문자 라틴 약어에나 맞고 한글에서는 읽기를 해친다. */
+.brand small { font-size: 13px; color: #9d9dd8; font-weight: 500; letter-spacing: -.01em; }
 
 .nav { margin-left: auto; display: flex; align-items: stretch; }
-.nav > li { list-style: none; position: relative; }
+/* 메뉴 이름은 절대 줄바꿈하지 않는다. 좁아지면 줄이 접히는 것이 아니라
+   오른쪽 항목이 '더 보기' 안으로 들어가야 한다(base.html의 fit()). */
+.nav > li { list-style: none; position: relative; flex-shrink: 0; }
 .nav > li > a {
   display: flex; align-items: center; height: 60px; padding: 0 13px;
-  font-size: 15px; font-weight: 600; color: #d7d7f0;
+  font-size: 15px; font-weight: 600; color: #d7d7f0; white-space: nowrap;
   border-bottom: 3px solid transparent;
   transition: color .15s, border-color .15s;
 }
+/* 스크립트가 없으면 옮겨 담을 수가 없다 — 잘려 나가는 것보다 접히는 편이 낫다 */
+html:not(.js) .nav { flex-wrap: wrap; }
 .nav > li > a:hover { color: #fff; }
 .nav > li[aria-current] > a, .nav > li.on > a { color: #fff; border-bottom-color: var(--magenta); }
 /* 하위 메뉴가 있다는 사실을 감추지 않는다 */
@@ -174,6 +212,50 @@ img { max-width: 100%; height: auto; display: block; }
 .submenu a span { display: block; font-size: 13px; color: var(--faint); font-weight: 400; }
 
 .navtoggle { display: none; margin-left: auto; background: none; border: 1px solid #4a45a0; color: #fff; border-radius: 8px; padding: 7px 12px; font: inherit; font-size: 15px; cursor: pointer; }
+
+/* ── '더 보기' — 자리가 모자랄 때 오른쪽 메뉴가 들어가는 곳 ──
+   항목을 옮겨 담기만 하므로 목록을 두 벌 둘 필요가 없다. */
+.more { position: relative; flex-shrink: 0; align-self: stretch; display: flex; }
+.more[hidden] { display: none; }
+.more-btn {
+  font: inherit; font-size: 15px; font-weight: 600; color: #d7d7f0;
+  background: none; border: 0; cursor: pointer; white-space: nowrap;
+  padding: 0 13px; height: 60px;
+  border-bottom: 3px solid transparent;
+  transition: color .15s;
+}
+.more-btn::after {
+  content: ""; display: inline-block; margin-left: 6px;
+  width: 0; height: 0; border: 3.5px solid transparent; border-top-color: currentColor;
+  opacity: .65; transform: translateY(2px);
+}
+.more-btn:hover, .more.on .more-btn { color: #fff; }
+.more.on .more-btn::after { opacity: 1; }
+
+.more-menu {
+  position: absolute; top: 100%; right: 0; min-width: 236px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 18px 40px rgba(7, 0, 104, .18);
+  padding: 8px; display: none;
+}
+.more.on .more-menu { display: block; }
+.more-menu > li { list-style: none; }
+.more-menu > li > a {
+  display: block; padding: 9px 12px; border-radius: 8px;
+  font-size: var(--fs-ui); font-weight: 700; color: var(--navy); line-height: 1.45;
+}
+.more-menu > li > a:hover { background: var(--wash); }
+.more-menu > li[aria-current] > a, .more-menu > li.on > a { color: var(--magenta); }
+/* 여기 들어온 하위 메뉴는 다시 겹쳐 띄우지 않고 펼쳐서 보여준다 */
+.more-menu .submenu {
+  position: static; display: block; opacity: 1; visibility: visible; transform: none;
+  background: none; border: 0; box-shadow: none; border-radius: 0;
+  min-width: 0; padding: 0 0 6px 10px;
+}
+.more-menu .submenu a { font-weight: 500; }
+.more-menu > li.has-sub > a::after { display: none; }
 
 /* ============================================================
    히어로 — 문장이 주인공, 오른쪽에 실제 일정
@@ -648,6 +730,13 @@ tbody tr:last-child td { border-bottom: none; }
 /* ============================================================
    반응형
    ============================================================ */
+/* 로고 옆 설명은 스크립트가 폭을 재서 필요할 때만 접는다(base.html의 fit()).
+   스크립트가 없을 때만 어림값으로 끊는다 — 실측 최소 폭 1,077px에 여유를 둔 값. */
+html:not(.js) .brand small { display: none; }
+@media (min-width: 1121px) {
+  html:not(.js) .brand small { display: block; }
+}
+
 @media (max-width: 940px) {
   .pagehead.big { padding: 56px 0 48px; }
   .hero .wrap { grid-template-columns: 1fr; gap: 30px; }
@@ -656,6 +745,12 @@ tbody tr:last-child td { border-bottom: none; }
 }
 
 @media (max-width: 780px) {
+  /* 대문 그림은 가로가 길어 좁은 화면에서 아주 얇아진다(390px 폭이면 높이 103px).
+     거기에 60px짜리 메뉴를 얹으면 그림의 절반 넘게 가린다 — 이때만 얹지 않는다.
+     그러면 메뉴 뒤가 흰 지면이 되므로 바탕도 함께 되돌린다. */
+  .js.navover.poster .posterhead { margin-top: 0; }
+  .js.navover.poster .topbar { background: var(--navy); }
+
   .navtoggle { display: block; }
   .nav {
     display: none; position: absolute; top: 60px; left: 0; right: 0;

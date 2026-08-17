@@ -1,8 +1,15 @@
 <!DOCTYPE html>
-<html lang="ko">
+{# navover = 이 쪽에는 배너 그림이 있으니 상단 메뉴를 그림 위에 얹어도 된다는 표시.
+   js = 자바스크립트가 살아 있다는 표시. 메뉴를 그림 위에 얹으려면 배너를 지나갔을 때
+   네이비 바탕을 되돌려 줘야 하는데 그건 스크립트가 한다. 스크립트가 없으면 이 클래스가
+   붙지 않아 CSS가 통째로 안 걸리고, 메뉴는 지금처럼 네이비 띠로 남는다.
+   poster = 그 배너가 조직위원회의 대문 그림이라는 표시. 좁은 화면에서는 그림이
+   얇아져 메뉴에 절반 넘게 가리므로, 그때만 얹지 않고 메뉴 아래에 둔다. #}
+<html lang="ko"{% if page.banner %} class="navover{% if page.poster %} poster{% endif %}"{% endif %}>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script>document.documentElement.classList.add('js')</script>
 <title>{% block title %}{{ page.title }} · {{ site.title }}{% endblock %}</title>
 <meta name="description" content="{{ page.meta.description if page.meta and page.meta.description else site.description }}">
 <link rel="stylesheet" href="/static/css/site.css?v={{ site.css_v }}">
@@ -15,7 +22,7 @@
   <div class="wrap">
     <a class="brand" href="/">
       <span class="mark"></span>{{ site.title }}
-      <small>{{ site.tagline_en }}</small>
+      <small>{{ site.tagline }}</small>
     </a>
     <button class="navtoggle" aria-expanded="false" aria-controls="nav">메뉴</button>
     <ul class="nav" id="nav">
@@ -32,6 +39,13 @@
       </li>
       {% endfor %}
     </ul>
+    {# 창이 좁아지면 오른쪽 메뉴부터 이 안으로 옮겨진다(base.html 아래 스크립트).
+       비워 두는 것이 맞다 — 목록을 두 벌 적으면 언젠가 어긋난다. #}
+    <div class="more" hidden>
+      <button class="more-btn" aria-expanded="false" aria-controls="more-menu"
+              aria-label="메뉴 더 보기">더 보기</button>
+      <ul class="more-menu" id="more-menu"></ul>
+    </div>
   </div>
 </header>
 
@@ -76,11 +90,109 @@
 </footer>
 
 <script>
-document.querySelector('.navtoggle').addEventListener('click', function () {
-  var nav = document.getElementById('nav');
-  var open = nav.classList.toggle('open');
-  this.setAttribute('aria-expanded', open);
-});
+(function () {
+  var root = document.documentElement;
+  var row = document.querySelector('.topbar > .wrap');
+  var brand = document.querySelector('.brand');
+  var tagline = brand.querySelector('small');
+  var bar = document.getElementById('nav');
+  var more = document.querySelector('.more');
+  var moreBtn = more.querySelector('.more-btn');
+  var moreList = document.getElementById('more-menu');
+  var GAP = 28;      // 로고와 메뉴 사이 최소 간격 (site.css의 .brand margin-right와 같은 값)
+  var NARROW = 780;  // 이 아래는 햄버거가 전부 맡는다
+
+  document.querySelector('.navtoggle').addEventListener('click', function () {
+    var open = bar.classList.toggle('open');
+    this.setAttribute('aria-expanded', open);
+    // 메뉴를 펼치면 바탕이 비쳐서는 안 된다 — 배너 위에 얹혀 있어도 네이비로 되돌린다.
+    root.classList.toggle('menu-open', open);
+  });
+
+  // ── 상단 메뉴를 창 폭에 맞춘다 ─────────────────────────────
+  // 왼쪽일수록 중요한 차례로 놓여 있으므로, 자리가 모자라면 **오른쪽 것부터**
+  // '더 보기' 안으로 옮긴다. 폭이 다시 넓어지면 되돌린다.
+  // 항목을 옮겨 담을 뿐 목록을 두 벌 두지 않는다 — 하위 메뉴·현재 위치 표시가 그대로 따라간다.
+  function closeMore() {
+    more.classList.remove('on');
+    moreBtn.setAttribute('aria-expanded', 'false');
+  }
+  function width(el) { return el.getBoundingClientRect().width; }
+  function itemsWidth() {
+    var w = 0;
+    for (var i = 0; i < bar.children.length; i++) w += width(bar.children[i]);
+    return w;
+  }
+
+  function fit() {
+    // 늘 원래대로 되돌려 놓고 다시 잰다. 상태가 쌓이면 창을 넓혔을 때 못 돌아온다.
+    while (moreList.firstChild) bar.appendChild(moreList.firstChild);
+    more.hidden = true;
+    closeMore();
+    if (tagline) tagline.hidden = false;
+    if (window.innerWidth <= NARROW) return;
+
+    var cs = getComputedStyle(row);
+    var pad = parseFloat(cs.paddingLeft) + parseFloat(cs.paddingRight);
+    var room = function () { return row.clientWidth - pad - width(brand) - GAP - 2; };
+
+    if (itemsWidth() <= room()) return;
+    // 1단계 — 로고 옆 설명을 접는다. 길찾기가 사이트 이름 설명보다 먼저다.
+    if (tagline) {
+      tagline.hidden = true;
+      if (itemsWidth() <= room()) return;
+    }
+    // 2단계 — 오른쪽 메뉴부터 하나씩 '더 보기' 안으로
+    more.hidden = false;
+    var limit = room() - width(more);
+    while (bar.children.length > 1 && itemsWidth() > limit) {
+      moreList.insertBefore(bar.lastElementChild, moreList.firstChild);
+    }
+  }
+
+  moreBtn.addEventListener('click', function (e) {
+    e.stopPropagation();
+    var open = !more.classList.contains('on');
+    more.classList.toggle('on', open);
+    this.setAttribute('aria-expanded', open);
+  });
+  document.addEventListener('click', closeMore);
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeMore(); });
+
+  // 몰아치는 resize를 한 번으로 묶는다. requestAnimationFrame은 쓰지 않는다 —
+  // 화면 밖 프레임에서는 브라우저가 그것을 멈춰 세워, 폭을 바꿔도 다시 재지 않는다.
+  var pending = false;
+  function refit() {
+    if (pending) return;
+    pending = true;
+    setTimeout(function () { pending = false; fit(); }, 0);
+  }
+  addEventListener('resize', refit);
+  // 창 크기 말고도 쓸 폭이 달라지는 경우가 있다 — 목록이 길어져 세로 스크롤막대가
+  // 생기면 폭이 15px쯤 줄어든다. 그때도 다시 잰다.
+  // (.topbar 폭은 창이 정하므로, fit()이 이 관측을 다시 부르는 일은 없다.)
+  if (window.ResizeObserver) new ResizeObserver(refit).observe(document.querySelector('.topbar'));
+  fit();
+  // 웹폰트가 늦게 오면 글자 폭이 달라진다 — 그때 한 번 더 잰다.
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+
+  // 상단 메뉴가 배너 그림 위에 얹히는 것은 **맨 위에 있을 때뿐**이다.
+  // 내리기 시작하면 바탕을 채운다 — 그러지 않으면 배너 안의 글까지 메뉴 뒤로
+  // 비쳐 지나가 서로 겹쳐 읽힌다.
+  //
+  // 다만 한 번에 켜면 색이 튄다. 100px에 걸쳐 서서히 짙어지게 해 '바뀌는 순간'을 없앤다.
+  // 100px은 지면이 메뉴 밑에 닿기 전에 다 채워지도록 고른 값이다 — 배너가 가장 얇을 때
+  // (제목 한 줄짜리 머리, 약 230px) 지면이 닿는 것은 170px쯤이다.
+  if (root.classList.contains('navover')) {
+    var FADE = 100;
+    var onScroll = function () {
+      var y = window.scrollY || document.documentElement.scrollTop || 0;
+      root.style.setProperty('--bar-a', Math.min(1, y / FADE).toFixed(3));
+    };
+    onScroll();   // 새로고침으로 페이지 중간에서 시작할 수도 있다
+    addEventListener('scroll', onScroll, { passive: true });
+  }
+})();
 </script>
 </body>
 </html>
