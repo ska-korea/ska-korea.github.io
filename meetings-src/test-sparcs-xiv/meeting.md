@@ -240,7 +240,9 @@ Dahee Lee | Chosun
 
 ## Composition
 
-::: stats
+<!-- 통계는 본디 미팅이 끝난 뒤에만 나옵니다. when=always 는 검토용으로 미리 켜 둔 것입니다. -->
+
+::: stats when=always
 :::
 
 

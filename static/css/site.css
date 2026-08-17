@@ -1038,17 +1038,20 @@ ol.steps b { color: var(--navy); }
 
 /* ── 구성 통계 ── 참가자·일정표에서 스스로 뽑는다 */
 .mx-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin: 22px 0; }
-.mx-stat h4 { font-size: var(--fs-card); font-weight: 700; color: var(--navy); margin-bottom: 10px; }
-.mx-stat ul { margin: 0; }
-.mx-stat li {
-  list-style: none; display: grid; grid-template-columns: minmax(0, 40%) 1fr auto;
-  gap: 10px; align-items: center; padding: 4px 0; font-size: var(--fs-meta);
+.mx-stat h4 { font-size: var(--fs-card); font-weight: 700; color: var(--navy); margin-bottom: 12px; }
+.mx-pie-row { display: flex; align-items: center; gap: 22px; flex-wrap: wrap; }
+.mx-pie { width: 132px; height: 132px; flex-shrink: 0; }
+/* 값은 범례가 진다 — 파이 각도만으로 비슷한 값을 읽게 두지 않는다.
+   글자는 늘 먹색이고, 색 조각이 옆에서 어느 항목인지만 짚어 준다. */
+.mx-legend { margin: 0; min-width: 0; flex: 1 1 190px; }
+.mx-legend li {
+  list-style: none; display: grid; grid-template-columns: 10px minmax(0, 1fr) auto;
+  gap: 9px; align-items: center; padding: 3px 0; font-size: var(--fs-meta); margin: 0;
 }
-.mx-stat .k { color: var(--ink); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.mx-stat .bar { background: var(--line-soft); border-radius: 20px; height: 9px; overflow: hidden; }
-.mx-stat .bar i { display: block; height: 100%; background: var(--magenta); border-radius: 20px; }
-.mx-stat .n { color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
-.mx-stat .n small { color: var(--faint); margin-left: 5px; font-size: var(--fs-label); }
+.mx-legend .sw { width: 10px; height: 10px; border-radius: 3px; }
+.mx-legend .k { color: var(--ink); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.mx-legend .n { color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.mx-legend .n small { color: var(--faint); margin-left: 5px; font-size: var(--fs-label); }
 .mx-note { font-size: var(--fs-label); color: var(--faint); margin-top: 8px; }
 
 /* 각주 — 등록비의 '* PhD 5년 이내' 같은 단서를 본문에서 떼어 낸다 */

@@ -37,21 +37,21 @@ LABELS = {
     "en": {"chair": "Chair", "break": "Break", "count": "{n} people",
            "dates": "Important Dates", "unspecified": "Unspecified",
            "slides": "Slides", "download": "Download",
-           "stat_affil": "Affiliation", "stat_pos": "Composition", "stat_topic": "Topics",
+           "stat_affil": "Affiliation", "stat_pos": "Career stage", "stat_topic": "Topics",
            "stat_note": "Only talks tagged with swg= are counted.",
            "stat_empty": "Composition will appear here once the participant list "
                          "or programme is filled in.",
-           "unclassified": "Unclassified",
+           "unclassified": "Unclassified", "other_n": "Other ({n})",
            "pos": {"student": "Student", "postdoc": "Postdoc",
                    "staff": "Faculty & staff", "other": "Other"},
            "week": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]},
     "ko": {"chair": "좌장", "break": "휴식", "count": "모두 {n}명",
            "dates": "주요 일정", "unspecified": "미기재",
            "slides": "슬라이드", "download": "내려받기",
-           "stat_affil": "소속", "stat_pos": "구성", "stat_topic": "발표 주제",
+           "stat_affil": "소속", "stat_pos": "직급", "stat_topic": "발표 주제",
            "stat_note": "주제 꼬리표(swg=)를 단 발표만 셉니다.",
            "stat_empty": "참가자 명단이나 일정표가 채워지면 여기에 구성이 나옵니다.",
-           "unclassified": "미분류",
+           "unclassified": "미분류", "other_n": "그 밖 {n}곳",
            "pos": {"student": "학생", "postdoc": "포닥",
                    "staff": "교수·연구원", "other": "기타"},
            "week": ["월", "화", "수", "목", "금", "토", "일"]},
@@ -490,18 +490,66 @@ def blk_gallery(lines, arg, ctx, md):
     return "".join(out)
 
 
-def bars(title, counts, total, note=""):
+# 범주형 색은 순서를 고정해 쓴다(돌려 쓰지 않는다). 데이터 시각화 지침의 기준 팔레트로,
+# 인접 조각끼리 색각 이상에서도 구분되도록 이미 검증된 차례다. 파이는 조각이 서로 닿으므로
+# '인접 쌍' 기준이 맞다. 여섯을 넘기면 색이 뭉개지므로 나머지는 회색 한 덩어리로 접는다.
+PIE_COLORS = ["#2a78d6", "#eb6834", "#1baf7a", "#eda100", "#e87ba4", "#008300"]
+PIE_REST = "#9a9aa8"
+PIE_MAX = 6
+
+
+def arc_path(cx, cy, r, a0, a1):
+    import math
+
+    def pt(a):
+        rad = math.radians(a - 90)
+        return cx + r * math.cos(rad), cy + r * math.sin(rad)
+    x0, y0 = pt(a0)
+    x1, y1 = pt(a1)
+    big = 1 if (a1 - a0) > 180 else 0
+    return f"M{cx:.1f},{cy:.1f} L{x0:.2f},{y0:.2f} A{r},{r} 0 {big} 1 {x1:.2f},{y1:.2f} Z"
+
+
+def pie(title, counts, total, ctx, note=""):
+    """부분-전체를 한눈에. 조각은 여섯까지, 나머지는 '그 밖'으로 접는다.
+
+    ★ 숫자는 옆의 범례가 말한다 — 파이만으로 값을 읽게 두지 않는다(비슷한 값은
+      각도로 구별되지 않는다). 색은 짚어 주는 역할이고 글자가 값을 진다.
+    """
     if not counts:
         return ""
     rows = sorted(counts.items(), key=lambda kv: (-kv[1], kv[0]))
-    out = [f'<div class="mx-stat"><h4>{e(title)}</h4><ul>']
-    for k, n in rows:
+    if len(rows) > PIE_MAX:
+        head, tail = rows[:PIE_MAX - 1], rows[PIE_MAX - 1:]
+        rows = head + [(L(ctx, "other_n").format(n=len(tail)), sum(v for _, v in tail))]
+    colors = PIE_COLORS[:len(rows)]
+    if len(rows) == PIE_MAX and len(counts) > PIE_MAX:
+        colors[-1] = PIE_REST
+
+    R, C = 62, 70
+    svg = [f'<svg class="mx-pie" viewBox="0 0 {C*2} {C*2}" role="img" '
+           f'aria-label="{e(title)}">']
+    if len(rows) == 1:
+        svg.append(f'<circle cx="{C}" cy="{C}" r="{R}" fill="{colors[0]}"/>')
+    else:
+        a = 0.0
+        for (k, n), col in zip(rows, colors):
+            span = n / total * 360 if total else 0
+            svg.append(f'<path d="{arc_path(C, C, R, a, a + span)}" fill="{col}" '
+                       f'stroke="#fff" stroke-width="2"><title>{e(k)}: {n}</title></path>')
+            a += span
+    svg.append("</svg>")
+
+    leg = ['<ul class="mx-legend">']
+    for (k, n), col in zip(rows, colors):
         pct = round(n / total * 100) if total else 0
-        out.append(f'<li><span class="k">{e(k)}</span>'
-                   f'<span class="bar"><i style="width:{pct}%"></i></span>'
+        leg.append(f'<li><span class="sw" style="background:{col}"></span>'
+                   f'<span class="k">{e(k)}</span>'
                    f'<span class="n">{n}<small>{pct}%</small></span></li>')
-    out.append("</ul>" + (f'<p class="mx-note">{e(note)}</p>' if note else "") + "</div>")
-    return "".join(out)
+    leg.append("</ul>")
+    return (f'<div class="mx-stat"><h4>{e(title)}</h4>'
+            f'<div class="mx-pie-row">{"".join(svg)}{"".join(leg)}</div>'
+            + (f'<p class="mx-note">{e(note)}</p>' if note else "") + "</div>")
 
 
 def blk_stats(lines, arg, ctx, md):
@@ -512,24 +560,28 @@ def blk_stats(lines, arg, ctx, md):
       분류 어휘를 코드에 박아 두지도 않는다. 무엇으로 정하든 그대로 집계된다.
     """
     from collections import Counter
+    _, opt = parse_args(arg)
+    # 끝난 모임의 기록이다. 열리기 전에는 보이지 않는다(미리 보려면 when=always).
+    if opt.get("when", "past") != "always" and ctx.get("phase") != "past":
+        return ""
     people = ctx.get("people_stat") or []
     talks = [r for d in (ctx.get("program") or []) for r in d["rows"]
              if r["kind"] == "talk" and (r["title"] or r["speaker"])]
     out = ['<div class="mx-stats">']
     if people:
         un = L(ctx, "unspecified")
-        out.append(bars(L(ctx, "stat_affil"),
-                        Counter(p["affil"] or un for p in people), len(people)))
+        out.append(pie(L(ctx, "stat_affil"),
+                       Counter(p["affil"] or un for p in people), len(people), ctx))
         names = L(ctx, "pos")
         pos = Counter(names.get(p["position"], un) for p in people)
-        out.append(bars(L(ctx, "stat_pos"), pos, len(people)))
+        out.append(pie(L(ctx, "stat_pos"), pos, len(people), ctx))
     if talks:
         tagged = [t["swg"] for t in talks if t["swg"]]
         c = Counter(tagged)
         if tagged:
             c[L(ctx, "unclassified")] = len(talks) - len(tagged)
-            out.append(bars(L(ctx, "stat_topic"), {k: v for k, v in c.items() if v},
-                            len(talks), L(ctx, "stat_note")))
+            out.append(pie(L(ctx, "stat_topic"), {k: v for k, v in c.items() if v},
+                           len(talks), ctx, L(ctx, "stat_note")))
     out.append("</div>")
     body = "".join(out)
     return body if (people or talks) else (
