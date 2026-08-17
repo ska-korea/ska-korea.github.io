@@ -68,6 +68,34 @@ site:
         links:
           - {label: CARTA 내려받기, url: "https://cartavis.org"}
           - {label: CARTA 사용 설명서, url: "https://carta.readthedocs.io/en/latest/"}
+  # ── 문의처 ───────────────────────────────────────────────
+  # 사안별 창구. 위에 있는 것부터 보인다 — 넓은 문의를 앞에 둔다.
+  #
+  # 항목 하나 = topic(무엇에 대한 문의인가) · what(한 줄 설명) · people(담당자)
+  #   people   name·email. 여럿이면 나란히 놓인다.
+  #   actions  메일 말고 다른 창구가 있을 때만 (예: GitHub 수정 요청). 없으면 생략.
+  # 새 창구가 생기면 아래에 네 줄 더하면 된다. 템플릿·CSS는 손댈 필요 없다.
+  contacts:
+    - topic: SKA Korea 사업 전반
+      what: 과제 참여, 기관 협력, 그 밖의 사업 관련 문의.
+      people:
+        - {name: Bong Won Sohn, email: bwsohn@kasi.re.kr}
+
+    - topic: SRC 참여
+      what: SKA 지역센터(SRC) 개발과 운영에 함께할 연구자·개발자를 찾고 있습니다.
+      people:
+        - {name: Shinyoung Kim, email: shinykim@kasi.re.kr}
+
+    - topic: 이 홈페이지
+      what: 잘못된 내용, 빠진 소식, 고쳤으면 하는 것을 알려 주세요.
+      people:
+        - {name: Hyein Yoon, email: hiyoon@kasi.re.kr}
+        - {name: Shinyoung Kim, email: shinykim@kasi.re.kr}
+      actions:
+        - label: GitHub에 수정 요청
+          url: "https://github.com/ska-korea/ska-korea.github.io/issues/new?template=homepage-request.yml"
+          note: GitHub 계정이 있으시면 이쪽이 가장 빠릅니다
+
   # 자료 창구에 넣지 않고 푸터로 뺀 링크 — '자료를 받는' 일이 아니라 '소식을 따라가는' 일이라서.
   external:
     - {label: SKAO, url: "https://www.skao.int/"}

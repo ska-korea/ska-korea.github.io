@@ -659,6 +659,53 @@ ol.steps b { color: var(--navy); }
 /* 제목 칸이 이미 여백을 주었으므로 본문은 덜 띄운다 */
 .band.tight { padding-top: 36px; }
 
+/* ============================================================
+   문의처 — 사안 : 사람
+   목록은 계속 늘어난다. 그래서 카드가 아니라 행으로 짰다 — 카드는 개수가
+   늘수록 격자가 어정쩡해지지만, 행은 몇 개가 되든 같은 리듬을 지킨다.
+   (미팅 목록·SRC 여정과 같은 조판 어휘다.)
+   ============================================================ */
+.contact-list { margin-top: 4px; border-top: 1px solid var(--line); }
+.contact {
+  list-style: none;
+  display: grid; grid-template-columns: minmax(0, 300px) minmax(0, 1fr);
+  gap: 14px 44px; align-items: start;
+  padding: 24px 4px 26px;
+  border-bottom: 1px solid var(--line);
+}
+.ct-what h2 {
+  font-size: 18px; font-weight: 700; color: var(--navy);
+  letter-spacing: -.018em; line-height: 1.4;
+}
+.ct-what p { font-size: var(--fs-aux); color: var(--muted); margin-top: 6px; line-height: 1.6; }
+
+.ct-who { display: flex; flex-wrap: wrap; gap: 10px; }
+
+/* 이름과 메일을 한 덩어리로 누르게 한다 — 메일 주소만 작게 링크로 두면
+   누를 자리가 좁고, 이름과 주소가 따로 노는 것처럼 보인다. */
+.person {
+  display: block; padding: 11px 16px 12px; min-width: 212px;
+  border: 1px solid var(--line); border-radius: 11px;
+  background: var(--paper);
+  transition: border-color .15s, background .15s, transform .15s;
+}
+.person:hover { border-color: var(--navy); background: var(--wash); transform: translateY(-1px); }
+.pname { display: block; font-size: var(--fs-card); font-weight: 700; color: var(--navy); line-height: 1.4; }
+.pmail {
+  display: block; margin-top: 2px;
+  font-size: var(--fs-meta); color: var(--magenta);
+  font-variant-numeric: tabular-nums;
+}
+.person:hover .pmail { color: var(--magenta-deep); }
+
+/* 메일 말고 다른 창구가 있을 때만 나온다(GitHub 수정 요청 등) */
+.ct-action { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; flex-basis: 100%; margin-top: 4px; }
+.btn.small { font-size: var(--fs-aux); padding: 9px 16px; border-radius: 9px; }
+.ct-note { font-size: var(--fs-meta); color: var(--faint); }
+
+@media (max-width: 720px) {
+  .contact { grid-template-columns: 1fr; gap: 14px; }
+}
 
 /* ============================================================
    표 · 콜아웃

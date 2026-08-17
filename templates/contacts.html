@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% from "_parts.html" import pagehead with context %}
+{% block main %}
+{% call pagehead(page) %}
+  <h1>{{ page.title }}</h1>
+  {% if page.sub %}<p class="sub">{{ page.sub | sentences }}</p>{% endif %}
+{% endcall %}
+
+<div class="band">
+  <div class="wrap">
+    {% if page.html %}<div class="prose" style="margin-bottom:30px">{{ page.html | safe }}</div>{% endif %}
+
+    {# 창구 목록은 site.yaml의 site.contacts가 정본이다. 여기서 손으로 적지 않는다 —
+       사안이 늘 때마다 그쪽에 네 줄만 더하면 된다. #}
+    <ul class="contact-list">
+      {% for c in site.contacts %}
+      <li class="contact">
+        <div class="ct-what">
+          <h2>{{ c.topic }}</h2>
+          {% if c.what %}<p>{{ c.what | sentences }}</p>{% endif %}
+        </div>
+        <div class="ct-who">
+          {% for p in c.people %}
+          <a class="person" href="mailto:{{ p.email }}">
+            <span class="pname">{{ p.name }}</span>
+            <span class="pmail">{{ p.email }}</span>
+          </a>
+          {% endfor %}
+          {% for a in c.actions %}
+          <div class="ct-action">
+            <a class="btn ghost small" href="{{ a.url }}" rel="noopener">{{ a.label }}</a>
+            {% if a.note %}<span class="ct-note">{{ a.note }}</span>{% endif %}
+          </div>
+          {% endfor %}
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+{% endblock %}
