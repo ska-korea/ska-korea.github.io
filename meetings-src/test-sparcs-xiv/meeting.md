@@ -54,10 +54,10 @@ The meeting this year will be held October 19th–23rd, 2026, in Seoul, South Ko
 
 The meeting is strongly encouraged as an in-person event to maximize interaction and networking between communities, while a limited number of online participants will be accommodated where necessary. The venue can hold up to 100 people, so places are first-come, first-served, and a waitlist will open once capacity is reached.
 
-::: split 1:1
-### Confirmed invited speakers
+## Confirmed Invited Speakers
 
-::: people sort=name as=list count=no
+::: card accent=yes
+::: people sort=name as=grid count=no
 Alec Thomson | SKAO
 Bong Won Sohn | KASI
 Christian Groeneveld | INAF-IRA
@@ -69,9 +69,11 @@ Lennart Heino | IDIA
 Sthabile Kolwa | UNISA, Online
 Tessa Vernstrom | CSIRO
 :::
+:::
 
----
+## Organizing Committee
 
+::: split 1:2
 ### SOC
 
 ::: people sort=name as=list count=no
@@ -84,9 +86,10 @@ Roland Timmerman
 Mattia Vaccari
 Tessa Vernstrom
 :::
-:::
 
-## LOC
+---
+
+### LOC
 
 ::: people sort=name as=grid
 Bong Won Sohn | KASI
@@ -112,6 +115,7 @@ Wonki Lee | Yonsei
 Yeji Jo | KHU
 Yunjeong Lee | KHU
 Yura Lee | Sejong
+:::
 :::
 
 ## More about SPARCS

@@ -334,7 +334,9 @@ def blk_deadlines(lines, arg, ctx, md):
     """마감일. `2026-04-15 | 초록 접수 시작`.
 
     지난 것은 스스로 물러나고 다음 것이 강조된다 — LOC가 색을 손으로 바꾸던 일을 없앤다.
+    제목은 기본으로 붙는다(`title=…` 로 바꾸고, `title=none` 이면 없앤다).
     """
+    _, opt = parse_args(arg)
     today = ctx.get("today") or date.today()
     rows = []
     for raw in lines:
@@ -349,14 +351,32 @@ def blk_deadlines(lines, arg, ctx, md):
         rows.append((d, c[1]))
     rows.sort()
     nxt = next((d for d, _ in rows if d >= today), None)
-    out = ['<ul class="mx-deadlines">']
+    title = opt.get("title", "Important Dates").replace("_", " ")
+    out = ['<section class="mx-card mx-dates">']
+    if title != "none":
+        out.append(f'<h3 class="mx-card-h">{e(title)}</h3>')
+    out.append('<ul class="mx-deadlines">')
     for d, what in rows:
         state = "past" if d < today else ("next" if d == nxt else "future")
         out.append(f'<li class="{state}"><span class="mx-date mono">'
                    f'{d.year}.{d.month:02d}.{d.day:02d}</span>'
                    f'<span>{e(what)}</span></li>')
-    out.append("</ul>")
+    out.append("</ul></section>")
     return "".join(out)
+
+
+def blk_card(lines, arg, ctx, md):
+    """상자로 묶는다. `::: card title=Confirmed_Invited_Speakers accent=yes`
+
+    강조하고 싶은 절(초청연사처럼 참석 여부를 좌우하는 정보)을 눈에 띄게 두르는 데 쓴다.
+    제목의 밑줄(_)은 빈칸으로 읽는다 — 여는 줄에서는 빈칸이 인자를 나누기 때문이다.
+    """
+    _, opt = parse_args(arg)
+    cls = "mx-card" + (" accent" if opt.get("accent") == "yes" else "")
+    title = opt.get("title", "").replace("_", " ")
+    head = f'<h3 class="mx-card-h">{e(title)}</h3>' if title else ""
+    return (f'<section class="{cls}">{head}'
+            f'{render_nodes(scan(lines), md, ctx)}</section>')
 
 
 def blk_map(lines, arg, ctx, md):
@@ -480,7 +500,7 @@ def blk_stats(lines, arg, ctx, md):
 BLOCKS = {"split": blk_split, "program": blk_program, "people": blk_people,
           "deadlines": blk_deadlines, "map": blk_map, "pdf": blk_pdf,
           "form": blk_form, "logos": blk_logos, "gallery": blk_gallery,
-          "stats": blk_stats}
+          "stats": blk_stats, "card": blk_card}
 
 
 def render_nodes(nodes, md, ctx):

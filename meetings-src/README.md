@@ -90,6 +90,22 @@ Dahee Lee | Chosun
 :::
 ```
 
+상자에 담기고 **Important Dates** 제목이 저절로 붙습니다.
+제목을 바꾸려면 `::: deadlines title=주요_일정` (빈칸은 `_`), 없애려면 `title=none`.
+
+### 상자로 묶어 강조
+
+```
+::: card title=Confirmed_Invited_Speakers accent=yes
+::: people sort=name as=grid count=no
+Alec Thomson | SKAO
+:::
+:::
+```
+
+`accent=yes` 를 빼면 수수한 상자가 됩니다. 참석 여부를 좌우하는 정보(초청연사 같은)를
+눈에 띄게 둘 때 쓰세요.
+
 ### 지도 · PDF · 등록 폼
 
 ```

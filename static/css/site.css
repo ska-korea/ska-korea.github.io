@@ -869,7 +869,22 @@ ol.steps b { color: var(--navy); }
 /* ============================================================
    미팅 원고 형식 (meetingfmt) — 조판을 우리가 소유할 때 비로소 가능한 것들
    ============================================================ */
-.mx-sub { font-size: var(--fs-lead); color: var(--muted); margin-top: 4px; }
+/* 부제는 제목과 한 줄에. 강조색으로 조금 작게 — 떨어뜨려 놓으면 묻힌다 */
+.mx-tail {
+  color: var(--magenta); font-size: .6em; font-weight: 700;
+  letter-spacing: -.01em; white-space: nowrap;
+}
+.mx-tail::before { content: "— "; color: var(--faint); font-weight: 400; }
+@media (max-width: 620px) { .mx-tail { display: block; margin-top: 2px; } .mx-tail::before { content: none; } }
+
+/* 날짜·장소는 '언제 어디서'라 가장 먼저 찾는 정보다. 회색 한 줄로 흘리지 않는다. */
+.mx-facts { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.mx-facts span {
+  font-size: var(--fs-card); font-weight: 600; color: var(--navy);
+  background: var(--wash); border: 1px solid var(--line);
+  border-radius: 20px; padding: 5px 14px;
+}
+.mx-facts .mono { font-variant-numeric: tabular-nums; }
 
 /* 끝난 모임·진행 중인 모임을 한 번만, 분명히 알린다 */
 .mx-over { background: var(--wash); border-bottom: 1px solid var(--line); }
@@ -886,6 +901,32 @@ ol.steps b { color: var(--navy); }
 /* 그림은 단 폭에 맞춘다 — 원고가 크기를 정하지 않아도 지면이 정해 준다 */
 .prose.mx img { margin: 8px 0; }
 .prose.mx figure, .prose.mx p > img { max-width: 100%; }
+
+/* ── 절을 눈으로 가를 것 ──
+   글이 길어지면 어디서 이야기가 바뀌는지 보이지 않는다. `##` 마다 강조색 짧은 줄을
+   앞세워, 훑기만 해도 절의 경계가 잡히게 한다. */
+.prose.mx h2 { position: relative; padding-top: 30px; margin-top: 42px; }
+.prose.mx h2::before {
+  content: ""; position: absolute; top: 0; left: 0;
+  width: 46px; height: 3px; border-radius: 3px; background: var(--magenta);
+}
+.prose.mx > h2:first-child, .mx-col > h2:first-child { margin-top: 0; }
+/* 상자 안에서는 줄을 또 긋지 않는다 — 테두리가 이미 경계다 */
+.mx-card h2 { padding-top: 0; margin-top: 24px; }
+.mx-card h2::before { content: none; }
+
+/* ── 상자 ── 강조하고 싶은 절, 그리고 마감일 표 */
+.mx-card {
+  border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 20px 22px 18px; margin: 24px 0; background: var(--paper);
+}
+.mx-card.accent { border-color: #f0c8d8; background: #fffafc; }
+.mx-card-h {
+  font-size: var(--fs-card); font-weight: 700; color: var(--magenta);
+  letter-spacing: .04em; text-transform: uppercase; margin: 0 0 12px;
+}
+.mx-card > :last-child { margin-bottom: 0; }
+.mx-dates { background: var(--wash); }
 
 /* ── 일정표 ── 시각은 소요시간에서 계산된다 */
 .mx-program { margin: 22px 0; border-top: 2px solid var(--navy); }

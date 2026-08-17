@@ -432,6 +432,20 @@ def collect_meetings(meta_cfg: dict) -> list[dict]:
     return pages
 
 
+def date_range(start, end) -> str:
+    """(2026-10-19, 2026-10-23) → '2026.10.19–23'. 달이 넘으면 '2023.10.30–11.03'."""
+    if not start:
+        return ""
+    a = f"{start.year}.{start.month:02d}.{start.day:02d}"
+    if not end or end == start:
+        return a
+    if (start.year, start.month) == (end.year, end.month):
+        return f"{a}–{end.day:02d}"
+    if start.year == end.year:
+        return f"{a}–{end.month:02d}.{end.day:02d}"
+    return f"{a}–{end.year}.{end.month:02d}.{end.day:02d}"
+
+
 def collect_authored(md: markdown.Markdown, today: date) -> list[dict]:
     """meetings-src/ 의 새 형식 원고를 미팅 페이지로 읽어들인다.
 
@@ -473,7 +487,7 @@ def collect_authored(md: markdown.Markdown, today: date) -> list[dict]:
                 "meeting_path": base, "meeting_sub": meta.get("subtitle"),
                 "banner": f"{base}/files/{meta['banner']}" if meta.get("banner") else None,
                 "poster": bool(meta.get("banner")), "banner_at": None,
-                "when": meta.get("dates"), "where": meta.get("venue"),
+                "when": date_range(start, end) or meta.get("dates"), "where": meta.get("venue"),
                 "phase": phase, "start": start, "end": end,
                 # meetings 목록에 세울지. 시험용 사본은 list: false 로 빼 둔다.
                 "year": start.year if start else None,

@@ -32,9 +32,15 @@
       <a href="/meetings">Meetings</a>
       {% if page.depth == 3 %} / <a href="{{ page.meeting_path }}">{{ page.meeting_title }}</a>{% endif %}
     </div>
-    <h1>{{ page.title if page.depth == 3 else page.meeting_title }}</h1>
-    {% if page.depth == 2 and page.meeting_sub %}<p class="mx-sub">{{ page.meeting_sub }}</p>{% endif %}
-    {% if meta %}<p class="meta mono">{{ meta }}</p>{% endif %}
+    {# 부제는 제목과 한 줄에, 강조색으로 조금 작게 — 별개의 문단으로 떨어뜨리면 묻힌다 #}
+    <h1>{{ page.title if page.depth == 3 else page.meeting_title }}
+      {%- if page.depth == 2 and page.meeting_sub %} <span class="mx-tail">{{ page.meeting_sub }}</span>{% endif %}</h1>
+    {% if page.when or page.where %}
+    <p class="mx-facts">
+      {% if page.when %}<span class="mono">{{ page.when }}</span>{% endif %}
+      {% if page.where %}<span>{{ page.where }}</span>{% endif %}
+    </p>
+    {% endif %}
   </div>
 </div>
 
