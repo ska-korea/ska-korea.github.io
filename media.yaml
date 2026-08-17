@@ -1,0 +1,167 @@
+# /ska-korea/ska-in-korean-media 의 언론 보도 목록.
+#
+# 날짜 역순으로 카드가 놓인다(정렬은 빌드가 한다 — 여기 순서는 상관없다).
+#   date    YYYY-MM-DD. 기사 발행일.
+#   outlet  언론사 이름.
+#   title   기사 제목. 원문 그대로 옮긴다.
+#   url     기사 주소. 카드 전체가 이 주소로 이어진다.
+#   image   static/img/media/ 안의 파일명. 없으면 언론사 이름만 있는 판으로 대신한다.
+#
+# 값은 2026-08-17에 각 기사 페이지의 메타데이터(og:title·article:published_time 등)에서
+# 읽어 온 것이다. 지어낸 값은 없다. 새 보도를 넣으려면 아래에 다섯 줄 더하면 된다.
+
+articles:
+  - date: 2025-12-04
+    outlet: 헬로디디
+    title: "[르포] 남아공 주도 역대급 전파천문 프로젝트···SKA 현장 가보니"
+    url: "https://www.hellodd.com/news/articleView.html?idxno=110138"
+    image: 2025-12-04-hellodd.jpg
+
+  - date: 2025-05-30
+    outlet: 동아사이언스
+    title: "한국, 국제 거대전파망원경 건설 프로젝트 참여"
+    url: "https://www.dongascience.com/ko/news/71984"
+    image: 2025-05-30-dongascience.jpg
+
+  - date: 2025-05-30
+    outlet: 연합뉴스
+    title: "韓, 3조 규모 세계 최대 전파망원경 프로젝트 참여…345억원 투입"
+    url: "https://www.yna.co.kr/view/AKR20250530078000017"
+    image: 2025-05-30-yna.jpg
+
+  - date: 2025-05-30
+    outlet: KBS 뉴스
+    title: "우주항공청, 사상 최대 전파망원경 프로젝트 참여"
+    url: "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8268201"
+    image: 2025-05-30-news.jpg
+
+  - date: 2025-05-30
+    outlet: 중앙일보
+    title: "한국, 3조원 규모 ‘세계 최대 전파망원경 프로젝트’ 참여…345억 투입"
+    url: "https://www.joongang.co.kr/article/25340291"
+    image: 2025-05-30-joongang.jpg
+
+  - date: 2025-05-30
+    outlet: MBC 뉴스
+    title: "한국, 3조 규모 세계 최대 전파망원경 프로젝트 참여‥345억 원 투입"
+    url: "https://imnews.imbc.com/news/2025/world/article/6721065_36725.html"
+    image: 2025-05-30-imnews.jpg
+
+  - date: 2025-05-30
+    outlet: 경남뉴스
+    title: "우주항공청, 국제 거대전파망원경 프로젝트에 참여"
+    url: "https://www.gnnews24.kr/news/articleView.html?idxno=28056"
+    image: 2025-05-30-gnnews24.jpg
+
+  - date: 2025-05-30
+    outlet: 서울경제
+    title: "韓, 3조원 규모 거대전파망원경 프로젝트 합류"
+    url: "https://www.sedaily.com/article/14073133"
+    image: 2025-05-30-sedaily.jpg
+
+  - date: 2025-05-30
+    outlet: 지디넷코리아
+    title: "우주청, 13만개 거대전파망원경 건설 프로젝트 참여…우주 비밀 밝힌다"
+    url: "https://zdnet.co.kr/view/?no=20250530154918"
+    image: 2025-05-30-zdnet.jpg
+
+  - date: 2025-05-30
+    outlet: 뉴스1
+    title: "역대급 전파망원경 프로젝트에 韓 참여 본격화…\"우주기원 규명\""
+    url: "https://www.news1.kr/it-science/general-it/5800046"
+    image: 2025-05-30-news1.jpg
+
+  - date: 2025-05-30
+    outlet: 스페셜타임스
+    title: "한국, 3조원 규모 전파망원경 프로젝트 본격 참여…우주 비밀 밝힌다"
+    url: "https://www.specialtimes.co.kr/news/articleView.html?idxno=427060"
+    image: 2025-05-30-specialtimes.jpg
+
+  - date: 2025-05-19
+    outlet: KBS 뉴스
+    title: "남아프리카 공화국, 세계 최대 전파 망원경 2030년 완공"
+    url: "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8257413"
+    image: 2025-05-19-news.jpg
+
+  - date: 2025-04-05
+    outlet: 이투데이
+    title: "외계 생명체ㆍ블랙홀 관측하는 SKA 프로젝트 韓 가입 지연된 이유는?"
+    url: "https://www.etoday.co.kr/news/view/2459211"
+    image: 2025-04-05-etoday.jpg
+
+  - date: 2025-04-03
+    outlet: 전자신문
+    title: "국제 거대전파망원경 프로젝트 참여 본격화…협력 분야 논의"
+    url: "https://www.etnews.com/20250403000156"
+    image: 2025-04-03-etnews.jpg
+
+  - date: 2025-04-03
+    outlet: 서울경제
+    title: "거대전파망원경 국제기구 사무총장 방한…韓 참여 논의"
+    url: "https://www.sedaily.com/article/14048718"
+    image: 2025-04-03-sedaily.jpg
+
+  - date: 2025-04-03
+    outlet: 아시아경제
+    title: "우주항공청, SKAO와 인적·물적 참여 방안 논의"
+    url: "https://view.asiae.co.kr/article/2025040313221517778"
+    image: 2025-04-03-asiae.jpg
+
+  - date: 2025-03-18
+    outlet: 코리아넷뉴스
+    title: "한국, 인류 최대 '전파망원경' 건설 참여한다"
+    url: "https://www.korean-culture.org/koreanet/view.do?seq=1050930&page=2&pageSize=10&photoPageSize=6&totalCount=0&searchType=&searchText=&searchCondition=1&cateCode="
+
+  - date: 2025-03-17
+    outlet: 동아사이언스
+    title: "한국, 역대 최대 전파망원경 건설 참여 의사 표명"
+    url: "https://www.dongascience.com/ko/news/70601"
+    image: 2025-03-17-dongascience.jpg
+
+  - date: 2025-03-17
+    outlet: 대한민국 정책브리핑
+    title: "우주청, 인류 최대 '전파망원경' 건설 참여…우주 초기 전파도 관측"
+    url: "https://www.korea.kr/news/policyNewsView.do?newsId=148940626"
+    image: 2025-03-17-korea.jpg
+
+  - date: 2025-03-17
+    outlet: 오마이뉴스
+    title: "우주청, 인류 최대규모 '거대전파망원경 프로젝트' 참여한다"
+    url: "https://www.ohmynews.com/NWS_Web/View/at_pg.aspx?CNTN_CD=A0003111220"
+    image: 2025-03-17-ohmynews.jpg
+
+  - date: 2025-03-17
+    outlet: YTN 사이언스
+    title: "우주청, 지상 최대 전파망원경 개발에 참여 추진"
+    url: "https://science.ytn.co.kr/program/view.php?mcd=0082&key=202503171620083414"
+    image: 2025-03-17-science.jpg
+
+  - date: 2025-03-17
+    outlet: 헬로디디
+    title: "\"블랙홀도 선명하게\" 韓 국제거대전파망원경 건설 참여"
+    url: "https://www.hellodd.com/news/articleView.html?idxno=107214"
+    image: 2025-03-17-hellodd.jpg
+
+  - date: 2025-03-17
+    outlet: 시사매거진
+    title: "우주항공청, 세계 최대 전파망원경 건설 프로젝트 공식 참여"
+    url: "https://www.sisamagazine.co.kr/news/articleView.html?idxno=512097"
+    image: 2025-03-17-sisamagazine.jpg
+
+  - date: 2025-03-17
+    outlet: 이데일리
+    title: "우주항공청, 인류 최대 거대전파망원경 건설사업 참여 추진"
+    url: "https://www.edaily.co.kr/News/Read?newsId=02676486642104304&mediaCodeNo=257"
+    image: 2025-03-17-edaily.jpg
+
+  - date: 2022-12-06
+    outlet: 파퓰러사이언스
+    title: "세계 최고 성능의 전파망원경 SKA, 마침내 착공"
+    url: "https://www.popsci.co.kr/news/articleView.html?idxno=20266"
+    image: 2022-12-06-popsci.jpg
+
+  - date: 2022-12-05
+    outlet: 동아사이언스
+    title: "화성의 휴대폰 신호도 감지...세계 최대 우주전파망원경 건설 '착수'"
+    url: "https://www.dongascience.com/ko/news/57421"
+    image: 2022-12-05-dongascience.jpg

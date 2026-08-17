@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% from "_parts.html" import pagehead with context %}
+{% block main %}
+{% call pagehead(page) %}
+  {% set parent = nav | selectattr('active') | selectattr('children') | first %}
+  {% if parent and not parent.exact %}
+  <div class="crumb"><a href="{{ parent.path }}">{{ parent.title }}</a> / {{ page.title }}</div>
+  {% endif %}
+  <h1>{{ page.title }}</h1>
+  {% if page.sub %}<p class="sub">{{ page.sub | sentences }}</p>{% endif %}
+{% endcall %}
+
+<div class="band">
+  <div class="wrap">
+    {# 목록은 media.yaml이 정본이다. 빌드가 날짜 역순으로 세워 준다. #}
+    <div class="mgrid">
+      {% for a in articles %}
+      <a class="mcard" href="{{ a.url }}" rel="noopener">
+        <span class="mshot">
+          {% if a.image %}
+          <img src="/static/img/media/{{ a.image }}" alt="" loading="lazy">
+          {% else %}
+          {# 대표 사진이 없는 기사 — 언론사 이름으로 자리를 채운다 #}
+          <span class="mshot-none">{{ a.outlet }}</span>
+          {% endif %}
+        </span>
+        <span class="mbody">
+          <span class="mmeta">
+            <span class="moutlet">{{ a.outlet }}</span>
+            <span class="mdate mono">{{ a.date | replace('-', '.') }}</span>
+          </span>
+          <span class="mtitle">{{ a.title }}</span>
+        </span>
+      </a>
+      {% endfor %}
+    </div>
+
+    {% if page.html %}<div class="prose lb-note">{{ page.html | safe }}</div>{% endif %}
+  </div>
+</div>
+{% endblock %}

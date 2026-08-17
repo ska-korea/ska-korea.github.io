@@ -660,6 +660,43 @@ ol.steps b { color: var(--navy); }
 .band.tight { padding-top: 36px; }
 
 /* ============================================================
+   언론 보도 — 최신이 왼쪽 위, 가로 3장까지
+   minmax(300px, 1fr)이면 폭에 따라 3 → 2 → 1로 저절로 접힌다.
+   지면 폭이 1140px에서 멈추므로 아무리 넓은 화면에서도 3장을 넘지 않는다.
+   ============================================================ */
+.mgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px 22px; }
+
+.mcard {
+  display: flex; flex-direction: column;
+  border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden;
+  background: var(--paper);
+  transition: border-color .16s, box-shadow .16s, transform .16s;
+}
+.mcard:hover { border-color: var(--navy); box-shadow: 0 16px 36px rgba(7, 0, 104, .12); transform: translateY(-3px); }
+
+/* 원본 사진의 비율이 제각각(1920×1080 ~ 559×164)이라 격자가 들쭉날쭉해진다.
+   틀을 16:9로 고정하고 잘라 맞춘다 — 카드가 가지런해야 훑어보기 좋다. */
+.mshot { display: block; aspect-ratio: 16 / 9; background: var(--wash); overflow: hidden; }
+.mshot img { width: 100%; height: 100%; object-fit: cover; transition: transform .3s; }
+.mcard:hover .mshot img { transform: scale(1.03); }
+/* 대표 사진이 없는 기사 */
+.mshot-none {
+  display: flex; align-items: center; justify-content: center; height: 100%;
+  background: var(--navy); color: #b9b9e0;
+  font-size: var(--fs-card); font-weight: 700; letter-spacing: -.01em;
+}
+
+.mbody { display: flex; flex-direction: column; gap: 8px; padding: 15px 17px 18px; }
+.mmeta { display: flex; align-items: baseline; gap: 9px; }
+.moutlet { font-size: var(--fs-label); font-weight: 700; color: var(--magenta); }
+.mdate { font-size: var(--fs-label); color: var(--faint); }
+.mtitle {
+  font-size: var(--fs-card); font-weight: 600; color: var(--ink);
+  line-height: 1.55; letter-spacing: -.012em; text-wrap: pretty;
+}
+.mcard:hover .mtitle { color: var(--navy); }
+
+/* ============================================================
    자료 창구 (Links) — 갈래마다 상자 하나
    상자 배경에 그 갈래의 사진을 깔되, 오른쪽만 제대로 보이고 왼쪽으로 갈수록
    흰 지면에 녹아든다. 글은 늘 흰 바탕 위에 있어 또렷하고, 사진은 '이 상자가
