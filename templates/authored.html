@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% from "_parts.html" import pagehead with context %}
+{% block main %}
+{% set meta = [page.when, page.where] | select | join(' · ') %}
+
+{# 대문 그림은 미팅 원고의 banner: 가 정한다 #}
+{% if page.banner %}
+<div class="posterhead">
+  <a href="{{ page.meeting_path }}"><img src="{{ page.banner }}" alt="{{ page.meeting_title }}"></a>
+</div>
+{% else %}
+{% call pagehead(page, big=true) %}
+  <div class="crumb"><a href="/meetings">Meetings</a></div>
+  <h1>{{ page.meeting_title }}</h1>
+  {% if meta %}<p class="sub mono">{{ meta }}</p>{% endif %}
+{% endcall %}
+{% endif %}
+
+{% if page.subnav | length > 1 %}
+<nav class="subtabs" aria-label="{{ page.meeting_title }} 하위 메뉴">
+  <div class="wrap">
+    {% for t in page.subnav %}
+    <a href="{{ t.path }}"{% if t.path == page.path %} aria-current="page"{% endif %}>{{ t.title }}</a>
+    {% endfor %}
+  </div>
+</nav>
+{% endif %}
+
+<div class="meethead">
+  <div class="wrap">
+    <div class="crumb">
+      <a href="/meetings">Meetings</a>
+      {% if page.depth == 3 %} / <a href="{{ page.meeting_path }}">{{ page.meeting_title }}</a>{% endif %}
+    </div>
+    <h1>{{ page.title if page.depth == 3 else page.meeting_title }}</h1>
+    {% if page.depth == 2 and page.meeting_sub %}<p class="mx-sub">{{ page.meeting_sub }}</p>{% endif %}
+    {% if meta %}<p class="meta mono">{{ meta }}</p>{% endif %}
+  </div>
+</div>
+
+{# 끝난 모임임을 한 번만, 분명히 알린다 — 등록창이 열려 있는 것처럼 보이면 안 된다 #}
+{% if page.phase == 'past' %}
+<div class="mx-over"><div class="wrap">
+  이 모임은 <b>{{ page.end.strftime('%Y년 %m월 %d일') }}</b>에 끝났습니다. 아래 내용은 기록으로 남겨 둔 것입니다.
+</div></div>
+{% elif page.phase == 'running' %}
+<div class="mx-over now"><div class="wrap">지금 진행 중인 모임입니다.</div></div>
+{% endif %}
+
+<div class="band tight">
+  <div class="wrap">
+    <article class="prose mx">{{ page.html | safe }}</article>
+  </div>
+</div>
+{% endblock %}

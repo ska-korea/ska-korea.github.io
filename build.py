@@ -25,6 +25,8 @@ from urllib.parse import urlparse
 
 import markdown
 import yaml
+
+import meetingfmt
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 from markupsafe import Markup, escape
 
@@ -430,6 +432,64 @@ def collect_meetings(meta_cfg: dict) -> list[dict]:
     return pages
 
 
+def collect_authored(md: markdown.Markdown, today: date) -> list[dict]:
+    """meetings-src/ 의 새 형식 원고를 미팅 페이지로 읽어들인다.
+
+    수확본과 달리 조판을 우리가 소유한다 — 단 배치·지도·PDF·일정표가 그래서 가능하다.
+    (수확 방식과 당분간 나란히 돈다. 옮긴 미팅만 이쪽을 쓴다.)
+    """
+    root = ROOT / "meetings-src"
+    if not root.is_dir():
+        return []
+    out = []
+    for f in sorted(root.glob("*/meeting.md")):
+        slug = f.parent.name
+        meta, body = split_front(f.read_text(encoding="utf-8"))
+        start, end = None, None
+        if meta.get("dates"):
+            got = re.findall(r"\d{4}-\d{2}-\d{2}", str(meta["dates"]))
+            if got:
+                start = date.fromisoformat(got[0])
+                end = date.fromisoformat(got[-1])
+        phase = ("past" if end and end < today else
+                 "running" if start and end and start <= today <= end else "upcoming")
+        ctx = {"today": today, "phase": phase, "slug": slug}
+
+        def render_md(text, _md=md):
+            _md.reset()
+            return _md.convert(text)
+
+        pages = meetingfmt.render(meetingfmt.parse(body), render_md, ctx)
+        base = f"/meetings/{slug}"
+        subnav = [{"path": base if i == 0 else f"{base}/{slugify(p['title'])}",
+                   "title": p["title"]} for i, p in enumerate(pages)]
+        for i, p in enumerate(pages):
+            # 원고 안의 상대 경로(files/…)를 배포 경로로
+            html_ = re.sub(r'((?:src|href)=")files/', rf'\1{base}/files/', p["html"])
+            out.append({
+                "path": subnav[i]["path"], "title": p["title"], "template": "authored.html",
+                "html": html_, "source": "authored", "depth": 2 if i == 0 else 3,
+                "subnav": subnav, "meeting_title": meta.get("title", slug),
+                "meeting_path": base, "meeting_sub": meta.get("subtitle"),
+                "banner": f"{base}/files/{meta['banner']}" if meta.get("banner") else None,
+                "poster": bool(meta.get("banner")), "banner_at": None,
+                "when": meta.get("dates"), "where": meta.get("venue"),
+                "phase": phase, "start": start, "end": end,
+                # meetings 목록에 세울지. 시험용 사본은 list: false 로 빼 둔다.
+                "year": start.year if start else None,
+                "month": start.month if start else None,
+                "category": meta.get("category"), "status": None,
+                "listed": meta.get("list", True),
+                "assets": f.parent / "files", "meta": meta,
+                "stats": ctx.get("stats"),
+            })
+    return out
+
+
+def slugify(s: str) -> str:
+    return re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-") or "page"
+
+
 def parse_when(when: str | None, year: int, month: int) -> tuple[date, date]:
     """meetings.yaml의 'YYYY.MM.DD–DD' 같은 표기를 (시작일, 종료일)로.
 
@@ -452,7 +512,8 @@ def parse_when(when: str | None, year: int, month: int) -> tuple[date, date]:
 
 def meeting_index(meetings: list[dict], today: date) -> dict:
     """미팅 목록을 연도별 역순으로 정리하고, 다가오는 일정을 뽑는다."""
-    tops = [m for m in meetings if m["depth"] == 2 and m["year"]]
+    tops = [m for m in meetings if m["depth"] == 2 and m["year"]
+            and m.get("listed", True)]
     tops.sort(key=lambda m: (m["year"], m["month"] or 0), reverse=True)
 
     upcoming = []
@@ -517,17 +578,22 @@ def main() -> int:
     banner_cfg = site.get("banners") or {}
     content = collect_content(md, banner_cfg)
     meetings = collect_meetings(meet_cfg.get("meetings", {}) if meet_cfg else {})
+    authored = collect_authored(md, today)
     talks = collect_talks(md)
     for t in talks:
         t["banner"], t["banner_at"] = banner_for(t["path"], t["meta"], banner_cfg)
     newsletters = collect_newsletters()
     for p in content + meetings:
         p["html"] = fix_images(p["html"], imgs)
+    meetings += authored
     index = meeting_index(meetings, today)
 
     # 미팅 하위 페이지는 상위 미팅의 서브탭을 물려받는다
     by_path = {m["path"]: m for m in meetings}
     for m in meetings:
+        # 새 형식 미팅은 collect_authored가 이미 다 채워 두었다 — 수확본 뒷손질 대상이 아니다
+        if m.get("source") == "authored":
+            continue
         parent = by_path.get(m["parent"]) if m["depth"] == 3 else None
         if not m["subnav"] and parent:
             m["subnav"] = parent.get("subnav", [])
@@ -602,6 +668,12 @@ def main() -> int:
                 kept_img += 1
             else:
                 skipped_img += 1
+    # 새 형식 미팅의 첨부(배너·사진·PDF)
+    for m in authored:
+        src = m.get("assets")
+        if src and Path(src).is_dir() and m["depth"] == 2:
+            shutil.copytree(src, OUT / m["meeting_path"].strip("/") / "files", dirs_exist_ok=True)
+
     # 발표 첨부(슬라이드·사진)를 원래 파일명 그대로 배포한다
     files = OUT / "talks" / "files"
     for t in talks:
