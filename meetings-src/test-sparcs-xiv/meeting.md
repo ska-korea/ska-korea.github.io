@@ -188,7 +188,9 @@ placeholder used to test the new format — times are computed from durations.)*
 
 # Registration
 
-**Registration & payment deadline**: August 31st
+::: deadlines
+2026-08-31 | Registration & payment deadline
+:::
 
 ::: split 3:2
 ## Important notes

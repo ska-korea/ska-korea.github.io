@@ -923,10 +923,13 @@ ol.steps b { color: var(--navy); }
 }
 .mx-card.accent { border-color: #f0c8d8; background: #fffafc; }
 .mx-card.mx-dates { padding: 18px 20px 8px; }
-.mx-card-h {
+/* .prose h3 의 30px 위 여백을 이겨야 한다 — 선택자를 같은 무게 이상으로 둔다.
+   안 그러면 상자 위쪽만 빈 줄 하나가 더 있는 것처럼 벌어진다. */
+.prose.mx h3.mx-card-h, .mx-card-h {
   font-size: var(--fs-label); font-weight: 700; color: var(--magenta);
-  letter-spacing: .12em; text-transform: uppercase; margin: 0 0 10px;
+  letter-spacing: .12em; text-transform: uppercase; margin: 0 0 10px; padding-top: 0;
 }
+.prose.mx h3.mx-card-h::before { content: none; }
 .mx-card > :last-child { margin-bottom: 0; }
 
 
@@ -1049,8 +1052,10 @@ ol.steps b { color: var(--navy); }
 .mx-note { font-size: var(--fs-label); color: var(--faint); margin-top: 8px; }
 
 /* 각주 — 등록비의 '* PhD 5년 이내' 같은 단서를 본문에서 떼어 낸다 */
-.prose.mx .footnote { margin-top: 30px; padding-top: 14px; border-top: 1px solid var(--line); }
-.prose.mx .footnote ol { font-size: var(--fs-meta); color: var(--muted); padding-left: 1.1em; }
+.prose.mx .footnote { margin-top: 22px; }
+/* 각주지 미주가 아니다 — 마크다운 확장이 넣는 구분선을 지운다 */
+.prose.mx .footnote hr { display: none; }
+.prose.mx .footnote ol { font-size: var(--fs-meta); color: var(--muted); padding-left: 1.2em; }
 .prose.mx .footnote li { margin: 4px 0; }
 .prose.mx .footnote p { margin: 0; font-size: var(--fs-meta); }
 .prose.mx sup a, .prose.mx .footnote-backref { text-decoration: none; color: var(--magenta); }
