@@ -14,7 +14,13 @@ Python으로 정적 HTML을 만들어 GitHub Pages로 배포합니다.
 직접 만들고 고칩니다. 30분마다 자동으로 본문만 가져와 이 사이트의 머리·꼬리를 입혀 보여줍니다.
 **조직위원회는 아무것도 새로 배울 필요가 없습니다.** 반영까지 최대 1시간으로 안내하세요.
 
-Google Sites의 상단 메뉴·배너·푸터는 가져오지 않습니다. 본문만 옮겨옵니다.
+Google Sites의 상단 메뉴·푸터는 가져오지 않습니다. 본문과 **배너 그림**만 옮겨옵니다.
+
+**배너 그림도 조직위원회가 정합니다.** Google Sites 페이지 맨 위에 깔아 둔 그림을 그대로 가져옵니다.
+글자 없이 그림만 있는 배너(조직위원회가 만든 대문 그림)는 그 그림이 페이지 머리가 되고,
+그 아래 하위 탭, 다시 그 아래에 제목이 놓입니다. 사진 위에 제목을 글자로 얹은 배너는
+사진만 배경으로 쓰고 제목은 이 사이트 조판으로 다시 그립니다.
+자동 판정이 어긋나면 `meetings.yaml`에 `banner: poster` 또는 `photo`, `none`으로 적으세요.
 
 ## 폴더
 
@@ -23,14 +29,41 @@ build.py            빌드 — content/ + harvest/ → _site/
 harvest/harvest.py  수확 — Google Sites에서 미팅 본문 가져오기
 import_content.py   기존 홈페이지 본문을 content/로 옮기는 1회성 도구
 
-site.yaml           사이트 제목·내비게이션·자료 창구·수치
+site.yaml           사이트 제목·내비게이션·자료 창구·수치·배너·**문의처**
 meetings.yaml       미팅 목록에 쓰는 날짜·장소
+links.yaml          자료 창구(Links) 목록 — 갈래·사진·링크
+media.yaml          언론 보도 목록 — 날짜·언론사·제목·기사 주소·사진
 content/            본문 원고 (Markdown)
 content/talks/      발표 — 파일명 규칙으로 자동 구성 (README 참조)
 templates/          Jinja2 템플릿
 static/             CSS·이미지
+static/img/banners/ 본문 페이지 배너 사진 (어느 쪽에 무엇을 쓰는지는 site.yaml, 출처는 그 폴더 README)
 harvest/            수확 결과 (자동 생성, 커밋됨)
 ```
+
+## 자주 하는 일
+
+**문의처를 늘리려면** `site.yaml`의 `site.contacts`에 항목을 더하세요. 템플릿·CSS는 손댈 필요 없습니다.
+
+```yaml
+- topic: 새 사안 이름
+  what: 한 줄 설명.
+  people:
+    - {name: 이름, email: 주소@kasi.re.kr}
+  # 메일 말고 다른 창구가 있을 때만
+  # actions: [{label: 버튼 이름, url: "https://…", note: 곁들일 설명}]
+```
+
+**자료 창구를 늘리려면** `links.yaml`에 항목을 더하세요. 갈래를 새로 만들면 사진은
+`static/img/links/`에 넣습니다(가로 1400px 이하). 링크는 **줄 전체**가 눌리고 주소는
+화면에 나오지 않으므로, `label`만 보고도 어디로 가는지 알 수 있게 적으세요.
+
+**언론 보도를 추가하려면** `media.yaml`에 다섯 줄을 더하고, 대표 사진을
+`static/img/media/`에 넣으세요(가로 720px 정도, 파일명은 `날짜-언론사.jpg`).
+카드는 **날짜 역순으로 자동 정렬**되므로 적는 위치는 상관없습니다. 사진이 없으면
+`image:`를 빼면 됩니다 — 언론사 이름이 들어간 판으로 대신 나옵니다.
+
+홈페이지 수정 요청 양식은 `.github/ISSUE_TEMPLATE/homepage-request.yml`입니다.
 
 ## 로컬에서 작업하기
 

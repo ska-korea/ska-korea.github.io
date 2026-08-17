@@ -2,7 +2,7 @@
 title: "From Imaging to Inference: Probabilistic Reconstruction of Physical Systems"
 speaker: Jakob Knollmüller
 affiliation: Max Planck Institute for Astrophysics
-when: "6월 18일(화) 오후 4시"
+when: "6월 18일(목) 오후 4시"
 where: 장영실홀 331-2
 mode: offline
 ---

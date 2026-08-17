@@ -12,19 +12,22 @@ YYYY-MM-DD-발표자-주제.확장자
 **앞부분(확장자 뺀 이름)이 같은 파일은 한 발표로 묶입니다.**
 
 ```
-2026-06-22-knollmueller-imaging-to-inference.md     ← 초록 + 발표 정보
-2026-06-22-knollmueller-imaging-to-inference.pdf    ← 슬라이드
-2026-06-22-knollmueller-imaging-to-inference.jpg    ← 사진
-2026-06-22-knollmueller-imaging-to-inference-2.jpg  ← 사진 둘째 장
-2026-06-22-knollmueller-imaging-to-inference-3.jpg  ← 셋째 장 …
+2026-06-18-knollmueller-imaging-to-inference.md     ← 초록 + 발표 정보
+2026-06-18-knollmueller-imaging-to-inference.pdf    ← 슬라이드
+2026-06-18-knollmueller-imaging-to-inference.jpg    ← 사진
+2026-06-18-knollmueller-imaging-to-inference-2.jpg  ← 사진 둘째 장
+2026-06-18-knollmueller-imaging-to-inference-3.jpg  ← 셋째 장 …
 ```
 
 - 맨 앞 `YYYY-MM-DD`가 **날짜이자 정렬 기준**입니다. 목록은 최신순으로 자동 정렬됩니다.
 - 발표자·주제 부분은 영문 소문자와 하이픈을 쓰세요. **주소(URL)가 되기 때문입니다.**
-  위 예시는 `ska.kasi.re.kr/talks/2026-06-22-knollmueller-imaging-to-inference`가 됩니다.
+  위 예시는 `ska.kasi.re.kr/talks/2026-06-18-knollmueller-imaging-to-inference`가 됩니다.
 - 확장자가 역할을 정합니다:
   `.md` 초록 · `.pdf` `.pptx` `.key` 슬라이드 · `.jpg` `.png` `.webp` `.gif` 사진
 - 규칙에 안 맞는 파일은 무시되고, 빌드할 때 경고가 뜹니다.
+- ★ **파일명 날짜와 아래 `when`이 어긋나면 빌드가 알려 줍니다.** 날짜가 두 곳에 적히는데
+  (파일명은 정렬·주소를, `when`은 화면에 보이는 값을 정합니다) 갈라져도 화면은 멀쩡해
+  보이기 때문입니다. 요일이 틀린 것도 함께 잡습니다.
 
 ## .md 파일 쓰는 법
 
