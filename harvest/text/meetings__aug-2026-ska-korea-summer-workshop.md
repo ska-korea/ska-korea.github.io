@@ -65,19 +65,19 @@ Session 4. Solar and Stellar Physics [Chair: Jungha Kim]
 
 Day 2. Aug 20 Thu
 
-Session 5. HI and Extragalactic Science
+Session 5. HI and Extragalactic Science [Chair: Minsu Kim]
 
                   - 09:30 - 09:55 Se-Heon Oh (Sejong Univ.), MeerKAT's view of cold-mode accretion and gas disequilibrium in nearby dwarf galaxies (20+5 min)09:55 - 10:10 Bumhyun Lee (Yonsei Univ.), MeerKAT-JCMT Synergy: Environmental Effects on Virgo Dwarf Galaxies (12+3 min)10:10 - 10:25 Anthony Carr (KASI), Next generation peculiar velocity science in the southern hemisphere with SKA (12+3 min)10:25 - 10:40 Seung-Yeon Lee (UNIST), Discovering Spiral-Host Double-Lobed Radio AGNs with LoTSS DR3 (12+3 min)
 
 10:40 - 11:10 Break (30 min)
 
-Session 6. Extragalactic Science and Cosmology
+Session 6. Extragalactic Science and Cosmology [Chair: Bumhyun Lee]
 
                   - 11:10 - 11:25 Yunjeong Lee (KHU), Pilot Study for SKA-VLBI: Resolving Jet Composition with eKVN & POSSUM and Developing a Mosaicking/Cutout Tool  (*remote, 12+3 min)11:25 - 11:40 Chandra Shekhar Saraf (KASI), Cosmology from SKAO-mid continuum survey (*remote, 12+3 min)11:40 - 11:55 David Parkinson (KASI), An SKAO AA4 simulation of cosmology from the clustering of continuum galaxies (12+3 min)11:55 - 12:10 Jeffrey Hodgson (Sejong Univ.), Cosmology with Counter-jet distances (12+3 min)
 
 12:10 - 13:30 Lunch (80 min)
 
-Session 7. VLBI with Low-Frequency
+Session 7. VLBI with Low-Frequency [Chair: Junhyun Baek]
 
                   - 13:30 - 13:55 Junhan Kim (KAIST), KAIST-ATNF Joint Research Center for Low-frequency VLBI (20+5 min)13:55 - 14:10 Jiwon Jang (KAIST), Pathway to LAMBDA-Korea: Overview of the LAMBDA Instruments and Associated Challenges (12+3 min)14:10 - 14:25 Thanawat Nakmorn (KAIST), Electronics and Instrumentation for Bustling Universe Radio Survey Telescope in Taiwan (BURSTT) (12+3 min)14:25 - 14:40 Sieun Go (UST/KASI), Preparing for SKA-Low VLBI through BURSTT Backend and Correlation Training (12+3 min)14:40 - 14:55 Eunchan Lee (KAIST), Science Preparation with LAMBDA and BURSTT-Pyeongchang (12+3 min)
 
@@ -91,11 +91,11 @@ Dinner - will be provided during the discussion
 
 Day 3: Aug 21 Fri
 
-                  - Session 9. VLBI Technique/Astrometry/SKA SDC4 09:30 - 09:45 Mingyu Ryu (UNIST), Neural Network for Faraday Rotation Measure Synthesis: Early-Stage Development Toward SDC4 (12+3 min)09:45 - 10:00 Minji Kim (UST/KASI), Toward High-Precision VLBI Astrometry for the SKA Era: Introducing the PINPT_MSP Project (12+3 min)10:00 - 10:15 Daehyun Kim (Sejong Univ.), Automated image domain parameter extraction from wide-field SKA-VLBI observations (12+3 min)10:15 - 10:30 Taeho Kang (UNIST), Simulation Study of Future Space- and Lunar-VLBI Arrays and Possible Extensions to the SKA (12+3 min)
+                  - Session 9. VLBI Technique/Astrometry/SKA SDC4 [Chair: Shinyoung Kim]09:30 - 09:45 Mingyu Ryu (UNIST), Neural Network for Faraday Rotation Measure Synthesis: Early-Stage Development Toward SDC4 (12+3 min)09:45 - 10:00 Minji Kim (UST/KASI), Toward High-Precision VLBI Astrometry for the SKA Era: Introducing the PINPT_MSP Project (12+3 min)10:00 - 10:15 Daehyun Kim (Sejong Univ.), Automated image domain parameter extraction from wide-field SKA-VLBI observations (12+3 min)10:15 - 10:30 Taeho Kang (UNIST), Simulation Study of Future Space- and Lunar-VLBI Arrays and Possible Extensions to the SKA (12+3 min)
 
 10:30 - 11:00 Break (30 min)
 
-                  - Session 10. VLBI with High-Frequency 11:00 - 11:10 Yoojin Choi (UNIST), Probing circular polarization in the core of M87 using multi-year VLBA 15 GHz observations (8+2 min)11:10 - 11:25 Yu-Sik Kim (UNIST), Parsec-scale Evolution of the Jet in PKS 1749+096 associated with multiple IceCube neutrino events (12+3 min)11:25 - 11:40 Ho Jun Jeong (UNIST), VLBA Polarimetry of the neutrino blazar PKS 0735+178 (12+3 min)11:40 - 11:55 Deokheyong Lee (UNIST), Multi-frequency synthesis imaging of M87 at 15, 43, and 86 GHz using RESOLVE (12+3 min)
+                  - Session 10. VLBI with High-Frequency [Chair: Mingyu Ryu]11:00 - 11:10 Yoojin Choi (UNIST), Probing circular polarization in the core of M87 using multi-year VLBA 15 GHz observations (8+2 min)11:10 - 11:25 Yu-Sik Kim (UNIST), Parsec-scale Evolution of the Jet in PKS 1749+096 associated with multiple IceCube neutrino events (12+3 min)11:25 - 11:40 Ho Jun Jeong (UNIST), VLBA Polarimetry of the neutrino blazar PKS 0735+178 (12+3 min)11:40 - 11:55 Deokheyong Lee (UNIST), Multi-frequency synthesis imaging of M87 at 15, 43, and 86 GHz using RESOLVE (12+3 min)
 
 11:55 - 12:10 Closing
 
