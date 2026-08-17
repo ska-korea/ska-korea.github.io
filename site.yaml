@@ -138,7 +138,7 @@ nav:
     path: /ska-korea
     children:
       - {path: /ska-korea/ska, title: SKA, note: 망원경과 과학 목표}
-      - {path: /ska-korea/ska-korea, title: SKA-Korea, note: 국내 커뮤니티 소개}
+      - {path: /ska-korea/ska-korea, title: SKA Korea, note: 국내 커뮤니티 소개}
       - {path: /ska-korea/ska-in-korean-media, title: SKA in Korean media, note: 국내 언론 보도}
   - title: Science
     path: /science

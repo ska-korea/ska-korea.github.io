@@ -538,6 +538,43 @@ ol.steps b { color: var(--navy); }
 /* ============================================================
    발표 (Talks)
    ============================================================ */
+/* 가장 최근 발표 — 초록까지 펼쳐 보여 준다(소식지 최신호와 같은 결).
+   본문(17px)이 아니라 카드 글자(15.5px)로 조판해, 지면의 주인공이 아니라
+   '미리 읽어 보는 것'으로 읽히게 한다. */
+.talk-latest {
+  display: grid; grid-template-columns: minmax(0, 1fr) 250px; gap: 40px; align-items: start;
+  background: var(--wash); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 28px 30px 30px;
+}
+.tk-main h2 { font-size: clamp(21px, 2.6vw, 27px); font-weight: 800; letter-spacing: -.026em; line-height: 1.35; margin: 8px 0 6px; }
+.tk-main h2 a { color: var(--navy); }
+.tk-main h2 a:hover { color: var(--magenta); }
+.tk-by { font-size: var(--fs-lead); color: var(--muted); }
+.tk-abstract { margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--line); }
+.tk-abstract p { font-size: var(--fs-card); line-height: 1.8; margin: 0 0 12px; }
+.tk-abstract p:last-child { margin-bottom: 0; }
+.tk-none { margin-top: 14px; color: var(--faint); font-size: var(--fs-aux); }
+
+.tk-side {
+  background: var(--paper); border: 1px solid var(--line); border-radius: 12px;
+  padding: 18px; display: flex; flex-direction: column; gap: 10px;
+}
+.tk-shot { display: block; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+.tk-shot img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.tk-side dl { margin-bottom: 4px; }
+/* 라벨이 한글이라 자간을 넓히지 않는다 — 자간 넓히기는 대문자 라틴 약어에나 맞는다 */
+.tk-side dt { font-size: 13px; font-weight: 600; letter-spacing: .02em; color: var(--faint); margin-top: 12px; }
+.tk-side dt:first-child { margin-top: 0; }
+.tk-side dd { font-size: var(--fs-card); color: var(--ink); margin-top: 4px; line-height: 1.6; }
+.tk-side .btn { text-align: center; }
+
+.talk-past { margin-top: 64px; padding-top: 40px; border-top: 1px solid var(--line); }
+.talk-past h2.sec { margin-bottom: 6px; }
+
+@media (max-width: 780px) {
+  .talk-latest { grid-template-columns: 1fr; gap: 22px; padding: 22px 20px 24px; }
+}
+
 .talk-item { grid-template-columns: 108px 1fr auto; }
 .talk-marks { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; justify-content: flex-end; }
 
@@ -548,8 +585,9 @@ ol.steps b { color: var(--navy); }
   padding: 20px;
 }
 .talk-side dl { margin-bottom: 16px; }
-.talk-side dt { font-size: 13px; font-weight: 600; letter-spacing: .14em;
-  text-transform: uppercase; color: var(--faint); margin-top: 14px;
+/* 한글 라벨이라 자간을 넓히지 않는다(.tk-side와 같은 이유) */
+.talk-side dt { font-size: 13px; font-weight: 600; letter-spacing: .02em;
+  color: var(--faint); margin-top: 14px;
 }
 .talk-side dt:first-child { margin-top: 0; }
 .talk-side dd { font-size: 15px; color: var(--ink); margin-top: 4px; line-height: 1.6; }

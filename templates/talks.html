@@ -13,8 +13,49 @@
     {% if not talks %}
     <div class="callout"><span class="eyebrow">준비 중</span>등록된 발표가 없습니다.</div>
     {% else %}
+    {% set latest = talks[0] %}
+
+    {# 가장 최근 발표는 초록까지 펼쳐 보여 준다 — 눌러 들어가지 않아도 무슨 이야기였는지 알 수 있게 #}
+    <section class="talk-latest">
+      <div class="tk-main">
+        <span class="eyebrow">최근 발표</span>
+        <h2><a href="{{ latest.path }}">{{ latest.title }}</a></h2>
+        {% if latest.speaker %}
+        <p class="tk-by">{{ latest.speaker }}{% if latest.affiliation %} · {{ latest.affiliation }}{% endif %}</p>
+        {% endif %}
+        {% if latest.html %}
+        <div class="prose tk-abstract">{{ latest.html | safe }}</div>
+        {% else %}
+        <p class="tk-none">초록이 등록되지 않았습니다.</p>
+        {% endif %}
+      </div>
+
+      <aside class="tk-side">
+        {% if latest.images %}
+        <a class="tk-shot" href="{{ latest.path }}"><img src="{{ latest.images[0] }}" alt="{{ latest.title }} 발표 사진" loading="lazy"></a>
+        {% endif %}
+        <dl>
+          <dt>일시</dt>
+          <dd class="mono">{{ latest.when or latest.date.strftime('%Y.%m.%d') }}</dd>
+          {% if latest.where %}
+          <dt>장소</dt>
+          <dd>{{ latest.where }}{% if latest.mode %} <span class="tag done">{{ latest.mode }}</span>{% endif %}</dd>
+          {% elif latest.mode %}
+          <dt>형식</dt>
+          <dd><span class="tag done">{{ latest.mode }}</span></dd>
+          {% endif %}
+        </dl>
+        {% if latest.slides %}<a class="btn primary small" href="{{ latest.slides }}">슬라이드</a>{% endif %}
+        <a class="btn ghost small" href="{{ latest.path }}">발표 페이지</a>
+      </aside>
+    </section>
+
+    {% if talk_years_rest %}
+    <section class="talk-past">
+      <span class="eyebrow">지난 발표</span>
+      <h2 class="sec">{{ talks | length - 1 }}건의 지난 발표</h2>
     <div class="timeline">
-      {% for group in talk_years %}
+      {% for group in talk_years_rest %}
       <div class="tl-year">{{ group.year }}</div>
       {% for t in group.entries %}
       <a class="tl-item talk-item" href="{{ t.path }}">
@@ -34,6 +75,8 @@
       {% endfor %}
       {% endfor %}
     </div>
+    </section>
+    {% endif %}
     {% endif %}
   </div>
 </div>

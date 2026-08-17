@@ -249,6 +249,31 @@ def collect_content(md: markdown.Markdown, banners: dict) -> list[dict]:
 TALK_SLIDES = {".pdf", ".pptx", ".key"}
 TALK_IMAGES = {".jpg", ".jpeg", ".png", ".webp", ".gif"}
 
+WEEKDAYS = "월화수목금토일"
+WHEN_DATE = re.compile(r"(\d{1,2})월\s*(\d{1,2})일(?:\s*\(([월화수목금토일])\))?")
+
+
+def check_talk_date(filename: str, file_date: date, when: str | None) -> None:
+    """파일명 날짜와 frontmatter의 `when`이 어긋나면 알린다.
+
+    발표는 두 곳에 날짜가 적힌다 — 파일명(정렬·주소를 정한다)과 `when`(화면에 보인다).
+    둘이 갈라져도 화면은 멀쩡해 보이므로 눈으로는 오래 못 잡는다. 실제로 한 건이
+    파일명 6/22 · 표기 6/18로 넉 달을 그렇게 있었다. 요일까지 함께 본다.
+    """
+    m = WHEN_DATE.search(str(when or ""))
+    if not m:
+        return
+    try:
+        said = date(file_date.year, int(m.group(1)), int(m.group(2)))
+    except ValueError:
+        return
+    if said != file_date:
+        print(f"  ! {filename}: 파일명은 {file_date}인데 when은 {said}입니다 "
+              f"— 정렬·주소는 파일명을 따릅니다", file=sys.stderr)
+    elif m.group(3) and m.group(3) != WEEKDAYS[said.weekday()]:
+        print(f"  ! {filename}: {said}는 {WEEKDAYS[said.weekday()]}요일인데 "
+              f"({m.group(3)})로 적혀 있습니다", file=sys.stderr)
+
 
 def collect_talks(md: markdown.Markdown) -> list[dict]:
     """content/talks/ 의 파일을 이름 규칙으로 묶어 발표 목록을 만든다.
@@ -288,6 +313,7 @@ def collect_talks(md: markdown.Markdown) -> list[dict]:
             t["meta"] = meta
             t["html"] = md.convert(body) if body.strip() else ""
             t["title"] = meta.get("title", t["title"])
+            check_talk_date(f.name, t["date"], meta.get("when"))
         elif ext in TALK_SLIDES:
             t["slides"] = f"/talks/files/{f.name}"
             t["assets"].append(f)
