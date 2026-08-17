@@ -40,7 +40,7 @@ We have a registration fee that varies by group.
                   - Student/ECR*: 80,000 KRW (~50 Euro)
 *maximum 5 years since PhD
 
-![](images/meetings__oct-2026-sparcs-xiv_21)
+![](images/meetings__oct-2026-sparcs-xiv_14)
 (Image credit: EMU, Tessa Vernstrom)
 
 ## Meeting Information
@@ -115,11 +115,11 @@ SEOUL MICE PLAZA, Seoul, South Korea
 
 ## Sponsorship
 
-![](images/meetings__oct-2026-sparcs-xiv_22)
-![](images/meetings__oct-2026-sparcs-xiv_23)
-![](images/meetings__oct-2026-sparcs-xiv_24)
+![](images/meetings__oct-2026-sparcs-xiv_15)
+![](images/meetings__oct-2026-sparcs-xiv_16)
+![](images/meetings__oct-2026-sparcs-xiv_17)
 
-![](images/meetings__oct-2026-sparcs-xiv_25)
+![](images/meetings__oct-2026-sparcs-xiv_18)
 
 ## Code of Conduct
 

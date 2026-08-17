@@ -2,9 +2,6 @@
 
 <!-- 원본: https://sites.google.com/view/ska-korea/meetings/2024jul-ska-korea -->
 
-## 2024 Summer SKA-Korea Workshop
-July 25-26 (Thu-Fri), 2024
-
 # 2024 SKA-Korea 여름 워크샵
 
 # 2024. 07. 25 - 26, 동탄 신라스테이 호텔
@@ -148,8 +145,8 @@ Invited talk (I; 40 min talk + 5 min Q&A), Contributed talk (C; 12 min talk + 3 
 
 You can download all the photos: [Link (will be expired in a month)](https://drive.google.com/drive/folders/1khySRXBdPY2H1K2kK9pNY6HlflZIYoND?usp=sharing)
 
-![](images/meetings__2024jul-ska-korea_53)
+![](images/meetings__2024jul-ska-korea_37)
 
-![](images/meetings__2024jul-ska-korea_54)
+![](images/meetings__2024jul-ska-korea_38)
 
 Last updated: 26-July-2024 by Hyein Yoon

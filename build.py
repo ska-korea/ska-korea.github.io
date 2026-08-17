@@ -474,8 +474,27 @@ def main() -> int:
 
     # 정적 자산
     shutil.copytree(ROOT / "static", OUT / "static", dirs_exist_ok=True)
-    if (HARVEST / "images").exists():
-        shutil.copytree(HARVEST / "images", OUT / "img", dirs_exist_ok=True)
+
+    # 수확한 그림은 **실제로 쓰인 것만** 배포한다. harvest/images에는 지금 이 사이트가
+    # 그리지 않는 쪽의 그림도 남아 있다 — 본문 페이지는 content/로 옮겨 왔지만 수확기는
+    # 여전히 그 쪽들을 훑기 때문이다. 통째로 복사하면 아무도 보지 않는 25 MB가 30분마다
+    # 함께 배포된다. 렌더된 HTML이 가리키는 것만 세면 빠뜨릴 일이 없다.
+    src_img = HARVEST / "images"
+    kept_img = skipped_img = 0
+    if src_img.exists():
+        used: set[str] = set()
+        for f in OUT.rglob("*.html"):
+            used |= set(re.findall(r"/img/([\w.-]+)", f.read_text(encoding="utf-8")))
+        dest_img = OUT / "img"
+        dest_img.mkdir(parents=True, exist_ok=True)
+        for f in src_img.iterdir():
+            if not f.is_file():
+                continue
+            if f.name in used:
+                shutil.copy2(f, dest_img / f.name)
+                kept_img += 1
+            else:
+                skipped_img += 1
     # 발표 첨부(슬라이드·사진)를 원래 파일명 그대로 배포한다
     files = OUT / "talks" / "files"
     for t in talks:
@@ -499,6 +518,8 @@ def main() -> int:
     print(f"빌드 완료: {total}쪽 (본문 {len(content)} · 미팅 {len(meetings)} · 발표 {len(talks)}) → {OUT}")
     print(f"  미팅 {index['count']}건 · 다가오는 일정 {len(index['upcoming'])}건 · "
           f"발표 {len(talks)}건 · 소식지 {len(newsletters)}호")
+    if skipped_img:
+        print(f"  수확 그림 {kept_img}개 배포 · 쓰이지 않아 뺀 것 {skipped_img}개")
 
     if args.serve:
         import os

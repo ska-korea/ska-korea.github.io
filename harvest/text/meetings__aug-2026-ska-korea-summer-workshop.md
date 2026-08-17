@@ -2,8 +2,6 @@
 
 <!-- 원본: https://sites.google.com/view/ska-korea/meetings/aug-2026-ska-korea-summer-workshop -->
 
-# 2026 SKA Korea Summer Workshop
-
 Date & Time: August 19-21 (Wed-Fri), 2026
 
 Venue: KAIST Lecture Hall at College of Natural Sciences building (Bldg E6-1's 1st floor, Room 1501), Daejeon
@@ -219,8 +217,8 @@ Contact: hiyoon (at) kasi.re.kr
 
 Sponsors
 
-![](images/meetings__aug-2026-ska-korea-summer-workshop_27)
-![](images/meetings__aug-2026-ska-korea-summer-workshop_28)
-![](images/meetings__aug-2026-ska-korea-summer-workshop_29)
+![](images/meetings__aug-2026-ska-korea-summer-workshop_19)
+![](images/meetings__aug-2026-ska-korea-summer-workshop_20)
+![](images/meetings__aug-2026-ska-korea-summer-workshop_21)
 
 Last edit: 16 Aug 2026 Hyein Yoon

@@ -4,10 +4,6 @@
 
 # SKA-VLBI Workshop in Korea
 
-October 21 - 25, 2024
-
-# SKA-VLBI Workshop in Korea
-
 # October 21 - October 25, 2024
 
 # Korea Astronomy and Space Science Institute (KASI), Daejeon, Korea
@@ -30,7 +26,7 @@ We aim to bring together experts in SKA-VLBI, including key figures from the Jum
 
 We encourage all those interested in SKA-VLBI to participate in this workshop.
 
-![](images/meetings__oct-2024-ska-vlbi-workshop_51)
+![](images/meetings__oct-2024-ska-vlbi-workshop_36)
 
 Topics
 

@@ -2,8 +2,6 @@
 
 <!-- 원본: https://sites.google.com/view/ska-korea/talks -->
 
-# SKA Korea Talks
-
 Recent Talks
 
 2026년 6월 22일 From Imaging to Inference: Probabilistic Reconstruction of Physical Systems

@@ -2,11 +2,9 @@
 
 <!-- 원본: https://sites.google.com/view/ska-korea/newsletters -->
 
-# SKA Korea Newsletters
-
 SKA Korea 소식을 전합니다 2026년 4월 뉴스레터가 돌아왔습니다!
 
-![](images/newsletters_72)
+![](images/newsletters_49)
 SKA-Korea_News_20260420.pdf
 
 지난 뉴스레터

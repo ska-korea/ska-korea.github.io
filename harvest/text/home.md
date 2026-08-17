@@ -2,8 +2,6 @@
 
 <!-- 원본: https://sites.google.com/view/ska-korea/home -->
 
-# SKA Korea
-
 ## Upcoming Meetings
 
                   - [2026 SKA Korea Summer Workshop, Aug. 19-21, KAIST-Daejeon](/meetings/aug-2026-ska-korea-summer-workshop)[2026 SKA Korea Summer Workshop - Registration is open / Abstract Submission is closed](https://forms.gle/ZNCuH9wjmaXARs9L9)

@@ -2,15 +2,13 @@
 
 <!-- 원본: https://sites.google.com/view/ska-korea/src -->
 
-# SKA Regional Centre
-
 SKA 지역센터 (SKA Regional Centre)
 
 SKA 지역센터(SRC)는 SKAO와 긴밀히 협력하여 SKA 데이터를 전 세계 과학 커뮤니티에 제공하는 역할을 맡게 됩니다.
 
 SKA 망원경이 정상운영에 들어가면 매년 약 300 페타바이트(PB = 1,000 TB = 1,000,000 GB)의 관측 데이터가 생성됩니다. 이러한 전례 없는 규모의 데이터를 전 세계 수천 명의 연구자에게 배포하고, 분석을 지원하며, 연구 성과를 극대화하기 위해서는 각 지역에 건설되는 SRC의 역할이 필수적입니다. SRC는 컴퓨팅 및 저장 자원을 통해 연구자들이 데이터에 접근하고 처리할 수 있도록 지원하고, 사용자 친화적인 과학 데이터 분석 환경과 기술적 지원을 제공합니다.
 
-![](images/src_13)
+![](images/src_07)
 
 SKA 지역센터 네트워크 (SKA Regional Centre Network)
 
@@ -24,7 +22,7 @@ SRCNet은 SKA 커뮤니티에 제공할 다섯 가지
                   - 모든 SKA 사용자가 프로젝트 데이터에 접근할 수 있는 권한
                   - 분석, 모델링, 시각화를 위한 소프트웨어 도구 개발 공간
 
-![](images/src_14)
+![](images/src_08)
 
 한국 SKA 지역센터 (Korean SKA Regional Centre)
 

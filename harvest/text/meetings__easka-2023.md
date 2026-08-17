@@ -24,7 +24,7 @@ Seogwipo, Jeju Island, South Korea, October 30 – November 3
 
 East Asia is a key partner in the SKA project contributing to the design, construction, and science of the SKA. Additionally, researchers in this region have been actively conducting astronomical research related to the SKA. To prepare proactively for this trend, international workshops, "EA-SKA in China" in 2019 and "EA-SKA in Japan" in 2021, have been held in the East Asia region. In line with this, we plan to host "EA-SKA in Korea" on October 30 - November 3, 2023. This conference will provide a platform for astronomers and researchers from the East Asia region and beyond to discuss the latest developments of the SKA project, with a particular focus on the SKA science. The conference will cover a wide range of science topics, including the early universe, galaxy formation and evolution, dark matter and dark energy, VLBI studies, and SKA data center development. Furthermore, the conference will provide an opportunity for researchers to present their latest findings and share their ideas with colleagues from around the world. This will foster collaboration and the exchange of ideas about the SKA, which is essential for advancing our understanding of the universe. Overall, the conference will play a critical role in advancing SKA research in the East Asia region and beyond and will help ensure the success of the SKA project.
 
-![](images/meetings__easka-2023_59)
+![](images/meetings__easka-2023_41)
 (Poster in [PDF](https://drive.google.com/file/d/1BXHg7144HlI7QdlPPUTg7XnowPWgEGOS/view?usp=drive_link))
 
 ## Program
@@ -110,8 +110,8 @@ To give a talk (16 min + 4 min Q&A), please submit the title and abstract throug
 
 ## Workshop Group Picture
 
-![](images/meetings__easka-2023_60)
+![](images/meetings__easka-2023_42)
 
 ## Group picture from the excursion to the KVN Tamna telescope
 
-![](images/meetings__easka-2023_61)
+![](images/meetings__easka-2023_43)

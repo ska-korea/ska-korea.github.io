@@ -13,7 +13,8 @@
       "text_chars": 66,
       "fetched_chars": 66,
       "html_bytes": 783,
-      "subnav": []
+      "subnav": [],
+      "banner": null
     },
     {
       "path": "/view/ska-korea/home",
@@ -21,14 +22,19 @@
       "slug": "home",
       "title": "SKA Korea",
       "held": false,
-      "prev_chars": 3003,
+      "prev_chars": 2994,
       "depth": 1,
       "parent": null,
-      "sections": 3,
-      "text_chars": 3003,
-      "fetched_chars": 3003,
-      "html_bytes": 6875,
-      "subnav": []
+      "sections": 2,
+      "text_chars": 2994,
+      "fetched_chars": 2994,
+      "html_bytes": 6335,
+      "subnav": [],
+      "banner": {
+        "image": null,
+        "text": "SKA Korea",
+        "poster": false
+      }
     },
     {
       "path": "/view/ska-korea/links",
@@ -36,14 +42,19 @@
       "slug": "links",
       "title": "Links",
       "held": false,
-      "prev_chars": 1002,
+      "prev_chars": 990,
       "depth": 1,
       "parent": null,
-      "sections": 5,
-      "text_chars": 1002,
-      "fetched_chars": 1002,
-      "html_bytes": 10829,
-      "subnav": []
+      "sections": 4,
+      "text_chars": 990,
+      "fetched_chars": 990,
+      "html_bytes": 10408,
+      "subnav": [],
+      "banner": {
+        "image": null,
+        "text": "Useful links",
+        "poster": false
+      }
     },
     {
       "path": "/view/ska-korea/meetings",
@@ -51,13 +62,13 @@
       "slug": "meetings",
       "title": "Meetings",
       "held": false,
-      "prev_chars": 337,
+      "prev_chars": 319,
       "depth": 1,
       "parent": null,
-      "sections": 3,
-      "text_chars": 337,
-      "fetched_chars": 337,
-      "html_bytes": 3446,
+      "sections": 2,
+      "text_chars": 319,
+      "fetched_chars": 319,
+      "html_bytes": 2984,
       "subnav": [
         {
           "path": "/view/ska-korea/meetings/aug-2026-ska-korea-summer-workshop",
@@ -111,7 +122,12 @@
           "path": "/view/ska-korea/meetings/april-2023-kas-spring-ska-special-session",
           "title": "2023 KAS Spring Meeting, Apr. 12"
         }
-      ]
+      ],
+      "banner": {
+        "image": null,
+        "text": "SKA Korea Meetings",
+        "poster": false
+      }
     },
     {
       "path": "/view/ska-korea/meetings/2023-korsdc-workshop",
@@ -119,14 +135,19 @@
       "slug": "meetings__2023-korsdc-workshop",
       "title": "May 2023 KorSDC lightning workshop",
       "held": false,
-      "prev_chars": 1525,
+      "prev_chars": 1497,
       "depth": 2,
       "parent": "meetings",
-      "sections": 4,
-      "text_chars": 1525,
-      "fetched_chars": 1525,
-      "html_bytes": 19130,
-      "subnav": []
+      "sections": 3,
+      "text_chars": 1497,
+      "fetched_chars": 1497,
+      "html_bytes": 18533,
+      "subnav": [],
+      "banner": {
+        "image": "meetings__2023-korsdc-workshop_banner",
+        "text": "KorSDC 워크샵 (KorSDC Workshop)",
+        "poster": false
+      }
     },
     {
       "path": "/view/ska-korea/meetings/2023aug-ska-korea",
@@ -134,14 +155,19 @@
       "slug": "meetings__2023aug-ska-korea",
       "title": "Aug 2023 SKA Korea summer meeting",
       "held": false,
-      "prev_chars": 2764,
+      "prev_chars": 2708,
       "depth": 2,
       "parent": "meetings",
-      "sections": 9,
-      "text_chars": 2764,
-      "fetched_chars": 2764,
-      "html_bytes": 35283,
-      "subnav": []
+      "sections": 8,
+      "text_chars": 2708,
+      "fetched_chars": 2708,
+      "html_bytes": 34675,
+      "subnav": [],
+      "banner": {
+        "image": "meetings__2023aug-ska-korea_banner",
+        "text": "SKA-Korea Summer 2023 Workshop Aug 23-24 (Wed-Thu), 2023",
+        "poster": false
+      }
     },
     {
       "path": "/view/ska-korea/meetings/2024feb-ska-korea",
@@ -149,14 +175,19 @@
       "slug": "meetings__2024feb-ska-korea",
       "title": "Feb 2024 SKA Korea winter workshop",
       "held": false,
-      "prev_chars": 3016,
+      "prev_chars": 2954,
       "depth": 2,
       "parent": "meetings",
-      "sections": 8,
-      "text_chars": 3016,
-      "fetched_chars": 3016,
-      "html_bytes": 42520,
-      "subnav": []
+      "sections": 7,
+      "text_chars": 2954,
+      "fetched_chars": 2954,
+      "html_bytes": 41503,
+      "subnav": [],
+      "banner": {
+        "image": "meetings__2024feb-ska-korea_banner",
+        "text": "2024 Winter SKA-Korea Workshop Feb 2 0 -2 1 ( Tue-Wed ), 202 4",
+        "poster": false
+      }
     },
     {
       "path": "/view/ska-korea/meetings/2024jul-ska-korea",
@@ -164,14 +195,19 @@
       "slug": "meetings__2024jul-ska-korea",
       "title": "Jul 2024 SKA Korea summer",
       "held": false,
-      "prev_chars": 3148,
+      "prev_chars": 3089,
       "depth": 2,
       "parent": "meetings",
-      "sections": 11,
-      "text_chars": 3148,
-      "fetched_chars": 3148,
-      "html_bytes": 54663,
-      "subnav": []
+      "sections": 10,
+      "text_chars": 3089,
+      "fetched_chars": 3089,
+      "html_bytes": 53679,
+      "subnav": [],
+      "banner": {
+        "image": "meetings__2024jul-ska-korea_banner",
+        "text": "2024 Summer SKA-Korea Workshop July 25-26 ( Thu-Fri ), 2024",
+        "poster": false
+      }
     },
     {
       "path": "/view/ska-korea/meetings/april-2023-kas-spring-ska-special-session",
@@ -179,14 +215,19 @@
       "slug": "meetings__april-2023-kas-spring-ska-special-session",
       "title": "April 2023 KAS Spring SKA Special session",
       "held": false,
-      "prev_chars": 107,
+      "prev_chars": 66,
       "depth": 2,
       "parent": "meetings",
-      "sections": 3,
-      "text_chars": 107,
-      "fetched_chars": 107,
-      "html_bytes": 3038,
-      "subnav": []
+      "sections": 2,
+      "text_chars": 66,
+      "fetched_chars": 66,
+      "html_bytes": 2542,
+      "subnav": [],
+      "banner": {
+        "image": "meetings__april-2023-kas-spring-ska-special-session_banner",
+        "text": "April 2023 KAS Spring SKA Special Session",
+        "poster": false
+      }
     },
     {
       "path": "/view/ska-korea/meetings/april-2024-kas-spring-ska-special-session",
@@ -194,14 +235,19 @@
       "slug": "meetings__april-2024-kas-spring-ska-special-session",
       "title": "April 2024 KAS Spring SKA special session",
       "held": false,
-      "prev_chars": 110,
+      "prev_chars": 69,
       "depth": 2,
       "parent": "meetings",
-      "sections": 3,
-      "text_chars": 110,
-      "fetched_chars": 110,
-      "html_bytes": 2881,
-      "subnav": []
+      "sections": 2,
+      "text_chars": 69,
+      "fetched_chars": 69,
+      "html_bytes": 2386,
+      "subnav": [],
+      "banner": {
+        "image": "meetings__april-2024-kas-spring-ska-special-session_banner",
+        "text": "April 2024 KAS Spring SKA special session",
+        "poster": false
+      }
     },
     {
       "path": "/view/ska-korea/meetings/april-2025-kas-spring-ska-special-session",
@@ -209,14 +255,19 @@
       "slug": "meetings__april-2025-kas-spring-ska-special-session",
       "title": "April 2025 KAS Spring SKA special session",
       "held": false,
-      "prev_chars": 150,
+      "prev_chars": 109,
       "depth": 2,
       "parent": "meetings",
-      "sections": 3,
-      "text_chars": 150,
-      "fetched_chars": 150,
-      "html_bytes": 1849,
-      "subnav": []
+      "sections": 2,
+      "text_chars": 109,
+      "fetched_chars": 109,
+      "html_bytes": 1354,
+      "subnav": [],
+      "banner": {
+        "image": "meetings__april-2025-kas-spring-ska-special-session_banner",
+        "text": "April 2025 KAS Spring SKA special session",
+        "poster": false
+      }
     },
     {
       "path": "/view/ska-korea/meetings/april-2025-korea-spring-meeting",
@@ -224,14 +275,19 @@
       "slug": "meetings__april-2025-korea-spring-meeting",
       "title": "April 2025 Korea Spring meeting",
       "held": false,
-      "prev_chars": 660,
+      "prev_chars": 625,
       "depth": 2,
       "parent": "meetings",
-      "sections": 2,
-      "text_chars": 660,
-      "fetched_chars": 660,
-      "html_bytes": 7486,
-      "subnav": []
+      "sections": 1,
+      "text_chars": 625,
+      "fetched_chars": 625,
+      "html_bytes": 7007,
+      "subnav": [],
+      "banner": {
+        "image": "meetings__april-2025-korea-spring-meeting_banner",
+        "text": "April 2025 SKA Korea Spring meeting",
+        "poster": false
+      }
     },
     {
       "path": "/view/ska-korea/meetings/aug-2026-ska-korea-summer-workshop",
@@ -239,14 +295,19 @@
       "slug": "meetings__aug-2026-ska-korea-summer-workshop",
       "title": "Aug 2026 SKA Korea Summer workshop",
       "held": false,
-      "prev_chars": 10438,
+      "prev_chars": 10407,
       "depth": 2,
       "parent": "meetings",
-      "sections": 12,
-      "text_chars": 10438,
-      "fetched_chars": 10438,
-      "html_bytes": 123620,
-      "subnav": []
+      "sections": 11,
+      "text_chars": 10407,
+      "fetched_chars": 10407,
+      "html_bytes": 123005,
+      "subnav": [],
+      "banner": {
+        "image": "meetings__aug-2026-ska-korea-summer-workshop_banner",
+        "text": "202 6 SKA Korea Summer Workshop",
+        "poster": false
+      }
     },
     {
       "path": "/view/ska-korea/meetings/dec-2024-ska-korea-winter-meeting",
@@ -254,14 +315,19 @@
       "slug": "meetings__dec-2024-ska-korea-winter-meeting",
       "title": "Dec 2024 SKA Korea winter meeting",
       "held": false,
-      "prev_chars": 1452,
+      "prev_chars": 1422,
       "depth": 2,
       "parent": "meetings",
-      "sections": 9,
-      "text_chars": 1452,
-      "fetched_chars": 1452,
-      "html_bytes": 27452,
-      "subnav": []
+      "sections": 8,
+      "text_chars": 1422,
+      "fetched_chars": 1422,
+      "html_bytes": 26976,
+      "subnav": [],
+      "banner": {
+        "image": "meetings__dec-2024-ska-korea-winter-meeting_banner",
+        "text": "2024 SKA-Korea Winter Workshop",
+        "poster": false
+      }
     },
     {
       "path": "/view/ska-korea/meetings/dec-2025-ska-korea-workshop",
@@ -269,14 +335,19 @@
       "slug": "meetings__dec-2025-ska-korea-workshop",
       "title": "Dec 2025 SKA Korea workshop",
       "held": false,
-      "prev_chars": 6115,
+      "prev_chars": 6085,
       "depth": 2,
       "parent": "meetings",
-      "sections": 10,
-      "text_chars": 6115,
-      "fetched_chars": 6115,
-      "html_bytes": 49634,
-      "subnav": []
+      "sections": 9,
+      "text_chars": 6085,
+      "fetched_chars": 6085,
+      "html_bytes": 49079,
+      "subnav": [],
+      "banner": {
+        "image": "meetings__dec-2025-ska-korea-workshop_banner",
+        "text": "2025 SKA Korea Winter Workshop",
+        "poster": false
+      }
     },
     {
       "path": "/view/ska-korea/meetings/easka-2023",
@@ -316,7 +387,12 @@
           "path": "/view/ska-korea/meetings/easka-2023/logistics",
           "title": "Logistics"
         }
-      ]
+      ],
+      "banner": {
+        "image": "meetings__easka-2023_banner",
+        "text": "",
+        "poster": true
+      }
     },
     {
       "path": "/view/ska-korea/meetings/easka-2023/logistics",
@@ -356,7 +432,12 @@
           "path": "/view/ska-korea/meetings/easka-2023/logistics",
           "title": "Logistics"
         }
-      ]
+      ],
+      "banner": {
+        "image": null,
+        "text": "",
+        "poster": true
+      }
     },
     {
       "path": "/view/ska-korea/meetings/easka-2023/participants",
@@ -396,7 +477,12 @@
           "path": "/view/ska-korea/meetings/easka-2023/logistics",
           "title": "Logistics"
         }
-      ]
+      ],
+      "banner": {
+        "image": null,
+        "text": "",
+        "poster": true
+      }
     },
     {
       "path": "/view/ska-korea/meetings/easka-2023/program",
@@ -436,7 +522,12 @@
           "path": "/view/ska-korea/meetings/easka-2023/logistics",
           "title": "Logistics"
         }
-      ]
+      ],
+      "banner": {
+        "image": null,
+        "text": "",
+        "poster": true
+      }
     },
     {
       "path": "/view/ska-korea/meetings/easka-2023/registration",
@@ -476,7 +567,12 @@
           "path": "/view/ska-korea/meetings/easka-2023/logistics",
           "title": "Logistics"
         }
-      ]
+      ],
+      "banner": {
+        "image": null,
+        "text": "",
+        "poster": true
+      }
     },
     {
       "path": "/view/ska-korea/meetings/easka-2023/timeline",
@@ -516,7 +612,12 @@
           "path": "/view/ska-korea/meetings/easka-2023/logistics",
           "title": "Logistics"
         }
-      ]
+      ],
+      "banner": {
+        "image": null,
+        "text": "",
+        "poster": true
+      }
     },
     {
       "path": "/view/ska-korea/meetings/jan-2023-ska-korea-winter-meeting",
@@ -524,14 +625,19 @@
       "slug": "meetings__jan-2023-ska-korea-winter-meeting",
       "title": "Jan 2023 SKA Korea winter meeting",
       "held": false,
-      "prev_chars": 2809,
+      "prev_chars": 2782,
       "depth": 2,
       "parent": "meetings",
-      "sections": 10,
-      "text_chars": 2809,
-      "fetched_chars": 2809,
-      "html_bytes": 39233,
-      "subnav": []
+      "sections": 9,
+      "text_chars": 2782,
+      "fetched_chars": 2782,
+      "html_bytes": 38697,
+      "subnav": [],
+      "banner": {
+        "image": "meetings__jan-2023-ska-korea-winter-meeting_banner",
+        "text": "SKA-Korea workshop Jan 2023",
+        "poster": false
+      }
     },
     {
       "path": "/view/ska-korea/meetings/jun-2025-ska-korea-workshop",
@@ -539,14 +645,19 @@
       "slug": "meetings__jun-2025-ska-korea-workshop",
       "title": "Jun 2025 SKA Korea workshop",
       "held": false,
-      "prev_chars": 1437,
+      "prev_chars": 1407,
       "depth": 2,
       "parent": "meetings",
-      "sections": 10,
-      "text_chars": 1437,
-      "fetched_chars": 1437,
-      "html_bytes": 10574,
-      "subnav": []
+      "sections": 9,
+      "text_chars": 1407,
+      "fetched_chars": 1407,
+      "html_bytes": 10104,
+      "subnav": [],
+      "banner": {
+        "image": "meetings__jun-2025-ska-korea-workshop_banner",
+        "text": "2025 SKA-Korea Summer Workshop",
+        "poster": false
+      }
     },
     {
       "path": "/view/ska-korea/meetings/oct-2024-ska-vlbi-workshop",
@@ -554,14 +665,19 @@
       "slug": "meetings__oct-2024-ska-vlbi-workshop",
       "title": "Oct 2024 SKA-VLBI workshop",
       "held": false,
-      "prev_chars": 7156,
+      "prev_chars": 7108,
       "depth": 2,
       "parent": "meetings",
-      "sections": 11,
-      "text_chars": 7156,
-      "fetched_chars": 7156,
-      "html_bytes": 75818,
-      "subnav": []
+      "sections": 10,
+      "text_chars": 7108,
+      "fetched_chars": 7108,
+      "html_bytes": 74991,
+      "subnav": [],
+      "banner": {
+        "image": "meetings__oct-2024-ska-vlbi-workshop_banner",
+        "text": "SKA-VLBI Workshop in Korea October 21 - 25, 2024",
+        "poster": false
+      }
     },
     {
       "path": "/view/ska-korea/meetings/oct-2026-sparcs-xiv",
@@ -601,7 +717,12 @@
           "path": "/view/ska-korea/meetings/oct-2026-sparcs-xiv/logistics-sparcs-xiv",
           "title": "Logistics"
         }
-      ]
+      ],
+      "banner": {
+        "image": "meetings__oct-2026-sparcs-xiv_banner",
+        "text": "",
+        "poster": true
+      }
     },
     {
       "path": "/view/ska-korea/meetings/oct-2026-sparcs-xiv/logistics-sparcs-xiv",
@@ -641,7 +762,12 @@
           "path": "/view/ska-korea/meetings/oct-2026-sparcs-xiv/logistics-sparcs-xiv",
           "title": "Logistics"
         }
-      ]
+      ],
+      "banner": {
+        "image": null,
+        "text": "",
+        "poster": true
+      }
     },
     {
       "path": "/view/ska-korea/meetings/oct-2026-sparcs-xiv/participants-sparcs-xiv",
@@ -681,7 +807,12 @@
           "path": "/view/ska-korea/meetings/oct-2026-sparcs-xiv/logistics-sparcs-xiv",
           "title": "Logistics"
         }
-      ]
+      ],
+      "banner": {
+        "image": null,
+        "text": "",
+        "poster": true
+      }
     },
     {
       "path": "/view/ska-korea/meetings/oct-2026-sparcs-xiv/program-sparcs-xiv",
@@ -721,7 +852,12 @@
           "path": "/view/ska-korea/meetings/oct-2026-sparcs-xiv/logistics-sparcs-xiv",
           "title": "Logistics"
         }
-      ]
+      ],
+      "banner": {
+        "image": null,
+        "text": "",
+        "poster": true
+      }
     },
     {
       "path": "/view/ska-korea/meetings/oct-2026-sparcs-xiv/registration-sparcs-xiv",
@@ -761,7 +897,12 @@
           "path": "/view/ska-korea/meetings/oct-2026-sparcs-xiv/logistics-sparcs-xiv",
           "title": "Logistics"
         }
-      ]
+      ],
+      "banner": {
+        "image": null,
+        "text": "",
+        "poster": true
+      }
     },
     {
       "path": "/view/ska-korea/meetings/oct-2026-sparcs-xiv/sparcs-sparcs-xiv",
@@ -801,7 +942,12 @@
           "path": "/view/ska-korea/meetings/oct-2026-sparcs-xiv/logistics-sparcs-xiv",
           "title": "Logistics"
         }
-      ]
+      ],
+      "banner": {
+        "image": null,
+        "text": "",
+        "poster": true
+      }
     },
     {
       "path": "/view/ska-korea/meetings/sep-2025-ska-korea-workshop",
@@ -809,14 +955,19 @@
       "slug": "meetings__sep-2025-ska-korea-workshop",
       "title": "Sep 2025 SKA Korea workshop",
       "held": false,
-      "prev_chars": 2366,
+      "prev_chars": 2338,
       "depth": 2,
       "parent": "meetings",
-      "sections": 7,
-      "text_chars": 2366,
-      "fetched_chars": 2366,
-      "html_bytes": 29460,
-      "subnav": []
+      "sections": 6,
+      "text_chars": 2338,
+      "fetched_chars": 2338,
+      "html_bytes": 28854,
+      "subnav": [],
+      "banner": {
+        "image": "meetings__sep-2025-ska-korea-workshop_banner",
+        "text": "2025 SKA Korea Fall Workshop",
+        "poster": false
+      }
     },
     {
       "path": "/view/ska-korea/newsletters",
@@ -824,14 +975,19 @@
       "slug": "newsletters",
       "title": "Newsletters",
       "held": false,
-      "prev_chars": 289,
+      "prev_chars": 268,
       "depth": 1,
       "parent": null,
-      "sections": 4,
-      "text_chars": 289,
-      "fetched_chars": 289,
-      "html_bytes": 6337,
-      "subnav": []
+      "sections": 3,
+      "text_chars": 268,
+      "fetched_chars": 268,
+      "html_bytes": 5902,
+      "subnav": [],
+      "banner": {
+        "image": null,
+        "text": "SKA Korea Newsletters",
+        "poster": false
+      }
     },
     {
       "path": "/view/ska-korea/science",
@@ -846,7 +1002,8 @@
       "text_chars": 7,
       "fetched_chars": 7,
       "html_bytes": 416,
-      "subnav": []
+      "subnav": [],
+      "banner": null
     },
     {
       "path": "/view/ska-korea/science/data-archives",
@@ -861,7 +1018,8 @@
       "text_chars": 13,
       "fetched_chars": 13,
       "html_bytes": 437,
-      "subnav": []
+      "subnav": [],
+      "banner": null
     },
     {
       "path": "/view/ska-korea/science/ska-science-working-groups",
@@ -869,14 +1027,19 @@
       "slug": "science__ska-science-working-groups",
       "title": "SKA Science Working Groups",
       "held": false,
-      "prev_chars": 460,
+      "prev_chars": 434,
       "depth": 2,
       "parent": "science",
-      "sections": 2,
-      "text_chars": 460,
-      "fetched_chars": 460,
-      "html_bytes": 4032,
-      "subnav": []
+      "sections": 1,
+      "text_chars": 434,
+      "fetched_chars": 434,
+      "html_bytes": 3568,
+      "subnav": [],
+      "banner": {
+        "image": null,
+        "text": "SKA Science Working Groups",
+        "poster": false
+      }
     },
     {
       "path": "/view/ska-korea/ska-korea/ska",
@@ -884,14 +1047,19 @@
       "slug": "ska-korea__ska",
       "title": "SKA",
       "held": false,
-      "prev_chars": 1079,
+      "prev_chars": 1052,
       "depth": 2,
       "parent": "ska-korea",
-      "sections": 5,
-      "text_chars": 1079,
-      "fetched_chars": 1079,
-      "html_bytes": 5896,
-      "subnav": []
+      "sections": 4,
+      "text_chars": 1052,
+      "fetched_chars": 1052,
+      "html_bytes": 5465,
+      "subnav": [],
+      "banner": {
+        "image": null,
+        "text": "SKA: Square Kilometre Array",
+        "poster": false
+      }
     },
     {
       "path": "/view/ska-korea/ska-korea/ska-in-korean-media",
@@ -899,14 +1067,19 @@
       "slug": "ska-korea__ska-in-korean-media",
       "title": "SKA in Korean media",
       "held": false,
-      "prev_chars": 19,
+      "prev_chars": 0,
       "depth": 2,
       "parent": "ska-korea",
-      "sections": 1,
-      "text_chars": 19,
-      "fetched_chars": 19,
-      "html_bytes": 386,
-      "subnav": []
+      "sections": 0,
+      "text_chars": 0,
+      "fetched_chars": 0,
+      "html_bytes": 0,
+      "subnav": [],
+      "banner": {
+        "image": null,
+        "text": "SKA in Korean media",
+        "poster": false
+      }
     },
     {
       "path": "/view/ska-korea/ska-korea/ska-korea",
@@ -914,14 +1087,19 @@
       "slug": "ska-korea__ska-korea",
       "title": "SKA-Korea",
       "held": false,
-      "prev_chars": 167,
+      "prev_chars": 158,
       "depth": 2,
       "parent": "ska-korea",
-      "sections": 2,
-      "text_chars": 167,
-      "fetched_chars": 167,
-      "html_bytes": 1159,
-      "subnav": []
+      "sections": 1,
+      "text_chars": 158,
+      "fetched_chars": 158,
+      "html_bytes": 727,
+      "subnav": [],
+      "banner": {
+        "image": null,
+        "text": "SKA Korea",
+        "poster": false
+      }
     },
     {
       "path": "/view/ska-korea/src",
@@ -929,14 +1107,19 @@
       "slug": "src",
       "title": "SRC",
       "held": false,
-      "prev_chars": 1556,
+      "prev_chars": 1535,
       "depth": 1,
       "parent": null,
-      "sections": 6,
-      "text_chars": 1556,
-      "fetched_chars": 1556,
-      "html_bytes": 5313,
-      "subnav": []
+      "sections": 5,
+      "text_chars": 1535,
+      "fetched_chars": 1535,
+      "html_bytes": 4726,
+      "subnav": [],
+      "banner": {
+        "image": null,
+        "text": "SKA Regio na l Centre",
+        "poster": false
+      }
     },
     {
       "path": "/view/ska-korea/src/data-resources",
@@ -951,7 +1134,8 @@
       "text_chars": 16,
       "fetched_chars": 16,
       "html_bytes": 441,
-      "subnav": []
+      "subnav": [],
+      "banner": null
     },
     {
       "path": "/view/ska-korea/src/korea-src",
@@ -966,7 +1150,8 @@
       "text_chars": 9,
       "fetched_chars": 9,
       "html_bytes": 426,
-      "subnav": []
+      "subnav": [],
+      "banner": null
     },
     {
       "path": "/view/ska-korea/src/srcnet-overview",
@@ -981,7 +1166,8 @@
       "text_chars": 15,
       "fetched_chars": 15,
       "html_bytes": 436,
-      "subnav": []
+      "subnav": [],
+      "banner": null
     },
     {
       "path": "/view/ska-korea/src/tutorials",
@@ -996,7 +1182,8 @@
       "text_chars": 9,
       "fetched_chars": 9,
       "html_bytes": 426,
-      "subnav": []
+      "subnav": [],
+      "banner": null
     },
     {
       "path": "/view/ska-korea/src/using-srcnet",
@@ -1011,7 +1198,8 @@
       "text_chars": 12,
       "fetched_chars": 12,
       "html_bytes": 432,
-      "subnav": []
+      "subnav": [],
+      "banner": null
     },
     {
       "path": "/view/ska-korea/talks",
@@ -1019,115 +1207,95 @@
       "slug": "talks",
       "title": "Talks",
       "held": false,
-      "prev_chars": 7600,
+      "prev_chars": 7585,
       "depth": 1,
       "parent": null,
-      "sections": 8,
-      "text_chars": 7600,
-      "fetched_chars": 7600,
-      "html_bytes": 24775,
-      "subnav": []
+      "sections": 7,
+      "text_chars": 7585,
+      "fetched_chars": 7585,
+      "html_bytes": 24352,
+      "subnav": [],
+      "banner": {
+        "image": null,
+        "text": "SKA Korea Talks",
+        "poster": false
+      }
     }
   ],
   "failures": [],
   "images": [
-    "home_bg00",
-    "links_76",
-    "links_77",
-    "links_78",
-    "links_79",
-    "links_bg75",
-    "meetings__2023-korsdc-workshop_66",
-    "meetings__2023-korsdc-workshop_bg65",
-    "meetings__2023aug-ska-korea_63",
-    "meetings__2023aug-ska-korea_64",
-    "meetings__2023aug-ska-korea_bg62",
-    "meetings__2024feb-ska-korea_bg58",
-    "meetings__2024jul-ska-korea_53",
-    "meetings__2024jul-ska-korea_54",
-    "meetings__2024jul-ska-korea_bg52",
-    "meetings__april-2023-kas-spring-ska-special-session_68",
-    "meetings__april-2023-kas-spring-ska-special-session_bg67",
-    "meetings__april-2024-kas-spring-ska-special-session_56",
-    "meetings__april-2024-kas-spring-ska-special-session_57",
-    "meetings__april-2024-kas-spring-ska-special-session_bg55",
-    "meetings__april-2025-kas-spring-ska-special-session_42",
-    "meetings__april-2025-kas-spring-ska-special-session_bg41",
-    "meetings__april-2025-korea-spring-meeting_bg43",
-    "meetings__aug-2026-ska-korea-summer-workshop_27",
-    "meetings__aug-2026-ska-korea-summer-workshop_28",
-    "meetings__aug-2026-ska-korea-summer-workshop_29",
-    "meetings__aug-2026-ska-korea-summer-workshop_bg26",
-    "meetings__dec-2024-ska-korea-winter-meeting_45",
-    "meetings__dec-2024-ska-korea-winter-meeting_47",
-    "meetings__dec-2024-ska-korea-winter-meeting_48",
-    "meetings__dec-2024-ska-korea-winter-meeting_49",
-    "meetings__dec-2024-ska-korea-winter-meeting_bg44",
-    "meetings__dec-2024-ska-korea-winter-meeting_bg46",
-    "meetings__dec-2025-ska-korea-workshop_31",
-    "meetings__dec-2025-ska-korea-workshop_bg30",
-    "meetings__easka-2023_59",
-    "meetings__easka-2023_60",
-    "meetings__easka-2023_61",
-    "meetings__easka-2023__logistics_88",
-    "meetings__easka-2023__logistics_90",
-    "meetings__easka-2023__logistics_92",
-    "meetings__easka-2023__logistics_93",
-    "meetings__easka-2023__logistics_94",
-    "meetings__easka-2023__logistics_bg89",
-    "meetings__easka-2023__logistics_bg91",
-    "meetings__easka-2023__logistics_bg95",
-    "meetings__easka-2023__logistics_bg96",
-    "meetings__easka-2023__logistics_bg97",
-    "meetings__easka-2023__program_84",
-    "meetings__easka-2023__program_85",
-    "meetings__easka-2023__program_bg86",
-    "meetings__easka-2023__program_bg87",
-    "meetings__jan-2023-ska-korea-winter-meeting_70",
-    "meetings__jan-2023-ska-korea-winter-meeting_bg69",
-    "meetings__jun-2025-ska-korea-workshop_34",
-    "meetings__jun-2025-ska-korea-workshop_36",
-    "meetings__jun-2025-ska-korea-workshop_38",
-    "meetings__jun-2025-ska-korea-workshop_39",
-    "meetings__jun-2025-ska-korea-workshop_40",
-    "meetings__jun-2025-ska-korea-workshop_bg33",
-    "meetings__jun-2025-ska-korea-workshop_bg35",
-    "meetings__jun-2025-ska-korea-workshop_bg37",
-    "meetings__oct-2024-ska-vlbi-workshop_51",
-    "meetings__oct-2024-ska-vlbi-workshop_bg50",
-    "meetings__oct-2026-sparcs-xiv_21",
-    "meetings__oct-2026-sparcs-xiv_22",
-    "meetings__oct-2026-sparcs-xiv_23",
-    "meetings__oct-2026-sparcs-xiv_24",
-    "meetings__oct-2026-sparcs-xiv_25",
-    "meetings__oct-2026-sparcs-xiv__logistics-sparcs-xiv_83",
-    "meetings__oct-2026-sparcs-xiv__program-sparcs-xiv_80",
-    "meetings__oct-2026-sparcs-xiv__program-sparcs-xiv_bg81",
-    "meetings__oct-2026-sparcs-xiv__sparcs-sparcs-xiv_82",
-    "meetings__sep-2025-ska-korea-workshop_bg32",
-    "meetings_bg20",
-    "newsletters_72",
-    "newsletters_bg71",
-    "newsletters_bg73",
-    "science__data-archives_bg11",
-    "science__ska-science-working-groups_10",
-    "science__ska-science-working-groups_bg09",
-    "science_bg08",
-    "ska-korea__ska-in-korean-media_bg07",
-    "ska-korea__ska-korea_bg06",
+    "links_51",
+    "links_52",
+    "links_53",
+    "links_54",
+    "meetings__2023-korsdc-workshop_46",
+    "meetings__2023aug-ska-korea_44",
+    "meetings__2023aug-ska-korea_45",
+    "meetings__2024jul-ska-korea_37",
+    "meetings__2024jul-ska-korea_38",
+    "meetings__april-2023-kas-spring-ska-special-session_47",
+    "meetings__april-2024-kas-spring-ska-special-session_39",
+    "meetings__april-2024-kas-spring-ska-special-session_40",
+    "meetings__april-2025-kas-spring-ska-special-session_30",
+    "meetings__aug-2026-ska-korea-summer-workshop_19",
+    "meetings__aug-2026-ska-korea-summer-workshop_20",
+    "meetings__aug-2026-ska-korea-summer-workshop_21",
+    "meetings__dec-2024-ska-korea-winter-meeting_31",
+    "meetings__dec-2024-ska-korea-winter-meeting_33",
+    "meetings__dec-2024-ska-korea-winter-meeting_34",
+    "meetings__dec-2024-ska-korea-winter-meeting_35",
+    "meetings__dec-2024-ska-korea-winter-meeting_bg32",
+    "meetings__dec-2025-ska-korea-workshop_22",
+    "meetings__easka-2023_41",
+    "meetings__easka-2023_42",
+    "meetings__easka-2023_43",
+    "meetings__easka-2023__logistics_63",
+    "meetings__easka-2023__logistics_65",
+    "meetings__easka-2023__logistics_67",
+    "meetings__easka-2023__logistics_68",
+    "meetings__easka-2023__logistics_69",
+    "meetings__easka-2023__logistics_bg64",
+    "meetings__easka-2023__logistics_bg66",
+    "meetings__easka-2023__logistics_bg70",
+    "meetings__easka-2023__logistics_bg71",
+    "meetings__easka-2023__logistics_bg72",
+    "meetings__easka-2023__program_59",
+    "meetings__easka-2023__program_60",
+    "meetings__easka-2023__program_bg61",
+    "meetings__easka-2023__program_bg62",
+    "meetings__jan-2023-ska-korea-winter-meeting_48",
+    "meetings__jun-2025-ska-korea-workshop_23",
+    "meetings__jun-2025-ska-korea-workshop_25",
+    "meetings__jun-2025-ska-korea-workshop_27",
+    "meetings__jun-2025-ska-korea-workshop_28",
+    "meetings__jun-2025-ska-korea-workshop_29",
+    "meetings__jun-2025-ska-korea-workshop_bg24",
+    "meetings__jun-2025-ska-korea-workshop_bg26",
+    "meetings__oct-2024-ska-vlbi-workshop_36",
+    "meetings__oct-2026-sparcs-xiv_14",
+    "meetings__oct-2026-sparcs-xiv_15",
+    "meetings__oct-2026-sparcs-xiv_16",
+    "meetings__oct-2026-sparcs-xiv_17",
+    "meetings__oct-2026-sparcs-xiv_18",
+    "meetings__oct-2026-sparcs-xiv__logistics-sparcs-xiv_58",
+    "meetings__oct-2026-sparcs-xiv__program-sparcs-xiv_55",
+    "meetings__oct-2026-sparcs-xiv__program-sparcs-xiv_bg56",
+    "meetings__oct-2026-sparcs-xiv__sparcs-sparcs-xiv_57",
+    "newsletters_49",
+    "newsletters_bg50",
+    "science__data-archives_bg06",
+    "science__ska-science-working-groups_05",
+    "science_bg04",
+    "ska-korea__ska_00",
+    "ska-korea__ska_01",
     "ska-korea__ska_02",
-    "ska-korea__ska_03",
-    "ska-korea__ska_04",
-    "ska-korea__ska_bg01",
-    "ska-korea__ska_bg05",
-    "src_13",
-    "src_14",
-    "src__data-resources_bg16",
-    "src__korea-src_bg18",
-    "src__srcnet-overview_bg15",
-    "src__tutorials_bg19",
-    "src__using-srcnet_bg17",
-    "src_bg12",
-    "talks_bg74"
+    "ska-korea__ska_bg03",
+    "src_07",
+    "src_08",
+    "src__data-resources_bg10",
+    "src__korea-src_bg12",
+    "src__srcnet-overview_bg09",
+    "src__tutorials_bg13",
+    "src__using-srcnet_bg11"
   ]
 }

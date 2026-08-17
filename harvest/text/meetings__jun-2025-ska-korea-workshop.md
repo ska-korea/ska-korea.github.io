@@ -2,8 +2,6 @@
 
 <!-- 원본: https://sites.google.com/view/ska-korea/meetings/jun-2025-ska-korea-workshop -->
 
-# 2025 SKA-Korea Summer Workshop
-
 Dates: June 25-26 (Wed-Thu)
 
 Venue: Hotel Onoma, Daejeon (5th floor Grand Ballroom)
@@ -19,17 +17,17 @@ Program (as of June 24)
 
 Link for the presentation files: https://drive.google.com/drive/folders/1Rne8i7QSG3gmzOClmTLwa87ByVTQuU3y?usp=sharing
 
-![](images/meetings__jun-2025-ska-korea-workshop_34)
+![](images/meetings__jun-2025-ska-korea-workshop_23)
 2025 SKA-Korea Summer Workshop Program
 
 Participants (as of June 24)
 
-![](images/meetings__jun-2025-ska-korea-workshop_36)
+![](images/meetings__jun-2025-ska-korea-workshop_25)
 2025 SKA-Korea Summer Workshop Participants
 
 Group Photo
 
-![](images/meetings__jun-2025-ska-korea-workshop_38)
+![](images/meetings__jun-2025-ska-korea-workshop_27)
 
 Scientific Organizing Committee
 
@@ -60,7 +58,7 @@ Contact Min-Young Lee (mlee@kasi.re.kr)
 
 Sponsors
 
-![](images/meetings__jun-2025-ska-korea-workshop_39)
+![](images/meetings__jun-2025-ska-korea-workshop_28)
 Sponsors
 
-![](images/meetings__jun-2025-ska-korea-workshop_40)
+![](images/meetings__jun-2025-ska-korea-workshop_29)

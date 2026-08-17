@@ -2,9 +2,6 @@
 
 <!-- 원본: https://sites.google.com/view/ska-korea/meetings/2024feb-ska-korea -->
 
-## 2024 Winter SKA-Korea Workshop
-Feb 20-21 (Tue-Wed), 2024
-
 # SKA-Korea 2024 겨울 워크샵
 
 # 2024.02.20-21

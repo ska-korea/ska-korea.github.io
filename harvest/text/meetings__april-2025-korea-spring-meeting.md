@@ -2,8 +2,6 @@
 
 <!-- 원본: https://sites.google.com/view/ska-korea/meetings/april-2025-korea-spring-meeting -->
 
-# April 2025 SKA Korea Spring meeting
-
 - 일시: 25년 4월 2일 (수) 13:00 - 15:30
 
 - 장소: 한국천문연구원 은하수홀

@@ -2,8 +2,6 @@
 
 <!-- 원본: https://sites.google.com/view/ska-korea/meetings/sep-2025-ska-korea-workshop -->
 
-# 2025 SKA Korea Fall Workshop
-
 Date & Time: Friday, September 26, 1:00 PM
 
 Venue: KASI, Daejeon (Auditorium at Eunhasoo Hall)

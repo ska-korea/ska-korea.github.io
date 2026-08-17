@@ -2,9 +2,6 @@
 
 <!-- 원본: https://sites.google.com/view/ska-korea/meetings/2023-korsdc-workshop -->
 
-# KorSDC 워크샵
-(KorSDC Workshop)
-
 ## KorSDC 번개 워크샵 (KorSDC Lightning Workshop)
 
 SDC3(SKA Science Data Challenge)를 진행 중인 KorSDC에서 자체 워크샵을 개최합니다. KorSDC의 현재 진행 상황을 공유하고, 토론 위주의 워크샵을 통하여 SDC3를 성공적으로 수행하는 발판을 마련하고자 합니다. 예향의 도시 광주에서 5월 24일(수) - 25일(목)에 걸쳐 개최됩니다.
@@ -64,4 +61,4 @@ Hotel recommendation if you need: ACC Design Hotel
 
 ## 참가자사진 (Group Photo)
 
-![](images/meetings__2023-korsdc-workshop_66)
+![](images/meetings__2023-korsdc-workshop_46)

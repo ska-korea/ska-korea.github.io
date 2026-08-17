@@ -2,8 +2,6 @@
 
 <!-- 원본: https://sites.google.com/view/ska-korea/meetings -->
 
-# SKA Korea Meetings
-
 ## Upcoming Meetings
 
                   - 2026 SKA Korea Summer Workshop, Aug. 19–21

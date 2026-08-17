@@ -2,8 +2,6 @@
 
 <!-- 원본: https://sites.google.com/view/ska-korea/science/ska-science-working-groups -->
 
-# SKA Science Working Groups
-
 ## SKA Science Working Groups
 
 현재 SKA를 활용한 천문학의 전 분야를 아우르는 14개의 국제 사이언스 워킹 그룹이 활동 중입니다.
@@ -27,4 +25,4 @@
 
 [https://www.skao.int/en/science-users/science-working-groups](https://www.skao.int/en/science-users/science-working-groups)
 
-![](images/science__ska-science-working-groups_10)
+![](images/science__ska-science-working-groups_05)

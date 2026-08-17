@@ -11,7 +11,16 @@
         role="main"  →  상위 <section>  →  그 부모(=본문 컨테이너)
     를 앵커로 삼고 그 안의 <section>을 순서대로 모은다.
     이 규칙은 표준 속성·태그만 쓰므로 난독화된 클래스명(UtePc 등)에 의존하지 않는다.
-    상단 메뉴(role=navigation)·배너(role=banner)·푸터는 이 컨테이너 밖이라 자연히 제외된다.
+    상단 메뉴(role=navigation)·푸터는 이 컨테이너 밖이라 자연히 제외된다.
+    (주의: role="banner"는 상단 검색줄이지 페이지 배너가 아니다 — 아래 참조.)
+
+★ 첫 섹션은 배너다 (2026-08-17 실측으로 확정):
+    본문 컨테이너의 첫 <section>은 언제나 '페이지 배너' — 배경 그림 위에 페이지
+    제목을 얹은 구역이다. 44쪽 전수 확인 결과 예외가 없었다. 새 사이트는 제목을
+    우리 조판으로 다시 그리므로 이 섹션은 본문에서 빼고, 배경 그림만 따로 거둔다.
+    거두지 않으면 미팅 본문이 제목을 한 번 더 되풀이한다.
+    조직위원회가 만든 대문 그림(EASKA 2023·SPARCS XIV)은 그림만 있고 글자가 없어,
+    '배경 있고 글자 0자'로 자동 판별된다 → poster.
 
 사용법:
     python harvest.py                  # 전체 수확
@@ -45,6 +54,11 @@ UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
 KEEP_ATTRS = {"href", "src", "alt", "title", "style", "colspan", "rowspan",
               "target", "rel", "id", "width", "height"}
 
+# 배너 판정·가공
+BANNER_TEXT_MAX = 150   # 첫 섹션 글자가 이보다 많으면 배너가 아니라 본문으로 본다
+BANNER_MAX_W = 1920     # 화면에서 쓰는 폭. 원본은 7008px·2.5MB짜리도 있다
+BANNER_BACKDROP = (7, 0, 104)   # SKAO 네이비 #070068 — 반투명 배너를 여기에 합성한다
+
 
 def fetch(url: str, session: requests.Session) -> str:
     r = session.get(url, headers={"User-Agent": UA}, timeout=30)
@@ -76,6 +90,32 @@ def body_container(soup: BeautifulSoup) -> Tag | None:
     if sec is None:
         return main.parent
     return sec.parent
+
+
+def banner_of(sec: Tag) -> dict | None:
+    """첫 섹션이 페이지 배너면 그 배경 그림 주소와 제목 글자를 돌려준다.
+
+    배너로 보는 조건 — 셋을 모두 만족해야 한다. 본문 구역을 배너로 잘못 보고
+    통째로 버리는 것이 가장 큰 위험이라, 조건을 좁게 건다.
+      1. 배경 그림(background-image)이 있다
+      2. 글자가 BANNER_TEXT_MAX 이하다 (실측 최대 62자 — 페이지 제목뿐이다)
+      3. <img>·<iframe>이 없다 (있으면 본문 구역이다)
+    글자가 하나도 없으면 조직위원회가 만든 대문 그림(poster)으로 본다.
+    """
+    url = None
+    for t in sec.find_all(style=True):
+        m = re.search(r"url\(([^)]+)\)", t["style"])
+        if m:
+            url = m.group(1).strip("'\" ")
+            break
+    if not url or not url.startswith("http"):
+        return None
+    if sec.find("img") or sec.find("iframe"):
+        return None
+    text = re.sub(r"\s+", " ", sec.get_text(" ", strip=True))
+    if len(text) > BANNER_TEXT_MAX:
+        return None
+    return {"url": url, "text": text, "poster": not text}
 
 
 def is_sibling_subnav(sec: Tag, page_path: str) -> list[dict] | None:
@@ -221,7 +261,17 @@ def to_markdown(node: Tag) -> str:
     return re.sub(r"\n{3,}", "\n\n", "\n".join(out)).strip()
 
 
-def harvest_page(path: str, session: requests.Session, images: dict,
+def wants_banner_image(path: str) -> bool:
+    """배너 그림을 실제로 내려받을 페이지인가.
+
+    미팅 대표쪽(깊이 2)만 받는다. 하위 탭은 같은 배너를 쓰므로 빌드가 부모 것을
+    물려받게 하고, 본문 페이지 배너는 우리가 static/img/banners/에서 고른다.
+    """
+    rel = path[len(SITE):].strip("/").split("/")
+    return len(rel) == 2 and rel[0] == "meetings"
+
+
+def harvest_page(path: str, session: requests.Session, images: dict, banners: dict,
                  prev: dict[str, int], guard: bool = True) -> tuple[dict, list[str]]:
     url = BASE + path
     soup = BeautifulSoup(fetch(url, session), "lxml")
@@ -242,6 +292,18 @@ def harvest_page(path: str, session: requests.Session, images: dict,
         raise RuntimeError("role='main'을 찾지 못함 — Google Sites 마크업 변경 의심")
 
     sections = cont.find_all("section", recursive=False) or [cont]
+    slug = slug_of(path)
+
+    # 첫 섹션이 배너면 본문에서 뺀다. 섹션이 하나뿐인 쪽은 건드리지 않는다 —
+    # 그 하나가 본문일 수 있고, 배너를 지우면 남는 게 없다.
+    banner = banner_of(sections[0]) if len(sections) > 1 else None
+    banner_key = None
+    if banner:
+        sections = sections[1:]
+        if wants_banner_image(path):
+            banner_key = f"{slug}_banner"
+            banners[banner_key] = banner["url"]
+
     subnav: list[dict] = []
     kept: list[Tag] = []
     for sec in sections:
@@ -260,8 +322,6 @@ def harvest_page(path: str, session: requests.Session, images: dict,
                           for s in kept)
     body_md = "\n\n".join(to_markdown(s) for s in kept)
     text_chars = sum(len(re.sub(r"\s+", " ", s.get_text(" ", strip=True))) for s in kept)
-
-    slug = slug_of(path)
 
     # ── 안전장치 ────────────────────────────────────────────────
     # Google이 마크업을 바꾸면 추출이 조용히 망가질 수 있다. 그때 빈 페이지를
@@ -288,6 +348,10 @@ def harvest_page(path: str, session: requests.Session, images: dict,
         "text_chars": was if shrunk else text_chars,
         "fetched_chars": text_chars,
         "html_bytes": len(body_html), "subnav": subnav,
+        # 배너. image는 실제로 내려받은 쪽에만 있고, 하위 탭은 빌드가 부모 것을 물려받는다.
+        # ★ 구글 주소는 요청마다 값이 달라지므로 절대 남기지 않는다(헛커밋의 원인).
+        "banner": ({"image": banner_key, "text": banner["text"],
+                    "poster": banner["poster"]} if banner else None),
     }, found)
 
 
@@ -317,6 +381,102 @@ def download_images(images: dict, session: requests.Session, refresh: bool = Fal
     return ok, skipped
 
 
+def shrink(raw: bytes) -> bytes:
+    """배너 그림을 화면에서 쓰는 폭으로 줄여 JPEG로 담는다.
+
+    ★ 반투명한 배너는 네이비 위에 미리 합성한다. 새 사이트에서 배너가 놓이는 자리는
+      언제나 네이비 바탕이므로(.pagehead·.posterhead) 브라우저가 할 합성을 미리 해 두는
+      것일 뿐, 보이는 그림은 같다. 알파를 살리려고 PNG로 담으면 같은 그림이
+      1.3 MB가 된다(실측) — JPEG로는 200 KB다.
+
+    Pillow가 없으면 원본을 그대로 둔다 — 수확이 멈추는 것보다 낫다.
+    같은 입력에 같은 출력이 나와야 한다(헛커밋 방지). Pillow의 인코딩은 결정적이다.
+    """
+    try:
+        import io
+        from PIL import Image
+    except ImportError:
+        return raw
+    try:
+        with Image.open(io.BytesIO(raw)) as im:
+            if im.mode in ("RGBA", "LA", "P"):
+                im = im.convert("RGBA")
+                bg = Image.new("RGB", im.size, BANNER_BACKDROP)
+                bg.paste(im, mask=im.getchannel("A"))
+                im = bg
+            else:
+                im = im.convert("RGB")
+            if im.width > BANNER_MAX_W:
+                im = im.resize((BANNER_MAX_W, round(im.height * BANNER_MAX_W / im.width)),
+                               Image.LANCZOS)
+            buf = io.BytesIO()
+            im.save(buf, "JPEG", quality=86, optimize=True, progressive=True)
+            return buf.getvalue()
+    except Exception as e:
+        print(f"  ! 배너 가공 실패, 원본 사용: {e}", file=sys.stderr)
+        return raw
+
+
+def download_banners(banners: dict, session: requests.Session) -> tuple[int, int, int]:
+    """배너 그림은 매번 새로 받아, 내용이 달라졌을 때만 저장한다.
+
+    본문 그림과 달리 '이미 있으면 건너뛰기'를 쓸 수 없다. 배너 키는 페이지마다
+    고정(<slug>_banner)이라 조직위원회가 그림을 갈아 끼워도 키가 그대로다. 배너 교체는
+    눈에 바로 보이는 변화라 놓치면 안 된다. 받는 쪽 수가 미팅 대표쪽뿐이라 부담도 적다.
+
+    구글이 이따금 403을 돌려준다(연달아 같은 서명 주소를 부를 때). 한 번 쉬었다 다시
+    부르고, 그래도 안 되면 **직전 파일을 그대로 둔다** — 못 받았다고 배너를 지우지 않는다.
+    """
+    changed, same, failed = 0, 0, 0
+    for key, url in sorted(banners.items()):
+        data = None
+        for attempt in range(2):
+            try:
+                r = session.get(url, headers={"User-Agent": UA}, timeout=60)
+                r.raise_for_status()
+                data = shrink(r.content)
+                break
+            except Exception as e:
+                if attempt:
+                    print(f"  ! 배너 실패 {key}: {e} — 직전 그림을 그대로 둡니다",
+                          file=sys.stderr)
+                else:
+                    time.sleep(2)
+        if data is None:
+            failed += 1
+            continue
+        dest = IMG_DIR / f"{key}.jpg"
+        # 예전에 다른 확장자로 담았던 파일이 남아 있으면 치운다(같은 키가 둘로 남지 않게)
+        for old in IMG_DIR.glob(f"{key}.*"):
+            if old != dest:
+                old.unlink()
+        if dest.exists() and dest.read_bytes() == data:
+            same += 1
+            continue
+        dest.write_bytes(data)
+        changed += 1
+    return changed, same, failed
+
+
+def prune_images(banner_keys: set[str]) -> int:
+    """어느 페이지에서도 참조하지 않는 그림 파일을 지운다.
+
+    본문 그림의 키는 '페이지 + 등장 순서'라 원고가 바뀌면 번호가 밀린다. 치우지 않으면
+    쓰이지 않는 파일이 저장소에 계속 쌓인다. 판단 기준은 인벤토리가 아니라 **디스크에
+    남아 있는 html이 실제로 가리키는 것** — 갱신을 보류한 페이지가 옛 키를 쓰고 있어도
+    안전하다.
+    """
+    used = set(banner_keys)
+    for f in HTML_DIR.glob("*.html"):
+        used |= set(re.findall(r"images/([\w.-]+)", f.read_text(encoding="utf-8")))
+    gone = 0
+    for f in IMG_DIR.iterdir():
+        if f.is_file() and f.stem not in used:
+            f.unlink()
+            gone += 1
+    return gone
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--only", help="경로에 이 문자열이 포함된 페이지만 수확")
@@ -342,6 +502,7 @@ def main() -> int:
 
     session = requests.Session()
     images: dict[str, str] = {}
+    banners: dict[str, str] = {}
     results, failures = [], []
     seen = {norm(HOME)}
     queue = deque(seen)
@@ -361,9 +522,12 @@ def main() -> int:
             time.sleep(args.delay)
             continue
         try:
-            info, found = harvest_page(path, session, images, prev, guard=not args.no_guard)
+            info, found = harvest_page(path, session, images, banners, prev,
+                                       guard=not args.no_guard)
             results.append(info)
             flag = f"  서브탭{len(info['subnav'])}" if info["subnav"] else ""
+            if info["banner"] and info["banner"]["poster"]:
+                flag += "  대문그림"
             if info["held"]:
                 flag += "  ⚠보류"
             print(f"  [{len(results):2d}] {info['title'][:42]:<42} "
@@ -379,6 +543,10 @@ def main() -> int:
     if not args.no_images and images:
         got, skipped = download_images(images, session, args.refresh_images)
         print(f"\n이미지 {len(images)}개 — 새로 받음 {got} · 이미 있음 {skipped}")
+    if not args.no_images and banners:
+        ch, same, failed = download_banners(banners, session)
+        print(f"배너 {len(banners)}개 — 바뀜 {ch} · 그대로 {same}"
+              + (f" · 못 받음 {failed}(직전 그림 유지)" if failed else ""))
 
     # 페이지 수가 크게 줄면 발견 자체가 망가진 것이다 — 아무것도 덮어쓰지 않고 멈춘다.
     if prev_count and len(results) < prev_count * 0.8:
@@ -396,6 +564,11 @@ def main() -> int:
                    ensure_ascii=False, indent=2), encoding="utf-8")
 
     held = [r for r in results if r["held"]]
+    if not args.no_images:
+        gone = prune_images(set(banners))
+        if gone:
+            print(f"쓰이지 않는 그림 {gone}개 정리")
+
     total = sum(r["text_chars"] for r in results)
     print(f"\n완료: 성공 {len(results)} / 실패 {len(failures)} / 본문 총 {total:,}자")
     if held:

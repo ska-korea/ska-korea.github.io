@@ -2,9 +2,7 @@
 
 <!-- 원본: https://sites.google.com/view/ska-korea/links -->
 
-# Useful links
-
-![](images/links_76)
+![](images/links_51)
 
 # SKAO
 
@@ -18,7 +16,7 @@ SKAO website: [https://www.skao.int/en](https://www.skao.int/en)
 
 (image credit: SKAO)
 
-![](images/links_77)
+![](images/links_52)
 
 # ASKAP
 
@@ -33,7 +31,7 @@ ASKAP website: [https://www.csiro.au/en/about/facilities-collections/ATNF/ASKAP-
 
 (image credit: CSIRO)
 
-![](images/links_78)
+![](images/links_53)
 
 # MeerKAT
 
@@ -46,7 +44,7 @@ MeerKAT website: [https://www.sarao.ac.za/science/meerkat/](https://www.sarao.ac
 
 (image credit: SARAO)
 
-![](images/links_79)
+![](images/links_54)
 
 # CARTA
 

@@ -2,9 +2,6 @@
 
 <!-- 원본: https://sites.google.com/view/ska-korea/meetings/jan-2023-ska-korea-winter-meeting -->
 
-# SKA-Korea workshop
-Jan 2023
-
 # SKA-Korea 겨울미팅
 
 # 2023.01.18(수)~19(목)
@@ -169,4 +166,4 @@ LOC
 
 Group Photo
 
-![](images/meetings__jan-2023-ska-korea-winter-meeting_70)
+![](images/meetings__jan-2023-ska-korea-winter-meeting_48)
