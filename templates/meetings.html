@@ -1,11 +1,10 @@
 {% extends "base.html" %}
+{% from "_parts.html" import pagehead with context %}
 {% block main %}
-<div class="pagehead">
-  <div class="wrap">
-    <h1>{{ page.title }}</h1>
-    <p class="sub">{{ page.sub | sentences }}</p>
-  </div>
-</div>
+{% call pagehead(page) %}
+  <h1>{{ page.title }}</h1>
+  <p class="sub">{{ page.sub | sentences }}</p>
+{% endcall %}
 
 {# 거르개. 기본은 '전체'이고, 고르면 그 갈래만 남는다.
    자바스크립트가 없는 환경에서는 그냥 전체 목록이 보인다. #}

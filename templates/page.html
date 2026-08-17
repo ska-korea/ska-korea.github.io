@@ -1,15 +1,14 @@
 {% extends "base.html" %}
+{% from "_parts.html" import pagehead with context %}
 {% block main %}
-<div class="pagehead">
-  <div class="wrap">
-    {% set parent = nav | selectattr('active') | selectattr('children') | first %}
-    {% if parent and not parent.exact %}
-    <div class="crumb"><a href="{{ parent.path }}">{{ parent.title }}</a> / {{ page.title }}</div>
-    {% endif %}
-    <h1>{{ page.title }}</h1>
-    {% if page.sub %}<p class="sub">{{ page.sub | sentences }}</p>{% endif %}
-  </div>
-</div>
+{% call pagehead(page) %}
+  {% set parent = nav | selectattr('active') | selectattr('children') | first %}
+  {% if parent and not parent.exact %}
+  <div class="crumb"><a href="{{ parent.path }}">{{ parent.title }}</a> / {{ page.title }}</div>
+  {% endif %}
+  <h1>{{ page.title }}</h1>
+  {% if page.sub %}<p class="sub">{{ page.sub | sentences }}</p>{% endif %}
+{% endcall %}
 
 <div class="band">
   <div class="wrap">

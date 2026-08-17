@@ -3,6 +3,8 @@ title: SKA Korea
 path: /
 template: home.html
 description: 한국의 SKA 참여를 잇는 연구자 커뮤니티. SKA 과학, 지역센터(SRC), 국내 모임과 자료 창구를 안내합니다.
+# 첫 화면은 히어로가 커서 사진이 넓게 보인다 — 실루엣이 아래쪽에 있어 벨 자리를 내린다
+banner: {file: sunset-array.jpg, at: "center 64%"}
 ---
 
 <!-- ★ 아래 SKA·SKA Korea 문단은 윤혜인 박사가 작성한 원고다.

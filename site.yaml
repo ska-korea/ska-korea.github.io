@@ -11,6 +11,29 @@ site:
   description: 한국의 SKA 참여를 잇는 연구자 커뮤니티입니다. SKA 과학, 지역센터(SRC), 국내 모임과 자료 창구를 한곳에서 안내합니다.
   owner: 한국천문연구원 · SKA Korea
 
+  # ── 페이지 배너에 깔 사진 ────────────────────────────────────
+  # 파일은 static/img/banners/ 에 있고, 출처는 그 폴더의 README.md에 적혀 있다.
+  # 전부 기존 홈페이지가 쓰던 사진이라 이용조건이 새로 생기지 않는다.
+  #
+  # paths  경로 접두사 → 파일명. 가장 긴 접두사가 이긴다.
+  #        (/src 규칙 하나로 /src/korea-src까지 따라온다)
+  # 개별 원고에서 frontmatter `banner: 파일명`으로 덮어쓸 수 있고,
+  # `banner:`를 빈 값으로 두면 사진 없이 네이비 바탕만 쓴다.
+  # 배너는 사진의 가운데를 얇게 베어 쓴다. 담을 것이 아래쪽에 있는 사진은
+  # `{file: …, at: "center 85%"}`처럼 벨 자리를 내려 준다.
+  # ★ 미팅 페이지는 여기를 쓰지 않는다 — 조직위원회가 Google Sites에서 고른 배너를
+  #   수확기가 그대로 가져온다.
+  banners:
+    default: ska-site-day.jpg               # SKA 관측소 전경 — Links·Contacts 등
+    paths:
+      # 접시와 스테이션이 사진 아래쪽에 있어 벨 자리를 내린다
+      /ska-korea: {file: two-telescopes.jpg, at: "center 70%"}
+      /science: science-goals.jpg           # SKAO 과학목표 배너
+      /src: global-network.jpg              # 지구와 연결망 = 지역센터 네트워크
+      /meetings: {file: ska-korea-workshop.jpg, at: "center 52%"}   # 얼굴이 오게
+      /talks: talks-hall.jpg
+      /newsletters: newsletter-group.jpg
+
   hero:
     headline: SKA를 쓰려는<br>한국 연구자를 위한 <em>창구</em>
     lede: 인류 최대의 전파망원경이 곧 관측을 시작합니다. 자료를 어떻게 받고 무엇을 할 수 있는지, 국내 커뮤니티가 어디에 모이는지 여기서 확인하세요.

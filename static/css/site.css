@@ -179,6 +179,14 @@ img { max-width: 100%; height: auto; display: block; }
    히어로 — 문장이 주인공, 오른쪽에 실제 일정
    ============================================================ */
 .hero { background: var(--navy); color: #fff; position: relative; overflow: hidden; }
+/* 사진을 깔아도 문장이 주인공이다 — 덮개를 진하게 걸어 사진은 질감으로만 남긴다 */
+.hero.has-bg { background-size: cover; background-position: center; }
+.hero.has-bg::before {
+  content: ""; position: absolute; inset: 0;
+  background:
+    linear-gradient(180deg, rgba(4, 0, 60, .88) 0%, rgba(7, 0, 104, .76) 50%, rgba(4, 0, 60, .93) 100%),
+    linear-gradient(90deg, rgba(4, 0, 60, .5), rgba(4, 0, 60, 0) 60%);
+}
 .hero::after {
   content: ""; position: absolute; inset: 0; pointer-events: none;
   background: radial-gradient(760px 300px at 88% -20%, rgba(231, 0, 104, .38), transparent 62%);
@@ -503,12 +511,72 @@ ol.steps b { color: var(--navy); }
 
 /* ============================================================
    페이지 머리 (본문 페이지)
+   사진은 '분위기'만 낸다 — 정보는 전부 그 위의 글자에 있다.
+   그래서 덮개를 진하게 걸어 사진이 밝든 어둡든 흰 글자가 흔들리지 않게 한다.
    ============================================================ */
-.pagehead { background: var(--navy); color: #fff; padding: 40px 0 36px; }
-.pagehead .crumb { font-size: 13.5px; color: #9d9dd8; margin-bottom: 10px; }
-.pagehead .crumb a:hover { color: #fff; }
+.pagehead {
+  position: relative; overflow: hidden;
+  background: var(--navy); color: #fff;
+  padding: 52px 0 46px;
+}
+/* 미팅처럼 배너가 그 지면의 얼굴인 쪽은 위아래를 더 준다 */
+.pagehead.big { padding: 78px 0 68px; }
+
+/* 덮개 세기는 계산해서 정한 값이다(2026-08-17).
+   사진 중 가장 밝은 자리는 흰 하늘(휘도 1.0)이다. 그 위에 네이비를 74%로 덮으면
+   합성 휘도가 0.073이 되어, 부제 색 #d3d3ee가 5.8:1 · 흰 글자가 8.5:1로 읽힌다
+   (WCAG AA 본문 기준 4.5:1). 이보다 옅게 덮으면 밝은 사진에서 부제가 무너진다.
+   위아래를 더 진하게 하는 것은 상단 메뉴(네이비)와 이어 붙이기 위함이고,
+   왼쪽 겹덮개는 글이 놓이는 쪽을 한 번 더 눌러 준다. */
+.pagehead.has-bg { background-size: cover; background-position: center; }
+.pagehead.has-bg::before {
+  content: ""; position: absolute; inset: 0;
+  background:
+    linear-gradient(180deg, rgba(4, 0, 60, .90) 0%, rgba(7, 0, 104, .74) 52%, rgba(4, 0, 60, .88) 100%),
+    linear-gradient(90deg, rgba(4, 0, 60, .45), rgba(4, 0, 60, 0) 62%);
+}
+.pagehead > .wrap { position: relative; z-index: 1; }
+
+.pagehead .crumb { font-size: 13.5px; color: #b3b3e0; margin-bottom: 10px; }
+.pagehead .crumb a:hover { color: #fff; text-decoration: underline; }
 .pagehead h1 { font-size: clamp(25px, 3.6vw, 38px); font-weight: 800; letter-spacing: -.032em; line-height: 1.25; }
-.pagehead .sub { margin-top: 12px; color: #c9c9ea; max-width: none; font-size: 16.5px; }
+.pagehead .sub { margin-top: 12px; color: #d3d3ee; max-width: none; font-size: 16.5px; }
+
+/* ============================================================
+   대문 그림 배너 (미팅)
+   창 폭을 가득 채운다. 조직위원회는 상단 메뉴줄과 좌우 여백까지 감안해서 이 그림을
+   만들었으므로, 사이트 폭(1140px) 안에 가둬 두면 가운데만 동동 떠 보인다.
+   ============================================================ */
+/* 바탕은 네이비다 — 수확기가 반투명 배너를 이 색에 합성해 담기 때문에,
+   여기 색을 바꾸면 그런 배너의 가장자리가 어긋난다(harvest.py의 BANNER_BACKDROP). */
+.posterhead { position: relative; background: var(--navy); }
+.posterhead a { display: block; }
+.posterhead img {
+  width: 100%; height: auto;
+  /* 아주 넓은 화면에서 배너가 화면을 삼키지 않게 하는 안전장치.
+     여기 걸릴 때만 좌우를 조금 베어 낸다 — 대문 그림은 글자가 가운데 모여 있다. */
+  max-height: 62vh; object-fit: cover; object-position: center;
+}
+/* 메뉴 글자가 놓이는 위쪽을 눌러 준다 — 밝은 대문 그림(EASKA)에서도 흰 글자가 읽히게.
+   실측 계산: 휘도 0.55짜리 밝은 자리에 65%를 덮으면 메뉴 글자 대비가 5.2:1이 된다. */
+.posterhead::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(180deg, rgba(4, 0, 60, .65), rgba(4, 0, 60, 0) 92px);
+}
+
+/* 대문 그림 아래, 하위 탭 아래에 오는 그 탭의 제목 */
+.meethead { padding: 34px 0 30px; border-bottom: 1px solid var(--line-soft); }
+.meethead .crumb { font-size: var(--fs-meta); color: var(--faint); margin-bottom: 8px; }
+.meethead .crumb a { color: var(--muted); }
+.meethead .crumb a:hover { color: var(--navy); text-decoration: underline; }
+.meethead h1 {
+  font-size: clamp(24px, 3.2vw, 34px); font-weight: 800;
+  color: var(--navy); letter-spacing: -.03em; line-height: 1.25;
+}
+.meethead .meta { margin-top: 9px; color: var(--muted); font-size: var(--fs-lead); }
+/* 제목 칸이 이미 여백을 주었으므로 본문은 덜 띄운다 */
+.band.tight { padding-top: 36px; }
+
 
 /* ============================================================
    표 · 콜아웃
@@ -581,6 +649,7 @@ tbody tr:last-child td { border-bottom: none; }
    반응형
    ============================================================ */
 @media (max-width: 940px) {
+  .pagehead.big { padding: 56px 0 48px; }
   .hero .wrap { grid-template-columns: 1fr; gap: 30px; }
   .foot .cols { grid-template-columns: 1fr; gap: 34px; }
   .foot-links { gap: 44px; }

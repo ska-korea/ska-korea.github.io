@@ -1,16 +1,15 @@
 {% extends "base.html" %}
 {% block title %}{{ page.title }} · Talks · {{ site.title }}{% endblock %}
 
+{% from "_parts.html" import pagehead with context %}
 {% block main %}
-<div class="pagehead">
-  <div class="wrap">
-    <div class="crumb"><a href="/talks">Talks</a> / {{ page.date.strftime('%Y.%m.%d') }}</div>
-    <h1>{{ page.title }}</h1>
-    {% if page.speaker %}
-    <p class="sub">{{ page.speaker }}{% if page.affiliation %} <span style="opacity:.75">({{ page.affiliation }})</span>{% endif %}</p>
-    {% endif %}
-  </div>
-</div>
+{% call pagehead(page) %}
+  <div class="crumb"><a href="/talks">Talks</a> / {{ page.date.strftime('%Y.%m.%d') }}</div>
+  <h1>{{ page.title }}</h1>
+  {% if page.speaker %}
+  <p class="sub">{{ page.speaker }}{% if page.affiliation %} <span style="opacity:.75">({{ page.affiliation }})</span>{% endif %}</p>
+  {% endif %}
+{% endcall %}
 
 <div class="band">
   <div class="wrap talk-body">

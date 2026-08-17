@@ -2,7 +2,8 @@
 {% block title %}{{ site.title }} — {{ site.tagline }}{% endblock %}
 
 {% block main %}
-<section class="hero">
+<section class="hero{% if page.banner %} has-bg{% endif %}"
+  {%- if page.banner %} style="background-image:url('{{ page.banner }}'){% if page.banner_at %};background-position:{{ page.banner_at }}{% endif %}"{% endif %}>
   <div class="wrap">
     <div>
       <span class="eyebrow">Square Kilometre Array · Korea</span>

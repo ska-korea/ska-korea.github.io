@@ -1,17 +1,40 @@
 {% extends "base.html" %}
+{% from "_parts.html" import pagehead with context %}
 {% block main %}
-<div class="pagehead">
-  <div class="wrap">
-    <div class="crumb"><a href="/meetings">Meetings</a> / {{ page.title }}</div>
-    <h1>{{ page.title }}</h1>
-    {% if page.when or page.where %}
-    <p class="sub mono">{{ page.when }}{% if page.when and page.where %} · {% endif %}{{ page.where }}</p>
-    {% endif %}
-  </div>
+{# 날짜·장소는 둘 중 하나만 있을 수 있다. 비어 있는 값을 걸러 낸 뒤 이어 붙인다
+   (Jinja는 None을 'None'이라는 글자로 찍는다). #}
+{% set meta = [page.when, page.where] | select | join(' · ') %}
+
+{#
+  미팅 머리는 두 갈래다.
+
+  · 대문 그림(poster) — 조직위원회가 만든 배너 그림이 있으면 그것이 곧 머리다.
+    그림 안에 이미 이름·날짜·장소가 들어 있으므로 글자를 겹쳐 쓰지 않는다.
+    잘라내지도 않는다(디자인한 그림의 구석에 정보가 들어 있다).
+    순서: 대문 그림 → 하위 탭 → 이 탭의 제목
+
+  · 그 밖 — 조직위원회가 고른 사진을 배경으로 깔고 제목을 우리 조판으로 얹는다.
+    순서: 제목 배너 → 하위 탭 → 본문
+#}
+{% if page.poster %}
+{# 대문 그림은 창 폭을 가득 채운다. 조직위원회는 상단 메뉴줄과 좌우 여백까지 감안해
+   이 그림을 만들었으므로, 사이트 폭 안에 가둬 두면 오히려 어색하다. #}
+<div class="posterhead">
+  <a href="{{ page.meeting_path }}"><img src="{{ page.banner }}" alt="{{ page.meeting_title }}"></a>
 </div>
+{% else %}
+{% call pagehead(page, big=true) %}
+  <div class="crumb">
+    <a href="/meetings">Meetings</a>
+    {% if page.depth == 3 %} / <a href="{{ page.meeting_path }}">{{ page.meeting_title }}</a>{% endif %}
+  </div>
+  <h1>{{ page.title }}</h1>
+  {% if meta %}<p class="sub mono">{{ meta }}</p>{% endif %}
+{% endcall %}
+{% endif %}
 
 {% if page.subnav %}
-<nav class="subtabs" aria-label="{{ page.title }} 하위 메뉴">
+<nav class="subtabs" aria-label="{{ page.meeting_title }} 하위 메뉴">
   <div class="wrap">
     {% for t in page.subnav %}
     <a href="{{ t.path }}"{% if t.path == page.path %} aria-current="page"{% endif %}>{{ t.title }}</a>
@@ -20,7 +43,20 @@
 </nav>
 {% endif %}
 
-<div class="band">
+{% if page.poster %}
+<div class="meethead">
+  <div class="wrap">
+    <div class="crumb">
+      <a href="/meetings">Meetings</a>
+      {% if page.depth == 3 %} / <a href="{{ page.meeting_path }}">{{ page.meeting_title }}</a>{% endif %}
+    </div>
+    <h1>{{ page.title }}</h1>
+    {% if meta %}<p class="meta mono">{{ meta }}</p>{% endif %}
+  </div>
+</div>
+{% endif %}
+
+<div class="band{% if page.poster %} tight{% endif %}">
   <div class="wrap">
     {# 본문은 LOC가 Google Sites에서 관리하는 원고를 그대로 옮긴 것 #}
     <article class="harvested">{{ page.html | safe }}</article>

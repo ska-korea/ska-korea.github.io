@@ -157,6 +157,38 @@ def fix_images(html: str, imgs: dict[str, str]) -> str:
     return re.sub(r'<img[^>]*src=""[^>]*>', "", html)
 
 
+BANNER_DIR = "/static/img/banners/"
+
+
+def banner_for(path: str, meta: dict, conf: dict) -> tuple[str | None, str | None]:
+    """본문 페이지 배너에 깔 사진을 고른다. (주소, 자를 위치)를 돌려준다.
+
+    원고의 frontmatter `banner:`가 있으면 그것을 쓰고(빈 값이면 사진 없이 네이비만),
+    없으면 site.yaml의 경로 규칙에서 가장 긴 접두사가 이긴다. 그래서
+    `/src` 규칙을 두면 `/src/korea-src`까지 함께 따라오고, 필요하면 그 쪽만 덮어쓴다.
+
+    값은 파일명 하나로 적어도 되고, 자를 위치를 함께 정하려면
+    `{file: 사진.jpg, at: "center 85%"}`로 적는다 — 배너는 사진의 가운데를 얇게
+    베어 쓰므로, 담을 것이 아래쪽에 있는 사진은 위치를 내려 줘야 제 모습이 나온다.
+    """
+    def unpack(v):
+        if not v:
+            return None, None
+        if isinstance(v, dict):
+            name, at = v.get("file"), v.get("at")
+        else:
+            name, at = v, None
+        return (name if str(name).startswith("/") else BANNER_DIR + str(name)), at
+
+    if "banner" in meta:
+        return unpack(meta["banner"])
+    best, chosen = -1, conf.get("default")
+    for prefix, v in (conf.get("paths") or {}).items():
+        if (path == prefix or path.startswith(prefix.rstrip("/") + "/")) and len(prefix) > best:
+            best, chosen = len(prefix), v
+    return unpack(chosen)
+
+
 def split_front(text: str) -> tuple[dict, str]:
     """--- YAML --- 본문 형태를 (메타, 본문)으로 나눈다."""
     if text.startswith("---"):
@@ -187,7 +219,7 @@ def build_nav(nav_cfg: list, current: str) -> list:
     return out
 
 
-def collect_content(md: markdown.Markdown) -> list[dict]:
+def collect_content(md: markdown.Markdown, banners: dict) -> list[dict]:
     """content/ 의 Markdown 원고를 페이지로 읽어들인다."""
     pages = []
     for f in sorted((ROOT / "content").rglob("*.md")):
@@ -198,13 +230,17 @@ def collect_content(md: markdown.Markdown) -> list[dict]:
         path = "/" if rel.name == "index" and rel.parent == Path(".") \
             else "/" + str(rel.parent / rel.name if rel.name != "index" else rel.parent).replace("\\", "/")
         md.reset()
+        p = meta.get("path", path)
+        src, at = banner_for(p, meta, banners)
         pages.append({
-            "path": meta.get("path", path),
+            "path": p,
             "title": meta.get("title", f.stem),
             "sub": meta.get("sub"),
             "template": meta.get("template", "page.html"),
             "html": md.convert(body) if body.strip() else "",
             "meta": meta,
+            "banner": src,
+            "banner_at": at,
             "source": "content",
         })
     return pages
@@ -273,6 +309,7 @@ def collect_talks(md: markdown.Markdown) -> list[dict]:
                     "when": meta.get("when"),
                     "where": meta.get("where"),
                     "mode": meta.get("mode"),
+                    "banner": None,   # main()에서 /talks 규칙으로 채운다
                     "year": t["date"].year})
     out.sort(key=lambda t: t["date"], reverse=True)
     return out
@@ -352,6 +389,11 @@ def collect_meetings(meta_cfg: dict) -> list[dict]:
             "where": info.get("where"),
             "category": info.get("category"),
             "status": info.get("status"),
+            # 수확기가 판정한 배너. 하위 탭은 대표쪽 것을 물려받는다(main 참조).
+            "banner_info": p.get("banner"),
+            # meetings.yaml에서 손으로 덮어쓰는 문: poster | photo | none
+            "banner_style": info.get("banner"),
+            "banner_at": info.get("banner_at"),
         })
     # 날짜를 적어 둔 미팅은 그 날짜를 정렬 기준으로 삼는다.
     # 제목에서 뽑은 연·월(예: 'Nov 2023 EASKA')보다 정확하다.
@@ -446,9 +488,12 @@ def main() -> int:
         shutil.rmtree(child) if child.is_dir() else child.unlink()
 
     imgs = image_map()
-    content = collect_content(md)
+    banner_cfg = site.get("banners") or {}
+    content = collect_content(md, banner_cfg)
     meetings = collect_meetings(meet_cfg.get("meetings", {}) if meet_cfg else {})
     talks = collect_talks(md)
+    for t in talks:
+        t["banner"], t["banner_at"] = banner_for(t["path"], t["meta"], banner_cfg)
     newsletters = collect_newsletters()
     for p in content + meetings:
         p["html"] = fix_images(p["html"], imgs)
@@ -457,14 +502,40 @@ def main() -> int:
     # 미팅 하위 페이지는 상위 미팅의 서브탭을 물려받는다
     by_path = {m["path"]: m for m in meetings}
     for m in meetings:
-        if not m["subnav"] and m["depth"] == 3:
-            m["subnav"] = by_path.get(m["parent"], {}).get("subnav", [])
+        parent = by_path.get(m["parent"]) if m["depth"] == 3 else None
+        if not m["subnav"] and parent:
+            m["subnav"] = parent.get("subnav", [])
         # 하위 페이지 제목은 <title>보다 조직위가 붙인 탭 이름을 따른다.
         # Google Sites는 페이지를 이름만 바꿔도 주소가 그대로라 둘이 어긋나는 일이 흔하다.
         if m["depth"] == 3:
             label = next((t["title"] for t in m["subnav"] if t["path"] == m["path"]), None)
             if label:
                 m["title"] = label
+
+        # ── 배너 ────────────────────────────────────────────────
+        # 그림은 대표쪽에만 내려받는다. 하위 탭은 같은 배너를 쓰므로 물려받는다.
+        # 대표쪽의 날짜·장소·이름도 함께 물려받아 어느 탭에서나 같이 보이게 한다.
+        head = parent or m
+        info = head.get("banner_info") or {}
+        key = info.get("image")
+        m["banner"] = f"/img/{imgs[key]}" if key and key in imgs else None
+        m["banner_at"] = m.get("banner_at") or head.get("banner_at")
+        m["poster"] = bool(info.get("poster"))
+        m["meeting_title"] = head["title"]
+        m["meeting_path"] = head["path"]
+        if parent:
+            m["when"], m["where"] = m["when"] or parent["when"], m["where"] or parent["where"]
+
+        # meetings.yaml이 있으면 그것이 이긴다 — 자동 판정이 틀렸을 때의 문
+        style = m.get("banner_style") or (parent or {}).get("banner_style")
+        if style == "none":
+            m["banner"], m["poster"] = None, False
+        elif style == "photo":
+            m["poster"] = False
+        elif style == "poster":
+            m["poster"] = True
+        if m["poster"] and not m["banner"]:
+            m["poster"] = False   # 그림이 없으면 대문 배너를 만들 수 없다
 
     shared = {"meetings": index, "talks": talks, "talk_years": talk_index(talks),
               "newsletters": newsletters}
