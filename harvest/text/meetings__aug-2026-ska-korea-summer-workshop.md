@@ -71,7 +71,7 @@ Session 5. HI and Extragalactic Science [Chair: Minsu Kim]
 
 10:40 - 11:10 Break (30 min)
 
-Session 6. Extragalactic Science and Cosmology [Chair: Bumhyun Lee]
+Session 6. Extragalactic Science and Cosmology [Chair: Jihye Hwang]
 
                   - 11:10 - 11:25 Yunjeong Lee (KHU), Pilot Study for SKA-VLBI: Resolving Jet Composition with eKVN & POSSUM and Developing a Mosaicking/Cutout Tool  (*remote, 12+3 min)11:25 - 11:40 Chandra Shekhar Saraf (KASI), Cosmology from SKAO-mid continuum survey (*remote, 12+3 min)11:40 - 11:55 David Parkinson (KASI), An SKAO AA4 simulation of cosmology from the clustering of continuum galaxies (12+3 min)11:55 - 12:10 Jeffrey Hodgson (Sejong Univ.), Cosmology with Counter-jet distances (12+3 min)
 
