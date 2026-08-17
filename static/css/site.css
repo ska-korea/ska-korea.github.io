@@ -689,6 +689,7 @@ ol.steps b { color: var(--navy); }
 .meethead .crumb { font-size: var(--fs-meta); color: var(--faint); margin-bottom: 8px; }
 .meethead .crumb a { color: var(--muted); }
 .meethead .crumb a:hover { color: var(--navy); text-decoration: underline; }
+.mx-crumb-sub { color: var(--faint); }
 .meethead h1 {
   font-size: clamp(24px, 3.2vw, 34px); font-weight: 800;
   color: var(--navy); letter-spacing: -.03em; line-height: 1.25;
@@ -871,8 +872,8 @@ ol.steps b { color: var(--navy); }
    ============================================================ */
 /* 부제는 제목과 한 줄에. 강조색으로 조금 작게 — 떨어뜨려 놓으면 묻힌다 */
 .mx-tail {
-  color: var(--magenta); font-size: .6em; font-weight: 700;
-  letter-spacing: -.01em; white-space: nowrap;
+  color: var(--magenta); font-size: .72em; font-weight: 700;
+  letter-spacing: -.02em; white-space: nowrap;
 }
 .mx-tail::before { content: "— "; color: var(--faint); font-weight: 400; }
 @media (max-width: 620px) { .mx-tail { display: block; margin-top: 2px; } .mx-tail::before { content: none; } }
@@ -921,12 +922,13 @@ ol.steps b { color: var(--navy); }
   padding: 20px 22px 18px; margin: 24px 0; background: var(--paper);
 }
 .mx-card.accent { border-color: #f0c8d8; background: #fffafc; }
+.mx-card.mx-dates { padding: 18px 20px 8px; }
 .mx-card-h {
-  font-size: var(--fs-card); font-weight: 700; color: var(--magenta);
-  letter-spacing: .04em; text-transform: uppercase; margin: 0 0 12px;
+  font-size: var(--fs-label); font-weight: 700; color: var(--magenta);
+  letter-spacing: .12em; text-transform: uppercase; margin: 0 0 10px;
 }
 .mx-card > :last-child { margin-bottom: 0; }
-.mx-dates { background: var(--wash); }
+
 
 /* ── 일정표 ── 시각은 소요시간에서 계산된다 */
 .mx-program { margin: 22px 0; border-top: 2px solid var(--navy); }
@@ -961,8 +963,14 @@ ol.steps b { color: var(--navy); }
 /* ── 사람 목록 ── 정렬은 빌드가 한다 */
 .mx-people { margin: 14px 0 6px; }
 .mx-people li { list-style: none; }
-.mx-people.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 6px 20px; }
-.mx-people li { padding: 5px 0; font-size: var(--fs-card); line-height: 1.5; }
+/* 격자와 한 줄 목록의 줄 간격을 같게 — 칸 사이 여백만 준다 */
+.mx-people.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(var(--pmin, 200px), 1fr)); gap: 0 26px; }
+/* 소속이 길면 이름 옆에 붙이지 않고 아래로 내린다 — 줄바꿈이 지저분해진다 */
+.mx-people.stack .mx-affil { display: block; margin-left: 0; margin-top: 1px; }
+.mx-people.stack li { padding: 7px 0; }
+/* .prose li의 위아래 여백을 지운다 — 한 줄 목록에서는 겹쳐 6px이지만 격자에서는
+   겹치지 않아 12px이 되어, 같은 명단인데 줄 간격이 달라 보였다. */
+.mx-people li { margin: 0; padding: 5px 0; font-size: var(--fs-card); line-height: 1.5; }
 .mx-name { font-weight: 600; color: var(--ink); }
 .mx-affil { color: var(--muted); margin-left: 6px; font-size: var(--fs-meta); }
 .mx-role {
@@ -972,16 +980,27 @@ ol.steps b { color: var(--navy); }
 .mx-count { font-size: var(--fs-meta); color: var(--faint); margin-top: 8px; }
 
 /* ── 마감일 ── 지난 것은 스스로 물러난다 */
-.mx-deadlines { margin: 8px 0 26px; border-top: 1px solid var(--line); }
+/* 마감일. 지난 것은 물러나고 다음 것만 강조색으로 세운다 —
+   상자 바탕과 강조 바탕을 겹쳐 두 색이 부딪히던 것을 걷어냈다. */
+.mx-deadlines { margin: 0; }
 .mx-deadlines li {
-  list-style: none; display: grid; grid-template-columns: 116px minmax(0, 1fr); gap: 16px;
-  padding: 9px 4px; border-bottom: 1px solid var(--line-soft); font-size: var(--fs-card);
+  list-style: none; display: grid; grid-template-columns: 108px minmax(0, 1fr);
+  gap: 18px; align-items: baseline;
+  padding: 8px 0; border-top: 1px solid var(--line-soft); font-size: var(--fs-card);
 }
+.mx-deadlines li:first-child { border-top: none; }
 .mx-deadlines .mx-date { color: var(--muted); }
 .mx-deadlines .past { color: var(--faint); }
 .mx-deadlines .past .mx-date { text-decoration: line-through; }
-.mx-deadlines .next { background: #fff6e6; font-weight: 700; color: var(--navy); }
-.mx-deadlines .next .mx-date { color: #a35a00; }
+.mx-deadlines .next { font-weight: 700; color: var(--navy); }
+.mx-deadlines .next .mx-date { color: var(--magenta); }
+/* 다음 마감일에만 강조색 표식 — 바탕을 칠하는 대신 왼쪽에 세운다 */
+.mx-deadlines .next { position: relative; }
+.mx-deadlines .next::before {
+  content: ""; position: absolute; left: -20px; top: 10px;
+  width: 3px; height: calc(100% - 20px); min-height: 12px;
+  border-radius: 3px; background: var(--magenta);
+}
 
 /* ── 지도·PDF·등록폼 ── 수확 방식으로는 아예 불가능했던 것들 */
 .mx-map iframe, .mx-pdf iframe, .mx-form iframe {
@@ -1028,6 +1047,13 @@ ol.steps b { color: var(--navy); }
 .mx-stat .n { color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
 .mx-stat .n small { color: var(--faint); margin-left: 5px; font-size: var(--fs-label); }
 .mx-note { font-size: var(--fs-label); color: var(--faint); margin-top: 8px; }
+
+/* 각주 — 등록비의 '* PhD 5년 이내' 같은 단서를 본문에서 떼어 낸다 */
+.prose.mx .footnote { margin-top: 30px; padding-top: 14px; border-top: 1px solid var(--line); }
+.prose.mx .footnote ol { font-size: var(--fs-meta); color: var(--muted); padding-left: 1.1em; }
+.prose.mx .footnote li { margin: 4px 0; }
+.prose.mx .footnote p { margin: 0; font-size: var(--fs-meta); }
+.prose.mx sup a, .prose.mx .footnote-backref { text-decoration: none; color: var(--magenta); }
 
 .mx-unknown { color: var(--magenta); font-size: var(--fs-meta); }
 

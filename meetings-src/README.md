@@ -23,8 +23,12 @@ subtitle: The SKAO Awakens
 dates:    2026-10-19 ~ 2026-10-23
 venue:    Seoul MICE Plaza, Seoul, South Korea
 banner:   banner.jpg
+lang:     en          # 기본값. 국내 워크숍이면 ko
 ---
 ```
+
+미팅 페이지의 **기본 언어는 영어**입니다(요일·Chair·Break·인원수 같은 자동 생성 글자).
+국내 워크숍이면 `lang: ko` 를 적으세요.
 
 `dates`만 정확히 적으면 **끝난 뒤 모습으로 저절로 바뀝니다.** 등록 폼이 닫히고, 지난 마감일이
 회색이 되고, 상단에 "이 모임은 …에 끝났습니다"가 붙습니다. 끝나고 아무것도 안 하셔도 됩니다.
@@ -79,6 +83,8 @@ Dahee Lee | Chosun
 - 셋째 칸은 선택입니다. 역할(`speaker` `chair`)과 직급(`student` `postdoc` `staff` `other`)을
   함께 적을 수 있습니다.
 - `as=grid`(여러 단) / `as=list`(한 줄씩). 인원수는 저절로 붙습니다.
+- 소속이 길면 `stack=yes` 를 더하세요 — 이름 아래로 내려가 줄바꿈이 지저분해지지 않습니다.
+  칸 폭은 `min=230px` 으로 조절합니다.
 - **참가자 명단에만** `stats=yes` 를 다세요 — 아래 구성 통계가 그 목록에서 나옵니다.
 
 ### 마감일 — 지난 것은 저절로 물러납니다
@@ -179,5 +185,18 @@ files/photo-02.jpg
 - 사진·PDF는 반드시 `files/` 안에 두고 `files/이름.jpg` 로 가리키세요.
 - `:::` 를 닫는 것을 잊지 마세요. 안에 다른 `:::` 가 있으면 그것도 각각 닫아야 합니다.
 - 잘 모르겠으면 **`test-sparcs-xiv/meeting.md` 를 통째로 복사해** 고쳐 쓰세요.
+
+## 각주
+
+```
+Student/ECR[^ecr]: 80,000 KRW
+
+[^ecr]: Early Career Researcher — maximum 5 years since PhD.
+```
+
+번호와 되돌아가는 링크가 저절로 붙습니다.
+**각주 정의는 참조와 같은 단락 안에 두세요** — 블록 경계를 넘으면 이어지지 않습니다.
+
+---
 
 막히면 [연락처](https://ska.kasi.re.kr/contacts)로 물어보세요.

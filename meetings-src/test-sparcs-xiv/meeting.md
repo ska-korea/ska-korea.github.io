@@ -39,9 +39,9 @@ We have a registration fee that varies by group.
 
 - Standard, in-person: 150,000 KRW (~90 Euro)
 - Standard, online: 120,000 KRW (~70 Euro)
-- Student/ECR\*: 80,000 KRW (~50 Euro)
+- Student/ECR[^ecr]: 80,000 KRW (~50 Euro)
 
-\*maximum 5 years since PhD
+[^ecr]: Early Career Researcher — maximum 5 years since PhD.
 
 ---
 
@@ -57,7 +57,7 @@ The meeting is strongly encouraged as an in-person event to maximize interaction
 ## Confirmed Invited Speakers
 
 ::: card accent=yes
-::: people sort=name as=grid count=no
+::: people sort=name as=grid stack=yes count=no min=230px
 Alec Thomson | SKAO
 Bong Won Sohn | KASI
 Christian Groeneveld | INAF-IRA
@@ -147,8 +147,8 @@ This code of conduct is based on the "London Code of Conduct", as originally des
 
 # Program
 
-일정은 확정되는 대로 채웁니다. 아래는 **새 형식의 일정표 예시**입니다 — 날짜줄에 시작시각을
-한 번 적고 나머지는 소요시간(분)만 적으면 시각이 저절로 계산됩니다.
+The detailed programme will be announced in due course. *(The table below is a
+placeholder used to test the new format — times are computed from durations.)*
 
 ::: program
 2026-10-19 | 09:30 | Day 1
@@ -166,9 +166,10 @@ This code of conduct is based on the "London Code of Conduct", as originally des
 
 # Abstract
 
-**Poster Presentation Abstract Submission Deadline**: Aug 31, 2026
-
-**Oral Presentation Abstract Submission Deadline**: May 31, 2026
+::: deadlines
+2026-05-31 | Oral presentation abstract submission
+2026-08-31 | Poster presentation abstract submission
+:::
 
 ## Important notes
 
@@ -203,9 +204,9 @@ We have a registration fee that varies by group. The registration fee will cover
 
 - Standard, in-person: 150,000 KRW (~90 Euro)
 - Standard, online: 120,000 KRW (~70 Euro)
-- Student/ECR\*: 80,000 KRW (~50 Euro)
+- Student/ECR[^ecr2]: 80,000 KRW (~50 Euro)
 
-\*Maximum 5 years since PhD
+[^ecr2]: Early Career Researcher — maximum 5 years since PhD.
 
 Please contact us (<wklee786@gmail.com>) regarding questions about registration.
 
@@ -217,8 +218,8 @@ Please contact us (<wklee786@gmail.com>) regarding questions about registration.
 
 # Participants
 
-등록이 열리면 이 쪽이 채워집니다. 명단을 주시면 **발표자 우선·이름순으로 저절로 정렬**됩니다.
-셋째 칸에 `speaker`(발표자)와 직급(`student` · `postdoc` · `staff` · `other`)을 함께 적을 수 있습니다.
+This page will be filled in once registration opens. *(The list below is a placeholder
+used to test the new format — speakers first, then alphabetical.)*
 
 ::: people sort=speaker,name as=grid stats=yes
 Bong Won Sohn | KASI | speaker staff
@@ -235,7 +236,7 @@ Soyeon Yeo | Yonsei | postdoc
 Dahee Lee | Chosun
 :::
 
-## 구성
+## Composition
 
 ::: stats
 :::

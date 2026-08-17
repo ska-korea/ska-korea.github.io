@@ -467,7 +467,9 @@ def collect_authored(md: markdown.Markdown, today: date) -> list[dict]:
                 end = date.fromisoformat(got[-1])
         phase = ("past" if end and end < today else
                  "running" if start and end and start <= today <= end else "upcoming")
-        ctx = {"today": today, "phase": phase, "slug": slug}
+        ctx = {"today": today, "phase": phase, "slug": slug,
+               # 미팅 페이지 기본 언어는 영어. 국내 워크숍만 lang: ko
+               "lang": (meta.get("lang") or "en").lower()}
 
         def render_md(text, _md=md):
             _md.reset()
@@ -495,7 +497,7 @@ def collect_authored(md: markdown.Markdown, today: date) -> list[dict]:
                 "category": meta.get("category"), "status": None,
                 "listed": meta.get("list", True),
                 "assets": f.parent / "files", "meta": meta,
-                "stats": ctx.get("stats"),
+                "stats": ctx.get("stats"), "lang": ctx["lang"],
             })
     return out
 
@@ -575,7 +577,7 @@ def main() -> int:
     css = ROOT / "static" / "css" / "site.css"
     site["css_v"] = hashlib.sha1(css.read_bytes()).hexdigest()[:8] if css.exists() else ""
 
-    md = markdown.Markdown(extensions=["extra", "attr_list", "toc", "sane_lists"])
+    md = markdown.Markdown(extensions=["extra", "attr_list", "toc", "sane_lists", "footnotes"])
     env = Environment(loader=FileSystemLoader(ROOT / "templates"),
                       autoescape=select_autoescape(["html"]), trim_blocks=True, lstrip_blocks=True)
     env.filters["sentences"] = sentences

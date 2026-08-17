@@ -30,7 +30,7 @@
   <div class="wrap">
     <div class="crumb">
       <a href="/meetings">Meetings</a>
-      {% if page.depth == 3 %} / <a href="{{ page.meeting_path }}">{{ page.meeting_title }}</a>{% endif %}
+      {% if page.depth == 3 %} / <a href="{{ page.meeting_path }}">{{ page.meeting_title }}{% if page.meeting_sub %} <span class="mx-crumb-sub">— {{ page.meeting_sub }}</span>{% endif %}</a>{% endif %}
     </div>
     {# 부제는 제목과 한 줄에, 강조색으로 조금 작게 — 별개의 문단으로 떨어뜨리면 묻힌다 #}
     <h1>{{ page.title if page.depth == 3 else page.meeting_title }}
@@ -47,10 +47,11 @@
 {# 끝난 모임임을 한 번만, 분명히 알린다 — 등록창이 열려 있는 것처럼 보이면 안 된다 #}
 {% if page.phase == 'past' %}
 <div class="mx-over"><div class="wrap">
-  이 모임은 <b>{{ page.end.strftime('%Y년 %m월 %d일') }}</b>에 끝났습니다. 아래 내용은 기록으로 남겨 둔 것입니다.
+  {% if page.lang == 'ko' %}이 모임은 <b>{{ page.end.strftime('%Y년 %m월 %d일') }}</b>에 끝났습니다. 아래 내용은 기록으로 남겨 둔 것입니다.
+  {% else %}This meeting ended on <b>{{ page.end.strftime('%d %B %Y') }}</b>. What follows is kept as a record.{% endif %}
 </div></div>
 {% elif page.phase == 'running' %}
-<div class="mx-over now"><div class="wrap">지금 진행 중인 모임입니다.</div></div>
+<div class="mx-over now"><div class="wrap">{% if page.lang == 'ko' %}지금 진행 중인 모임입니다.{% else %}This meeting is happening now.{% endif %}</div></div>
 {% endif %}
 
 <div class="band tight">

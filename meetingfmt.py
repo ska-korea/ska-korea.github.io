@@ -31,6 +31,36 @@ BLOCK_OPEN = re.compile(r"^:::\s*(\w+)\s*(.*)$")
 BLOCK_CLOSE = re.compile(r"^:::\s*$")
 HEADING = re.compile(r"^(#{1,4})\s+(.+?)\s*$")
 
+# 미팅 페이지의 기본 언어는 **영어**다. SPARCS·EASKA처럼 국제 회의가 섞여 있고,
+# 국내 워크숍만 frontmatter에 `lang: ko` 를 적으면 된다.
+LABELS = {
+    "en": {"chair": "Chair", "break": "Break", "count": "{n} people",
+           "dates": "Important Dates", "unspecified": "Unspecified",
+           "slides": "Slides", "download": "Download",
+           "stat_affil": "Affiliation", "stat_pos": "Composition", "stat_topic": "Topics",
+           "stat_note": "Only talks tagged with swg= are counted.",
+           "stat_empty": "Composition will appear here once the participant list "
+                         "or programme is filled in.",
+           "unclassified": "Unclassified",
+           "pos": {"student": "Student", "postdoc": "Postdoc",
+                   "staff": "Faculty & staff", "other": "Other"},
+           "week": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]},
+    "ko": {"chair": "좌장", "break": "휴식", "count": "모두 {n}명",
+           "dates": "주요 일정", "unspecified": "미기재",
+           "slides": "슬라이드", "download": "내려받기",
+           "stat_affil": "소속", "stat_pos": "구성", "stat_topic": "발표 주제",
+           "stat_note": "주제 꼬리표(swg=)를 단 발표만 셉니다.",
+           "stat_empty": "참가자 명단이나 일정표가 채워지면 여기에 구성이 나옵니다.",
+           "unclassified": "미분류",
+           "pos": {"student": "학생", "postdoc": "포닥",
+                   "staff": "교수·연구원", "other": "기타"},
+           "week": ["월", "화", "수", "목", "금", "토", "일"]},
+}
+
+
+def L(ctx, key):
+    return LABELS.get(ctx.get("lang", "en"), LABELS["en"])[key]
+
 
 # ── 파싱 ────────────────────────────────────────────────────────────
 
@@ -216,7 +246,7 @@ def blk_program(lines, arg, ctx, md):
         if s.lower().startswith("break"):
             m = re.match(r"break\s+(\d+)\s*(?:\|\s*(.*))?$", s, re.I)
             mins = int(m.group(1)) if m else 0
-            label = (m.group(2) if m and m.group(2) else "휴식")
+            label = (m.group(2) if m and m.group(2) else L(ctx, "break"))
             start = clock
             clock = clock + timedelta(minutes=mins)
             cur["rows"].append({"kind": "break", "label": label, "mins": mins,
@@ -247,21 +277,22 @@ def blk_program(lines, arg, ctx, md):
     for d in days:
         try:
             dt = date.fromisoformat(d["date"])
-            head = f'{dt.year}.{dt.month:02d}.{dt.day:02d} ({"월화수목금토일"[dt.weekday()]})'
+            head = f'{dt.year}.{dt.month:02d}.{dt.day:02d} ({L(ctx, "week")[dt.weekday()]})'
         except ValueError:
             head = d["date"]
         out.append(f'<div class="mx-day"><span>{e(head)}</span>'
                    + (f'<em>{e(d["note"])}</em>' if d["note"] else "") + "</div>")
         for r in d["rows"]:
             if r["kind"] == "session":
-                chair = f' <span class="mx-chair">좌장 {e(r["chair"])}</span>' if r["chair"] else ""
+                chair = (f' <span class="mx-chair">{L(ctx, "chair")} {e(r["chair"])}</span>'
+                         if r["chair"] else "")
                 out.append(f'<div class="mx-session">{e(r["title"])}{chair}</div>')
             elif r["kind"] == "break":
                 out.append(f'<div class="mx-row mx-break"><span class="mx-time">'
                            f'{r["from"]}–{r["to"]}</span><span class="mx-what">{e(r["label"])}</span></div>')
             else:
                 who = " · ".join(x for x in (r["speaker"], r["affil"]) if x)
-                slides = (f'<a class="mx-slides" href="{e(r["slides"])}">슬라이드</a>'
+                slides = (f'<a class="mx-slides" href="{e(r["slides"])}">{L(ctx, "slides")}</a>'
                           if r["slides"] and ctx.get("phase") == "past" else "")
                 lang = f'<span class="mx-lang">{e(r["lang"])}</span>' if r["lang"] else ""
                 out.append(
@@ -280,11 +311,11 @@ ROLE_ORDER = {"chair": 0, "speaker": 1, "": 2}
 # 직급은 네 갈래로만 센다 — 실제로는 이 이상 구분되지 않는 경우가 대부분이다(사용자 확인).
 ROLES = {"speaker", "chair"}
 POSITIONS = {
-    "student": "학생", "학생": "학생", "grad": "학생", "phd": "학생", "ms": "학생",
-    "postdoc": "포닥", "포닥": "포닥", "pd": "포닥",
-    "staff": "교수·연구원", "faculty": "교수·연구원", "prof": "교수·연구원",
-    "professor": "교수·연구원", "researcher": "교수·연구원",
-    "other": "기타", "기타": "기타",
+    "student": "student", "학생": "student", "grad": "student", "phd": "student", "ms": "student",
+    "postdoc": "postdoc", "포닥": "postdoc", "pd": "postdoc",
+    "staff": "staff", "faculty": "staff", "prof": "staff",
+    "professor": "staff", "researcher": "staff",
+    "other": "other", "기타": "other",
 }
 
 
@@ -318,7 +349,10 @@ def blk_people(lines, arg, ctx, md):
         ctx["people_stat"] = list(rows)
 
     cls = "mx-people" + (" grid" if opt.get("as", "grid") == "grid" else " list")
-    out = [f'<ul class="{cls}">']
+    if opt.get("stack") == "yes":
+        cls += " stack"
+    style = f' style="--pmin:{e(opt["min"])}"' if opt.get("min") else ""
+    out = [f'<ul class="{cls}"{style}>']
     for r in rows:
         mark = f'<span class="mx-role">{e(r["role"])}</span>' if r["role"] else ""
         out.append(f'<li><span class="mx-name">{e(r["name"])}</span>'
@@ -326,7 +360,7 @@ def blk_people(lines, arg, ctx, md):
                    + mark + "</li>")
     out.append("</ul>")
     if opt.get("count", "yes") != "no":
-        out.append(f'<p class="mx-count">모두 {len(rows)}명</p>')
+        out.append(f'<p class="mx-count">{L(ctx, "count").format(n=len(rows))}</p>')
     return "".join(out)
 
 
@@ -351,7 +385,7 @@ def blk_deadlines(lines, arg, ctx, md):
         rows.append((d, c[1]))
     rows.sort()
     nxt = next((d for d, _ in rows if d >= today), None)
-    title = opt.get("title", "Important Dates").replace("_", " ")
+    title = opt.get("title", L(ctx, "dates")).replace("_", " ")
     out = ['<section class="mx-card mx-dates">']
     if title != "none":
         out.append(f'<h3 class="mx-card-h">{e(title)}</h3>')
@@ -402,7 +436,7 @@ def blk_pdf(lines, arg, ctx, md):
         return ""
     return (f'<div class="mx-pdf"><iframe src="{e(src)}#view=FitH" loading="lazy" '
             f'title="{e(label)}"></iframe>'
-            f'<p class="mx-cap"><a href="{e(src)}">{e(label)} 내려받기</a></p></div>')
+            f'<p class="mx-cap"><a href="{e(src)}">{e(label)} · {L(ctx, "download")}</a></p></div>')
 
 
 def blk_form(lines, arg, ctx, md):
@@ -412,8 +446,10 @@ def blk_form(lines, arg, ctx, md):
     if not src:
         return ""
     if ctx.get("phase") == "past":
-        return ('<div class="mx-closed"><b>등록이 마감되었습니다.</b> '
-                '이 모임은 이미 끝났습니다.</div>')
+        msg = ("<b>등록이 마감되었습니다.</b> 이 모임은 이미 끝났습니다."
+               if ctx.get("lang") == "ko" else
+               "<b>Registration is closed.</b> This meeting has ended.")
+        return f'<div class="mx-closed">{msg}</div>'
     sep = "&" if "?" in src else "?"
     return (f'<div class="mx-form"><iframe src="{e(src + sep)}embedded=true" loading="lazy" '
             f'title="등록 양식" height="{e(opt.get("height", "900"))}"></iframe></div>')
@@ -481,20 +517,23 @@ def blk_stats(lines, arg, ctx, md):
              if r["kind"] == "talk" and (r["title"] or r["speaker"])]
     out = ['<div class="mx-stats">']
     if people:
-        out.append(bars("소속", Counter(p["affil"] or "미기재" for p in people), len(people)))
-        pos = Counter(p["position"] or "미기재" for p in people)
-        out.append(bars("구성", pos, len(people)))
+        un = L(ctx, "unspecified")
+        out.append(bars(L(ctx, "stat_affil"),
+                        Counter(p["affil"] or un for p in people), len(people)))
+        names = L(ctx, "pos")
+        pos = Counter(names.get(p["position"], un) for p in people)
+        out.append(bars(L(ctx, "stat_pos"), pos, len(people)))
     if talks:
         tagged = [t["swg"] for t in talks if t["swg"]]
         c = Counter(tagged)
         if tagged:
-            c["미분류"] = len(talks) - len(tagged)
-            out.append(bars("발표 주제", {k: v for k, v in c.items() if v}, len(talks),
-                            "주제 꼬리표(swg=)를 단 발표만 셉니다."))
+            c[L(ctx, "unclassified")] = len(talks) - len(tagged)
+            out.append(bars(L(ctx, "stat_topic"), {k: v for k, v in c.items() if v},
+                            len(talks), L(ctx, "stat_note")))
     out.append("</div>")
     body = "".join(out)
     return body if (people or talks) else (
-        '<p class="mx-note">참가자 명단이나 일정표가 채워지면 여기에 구성이 나옵니다.</p>')
+        f'<p class="mx-note">{L(ctx, "stat_empty")}</p>')
 
 
 BLOCKS = {"split": blk_split, "program": blk_program, "people": blk_people,
