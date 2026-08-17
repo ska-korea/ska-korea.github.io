@@ -1,0 +1,50 @@
+# /links 페이지의 자료 창구.
+#
+# 갈래 하나 = 상자 하나. 상자 배경에 그 갈래의 사진이 오른쪽으로 깔린다.
+#   name    상자 제목
+#   what    한 줄 설명
+#   image   static/img/links/ 안의 파일명 (없으면 사진 없이 흰 상자)
+#   credit  사진 출처. 반드시 적는다
+#   links   label + url. **줄 전체가 링크**가 되므로 주소는 화면에 나오지 않는다.
+#           그래서 label만 보고도 어디로 가는지 알 수 있게 적을 것.
+#
+# 갈래를 늘리려면 아래에 한 덩어리 더하면 된다. 템플릿·CSS는 손댈 필요 없다.
+
+groups:
+  - name: SKAO
+    what: Square Kilometre Array Observatory
+    image: skao.jpg
+    credit: SKAO
+    links:
+      - {label: SKAO website, url: "https://www.skao.int/en"}
+      - {label: SKA science working groups, url: "https://www.skao.int/en/science-users/science-working-groups"}
+      - {label: SKAO newsletters and webinars, url: "https://www.skao.int/en/science-users/670/newsletters-and-webinars"}
+      - {label: SKAO job opportunities, url: "https://recruitment.skao.int/vacancies.html"}
+
+  - name: ASKAP
+    what: SKA precursor · Australia
+    image: askap.jpg
+    credit: CSIRO
+    links:
+      - {label: ASKAP website, url: "https://www.csiro.au/en/about/facilities-collections/ATNF/ASKAP-radio-telescope"}
+      - {label: ASKAP data archive (CASDA), url: "https://data.csiro.au/domain/casdaObservation"}
+      - {label: CASDA cutout service, url: "https://data.csiro.au/domain/casdaCutoutService"}
+      - {label: CASDA user guide, url: "https://research.csiro.au/casda/casda-user-guide/"}
+      - {label: ATNF proposal submission (OPAL), url: "https://opal.atnf.csiro.au"}
+
+  - name: MeerKAT
+    what: SKA precursor · South Africa
+    image: meerkat.jpg
+    credit: SARAO
+    links:
+      - {label: MeerKAT website, url: "https://www.sarao.ac.za/science/meerkat/"}
+      - {label: MeerKAT documentation, url: "https://skaafrica.atlassian.net/wiki/spaces/ESDKB/overview?homepageId=41025669"}
+      - {label: MeerKAT data archive, url: "https://archive.sarao.ac.za"}
+
+  - name: CARTA
+    what: Cube Analysis and Rendering Tool for Astronomy
+    image: carta.jpg
+    credit: CARTA team
+    links:
+      - {label: CARTA website, url: "https://cartavis.org"}
+      - {label: CARTA user manual, url: "https://carta.readthedocs.io/en/latest/"}

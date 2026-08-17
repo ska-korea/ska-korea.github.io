@@ -537,8 +537,18 @@ def main() -> int:
         if m["poster"] and not m["banner"]:
             m["poster"] = False   # 그림이 없으면 대문 배너를 만들 수 없다
 
+    link_cfg = load_yaml(ROOT / "links.yaml") if (ROOT / "links.yaml").exists() else {}
+    media_cfg = load_yaml(ROOT / "media.yaml") if (ROOT / "media.yaml").exists() else {}
+    # 언론 보도는 늘 최신이 위다. yaml에 적은 순서와 무관하게 여기서 세운다.
+    articles = sorted((media_cfg or {}).get("articles", []),
+                      key=lambda a: str(a.get("date") or ""), reverse=True)
     shared = {"meetings": index, "talks": talks, "talk_years": talk_index(talks),
-              "newsletters": newsletters}
+              # 가장 최근 발표는 목록 위에 초록까지 펼쳐 보여 준다(소식지 최신호와 같은 결).
+              # 그래서 아래 연대기는 그것을 뺀 나머지다 — 같은 발표를 두 번 싣지 않는다.
+              "talk_years_rest": talk_index(talks[1:]),
+              "newsletters": newsletters,
+              "linkgroups": (link_cfg or {}).get("groups", []),
+              "articles": articles}
     render(env, content, nav_cfg, site, shared)
     render(env, meetings, nav_cfg, site, shared)
     render(env, talks, nav_cfg, site, shared)

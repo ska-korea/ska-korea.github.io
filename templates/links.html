@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% from "_parts.html" import pagehead with context %}
+{% block main %}
+{% call pagehead(page) %}
+  <h1>{{ page.title }}</h1>
+  {% if page.sub %}<p class="sub">{{ page.sub | sentences }}</p>{% endif %}
+{% endcall %}
+
+<div class="band">
+  <div class="wrap">
+    {# 목록은 links.yaml이 정본이다. 여기서 손으로 적지 않는다. #}
+    {% for g in linkgroups %}
+    <section class="linkbox{% if not g.image %} plain{% endif %}"
+      {%- if g.image %} style="--shot:url('/static/img/links/{{ g.image }}')"{% endif %}>
+      <div class="lb-inner">
+        <div class="lb-head">
+          <h2>{{ g.name }}</h2>
+          {% if g.what %}<p>{{ g.what }}</p>{% endif %}
+        </div>
+        <ul class="lb-links">
+          {% for l in g.links %}
+          {# 줄 전체가 링크다 — 주소는 보이지 않고 이름과 화살표만 남는다 #}
+          <li><a href="{{ l.url }}" rel="noopener">{{ l.label }}<span class="go" aria-hidden="true">↗</span></a></li>
+          {% endfor %}
+        </ul>
+        {% if g.credit %}<p class="lb-credit">Image credit: {{ g.credit }}</p>{% endif %}
+      </div>
+    </section>
+    {% endfor %}
+
+    {# 원고 본문은 목록 아래 꼬리말로 붙는다 — 목록을 다 보고 난 뒤에 할 말이다 #}
+    {% if page.html %}<div class="prose lb-note">{{ page.html | safe }}</div>{% endif %}
+  </div>
+</div>
+{% endblock %}
