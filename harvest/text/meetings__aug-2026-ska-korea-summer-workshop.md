@@ -7,6 +7,8 @@ Date & Time: August 19-21 (Wed-Fri), 2026
 Venue: KAIST Lecture Hall at College of Natural Sciences building (Bldg E6-1's 1st floor, Room 1501), Daejeon
  대전 카이스트 자연과학대학 (E6-1 건물 1층 1501호/공동강의실)
 
+*** Parking: Free parking is available on campus. You may park in the car park in front of the Art Museum near the Natural Sciences Building or use the street parking around the building. 교내 무료 주차입니다. 자연과학동 인근 미술관 앞 주차장 혹은 자연과학동 주변 도로 주차 가능합니다.
+
 Rationale
 
 The Square Kilometre Array (SKA) is currently under construction, with the Science Verification and the Cycle 0 phases expected to begin in the near future. Researchers in Korea have been actively contributing to the SKA through various Science Working Groups (SWGs) and recent SKA-VLBI activities. Korea will also formally join the SKA Observatory, further strengthening its role within the global SKA community. These developments represent an important and exciting milestone for the Korean SKA community as preparations advance toward the forthcoming phases of SKA operations and data exploitation.
@@ -28,8 +30,10 @@ Contact: Hyein Yoon, hiyoon (at) kasi.re.kr
 
 Location
 
-                  - KAIST Lecture Hall at College of Natural Sciences Building (Bldg E6-1's 1st floor, Room 1501), Daejeon 
-대전 카이스트 자연과학대학 (E6-1 건물 1층 1501호, 공동강의실): [https://natsci.kaist.ac.kr/sub0104](https://natsci.kaist.ac.kr/sub0104)
+                  - KAIST Lecture Hall at College of Natural Sciences Building 
+(Bldg E6-1's 1st floor, Room 1501), Daejeon 
+대전 카이스트 자연과학대학 (E6-1 건물 1층 1501호, 공동강의실):
+ [https://natsci.kaist.ac.kr/sub0104](https://natsci.kaist.ac.kr/sub0104)
 
 Program ver. Aug 14, 2026
 

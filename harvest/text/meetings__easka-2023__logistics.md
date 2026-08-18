@@ -42,7 +42,7 @@ Below is a list of recommended restaurants around the conference venue (pdf down
 
 See also Google Maps below to find their locations.
 
-![](images/meetings__easka-2023__logistics_63)
+![](images/meetings__easka-2023__logistics_64)
 EA-SKA 2023_ restaurant recommendations.pdf
 
 ## Excursions (also download [pdf](https://drive.google.com/uc?export=download&id=1cwMhJi_smh9Jfg_XA6aqeytxgaE95qyp))
@@ -51,7 +51,7 @@ An excursion event is planned for the workshop participants. Please see below fo
 
 NOTE: you need to choose your course at the registration desk.
 
-![](images/meetings__easka-2023__logistics_65)
+![](images/meetings__easka-2023__logistics_66)
 2023 EASKA Excursion.pdf
 
 ## Google Maps for the workshop
@@ -62,9 +62,9 @@ The LOC has made a Google map for the workshop, including locations of the works
 
 Below you can see videos explaining ancient instruments that Koreans used for astronomy.
 
-![](images/meetings__easka-2023__logistics_67)
-[English]Cheonsangyeolcha_Bunyajido.mp4
 ![](images/meetings__easka-2023__logistics_68)
-[English]Joseon_Clocks.mp4
+[English]Cheonsangyeolcha_Bunyajido.mp4
 ![](images/meetings__easka-2023__logistics_69)
+[English]Joseon_Clocks.mp4
+![](images/meetings__easka-2023__logistics_70)
 [English]CheomSeongDae.mp4
