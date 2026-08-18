@@ -3,11 +3,19 @@
 {% block main %}
 {% set meta = [page.when, page.where] | select | join(' · ') %}
 
-{# 대문 그림은 미팅 원고의 banner: 가 정한다 #}
-{% if page.banner %}
+{# 머리 그림은 미팅 원고의 banner: 가 정하고, 다루는 방식은 banner_style: 이 정한다.
+
+   · poster(기본) — 조직위원회가 만든 대문 그림. 이름·날짜가 그림 안에 있으므로
+     자르지 않고 통째로 건다.
+   · photo — 글자 없는 사진(SKAO 풍경 등). 통째로 걸면 세로로 너무 길고, 조직위가
+     구도를 잡은 그림도 아니다. 얇은 띠로 베어 깔고 제목은 아래 meethead가 그린다. #}
+{% if page.banner and page.poster %}
 <div class="posterhead">
   <a href="{{ page.meeting_path }}"><img src="{{ page.banner }}" alt="{{ page.meeting_title }}"></a>
 </div>
+{% elif page.banner %}
+<div class="posterhead photo" role="img" aria-label="{{ page.meeting_title }}"
+     style="background-image:url('{{ page.banner }}'){% if page.banner_at %};background-position:{{ page.banner_at }}{% endif %}"></div>
 {% else %}
 {% call pagehead(page, big=true) %}
   <div class="crumb"><a href="/meetings">Meetings</a></div>

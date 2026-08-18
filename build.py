@@ -495,7 +495,10 @@ def collect_authored(md: markdown.Markdown, today: date) -> list[dict]:
                 "subnav": subnav, "meeting_title": meta.get("title", slug),
                 "meeting_path": base, "meeting_sub": meta.get("subtitle"),
                 "banner": f"{base}/files/{meta['banner']}" if meta.get("banner") else None,
-                "poster": bool(meta.get("banner")), "banner_at": None,
+                # 대문 그림(poster)이 기본. 조직위가 글자 없는 사진을 골랐으면
+                # banner_style: photo — 사진은 얇은 띠로 깔고 제목은 우리 조판으로 그린다.
+                "poster": bool(meta.get("banner")) and meta.get("banner_style") != "photo",
+                "banner_at": meta.get("banner_at"),
                 "when": date_range(start, end) or meta.get("dates"), "where": meta.get("venue"),
                 "phase": phase, "start": start, "end": end,
                 # meetings 목록에 세울지. 시험용 사본은 list: false 로 빼 둔다.

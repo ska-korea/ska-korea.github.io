@@ -11,7 +11,8 @@ Python으로 정적 HTML을 만들어 GitHub Pages로 배포합니다.
 | **미팅 페이지 (새 형식)** | **각 모임 조직위원회(LOC)** | 별도 저장소 [`ska-korea/meetings`](https://github.com/ska-korea/meetings) — CI가 `meetings-src/`로 받아온다 |
 | 미팅 페이지 (아직 안 옮긴 것) | 각 모임 조직위원회(LOC) | **Google Sites** → `harvest/`로 자동 수확 |
 
-새 형식으로 옮긴 미팅(현재 SPARCS XIV)은 `ska-korea/meetings` 저장소의 원고가 정본이며,
+새 형식으로 옮긴 미팅(SPARCS XIV · 2026 SKA Korea Summer Workshop)은
+`ska-korea/meetings` 저장소의 원고가 정본이며,
 **같은 주소의 수확본은 빌드에서 자동으로 빠집니다**(저장소에서 폴더를 빼면 수확본으로 되돌아옵니다).
 원고를 별도 저장소에 두는 이유는 LOC가 매번 바뀌므로 **권한을 사이트 코드와 떼어 놓기** 위함입니다.
 쓰는 방법은 그 저장소의 README(5분 안내서)에 있습니다.
@@ -27,6 +28,7 @@ Google Sites의 상단 메뉴·푸터는 가져오지 않습니다. 본문과 **
 그 아래 하위 탭, 다시 그 아래에 제목이 놓입니다. 사진 위에 제목을 글자로 얹은 배너는
 사진만 배경으로 쓰고 제목은 이 사이트 조판으로 다시 그립니다.
 자동 판정이 어긋나면 `meetings.yaml`에 `banner: poster` 또는 `photo`, `none`으로 적으세요.
+새 형식 원고에서는 `meeting.md`의 frontmatter에 `banner_style: photo`로 적습니다.
 
 ## 폴더
 

@@ -677,6 +677,15 @@ ol.steps b { color: var(--navy); }
      여기 걸릴 때만 좌우를 조금 베어 낸다 — 대문 그림은 글자가 가운데 모여 있다. */
   max-height: 62vh; object-fit: cover; object-position: center;
 }
+/* 글자 없는 사진(banner_style: photo)은 통째로 걸지 않고 띠로 벤다.
+   조직위가 구도를 잡은 그림이 아니라 SKAO 풍경 사진이므로, 가운데를 얇게 베는 편이
+   낫다 — 2:1 사진을 폭에 맞춰 늘리면 화면 하나를 통째로 잡아먹는다.
+   해상도가 낮은 수확 사진(가로 750px)도 이 높이라면 늘어남이 눈에 띄지 않는다. */
+.posterhead.photo {
+  height: clamp(170px, 22vw, 300px);
+  background-size: cover; background-position: center;
+}
+
 /* 메뉴 글자가 놓이는 위쪽을 눌러 준다 — 밝은 대문 그림(EASKA)에서도 흰 글자가 읽히게.
    실측 계산: 휘도 0.55짜리 밝은 자리에 65%를 덮으면 메뉴 글자 대비가 5.2:1이 된다. */
 .posterhead::after {

@@ -23,6 +23,8 @@ meetings:
     where: "서울 MICE Plaza"
     category: international
 
+  # SKA Korea Summer Workshop도 새 형식이 정본이다
+  # (meetings-src/aug-2026-ska-korea-summer-workshop/). 아래는 수확본으로 되돌릴 때를 위해 남긴다.
   /meetings/aug-2026-ska-korea-summer-workshop:
     title: SKA Korea Summer Workshop
     when: "2026.08.19–21"
