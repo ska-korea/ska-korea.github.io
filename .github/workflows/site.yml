@@ -28,6 +28,15 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # 미팅 원고는 별도 저장소에서 온다 — LOC 권한을 사이트 코드와 떼어 놓기 위함.
+      # 그 저장소의 push는 여기를 직접 트리거하지 않지만, 30분 예약 실행이
+      # 매번 최신 원고를 받아오므로 최대 30분 안에 반영된다.
+      - name: 미팅 원고 (ska-korea/meetings)
+        uses: actions/checkout@v4
+        with:
+          repository: ska-korea/meetings
+          path: meetings-src
+
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'

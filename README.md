@@ -3,16 +3,22 @@
 한국 SKA 커뮤니티 홈페이지(`ska.kasi.re.kr`)의 소스입니다.
 Python으로 정적 HTML을 만들어 GitHub Pages로 배포합니다.
 
-## 원고가 두 갈래인 이유
+## 원고가 세 갈래인 이유
 
 | 무엇 | 누가 고치나 | 어디에 있나 |
 |---|---|---|
 | 본문 페이지 (SKA·Science·SRC·Links…) | 관리자 | `content/**/*.md` |
-| **미팅 페이지** | **각 모임 조직위원회(LOC)** | **Google Sites** → `harvest/`로 자동 수확 |
+| **미팅 페이지 (새 형식)** | **각 모임 조직위원회(LOC)** | 별도 저장소 [`ska-korea/meetings`](https://github.com/ska-korea/meetings) — CI가 `meetings-src/`로 받아온다 |
+| 미팅 페이지 (아직 안 옮긴 것) | 각 모임 조직위원회(LOC) | **Google Sites** → `harvest/`로 자동 수확 |
 
-미팅 홈페이지는 지금까지처럼 조직위원회가 [Google Sites](https://sites.google.com/view/ska-korea)에서
+새 형식으로 옮긴 미팅(현재 SPARCS XIV)은 `ska-korea/meetings` 저장소의 원고가 정본이며,
+**같은 주소의 수확본은 빌드에서 자동으로 빠집니다**(저장소에서 폴더를 빼면 수확본으로 되돌아옵니다).
+원고를 별도 저장소에 두는 이유는 LOC가 매번 바뀌므로 **권한을 사이트 코드와 떼어 놓기** 위함입니다.
+쓰는 방법은 그 저장소의 README(5분 안내서)에 있습니다.
+
+아직 안 옮긴 미팅은 지금까지처럼 조직위원회가 [Google Sites](https://sites.google.com/view/ska-korea)에서
 직접 만들고 고칩니다. 30분마다 자동으로 본문만 가져와 이 사이트의 머리·꼬리를 입혀 보여줍니다.
-**조직위원회는 아무것도 새로 배울 필요가 없습니다.** 반영까지 최대 1시간으로 안내하세요.
+어느 쪽이든 반영까지 최대 1시간으로 안내하세요.
 
 Google Sites의 상단 메뉴·푸터는 가져오지 않습니다. 본문과 **배너 그림**만 옮겨옵니다.
 
