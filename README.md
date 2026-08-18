@@ -76,6 +76,9 @@ harvest/            수확 결과 (자동 생성, 커밋됨)
 ```bash
 pip install -r requirements.txt
 
+# 미팅 원고는 별도 저장소 — 한 번만 받아 두면 된다 (없으면 수확본만으로 빌드된다)
+git clone git@github.com:ska-korea/meetings.git meetings-src
+
 python build.py --serve      # http://localhost:8000 에서 미리보기
 python build.py              # _site/ 로 빌드만
 ```
