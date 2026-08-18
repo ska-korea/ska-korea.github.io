@@ -657,7 +657,9 @@ ol.steps b { color: var(--navy); }
 }
 .pagehead > .wrap { position: relative; z-index: 1; }
 
-/* 대문 그림이 없는 미팅 — 사이트 기본 배경에 이름을 가운데 얹는다.
+/* 대문 그림이 없는 미팅 — 사이트 기본 배경에 미팅 이름과 부제만 가운데 얹는다.
+   대문 그림이 그림으로 하는 일을 글자로 할 뿐이므로, 담는 것도 대문 그림과 같다
+   (날짜·장소는 아래 meethead가 말한다).
    왼쪽 겹덮개는 글이 왼쪽에 놓일 때 쓰는 것이라, 가운데 정렬에서는
    가운데를 눌러 주는 덮개로 바꾼다(세로 덮개는 대비 계산값 그대로 둔다). */
 .pagehead.centered { text-align: center; }
@@ -667,9 +669,6 @@ ol.steps b { color: var(--navy); }
     linear-gradient(180deg, rgba(4, 0, 60, .90) 0%, rgba(7, 0, 104, .74) 52%, rgba(4, 0, 60, .88) 100%),
     radial-gradient(ellipse at center, rgba(4, 0, 60, .45), rgba(4, 0, 60, 0) 72%);
 }
-/* 날짜·장소 줄은 이름 아래 한 칸 띄워 조금 작게 — 이름과 같은 무게로 서면 안 된다 */
-.pagehead.centered .sub.mono { margin-top: 14px; font-size: 15.5px; color: #c4c4e6; }
-
 .pagehead .crumb { font-size: 13.5px; color: #b3b3e0; margin-bottom: 10px; }
 .pagehead .crumb a:hover { color: #fff; text-decoration: underline; }
 .pagehead h1 { font-size: clamp(25px, 3.6vw, 38px); font-weight: 800; letter-spacing: -.032em; line-height: 1.25; }

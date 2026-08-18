@@ -4,16 +4,17 @@
 {% set meta = [page.when, page.where] | select | join(' · ') %}
 
 {#
-  미팅 머리는 두 갈래다. 가르는 것은 **조직위원회가 만든 대문 그림이 있느냐**뿐이다.
+  미팅 머리는 **배너 자리 하나만** 두 갈래다. 하위 탭부터 아래는 완전히 같다 —
+  두 스타일이 달라야 할 이유가 없다(2026-08-18 사용자 지적).
 
-  · poster — 원고에 `banner:`가 있다. 이름·날짜가 그림 안에 그려져 있으므로
-    자르지 않고 통째로 걸고, 글자를 겹쳐 쓰지 않는다.
-    순서: 대문 그림 → 하위 탭 → 이 탭의 제목
+  · poster — 원고에 `banner:`가 있다. 조직위원회가 만든 대문 그림이고
+    이름·부제가 그림 안에 그려져 있으므로, 자르지도 글자를 겹쳐 쓰지도 않는다.
 
-  · 없음 — 이 사이트의 미팅 기본 배경(다른 쪽들과 같은 결)을 깔고
-    미팅 이름과 부제를 **가운데** 얹는다. 아무 뜻 없는 풍경 사진을
-    미팅의 얼굴로 세우느니 사이트 조판으로 이름을 세우는 편이 낫다.
-    순서: 제목 배너 → 하위 탭 → (하위 탭에서만) 그 탭의 제목
+  · 없음 — 사이트의 미팅 기본 배경을 깔고 **미팅 이름과 부제만** 가운데 얹는다.
+    대문 그림이 그림으로 하는 일을 글자로 하는 것뿐이다. 그래서 담는 것도 같다 —
+    날짜·장소·이정표는 대문 그림이 그렇듯 여기서도 말하지 않고 아래 meethead가 말한다.
+
+  순서(두 갈래 공통): 배너 → 하위 탭 → 이 탭의 제목 → 본문
 #}
 {% if page.poster %}
 <div class="posterhead">
@@ -21,10 +22,8 @@
 </div>
 {% else %}
 {% call pagehead(page, big=true, centered=true) %}
-  <div class="crumb"><a href="/meetings">Meetings</a></div>
   <h1>{{ page.meeting_title }}</h1>
   {% if page.meeting_sub %}<p class="sub">{{ page.meeting_sub }}</p>{% endif %}
-  {% if meta %}<p class="sub mono">{{ meta }}</p>{% endif %}
 {% endcall %}
 {% endif %}
 
@@ -38,9 +37,7 @@
 </nav>
 {% endif %}
 
-{# 대문 그림 쪽은 그림이 글자를 담지 않으므로 여기서 이름·날짜·장소를 처음 말한다.
-   기본 배경 쪽은 위 배너가 이미 말했으니, 하위 탭에서 **그 탭의 이름만** 덧붙인다. #}
-{% if page.poster or page.depth == 3 %}
+{# 배너는 이름만 말한다. 이정표·날짜·장소, 그리고 하위 탭에서는 그 탭의 이름을 여기서 말한다. #}
 <div class="meethead">
   <div class="wrap">
     <div class="crumb">
@@ -50,7 +47,7 @@
     {# 부제는 제목과 한 줄에, 강조색으로 조금 작게 — 별개의 문단으로 떨어뜨리면 묻힌다 #}
     <h1>{{ page.title if page.depth == 3 else page.meeting_title }}
       {%- if page.depth == 2 and page.meeting_sub %} <span class="mx-tail">{{ page.meeting_sub }}</span>{% endif %}</h1>
-    {% if page.poster and (page.when or page.where) %}
+    {% if page.when or page.where %}
     <p class="mx-facts">
       {% if page.when %}<span class="mono">{{ page.when }}</span>{% endif %}
       {% if page.where %}<span>{{ page.where }}</span>{% endif %}
@@ -58,7 +55,6 @@
     {% endif %}
   </div>
 </div>
-{% endif %}
 
 {# 끝난 모임임을 한 번만, 분명히 알린다 — 등록창이 열려 있는 것처럼 보이면 안 된다 #}
 {% if page.phase == 'past' %}
