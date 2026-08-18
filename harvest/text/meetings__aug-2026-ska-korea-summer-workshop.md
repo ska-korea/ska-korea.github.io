@@ -35,7 +35,7 @@ Location
 대전 카이스트 자연과학대학 (E6-1 건물 1층 1501호, 공동강의실):
  [https://natsci.kaist.ac.kr/sub0104](https://natsci.kaist.ac.kr/sub0104)
 
-Program ver. Aug 14, 2026
+Program ver. Aug 18, 2026
 
 Note for speakers: Please upload your presentation slides to the [Google Drive (link)](https://drive.google.com/drive/folders/1nfilBONsL-4zvlQ1LEi37hvhYkalSciq?usp=share_link) by midnight on the day before your presentation. We will use a shared Windows PC for all presentations.
 
@@ -65,7 +65,7 @@ Session 3. SKA-Korea Science Overview [Chair: Jungha Kim]
 
 Session 4. Solar and Stellar Physics [Chair: Jungha Kim]
 
-                  - 16:05 - 16:30 Kyung Suk Cho (KASI), Studying Quasi-Periodic Pulsations in Solar and Stellar Flares with the SKA (20+5 min) 16:30 - 16:45 Hee Il Kim (Sogong Univ.), Collapse of Supermassive stars (12+3 min)16:45 - 17:00 Jihye Hwang (Kyushu Univ.), Tracing Magnetic Fields with the Zeeman Effect: From MeerKAT to the SKA (12+3 min)17:00 - 17:15 Bao Truong (UST/KASI), Probing 3D Magnetic Fields of the Local Bubble with Starlight Polarization and Faraday Rotation: Future Perspectives in the SKA Era (12+3 min)
+                  - 16:05 - 16:30 Kyung Suk Cho (KASI), Studying Quasi-Periodic Pulsations in Solar and Stellar Flares with the SKA (20+5 min) 16:30 - 16:45 Hee Il Kim (Sogang Univ.), Collapse of Supermassive stars (12+3 min)16:45 - 17:00 Jihye Hwang (Kyushu Univ.), Tracing Magnetic Fields with the Zeeman Effect: From MeerKAT to the SKA (12+3 min)17:00 - 17:15 Bao Truong (UST/KASI), Probing 3D Magnetic Fields of the Local Bubble with Starlight Polarization and Faraday Rotation: Future Perspectives in the SKA Era (12+3 min)
 
 Day 2. Aug 20 Thu
 
@@ -105,7 +105,7 @@ Day 3: Aug 21 Fri
 
 12:10 - 12:20 Closing
 
-Participants (last update: Aug 16)
+Participants (last update: Aug 18)
 * indicates 29 participants who would like to give a talk. Please submit the title and a brief abstract of your talk as soon as possible, if you have not done so yet.
 
 - Anthony Carr (KASI)*
@@ -178,16 +178,15 @@ Participants (last update: Aug 16)
                   - 임기정 (CNU)
                   - 장지원 (KAIST)*
                   - 장태윤 (KHU)
-                  - 정태현 (KASI)
                   - 정호준 (UNIST)*
                   - 조경석 (KASI)*
                   - 조성훈 (KNU)
+
                   - 조일제 (KNU)
                   - 조정연 (CNU)
                   - 조용욱 (UST/KASI)
                   - 차하경 (UNIST)
                   - 채명주 (Yonsei Univ.)
-                  - 최민호 (KASI)
                   - 최유진 (UNIST)*
                   - 한상현 (Sejong Univ.)
                   - 홍성욱 (KASI)
@@ -227,4 +226,4 @@ Sponsors
 ![](images/meetings__aug-2026-ska-korea-summer-workshop_20)
 ![](images/meetings__aug-2026-ska-korea-summer-workshop_21)
 
-Last edit: 16 Aug 2026 Hyein Yoon
+Last edit: 18 Aug 2026 Hyein Yoon
