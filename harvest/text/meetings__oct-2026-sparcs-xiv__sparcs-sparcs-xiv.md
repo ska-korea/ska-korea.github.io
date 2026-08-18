@@ -26,5 +26,5 @@ We are planning to organize a guided tour to Gyeongbokgung Palace, Gwanghwamun S
 
 Please contact us (wklee786@gmail.com) regarding questions about registration.
 
-![](images/meetings__oct-2026-sparcs-xiv__sparcs-sparcs-xiv_58)
+![](images/meetings__oct-2026-sparcs-xiv__sparcs-sparcs-xiv_57)
 Image credit: Seoul Tourism Archive
