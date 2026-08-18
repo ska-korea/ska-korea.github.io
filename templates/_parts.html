@@ -5,8 +5,8 @@
   글자는 언제나 흰색이므로, 사진이 밝아도 대비가 무너지지 않게 덮개가 필요하다.
   big=true 는 미팅 페이지용으로 위아래를 더 넉넉히 준다.
 #}
-{% macro pagehead(page, big=false) %}
-<div class="pagehead{% if page.banner %} has-bg{% endif %}{% if big %} big{% endif %}"
+{% macro pagehead(page, big=false, centered=false) %}
+<div class="pagehead{% if page.banner %} has-bg{% endif %}{% if big %} big{% endif %}{% if centered %} centered{% endif %}"
      {%- if page.banner %} style="background-image:url('{{ page.banner }}'){% if page.banner_at %};background-position:{{ page.banner_at }}{% endif %}"{% endif %}>
   <div class="wrap">{{ caller() }}</div>
 </div>

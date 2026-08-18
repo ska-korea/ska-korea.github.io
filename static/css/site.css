@@ -657,6 +657,19 @@ ol.steps b { color: var(--navy); }
 }
 .pagehead > .wrap { position: relative; z-index: 1; }
 
+/* 대문 그림이 없는 미팅 — 사이트 기본 배경에 이름을 가운데 얹는다.
+   왼쪽 겹덮개는 글이 왼쪽에 놓일 때 쓰는 것이라, 가운데 정렬에서는
+   가운데를 눌러 주는 덮개로 바꾼다(세로 덮개는 대비 계산값 그대로 둔다). */
+.pagehead.centered { text-align: center; }
+.pagehead.centered .sub { margin-left: auto; margin-right: auto; max-width: 46rem; }
+.pagehead.centered.has-bg::before {
+  background:
+    linear-gradient(180deg, rgba(4, 0, 60, .90) 0%, rgba(7, 0, 104, .74) 52%, rgba(4, 0, 60, .88) 100%),
+    radial-gradient(ellipse at center, rgba(4, 0, 60, .45), rgba(4, 0, 60, 0) 72%);
+}
+/* 날짜·장소 줄은 이름 아래 한 칸 띄워 조금 작게 — 이름과 같은 무게로 서면 안 된다 */
+.pagehead.centered .sub.mono { margin-top: 14px; font-size: 15.5px; color: #c4c4e6; }
+
 .pagehead .crumb { font-size: 13.5px; color: #b3b3e0; margin-bottom: 10px; }
 .pagehead .crumb a:hover { color: #fff; text-decoration: underline; }
 .pagehead h1 { font-size: clamp(25px, 3.6vw, 38px); font-weight: 800; letter-spacing: -.032em; line-height: 1.25; }
@@ -677,15 +690,6 @@ ol.steps b { color: var(--navy); }
      여기 걸릴 때만 좌우를 조금 베어 낸다 — 대문 그림은 글자가 가운데 모여 있다. */
   max-height: 62vh; object-fit: cover; object-position: center;
 }
-/* 글자 없는 사진(banner_style: photo)은 통째로 걸지 않고 띠로 벤다.
-   조직위가 구도를 잡은 그림이 아니라 SKAO 풍경 사진이므로, 가운데를 얇게 베는 편이
-   낫다 — 2:1 사진을 폭에 맞춰 늘리면 화면 하나를 통째로 잡아먹는다.
-   해상도가 낮은 수확 사진(가로 750px)도 이 높이라면 늘어남이 눈에 띄지 않는다. */
-.posterhead.photo {
-  height: clamp(170px, 22vw, 300px);
-  background-size: cover; background-position: center;
-}
-
 /* 메뉴 글자가 놓이는 위쪽을 눌러 준다 — 밝은 대문 그림(EASKA)에서도 흰 글자가 읽히게.
    실측 계산: 휘도 0.55짜리 밝은 자리에 65%를 덮으면 메뉴 글자 대비가 5.2:1이 된다. */
 .posterhead::after {

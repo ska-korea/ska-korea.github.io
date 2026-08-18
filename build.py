@@ -446,7 +446,7 @@ def date_range(start, end) -> str:
     return f"{a}–{end.year}.{end.month:02d}.{end.day:02d}"
 
 
-def collect_authored(md: markdown.Markdown, today: date) -> list[dict]:
+def collect_authored(md: markdown.Markdown, today: date, banners: dict) -> list[dict]:
     """meetings-src/ 의 새 형식 원고를 미팅 페이지로 읽어들인다.
 
     수확본과 달리 조판을 우리가 소유한다 — 단 배치·지도·PDF·일정표가 그래서 가능하다.
@@ -455,6 +455,8 @@ def collect_authored(md: markdown.Markdown, today: date) -> list[dict]:
     root = ROOT / "meetings-src"
     if not root.is_dir():
         return []
+    # 포스터가 없는 미팅이 쓸 배경 = 목록 쪽(/meetings)과 같은 사진
+    fallback_banner, fallback_at = banner_for("/meetings", {}, banners)
     out = []
     for f in sorted(root.glob("*/meeting.md")):
         slug = f.parent.name
@@ -494,11 +496,13 @@ def collect_authored(md: markdown.Markdown, today: date) -> list[dict]:
                 "html": html_, "source": "authored", "depth": 2 if i == 0 else 3,
                 "subnav": subnav, "meeting_title": meta.get("title", slug),
                 "meeting_path": base, "meeting_sub": meta.get("subtitle"),
-                "banner": f"{base}/files/{meta['banner']}" if meta.get("banner") else None,
-                # 대문 그림(poster)이 기본. 조직위가 글자 없는 사진을 골랐으면
-                # banner_style: photo — 사진은 얇은 띠로 깔고 제목은 우리 조판으로 그린다.
-                "poster": bool(meta.get("banner")) and meta.get("banner_style") != "photo",
-                "banner_at": meta.get("banner_at"),
+                # `banner:`는 **조직위원회가 만든 대문 그림(poster)**을 가리킬 때만 적는다.
+                # 없으면 이 사이트의 미팅 기본 배경(site.yaml)을 깔고 제목을 가운데 얹는다 —
+                # 아무 뜻 없는 풍경 사진을 미팅의 얼굴로 세우지 않는다(2026-08-18 사용자 결정).
+                "banner": (f"{base}/files/{meta['banner']}" if meta.get("banner")
+                           else fallback_banner),
+                "poster": bool(meta.get("banner")),
+                "banner_at": None if meta.get("banner") else fallback_at,
                 "when": date_range(start, end) or meta.get("dates"), "where": meta.get("venue"),
                 "phase": phase, "start": start, "end": end,
                 # meetings 목록에 세울지. 시험용 사본은 list: false 로 빼 둔다.
@@ -612,7 +616,7 @@ def main() -> int:
     banner_cfg = site.get("banners") or {}
     content = collect_content(md, banner_cfg)
     meetings = collect_meetings(meet_cfg.get("meetings", {}) if meet_cfg else {})
-    authored = collect_authored(md, today)
+    authored = collect_authored(md, today, banner_cfg)
     # 새 형식(meetings-src)으로 옮긴 미팅은 수확본을 쓰지 않는다 —
     # 같은 주소의 정본은 하나여야 한다. Google Sites 쪽은 폴백으로만 남는다.
     owned = {m["meeting_path"] for m in authored}
