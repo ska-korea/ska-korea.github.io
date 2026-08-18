@@ -4,9 +4,15 @@ subtitle: The SKAO Awakens
 dates:    2026-10-19 ~ 2026-10-23
 venue:    Seoul MICE Plaza, Seoul, South Korea
 banner:   banner.jpg
-list:     false          # 시험용 사본 — 목록에는 세우지 않는다
+category: international
 contact:  wklee786@gmail.com
-# ⚠ 새 형식을 시험하기 위한 사본입니다. 실제 페이지는 /meetings/oct-2026-sparcs-xiv/ 입니다.
+# Google Sites의 옛 하위 페이지 주소 → 새 탭. 배포된 링크가 깨지지 않게 한다.
+redirects:
+  program-sparcs-xiv: program
+  registration-sparcs-xiv: abstract       # 옛 사이트에서 'Abstract' 탭의 주소였다
+  sparcs-sparcs-xiv: registration         # 옛 사이트에서 'Registration' 탭의 주소였다
+  participants-sparcs-xiv: participants
+  logistics-sparcs-xiv: logistics
 # 본문 문장은 조직위원회가 Google Sites에 쓴 것을 그대로 옮겼습니다 — 임의로 고치지 마세요.
 ---
 
@@ -147,20 +153,10 @@ This code of conduct is based on the "London Code of Conduct", as originally des
 
 # Program
 
-The detailed programme will be announced in due course. *(The table below is a
-placeholder used to test the new format — times are computed from durations.)*
+- Brief schedule (last updated: Jul 29, 2026): Download PDF [here](https://drive.google.com/uc?export=download&id=1jthpXjSodS_KBGqGfGbSPCncEk8D-0HR)
 
-::: program
-2026-10-19 | 09:30 | Day 1
-  session Session 1 | chair Tessa Vernstrom
-  10 | Bong Won Sohn | KASI | Welcome and local information
-  25 | Tessa Vernstrom | CSIRO | SPARCS: where we stand
-  20 | Alec Thomson | SKAO | SKA continuum surveys | lang=en
-  break 20
-  session Session 2 | chair Jeroen Stil
-  20 | Henrik Edler | ASTRON | LOFAR deep fields
-  20 | Yjan Gordon | Wisconsin | Radio galaxy classification
-  60 | | | Lunch
+::: pdf files/SPARCS_XIV_Programme_v0.pdf
+SPARCS_XIV_Programme_v0.pdf
 :::
 
 
@@ -220,30 +216,7 @@ Please contact us (<wklee786@gmail.com>) regarding questions about registration.
 
 # Participants
 
-This page will be filled in once registration opens. *(The list below is a placeholder
-used to test the new format — speakers first, then alphabetical.)*
-
-::: people sort=speaker,name as=grid stats=yes
-Bong Won Sohn | KASI | speaker staff
-Tessa Vernstrom | CSIRO | speaker staff
-Alec Thomson | SKAO | speaker staff
-Wonki Lee | Yonsei | postdoc
-Jae-Young Kim | UNIST | staff
-Junhan Kim | KAIST | staff
-Minji Kim | KASI | student
-Sieun Go | KASI | student
-Hyobin Im | KASI | student
-Yura Lee | Sejong | student
-Soyeon Yeo | Yonsei | postdoc
-Dahee Lee | Chosun
-:::
-
-## Composition
-
-<!-- 통계는 본디 미팅이 끝난 뒤에만 나옵니다. when=always 는 검토용으로 미리 켜 둔 것입니다. -->
-
-::: stats when=always
-:::
+- This page will be updated once registration opens
 
 
 # Logistics

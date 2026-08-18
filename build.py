@@ -482,8 +482,15 @@ def collect_authored(md: markdown.Markdown, today: date) -> list[dict]:
         for i, p in enumerate(pages):
             # 원고 안의 상대 경로(files/…)를 배포 경로로
             html_ = re.sub(r'((?:src|href)=")files/', rf'\1{base}/files/', p["html"])
+            # 탭 간 상대 링크([Registration](registration))는 미팅 주소 기준으로.
+            # 하위 탭은 /<slug>/<탭>/ 아래에 배포되므로 그대로 두면 한 층 더 파고든다.
+            # `&`은 마크다운이 이메일 주소를 엔티티로 난독화한 것(&#109;… = mailto:…)이다.
+            html_ = re.sub(r'(href=")(?!https?:|/|#|\.|&|mailto:|tel:)', rf'\1{base}/', html_)
             out.append({
-                "path": subnav[i]["path"], "title": p["title"], "template": "authored.html",
+                # 대표쪽은 미팅 이름을 제목으로 — 목록·<title>에 서는 것은 탭 이름('Home')이 아니다
+                "path": subnav[i]["path"],
+                "title": meta.get("title", slug) if i == 0 else p["title"],
+                "template": "authored.html",
                 "html": html_, "source": "authored", "depth": 2 if i == 0 else 3,
                 "subnav": subnav, "meeting_title": meta.get("title", slug),
                 "meeting_path": base, "meeting_sub": meta.get("subtitle"),
@@ -499,6 +506,14 @@ def collect_authored(md: markdown.Markdown, today: date) -> list[dict]:
                 "assets": f.parent / "files", "meta": meta,
                 "stats": ctx.get("stats"), "lang": ctx["lang"],
             })
+        # Google Sites 시절의 하위 페이지 주소 → 새 탭 주소. 이미 배포된 링크를 깨뜨리지 않는다.
+        # meeting.md frontmatter:  redirects: {옛-slug: 새-탭-slug}
+        tabs = {slugify(s["title"]): s["path"] for s in subnav}
+        for old, tab in (meta.get("redirects") or {}).items():
+            out.append({"path": f"{base}/{old}", "title": meta.get("title", slug),
+                        "template": "redirect.html", "target": tabs.get(str(tab)) or base,
+                        "source": "authored", "depth": 4, "subnav": [],
+                        "meeting_path": base, "listed": False, "year": None, "month": None})
     return out
 
 
@@ -595,6 +610,11 @@ def main() -> int:
     content = collect_content(md, banner_cfg)
     meetings = collect_meetings(meet_cfg.get("meetings", {}) if meet_cfg else {})
     authored = collect_authored(md, today)
+    # 새 형식(meetings-src)으로 옮긴 미팅은 수확본을 쓰지 않는다 —
+    # 같은 주소의 정본은 하나여야 한다. Google Sites 쪽은 폴백으로만 남는다.
+    owned = {m["meeting_path"] for m in authored}
+    meetings = [m for m in meetings
+                if not any(m["path"] == b or m["path"].startswith(b + "/") for b in owned)]
     talks = collect_talks(md)
     for t in talks:
         t["banner"], t["banner_at"] = banner_for(t["path"], t["meta"], banner_cfg)

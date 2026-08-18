@@ -14,6 +14,9 @@
 
 meetings:
   # ── 2026 ────────────────────────────────────────────────
+  # SPARCS XIV는 새 형식(meetings-src/oct-2026-sparcs-xiv/)이 정본이다.
+  # 제목·날짜·장소·분류도 그쪽 frontmatter가 정한다. 아래 항목은 수확본으로
+  # 되돌릴 때(meetings-src에서 폴더를 빼면 자동으로 되돌아온다)를 위해 남겨 둔다.
   /meetings/oct-2026-sparcs-xiv:
     title: SPARCS XIV
     when: "2026.10.19–23"
