@@ -6,4 +6,4 @@ Participants
 
 2026 SPARCS XIV
 
-- This page will be updated once registration opens
+
