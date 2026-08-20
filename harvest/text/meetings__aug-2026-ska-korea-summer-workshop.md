@@ -91,7 +91,7 @@ Session 7. VLBI with Low-Frequency [Chair: Junhyun Baek]
 
 Session 8. Discussion [Chair: Bong Won Sohn]
 
-                  - 15:15 - 20:00 Discussion (topics to be announced later) : 논의 기록 Meeting minutes: [Link](https://docs.google.com/document/d/19zq_4wEzCLQ7tzuF5q9_AGRQRti70jpdsf7IQNU8bgk/edit?usp=sharing) Dinner - will be provided during the discussion
+                  - 15:15 - 20:00 Discussion (topics to be announced later) 논의 기록 Meeting minutes: [Link](https://docs.google.com/document/d/19zq_4wEzCLQ7tzuF5q9_AGRQRti70jpdsf7IQNU8bgk/edit?usp=sharing) Dinner - will be provided during the discussion
 
 Day 3: Aug 21 Fri
 
