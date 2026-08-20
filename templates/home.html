@@ -21,7 +21,8 @@
       <ul>
         {% for m in meetings.upcoming %}
         <li>
-          <a href="{{ m.path }}">
+          {# 미팅 링크의 행선지는 site.yaml의 meetings_link_base가 정한다 #}
+          <a href="{{ m.link or m.path }}">
             <span class="dday">{% if m.running %}진행 중{% elif m.dday == 0 %}오늘{% else %}D-{{ m.dday }}{% endif %}</span>
             <span class="name">{{ m.title }}</span>
             <span class="meta">{{ m.when or (m.year ~ '.' ~ '%02d' % m.month) }}{% if m.where %} · {{ m.where }}{% endif %}</span>

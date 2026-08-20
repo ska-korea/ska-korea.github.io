@@ -26,7 +26,9 @@
       {% for group in meetings.years %}
       <div class="tl-year" data-year="{{ group.year }}">{{ group.year }}</div>
       {% for m in group.entries %}
-      <a class="tl-item" href="{{ m.path }}" data-cat="{{ m.category or '' }}" data-year="{{ group.year }}">
+      {# 링크는 site.yaml의 meetings_link_base가 정한다 — 같은 미팅 페이지가
+         온라인에 둘 있는 동안에는 기존 홈페이지 쪽으로 내보낸다. #}
+      <a class="tl-item" href="{{ m.link or m.path }}" data-cat="{{ m.category or '' }}" data-year="{{ group.year }}">
         <span class="tl-date">{{ m.when or ('%04d.%02d' % (m.year, m.month)) }}</span>
         <span>
           <span class="tl-name">{{ m.title }}</span>

@@ -548,11 +548,19 @@ def parse_when(when: str | None, year: int, month: int) -> tuple[date, date]:
     return start, (end if end >= start else start)
 
 
-def meeting_index(meetings: list[dict], today: date) -> dict:
-    """미팅 목록을 연도별 역순으로 정리하고, 다가오는 일정을 뽑는다."""
+def meeting_index(meetings: list[dict], today: date, link_base: str = "") -> dict:
+    """미팅 목록을 연도별 역순으로 정리하고, 다가오는 일정을 뽑는다.
+
+    link_base(site.yaml의 meetings_link_base)가 있으면 목록에서 그 주소로 내보낸다.
+    같은 미팅 페이지가 온라인에 둘 있는 동안 정본을 하나로 두려는 것이라,
+    이 사이트의 미팅 페이지는 그대로 만들되 목록에서 링크만 걸지 않는다.
+    """
+    base = (link_base or "").rstrip("/")
     tops = [m for m in meetings if m["depth"] == 2 and m["year"]
             and m.get("listed", True)]
     tops.sort(key=lambda m: (m["year"], m["month"] or 0), reverse=True)
+    for m in tops:
+        m["link"] = base + m["path"] if base else m["path"]
 
     upcoming = []
     for m in tops:
@@ -629,7 +637,7 @@ def main() -> int:
     for p in content + meetings:
         p["html"] = fix_images(p["html"], imgs)
     meetings += authored
-    index = meeting_index(meetings, today)
+    index = meeting_index(meetings, today, site.get("meetings_link_base") or "")
 
     # 미팅 하위 페이지는 상위 미팅의 서브탭을 물려받는다
     by_path = {m["path"]: m for m in meetings}
