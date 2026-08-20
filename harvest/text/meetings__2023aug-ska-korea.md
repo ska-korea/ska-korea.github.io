@@ -2,7 +2,7 @@
 
 <!-- 원본: https://sites.google.com/view/ska-korea/meetings/2023aug-ska-korea -->
 
-![](images/meetings__2023aug-ska-korea_44)
+![](images/meetings__2023aug-ska-korea_45)
 
 # SKA-Korea 여름 워크샵
 
@@ -132,4 +132,4 @@ Venue
 
 (See more photos [here](https://drive.google.com/drive/folders/1_SAHWlmEMjHCl1AzmbNTnxnuGCt5ldzF?usp=drive_link))
 
-![](images/meetings__2023aug-ska-korea_45)
+![](images/meetings__2023aug-ska-korea_46)

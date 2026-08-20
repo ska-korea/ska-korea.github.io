@@ -145,8 +145,8 @@ Invited talk (I; 40 min talk + 5 min Q&A), Contributed talk (C; 12 min talk + 3 
 
 You can download all the photos: [Link (will be expired in a month)](https://drive.google.com/drive/folders/1khySRXBdPY2H1K2kK9pNY6HlflZIYoND?usp=sharing)
 
-![](images/meetings__2024jul-ska-korea_37)
-
 ![](images/meetings__2024jul-ska-korea_38)
+
+![](images/meetings__2024jul-ska-korea_39)
 
 Last updated: 26-July-2024 by Hyein Yoon

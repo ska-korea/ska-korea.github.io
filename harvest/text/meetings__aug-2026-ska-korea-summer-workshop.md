@@ -9,6 +9,8 @@ Venue: KAIST Lecture Hall at College of Natural Sciences building (Bldg E6-1's 1
 
 *** Parking: Free parking is available on campus. You may park in the car park in front of the Art Museum near the Natural Sciences Building or use the street parking around the building. 교내 무료 주차입니다. 자연과학동 인근 미술관 앞 주차장 혹은 자연과학동 주변 도로 주차 가능합니다.
 
+![](images/meetings__aug-2026-ska-korea-summer-workshop_19)
+
 Rationale
 
 The Square Kilometre Array (SKA) is currently under construction, with the Science Verification and the Cycle 0 phases expected to begin in the near future. Researchers in Korea have been actively contributing to the SKA through various Science Working Groups (SWGs) and recent SKA-VLBI activities. Korea will also formally join the SKA Observatory, further strengthening its role within the global SKA community. These developments represent an important and exciting milestone for the Korean SKA community as preparations advance toward the forthcoming phases of SKA operations and data exploitation.
@@ -222,8 +224,8 @@ Contact: hiyoon (at) kasi.re.kr
 
 Sponsors
 
-![](images/meetings__aug-2026-ska-korea-summer-workshop_19)
 ![](images/meetings__aug-2026-ska-korea-summer-workshop_20)
 ![](images/meetings__aug-2026-ska-korea-summer-workshop_21)
+![](images/meetings__aug-2026-ska-korea-summer-workshop_22)
 
-Last edit: 18 Aug 2026 Hyein Yoon
+Last edit: 20 Aug 2026 Hyein Yoon

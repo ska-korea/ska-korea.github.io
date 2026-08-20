@@ -24,7 +24,7 @@ We recommend using Mercure Ambassador Seoul Magok ([https://www.homehmc.com/en/m
 
 If you are interested in using these rooms, please complete the [room reservations form](https://forms.gle/UnTrs4qXLqjTERkZA).
 
-![](images/meetings__oct-2026-sparcs-xiv__logistics-sparcs-xiv_58)
+![](images/meetings__oct-2026-sparcs-xiv__logistics-sparcs-xiv_59)
 Below are the alternative options around the conference venue. Notice that these hotels should be booked and arranged by the participants themselves.
 
 Around the

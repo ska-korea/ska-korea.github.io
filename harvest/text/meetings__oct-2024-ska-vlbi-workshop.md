@@ -26,7 +26,7 @@ We aim to bring together experts in SKA-VLBI, including key figures from the Jum
 
 We encourage all those interested in SKA-VLBI to participate in this workshop.
 
-![](images/meetings__oct-2024-ska-vlbi-workshop_36)
+![](images/meetings__oct-2024-ska-vlbi-workshop_37)
 
 Topics
 

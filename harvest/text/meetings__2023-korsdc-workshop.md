@@ -61,4 +61,4 @@ Hotel recommendation if you need: ACC Design Hotel
 
 ## 참가자사진 (Group Photo)
 
-![](images/meetings__2023-korsdc-workshop_46)
+![](images/meetings__2023-korsdc-workshop_47)

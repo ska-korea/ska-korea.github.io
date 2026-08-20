@@ -12,7 +12,7 @@ The Square Kilometre Array (SKA) is now under construction, and the first Cycle 
 
 We invite you to the SKA Korea Winter Workshop 2025, which will serve as a valuable opportunity for the community to gather and discuss key topics, including current and future SKA-related science research, strategies for SDC4 participation, progress on the Korean SKA data center (SKA Regional Centre) initiative, and future human resource development program. Invited and contributed talks, as well as group discussions, are planned to facilitate the exchange of ideas and to coordinate major activities for the coming year. Researchers from all areas of astronomy and related fields--not only from the field of radio astronomy--are also welcome to attend and participating in shaping the next steps for SKA science and data readiness in Korea.
 
-![](images/meetings__dec-2025-ska-korea-workshop_22)
+![](images/meetings__dec-2025-ska-korea-workshop_23)
 
 Registration
 
