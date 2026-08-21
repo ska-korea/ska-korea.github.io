@@ -39,7 +39,7 @@ Location
 
 Program ver. Aug 18, 2026
 
-Note for speakers: Please upload your presentation slides to the [Google Drive (link)](https://drive.google.com/drive/folders/1nfilBONsL-4zvlQ1LEi37hvhYkalSciq?usp=share_link) by midnight on the day before your presentation. We will use a shared Windows PC for all presentations.
+Note for speakers: Please upload your presentation slides to the google drive by midnight on the day before your presentation. We will use a shared Windows PC for all presentations.
 
                   - Presentation sildes: English
                   - Presentation language: Up to each speaker's preference

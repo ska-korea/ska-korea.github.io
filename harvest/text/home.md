@@ -4,7 +4,7 @@
 
 ## Upcoming Meetings
 
-                  - [2026 SKA Korea Summer Workshop, Aug. 19-21, KAIST-Daejeon](/meetings/aug-2026-ska-korea-summer-workshop)[2026 SKA Korea Summer Workshop - Registration is open / Abstract Submission is closed](https://forms.gle/ZNCuH9wjmaXARs9L9)
+                  - [2026 SKA Korea Summer Workshop, Aug. 19-21, KAIST-Daejeon](/meetings/aug-2026-ska-korea-summer-workshop)
                   - [2026 SPARCS XIV, Oct. 19–23, Seoul](/meetings/oct-2026-sparcs-xiv)[2026 SPARCS XIV - Abstract Submission is closed](/meetings/oct-2026-sparcs-xiv/registration-sparcs-xiv)
 
 ## SKA: Square Kilometre Array
