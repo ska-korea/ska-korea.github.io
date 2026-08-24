@@ -99,7 +99,7 @@ Day 3: Aug 21 Fri
 
 10:30 - 11:00 Break (30 min)
 
-                  - Session 10. VLBI with High-Frequency [Chair: Mingyu Ryu]11:00 - 11:10 Yoojin Choi (UNIST), Probing circular polarization in the core of M87 using multi-year VLBA 15 GHz observations (8+2 min)11:10 - 11:25 Yu-Sik Kim (UNIST), Parsec-scale Evolution of the Jet in PKS 1749+096 associated with multiple IceCube neutrino events (12+3 min)11:25 - 11:40 Ho Jun Jeong (UNIST), VLBA Polarimetry of the neutrino blazar PKS 0735+178 (12+3 min)11:40 - 11:55 Deokheyong Lee (UNIST), Multi-frequency synthesis imaging of M87 at 15, 43, and 86 GHz using RESOLVE (12+3 min)
+                  - Session 10. VLBI with High-Frequency [Chair: Mingyu Ryu]11:00 - 11:10 Yoojin Choi (UNIST), Probing circular polarization in the core of M87 using multi-year VLBA 15 GHz observations (8+2 min)11:10 - 11:25 Yu-Sik Kim (UNIST), Parsec-scale Evolution of the Jet in PKS 1749+096 associated with multiple IceCube neutrino events (12+3 min)11:25 - 11:40 Ho Jun Jeong (UNIST), VLBA Polarimetry of the neutrino blazar PKS 0735+178 (12+3 min)11:40 - 11:55 Deokhyeong Lee (UNIST), Multi-frequency synthesis imaging of M87 at 15, 43, and 86 GHz using RESOLVE (12+3 min)
 
 11:55 - 12:10 Break (15 min)
 
