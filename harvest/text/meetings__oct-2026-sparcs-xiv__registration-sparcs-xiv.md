@@ -6,9 +6,7 @@ Abstract Submission
 
 2026 SPARCS XIV
 
-Poster Presentation Abstract Submission Deadline: Aug 31, 2026
-
-Oral Presentation Abstract Submission Deadline: May 31, 2026
+Oral & Poster Presentation Abstract Submissions are now closed.
 
 Important notes:
 

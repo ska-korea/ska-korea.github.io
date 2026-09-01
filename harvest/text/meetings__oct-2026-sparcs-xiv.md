@@ -14,9 +14,7 @@ Seoul MICE Plaza, Seoul, South Korea, 19-23 October, 2026
 
 ### July 29th: Program announcement
 
-August 31st: Poster abstract submission closed
-
-August 31st: Registration & payment deadline
+August 31st: Poster Abstract Submission & Registration are closed
 
 All queries regarding the meeting can be addressed to: wklee786@gmail.com
 

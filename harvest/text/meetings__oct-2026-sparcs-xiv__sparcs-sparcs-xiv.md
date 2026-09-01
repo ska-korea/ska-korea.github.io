@@ -6,7 +6,7 @@ Registration
 
 2026 SPARCS XIV
 
-Registration & payment deadline: August 31st
+Registration & payment are now closed.
 
 Important notes:
 

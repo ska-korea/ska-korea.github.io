@@ -709,9 +709,9 @@
       "depth": 2,
       "parent": "meetings",
       "sections": 9,
-      "text_chars": 5361,
-      "fetched_chars": 5361,
-      "html_bytes": 35814,
+      "text_chars": 5333,
+      "fetched_chars": 5333,
+      "html_bytes": 35351,
       "subnav": [
         {
           "path": "/view/ska-korea/meetings/oct-2026-sparcs-xiv",
@@ -889,9 +889,9 @@
       "depth": 3,
       "parent": "meetings/oct-2026-sparcs-xiv",
       "sections": 3,
-      "text_chars": 1274,
-      "fetched_chars": 1274,
-      "html_bytes": 8230,
+      "text_chars": 1211,
+      "fetched_chars": 1211,
+      "html_bytes": 7399,
       "subnav": [
         {
           "path": "/view/ska-korea/meetings/oct-2026-sparcs-xiv",
@@ -934,9 +934,9 @@
       "depth": 3,
       "parent": "meetings/oct-2026-sparcs-xiv",
       "sections": 2,
-      "text_chars": 1265,
-      "fetched_chars": 1265,
-      "html_bytes": 8862,
+      "text_chars": 1258,
+      "fetched_chars": 1258,
+      "html_bytes": 8584,
       "subnav": [
         {
           "path": "/view/ska-korea/meetings/oct-2026-sparcs-xiv",
