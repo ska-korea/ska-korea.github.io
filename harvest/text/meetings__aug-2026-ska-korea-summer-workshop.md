@@ -105,7 +105,7 @@ Day 3: Aug 21 Fri
 
 12:10 - 12:20 Closing
 
-Participants (last update: Aug 18)
+Participants (last update: Aug 21)
 * indicates 29 participants who would like to give a talk. Please submit the title and a brief abstract of your talk as soon as possible, if you have not done so yet.
 
 - Anthony Carr (KASI)*
@@ -145,12 +145,11 @@ Participants (last update: Aug 18)
                   - 류어진 (Chosun Univ.)
                   - 명재현 (Sejong Univ.)
                   - 박규은 (KASI)
-                  - 박민아 (KASI)
                   - 박종호 (KHU)
                   - 박현배 (IBS)
                   - 백준현 (KASI)
-
                   - 백현 (UST/KASI)
+
                   - 손봉원 (KASI)*
                   - 손혜원 (Sejong Univ.)
                   - 안경진 (Chosun Univ.)
@@ -161,6 +160,7 @@ Participants (last update: Aug 18)
                   - 오세헌 (Sejong Univ.)*
                   - 오혜윤 (KT SAT)
                   - 윤여문 (KAIST)
+
                   - 윤혜인 (KASI)*
                   - 이다희 (Chosun Univ.)
                   - 이덕형 (UNIST)*
@@ -170,8 +170,8 @@ Participants (last update: Aug 18)
                   - 이영민 (KNU)
                   - 이우진 (UNIST)
                   - 이유라 (Sejong Univ.)
-
                   - 이윤정 (KHU)*
+
                   - 이은찬 (KAIST)*
                   - ­이학진 (KAIST)
                   - 이혜승 (CNU)
@@ -181,8 +181,8 @@ Participants (last update: Aug 18)
                   - 정호준 (UNIST)*
                   - 조경석 (KASI)*
                   - 조성훈 (KNU)
-
                   - 조일제 (KNU)
+
                   - 조정연 (CNU)
                   - 조용욱 (UST/KASI)
                   - 차하경 (UNIST)
@@ -226,4 +226,4 @@ Sponsors
 ![](images/meetings__aug-2026-ska-korea-summer-workshop_21)
 ![](images/meetings__aug-2026-ska-korea-summer-workshop_22)
 
-Last edit: 20 Aug 2026 Hyein Yoon
+Last edit: 21 Aug 2026 Hyein Yoon
