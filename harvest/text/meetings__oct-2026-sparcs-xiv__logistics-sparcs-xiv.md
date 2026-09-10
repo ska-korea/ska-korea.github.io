@@ -20,9 +20,7 @@ Upon arriving on the 7th floor, directional signage will be available to guide y
 
 ## Accomodation
 
-We recommend using Mercure Ambassador Seoul Magok ([https://www.homehmc.com/en/mercure-seoul-magok/](https://www.homehmc.com/en/mercure-seoul-magok/)), which is located right next to the conference venue. We have reserved 20 Deluxe rooms with a King Bed for conference participants at a special rate of ~150 USD/night (incl. VAT).
-
-If you are interested in using these rooms, please complete the [room reservations form](https://forms.gle/UnTrs4qXLqjTERkZA).
+We recommend using Mercure Ambassador Seoul Magok ([https://www.homehmc.com/en/mercure-seoul-magok/](https://www.homehmc.com/en/mercure-seoul-magok/)), which is located right next to the conference venue.
 
 ![](images/meetings__oct-2026-sparcs-xiv__logistics-sparcs-xiv_59)
 Below are the alternative options around the conference venue. Notice that these hotels should be booked and arranged by the participants themselves.
