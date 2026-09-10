@@ -4,8 +4,9 @@
 
 ## Upcoming Meetings
 
-                  - [2026 SKA Korea Summer Workshop, Aug. 19-21, KAIST-Daejeon](/meetings/aug-2026-ska-korea-summer-workshop)
+                  - [Newsletter 2026 August issue](https://drive.google.com/file/d/1T7tfhUqC__348L_22oKZEy7wAX86clmF/view?usp=drive_link)
                   - [2026 SPARCS XIV, Oct. 19–23, Seoul](/meetings/oct-2026-sparcs-xiv)[2026 SPARCS XIV - Abstract Submission is closed](/meetings/oct-2026-sparcs-xiv/registration-sparcs-xiv)
+                  - MultiView and its Scietific utilization, Dec. 2-4 (2026), Incheon, Stay tuned!
 
 ## SKA: Square Kilometre Array
 One global observatory, Two telescopes, Three continents

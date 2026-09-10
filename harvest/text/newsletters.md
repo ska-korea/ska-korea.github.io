@@ -2,12 +2,16 @@
 
 <!-- 원본: https://sites.google.com/view/ska-korea/newsletters -->
 
-SKA Korea 소식을 전합니다 2026년 4월 뉴스레터가 돌아왔습니다!
+SKA Korea 소식을 전합니다 2026년 4월 뉴스레터가 돌아왔습니다.
+
+2026년 8월 뉴스레터가 업로드 되었습니다.
 
 ![](images/newsletters_50)
-SKA-Korea_News_20260420.pdf
+SKA-Korea_News_20260831.pdf
 
 지난 뉴스레터
+
+[2026년6월](https://drive.google.com/file/d/1SiqZw_DG7PKBsSEhPcubWvtgJ1zYN8lq/view?usp=drive_link) [2026년 4월](https://drive.google.com/file/d/140emodFI5g8sFrxddsTDpo6uv443UL47/view?usp=drive_link)
 
 [2024년 9/10월](https://drive.google.com/file/d/1Qllm-8b4swz_CXVTmdZBTB1o3618-SuO/view?usp=sharing) [2024년 7/8월](https://drive.google.com/file/d/1Nur54GUbiutkibT6n_dhSAtzUk9yA2bC/view?usp=sharing) [2024년 6월](https://drive.google.com/file/d/1xq1SkWcldX8Wmdx_ii3o958ZsMgVL04e/view?usp=sharing) [2024년 4월](https://drive.google.com/file/d/1tD4ghiaQgZTZ_l9RxvdnHUJ_mSn1fd-S/view?usp=drive_link)  [2024년 3월](https://drive.google.com/file/d/1iyXs0ypP5UJ96Tdk3Y1ul2uRWk1qIUro/view?usp=drive_link)  [2024년 1월](https://drive.google.com/file/d/1qc0Tsn40pMleqvWCh0WhFA2Ltlk2xjKS/view?usp=sharing)
 
