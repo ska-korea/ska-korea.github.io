@@ -22,7 +22,7 @@ Upon arriving on the 7th floor, directional signage will be available to guide y
 
 We recommend using Mercure Ambassador Seoul Magok ([https://www.homehmc.com/en/mercure-seoul-magok/](https://www.homehmc.com/en/mercure-seoul-magok/)), which is located right next to the conference venue.
 
-![](images/meetings__oct-2026-sparcs-xiv__logistics-sparcs-xiv_57)
+![](images/meetings__oct-2026-sparcs-xiv__logistics-sparcs-xiv_59)
 Below are the alternative options around the conference venue. Notice that these hotels should be booked and arranged by the participants themselves.
 
 Around the
