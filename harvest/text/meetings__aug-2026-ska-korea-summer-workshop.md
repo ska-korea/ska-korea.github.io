@@ -9,7 +9,7 @@ Venue: KAIST Lecture Hall at College of Natural Sciences building (Bldg E6-1's 1
 
 *** Parking: Free parking is available on campus. You may park in the car park in front of the Art Museum near the Natural Sciences Building or use the street parking around the building. 교내 무료 주차입니다. 자연과학동 인근 미술관 앞 주차장 혹은 자연과학동 주변 도로 주차 가능합니다.
 
-![](images/meetings__aug-2026-ska-korea-summer-workshop_19)
+![](images/meetings__aug-2026-ska-korea-summer-workshop_20)
 
 Rationale
 
@@ -222,8 +222,8 @@ Contact: hiyoon (at) kasi.re.kr
 
 Sponsors
 
-![](images/meetings__aug-2026-ska-korea-summer-workshop_20)
 ![](images/meetings__aug-2026-ska-korea-summer-workshop_21)
 ![](images/meetings__aug-2026-ska-korea-summer-workshop_22)
+![](images/meetings__aug-2026-ska-korea-summer-workshop_23)
 
 Last edit: 21 Aug 2026 Hyein Yoon

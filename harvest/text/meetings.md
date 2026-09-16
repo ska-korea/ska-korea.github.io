@@ -4,9 +4,9 @@
 
 ## Upcoming Meetings
 
-                  - 2026 SKA Korea Summer Workshop, Aug. 19–21
                   - 2026 SPARCS XIV, Oct. 19–23
-                  - 2026 SKA Korea Winter Workshop
+                  - 2026 MultiView and its scientific utilization, Dec. 2-4
+                  - 2026 SKA Korea Winter Workshop, Dec. 16-18
 
 Asia-Pacific (East Asia) SKA Workshop
 
