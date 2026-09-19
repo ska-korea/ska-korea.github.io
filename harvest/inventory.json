@@ -501,6 +501,51 @@
       }
     },
     {
+      "path": "/view/ska-korea/meetings/easka-2023/program",
+      "url": "https://sites.google.com/view/ska-korea/meetings/easka-2023/program",
+      "slug": "meetings__easka-2023__program",
+      "title": "Program",
+      "held": false,
+      "prev_chars": 0,
+      "depth": 3,
+      "parent": "meetings/easka-2023",
+      "sections": 2,
+      "text_chars": 231,
+      "fetched_chars": 231,
+      "html_bytes": 2601,
+      "subnav": [
+        {
+          "path": "/view/ska-korea/meetings/easka-2023",
+          "title": "Meeting Home"
+        },
+        {
+          "path": "/view/ska-korea/meetings/easka-2023/program",
+          "title": "Program"
+        },
+        {
+          "path": "/view/ska-korea/meetings/easka-2023/registration",
+          "title": "Registration"
+        },
+        {
+          "path": "/view/ska-korea/meetings/easka-2023/timeline",
+          "title": "Timeline"
+        },
+        {
+          "path": "/view/ska-korea/meetings/easka-2023/participants",
+          "title": "Participants"
+        },
+        {
+          "path": "/view/ska-korea/meetings/easka-2023/logistics",
+          "title": "Logistics"
+        }
+      ],
+      "banner": {
+        "image": null,
+        "text": "",
+        "poster": true
+      }
+    },
+    {
       "path": "/view/ska-korea/meetings/easka-2023/registration",
       "url": "https://sites.google.com/view/ska-korea/meetings/easka-2023/registration",
       "slug": "meetings__easka-2023__registration",
@@ -711,6 +756,51 @@
       ],
       "banner": {
         "image": "meetings__oct-2026-sparcs-xiv_banner",
+        "text": "",
+        "poster": true
+      }
+    },
+    {
+      "path": "/view/ska-korea/meetings/oct-2026-sparcs-xiv/logistics-sparcs-xiv",
+      "url": "https://sites.google.com/view/ska-korea/meetings/oct-2026-sparcs-xiv/logistics-sparcs-xiv",
+      "slug": "meetings__oct-2026-sparcs-xiv__logistics-sparcs-xiv",
+      "title": "Logistics - SPARCS XIV",
+      "held": false,
+      "prev_chars": 0,
+      "depth": 3,
+      "parent": "meetings/oct-2026-sparcs-xiv",
+      "sections": 4,
+      "text_chars": 1893,
+      "fetched_chars": 1893,
+      "html_bytes": 11730,
+      "subnav": [
+        {
+          "path": "/view/ska-korea/meetings/oct-2026-sparcs-xiv",
+          "title": "Meeting Home"
+        },
+        {
+          "path": "/view/ska-korea/meetings/oct-2026-sparcs-xiv/program-sparcs-xiv",
+          "title": "Program"
+        },
+        {
+          "path": "/view/ska-korea/meetings/oct-2026-sparcs-xiv/registration-sparcs-xiv",
+          "title": "Abstract"
+        },
+        {
+          "path": "/view/ska-korea/meetings/oct-2026-sparcs-xiv/sparcs-sparcs-xiv",
+          "title": "Registration"
+        },
+        {
+          "path": "/view/ska-korea/meetings/oct-2026-sparcs-xiv/participants-sparcs-xiv",
+          "title": "Participants"
+        },
+        {
+          "path": "/view/ska-korea/meetings/oct-2026-sparcs-xiv/logistics-sparcs-xiv",
+          "title": "Logistics"
+        }
+      ],
+      "banner": {
+        "image": null,
         "text": "",
         "poster": true
       }
@@ -1168,16 +1258,7 @@
       }
     }
   ],
-  "failures": [
-    {
-      "page": "/view/ska-korea/meetings/oct-2026-sparcs-xiv/logistics-sparcs-xiv",
-      "error": "HTTPSConnectionPool(host='sites.google.com', port=443): Read timed out. (read timeout=30)"
-    },
-    {
-      "page": "/view/ska-korea/meetings/easka-2023/program",
-      "error": "HTTPSConnectionPool(host='sites.google.com', port=443): Read timed out. (read timeout=30)"
-    }
-  ],
+  "failures": [],
   "images": [
     "links_53",
     "links_54",
@@ -1206,16 +1287,20 @@
     "meetings__easka-2023_43",
     "meetings__easka-2023_44",
     "meetings__easka-2023_45",
-    "meetings__easka-2023__logistics_60",
-    "meetings__easka-2023__logistics_62",
-    "meetings__easka-2023__logistics_64",
     "meetings__easka-2023__logistics_65",
-    "meetings__easka-2023__logistics_66",
-    "meetings__easka-2023__logistics_bg61",
-    "meetings__easka-2023__logistics_bg63",
-    "meetings__easka-2023__logistics_bg67",
+    "meetings__easka-2023__logistics_67",
+    "meetings__easka-2023__logistics_69",
+    "meetings__easka-2023__logistics_70",
+    "meetings__easka-2023__logistics_71",
+    "meetings__easka-2023__logistics_bg66",
     "meetings__easka-2023__logistics_bg68",
-    "meetings__easka-2023__logistics_bg69",
+    "meetings__easka-2023__logistics_bg72",
+    "meetings__easka-2023__logistics_bg73",
+    "meetings__easka-2023__logistics_bg74",
+    "meetings__easka-2023__program_61",
+    "meetings__easka-2023__program_62",
+    "meetings__easka-2023__program_bg63",
+    "meetings__easka-2023__program_bg64",
     "meetings__jan-2023-ska-korea-winter-meeting_50",
     "meetings__jun-2025-ska-korea-workshop_25",
     "meetings__jun-2025-ska-korea-workshop_27",
@@ -1230,6 +1315,7 @@
     "meetings__oct-2026-sparcs-xiv_17",
     "meetings__oct-2026-sparcs-xiv_18",
     "meetings__oct-2026-sparcs-xiv_19",
+    "meetings__oct-2026-sparcs-xiv__logistics-sparcs-xiv_60",
     "meetings__oct-2026-sparcs-xiv__program-sparcs-xiv_57",
     "meetings__oct-2026-sparcs-xiv__program-sparcs-xiv_bg58",
     "meetings__oct-2026-sparcs-xiv__sparcs-sparcs-xiv_59",
