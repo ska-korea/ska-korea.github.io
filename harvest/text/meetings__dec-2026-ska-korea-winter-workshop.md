@@ -8,7 +8,7 @@ The 2026 SKA Korea Winter Workshop will be held on the Yonsei University campus 
 
 Date & Time: December 16 Wednesday 1PM - 18 Friday 1PM
 
-Venue: Kwak Joung-Hwan Challenge Hall, Yonsei University, Seoul
+Venue: 연세대학교, 백양누리 B146, 곽정환 홀 / B146 Baekyangnuri, Kwak Joung-Hwan Challenge Hall, Yonsei University, Seoul
 
 The Square Kilometre Array (SKA) will be the world's largest radio telescope. It is now being built and getting closer to its first science phases, while its precursor and pathfinder telescopes (MeerKAT, ASKAP, MWA) are already producing exciting new results. Korea is now formally joining the SKA Observatory, and the role of the Korean community keeps growing.
 
@@ -23,6 +23,10 @@ UNIST가 주관하는 우주항공청 SKA 인력양성사업에 참여하는 서
 Faculty members and students from universities outside Seoul (Kyung Hee University, Chungnam National University, Chosun University, and UNIST) participating in the Korea AeroSpace Administration (KASA) SKA Human Resources Development Program, hosted by UNIST, may be eligible for travel expense support through this program. Travel expenses will be supported on a first-come, first-served basis, subject to the availability of the program budget. Those selected for support will be notified individually at a later date, along with further details regarding the reimbursement process.
 
 Registration: TBA
+
+Location
+
+                  - 연세대학교, 백양누리 B146, 곽정환 홀 / B146 Baekyangnuri, Kwak Joung-Hwan Challenge Hall, Yonsei University, Seoul
 
 Scientific Organizing Committee
 

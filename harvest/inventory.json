@@ -358,14 +358,14 @@
       "prev_chars": 2595,
       "depth": 2,
       "parent": "meetings",
-      "sections": 4,
-      "text_chars": 2595,
-      "fetched_chars": 2595,
-      "html_bytes": 9354,
+      "sections": 5,
+      "text_chars": 2750,
+      "fetched_chars": 2750,
+      "html_bytes": 10972,
       "subnav": [],
       "banner": {
         "image": "meetings__dec-2026-ska-korea-winter-workshop_banner",
-        "text": "2026 SKA Korea Winter Workshop B146 Baekyangnuri, Kwak Joung-Hwan Challenge Hall Yonsei University, Seoul December 16 (Wed) - 18 (Fri)",
+        "text": "2026 SKA Korea Winter Workshop",
         "poster": false
       }
     },
