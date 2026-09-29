@@ -8,5 +8,5 @@ Program
 
 - Program schedule (last updated: Sep 28, 2026): Download PDF [here](https://drive.google.com/uc?export=download&id=1jthpXjSodS_KBGqGfGbSPCncEk8D-0HR)
 
-![](images/meetings__oct-2026-sparcs-xiv__program-sparcs-xiv_58)
+![](images/meetings__oct-2026-sparcs-xiv__program-sparcs-xiv_56)
 SPARCS_XIV_Programme_v0.pdf
