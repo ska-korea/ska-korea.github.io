@@ -16,17 +16,21 @@ As Korea's part in the SKA becomes more active, the SKA Korea Winter Workshop 20
 
 We especially encourage students in the SKA Korea funding programmes to present. Talks on new ideas, ongoing work, or early results are all welcome.
 
+Registration: TBA
+
 출장비 지원 안내
 
 UNIST가 주관하는 우주항공청 SKA 인력양성사업에 참여하는 서울 외 지역 대학(경희대학교, 충남대학교, 조선대학교, UNIST) 소속 교원 및 학생에게는 본 사업을 통해 출장비를 지원할 수 있습니다. 출장비는 예산이 허용되는 범위 내에서 선착순으로 지원되며, 선정여부 및 자세한 사항은 추후 개인적으로 안내할 예정입니다.
 
 Faculty members and students from universities outside Seoul (Kyung Hee University, Chungnam National University, Chosun University, and UNIST) participating in the Korea AeroSpace Administration (KASA) SKA Human Resources Development Program, hosted by UNIST, may be eligible for travel expense support through this program. Travel expenses will be supported on a first-come, first-served basis, subject to the availability of the program budget. Those selected for support will be notified individually at a later date, along with further details regarding the reimbursement process.
 
-Registration: TBA
-
 Location
 
                   - 연세대학교, 백양누리 B146, 곽정환 홀 / B146 Baekyangnuri, Kwak Joung-Hwan Challenge Hall, Yonsei University, Seoul
+
+Program: TBA
+
+Participants: TBA
 
 Scientific Organizing Committee
 
@@ -44,3 +48,14 @@ Local Organizing Committee
                   - KIM, Jeein (Yonsei University)
                   - BANG, Taehyeon (Yonsei University)
                   - LEE, Kibeop (Yonsei University)
+
+Sponsors
+
+![](images/meetings__dec-2026-ska-korea-winter-workshop_14)
+![](images/meetings__dec-2026-ska-korea-winter-workshop_15)
+![](images/meetings__dec-2026-ska-korea-winter-workshop_16)
+![](images/meetings__dec-2026-ska-korea-winter-workshop_17)
+![](images/meetings__dec-2026-ska-korea-winter-workshop_18)
+![](images/meetings__dec-2026-ska-korea-winter-workshop_19)
+
+Last edit: 30 Sep 2026
