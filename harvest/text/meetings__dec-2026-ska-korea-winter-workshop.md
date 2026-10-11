@@ -20,9 +20,9 @@ Registration: TBA
 
 출장비 지원 안내
 
-UNIST가 주관하는 우주항공청 SKA 인력양성사업에 참여하는 서울 외 지역 대학(경희대학교, 충남대학교, 조선대학교, UNIST) 소속 교원 및 학생에게는 본 사업을 통해 출장비를 지원할 수 있습니다. 출장비는 예산이 허용되는 범위 내에서 선착순으로 지원되며, 선정여부 및 자세한 사항은 추후 개인적으로 안내할 예정입니다.
+UNIST가 주관하는 우주항공청 SKA 인력양성사업에 참여하는 서울 외 지역 대학(경희대학교, 충남대학교, 조선대학교, UNIST) 소속 교원 및 학생에게는 본 사업을 통해 출장비를 지원할 수 있습니다. 출장비는 예산이 허용되는 범위 내에서 선착순으로 지원되며, 선정여부 및 자세한 사항은 추후 개인적으로 안내할 예정입니다. 출장비 신청자의 경우 11월 11일(수요일)까지 등록 요청드립니다.
 
-Faculty members and students from universities outside Seoul (Kyung Hee University, Chungnam National University, Chosun University, and UNIST) participating in the Korea AeroSpace Administration (KASA) SKA Human Resources Development Program, hosted by UNIST, may be eligible for travel expense support through this program. Travel expenses will be supported on a first-come, first-served basis, subject to the availability of the program budget. Those selected for support will be notified individually at a later date, along with further details regarding the reimbursement process.
+Faculty members and students from universities outside Seoul (Kyung Hee University, Chungnam National University, Chosun University, and UNIST) participating in the Korea AeroSpace Administration (KASA) SKA Human Resources Development Program, hosted by UNIST, may be eligible for travel expense support through this program. Travel expenses will be supported on a first-come, first-served basis, subject to the availability of the program budget. Those selected for support will be notified individually at a later date, along with further details regarding the reimbursement process. Those applying for travel expenses are kindly requested to complete their registration by Wednesday, November 11.
 
 Location
 
