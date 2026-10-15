@@ -20,9 +20,9 @@ Standard, online: 120,000 KRW (~70 Euro)
 Student/ECR*: 80,000 KRW (~50 Euro)
 *Maximum 5 years since PhD
                   - Banquet:
-A banquet is planned for Oct. 22nd (Thurs) at the conference hotel. A diverse menu catering to various preferences, including vegetarian options, will be available. Please indicate your interest in the registration site for head counting.
+A banquet is planned for Oct. 20nd (Tue.) at the Jinjinsura Korean traditional restaurant ([location link](https://maps.app.goo.gl/T1z8rej78KKgKFb68)).
                   - Excursion:
-We are planning to organize a guided tour to Gyeongbokgung Palace, Gwanghwamun Square, and Cheonggyecheon. The tour is tentatively scheduled for Oct. 22nd (Thurs). There is no additional charge for the tour, and we will arrange a tour bus to and from the venue. To reserve a spot for this event, please indicate your interest when you register.
+We are planning to organize a guided tour to Gyeongbokgung Palace, Gwanghwamun Square, and Cheonggyecheon. The tour will start at 2 p.m. on Oct. 21nd (Wed), and a tour bus will pick us up near the venue.
 
 Please contact us (wklee786@gmail.com) regarding questions about registration.
 

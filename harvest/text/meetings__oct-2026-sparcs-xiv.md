@@ -134,3 +134,11 @@ This code of conduct is based on the “London Code of Conduct”, as originally
 ## Contact
 
                   - All queries regarding the meeting can be addressed to: wklee786@gmail.com
+
+## Seoul Tour Guide
+
+SPARCS XIV is officially sponsored by the Seoul Metropolitan Government and the Seoul Tourism Organization.
+
+Please check the following tour guide videos for more information.
+
+(Video would be uploaded upon approval)
