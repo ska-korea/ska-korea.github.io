@@ -728,10 +728,10 @@
       "prev_chars": 5564,
       "depth": 2,
       "parent": "meetings",
-      "sections": 10,
-      "text_chars": 5564,
-      "fetched_chars": 5564,
-      "html_bytes": 36481,
+      "sections": 12,
+      "text_chars": 5521,
+      "fetched_chars": 5521,
+      "html_bytes": 36484,
       "subnav": [
         {
           "path": "/view/ska-korea/meetings/oct-2026-sparcs-xiv",
