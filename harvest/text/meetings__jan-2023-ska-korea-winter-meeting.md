@@ -166,4 +166,4 @@ LOC
 
 Group Photo
 
-![](images/meetings__jan-2023-ska-korea-winter-meeting_55)
+![](images/meetings__jan-2023-ska-korea-winter-meeting_56)
