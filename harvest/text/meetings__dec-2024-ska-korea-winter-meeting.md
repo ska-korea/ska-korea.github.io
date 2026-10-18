@@ -43,7 +43,7 @@ KW Convention
 
 Program
 
-![](images/meetings__dec-2024-ska-korea-winter-meeting_39)
+![](images/meetings__dec-2024-ska-korea-winter-meeting_38)
 제목 없는 스프레드시트
 
 Scientific Organization Committee
@@ -68,6 +68,6 @@ Local Organization Committee
 
 Sponsors
 
+![](images/meetings__dec-2024-ska-korea-winter-meeting_40)
 ![](images/meetings__dec-2024-ska-korea-winter-meeting_41)
 ![](images/meetings__dec-2024-ska-korea-winter-meeting_42)
-![](images/meetings__dec-2024-ska-korea-winter-meeting_43)

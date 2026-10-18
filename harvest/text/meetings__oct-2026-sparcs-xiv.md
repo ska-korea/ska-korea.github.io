@@ -115,10 +115,8 @@ SEOUL MICE PLAZA, Seoul, South Korea
 
 ![](images/meetings__oct-2026-sparcs-xiv_21)
 ![](images/meetings__oct-2026-sparcs-xiv_22)
-
 ![](images/meetings__oct-2026-sparcs-xiv_23)
 ![](images/meetings__oct-2026-sparcs-xiv_24)
-![](images/meetings__oct-2026-sparcs-xiv_25)
 
 ## Code of Conduct
 
