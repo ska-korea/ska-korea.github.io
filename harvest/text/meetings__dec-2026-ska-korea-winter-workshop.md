@@ -16,7 +16,7 @@ As Korea's part in the SKA becomes more active, the SKA Korea Winter Workshop 20
 
 We especially encourage students in the SKA Korea funding programmes to present. Talks on new ideas, ongoing work, or early results are all welcome.
 
-Registration: TBA
+Registration: [[Click Here](https://docs.google.com/forms/d/1O7wnbEoZcoWb0bkmXRgi11GeOuYybRePCH1HCHZXbcI/preview)]
 
 출장비 지원 안내
 
@@ -58,4 +58,4 @@ Sponsors
 ![](images/meetings__dec-2026-ska-korea-winter-workshop_18)
 ![](images/meetings__dec-2026-ska-korea-winter-workshop_19)
 
-Last edit: 30 Sep 2026
+Last edit: 19 Oct 2026
