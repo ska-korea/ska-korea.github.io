@@ -100,7 +100,7 @@ SEOUL MICE PLAZA, Seoul, South Korea
                   - Sieun Go (KASI/UST)
                   - Siyeon Namkung (Sejong)
                   - Soyeon Yeo (Yonsei)
-                  - Wonki Lee (Yonsei)
+                  - Wonki Lee (MPIA)
                   - Yeji Jo (KHU)
                   - Yunjeong Lee (KHU)
                   - Yura Lee (Sejong)
