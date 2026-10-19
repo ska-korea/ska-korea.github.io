@@ -28,9 +28,41 @@ Location
 
                   - 연세대학교, 백양누리 B146, 곽정환 홀 / B146 Baekyangnuri, Kwak Joung-Hwan Challenge Hall, Yonsei University, Seoul
 
-Program: TBA
+Program Outline:
+
+Main theme - "Towards SKA1 - Strengthening Korean participation and international collaboration": The workshop aims to share SKA-related scientific and technological developments, strengthen national and international collaboration, and explore future opportunities for the Korean SKA community, particularly students and early-career researchers.
+
+● SKA-Korea: Current status and future opportunities
+
+○ Korea's participation in SKAO, and future plans
+
+● SKA science in Korea and international developments
+
+○ Recent scientific results and ongoing research activities
+
+○ Updates on precursor projects
+
+● Student and postdoctoral research presentations
+
+○ Ongoing projects, preliminary results, and new research ideas
+
+● Instrumentation, technology, and industry engagement
+
+○ Technology development in Korea and potential contributions to SKA1
+
+○ Industrial participation and procurement opportunities
+
+● Strategic discussions: Korea's pathway to SKA1
+
+○ National and international science collaboration, including potential key science programmes
+
+○ Technology development and SRC/computing infrastructure
+
+○ Early-career development, training, and international opportunities
 
 Participants: TBA
+
+Contributions from all SKA-related researchers are welcome, with particular encouragement for students and postdoctoral researchers, including those supported by SKA-Korea program.
 
 Scientific Organizing Committee
 
