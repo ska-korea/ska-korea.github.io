@@ -355,7 +355,7 @@
       "slug": "meetings__dec-2026-ska-korea-winter-workshop",
       "title": "Dec 2026 SKA Korea Winter Workshop",
       "held": false,
-      "prev_chars": 4324,
+      "prev_chars": 4343,
       "depth": 2,
       "parent": "meetings",
       "sections": 10,
@@ -427,51 +427,6 @@
       "text_chars": 3301,
       "fetched_chars": 3301,
       "html_bytes": 23814,
-      "subnav": [
-        {
-          "path": "/view/ska-korea/meetings/easka-2023",
-          "title": "Meeting Home"
-        },
-        {
-          "path": "/view/ska-korea/meetings/easka-2023/program",
-          "title": "Program"
-        },
-        {
-          "path": "/view/ska-korea/meetings/easka-2023/registration",
-          "title": "Registration"
-        },
-        {
-          "path": "/view/ska-korea/meetings/easka-2023/timeline",
-          "title": "Timeline"
-        },
-        {
-          "path": "/view/ska-korea/meetings/easka-2023/participants",
-          "title": "Participants"
-        },
-        {
-          "path": "/view/ska-korea/meetings/easka-2023/logistics",
-          "title": "Logistics"
-        }
-      ],
-      "banner": {
-        "image": null,
-        "text": "",
-        "poster": true
-      }
-    },
-    {
-      "path": "/view/ska-korea/meetings/easka-2023/participants",
-      "url": "https://sites.google.com/view/ska-korea/meetings/easka-2023/participants",
-      "slug": "meetings__easka-2023__participants",
-      "title": "Participants",
-      "held": false,
-      "prev_chars": 12,
-      "depth": 3,
-      "parent": "meetings/easka-2023",
-      "sections": 1,
-      "text_chars": 12,
-      "fetched_chars": 12,
-      "html_bytes": 406,
       "subnav": [
         {
           "path": "/view/ska-korea/meetings/easka-2023",
@@ -1262,7 +1217,12 @@
       }
     }
   ],
-  "failures": [],
+  "failures": [
+    {
+      "page": "/view/ska-korea/meetings/easka-2023/participants",
+      "error": "HTTPSConnectionPool(host='sites.google.com', port=443): Read timed out. (read timeout=30)"
+    }
+  ],
   "images": [
     "links_58",
     "links_59",
