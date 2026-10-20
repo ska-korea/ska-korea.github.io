@@ -80,6 +80,7 @@ Local Organizing Committee
                   - KIM, Jeein (Yonsei University)
                   - BANG, Taehyeon (Yonsei University)
                   - LEE, Kibeop (Yonsei University)
+                  - YOON, Hyein (KASI)
 
 Sponsors
 
