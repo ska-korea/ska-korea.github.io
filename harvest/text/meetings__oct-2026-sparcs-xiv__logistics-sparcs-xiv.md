@@ -16,11 +16,11 @@ Getting to the Venue:
 
 From Exit number 6 of Magongnaru Station, you will see the following building next to the subway station.
 
-![](images/meetings__oct-2026-sparcs-xiv__logistics-sparcs-xiv_67)
+![](images/meetings__oct-2026-sparcs-xiv__logistics-sparcs-xiv_69)
 
 ## Inside the Building D
 
-![](images/meetings__oct-2026-sparcs-xiv__logistics-sparcs-xiv_68)
+![](images/meetings__oct-2026-sparcs-xiv__logistics-sparcs-xiv_70)
 
 ## From Incheon International Airport to Building D
 
@@ -65,7 +65,7 @@ Taxis wait outside the arrivals hall at both Terminal 1 and Terminal 2. The ride
                   - Topping up is mostly cash only. Some newer subway vending machines now accept overseas cards for top-ups.
                   - You cannot tap a foreign credit card or phone to ride the subway or buses. You need a T-money card.
 
-![](images/meetings__oct-2026-sparcs-xiv__logistics-sparcs-xiv_69)
+![](images/meetings__oct-2026-sparcs-xiv__logistics-sparcs-xiv_71)
 
 Maps
  Google Maps works poorly in Korea. We recommend Kakao Map or Naver Map, which both have English versions.
@@ -105,7 +105,7 @@ Itaewon Station (이태원역), Line 6, Exit 1
 
 We recommend using Mercure Ambassador Seoul Magok ([https://www.homehmc.com/en/mercure-seoul-magok/](https://www.homehmc.com/en/mercure-seoul-magok/)), which is located right next to the conference venue.
 
-![](images/meetings__oct-2026-sparcs-xiv__logistics-sparcs-xiv_70)
+![](images/meetings__oct-2026-sparcs-xiv__logistics-sparcs-xiv_72)
 Below are the alternative options around the conference venue. Notice that these hotels should be booked and arranged by the participants themselves.
 
 Around the

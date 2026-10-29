@@ -105,6 +105,11 @@ SEOUL MICE PLAZA, Seoul, South Korea
                   - Yunjeong Lee (KHU)
                   - Yura Lee (Sejong)
 
+## SPARCS XIV Group photo
+
+![](images/meetings__oct-2026-sparcs-xiv_21)
+![](images/meetings__oct-2026-sparcs-xiv_22)
+
 ## More about SPARCS
 
 ### Join the Slack: [https://join.slack.com/t/sparcs-team/shared_invite/zt-tj3rhbev-VZTOuROctIgxRzCWoFKcMg](https://join.slack.com/t/sparcs-team/shared_invite/zt-tj3rhbev-VZTOuROctIgxRzCWoFKcMg)
@@ -113,10 +118,10 @@ SEOUL MICE PLAZA, Seoul, South Korea
 
 ## Sponsorship
 
-![](images/meetings__oct-2026-sparcs-xiv_21)
-![](images/meetings__oct-2026-sparcs-xiv_22)
 ![](images/meetings__oct-2026-sparcs-xiv_23)
 ![](images/meetings__oct-2026-sparcs-xiv_24)
+![](images/meetings__oct-2026-sparcs-xiv_25)
+![](images/meetings__oct-2026-sparcs-xiv_26)
 
 ## Code of Conduct
 

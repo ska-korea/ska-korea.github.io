@@ -8,5 +8,5 @@
 
 시간: 13시30분 - 15시
 
-![](images/meetings__april-2024-kas-spring-ska-special-session_46)
-![](images/meetings__april-2024-kas-spring-ska-special-session_47)
+![](images/meetings__april-2024-kas-spring-ska-special-session_48)
+![](images/meetings__april-2024-kas-spring-ska-special-session_49)
