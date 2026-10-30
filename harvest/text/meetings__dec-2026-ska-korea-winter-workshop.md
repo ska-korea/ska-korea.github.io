@@ -16,7 +16,7 @@ As Korea's part in the SKA becomes more active, the SKA Korea Winter Workshop 20
 
 We especially encourage students in the SKA Korea funding programmes to present. Talks on new ideas, ongoing work, or early results are all welcome.
 
-Registration: [[Click Here](https://docs.google.com/forms/d/1O7wnbEoZcoWb0bkmXRgi11GeOuYybRePCH1HCHZXbcI/preview)]
+Registration: [[Click Here](https://docs.google.com/forms/d/e/1FAIpQLSd7Wc3Mfyy9lMiuU1PyjFMc_GP-Udbw1aM6UV2OQyZturorNQ/viewform)]
 
 출장비 지원 안내
 

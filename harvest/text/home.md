@@ -4,8 +4,7 @@
 
 ## Upcoming Meetings
 
-                  - [Newsletter 2026 August issue](https://drive.google.com/file/d/1T7tfhUqC__348L_22oKZEy7wAX86clmF/view?usp=drive_link)
-                  - [2026 SPARCS XIV, Oct. 19–23, Seoul](/meetings/oct-2026-sparcs-xiv)[2026 SPARCS XIV - Abstract Submission is closed](/meetings/oct-2026-sparcs-xiv/registration-sparcs-xiv)
+                  - [2026 SKA Korea Winter Workshop, Dec. 16–18, Yonsei Univ, Seoul](/meetings/dec-2026-ska-korea-winter-workshop)
                   - MultiView and its Scietific utilization, Dec. 2-4 (2026), Incheon, Stay tuned!
 
 ## SKA: Square Kilometre Array

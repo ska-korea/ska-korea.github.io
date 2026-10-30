@@ -26,9 +26,9 @@
       "depth": 1,
       "parent": null,
       "sections": 2,
-      "text_chars": 2958,
-      "fetched_chars": 2958,
-      "html_bytes": 6084,
+      "text_chars": 2909,
+      "fetched_chars": 2909,
+      "html_bytes": 5252,
       "subnav": [],
       "banner": {
         "image": null,
@@ -361,7 +361,7 @@
       "sections": 10,
       "text_chars": 4343,
       "fetched_chars": 4343,
-      "html_bytes": 21955,
+      "html_bytes": 21970,
       "subnav": [],
       "banner": {
         "image": "meetings__dec-2026-ska-korea-winter-workshop_banner",
