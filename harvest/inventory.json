@@ -22,7 +22,7 @@
       "slug": "home",
       "title": "SKA Korea",
       "held": false,
-      "prev_chars": 2958,
+      "prev_chars": 2909,
       "depth": 1,
       "parent": null,
       "sections": 2,
@@ -728,10 +728,10 @@
       "prev_chars": 5543,
       "depth": 2,
       "parent": "meetings",
-      "sections": 12,
-      "text_chars": 5543,
-      "fetched_chars": 5543,
-      "html_bytes": 37174,
+      "sections": 13,
+      "text_chars": 5580,
+      "fetched_chars": 5580,
+      "html_bytes": 37806,
       "subnav": [
         {
           "path": "/view/ska-korea/meetings/oct-2026-sparcs-xiv",

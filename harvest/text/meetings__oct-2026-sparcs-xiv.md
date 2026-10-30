@@ -116,7 +116,7 @@ SEOUL MICE PLAZA, Seoul, South Korea
 
 ### SPARCS Wiki: [http://spacs.pbworks.com/w/page/26926199/FrontPage](http://spacs.pbworks.com/w/page/26926199/FrontPage)
 
-## Sponsorship
+## Sponsored by
 
 ![](images/meetings__oct-2026-sparcs-xiv_23)
 ![](images/meetings__oct-2026-sparcs-xiv_24)
@@ -148,3 +148,5 @@ Please check the following videos if you are interested.
 
 
 
+
+Seoul Bleisure: [Check their homepage](http://seoulbleisure.com/)
