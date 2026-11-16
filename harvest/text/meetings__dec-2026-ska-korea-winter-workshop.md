@@ -91,4 +91,4 @@ Sponsors
 ![](images/meetings__dec-2026-ska-korea-winter-workshop_18)
 ![](images/meetings__dec-2026-ska-korea-winter-workshop_19)
 
-Last edit: 19 Oct 2026
+Last edit: 16 Nov 2026
