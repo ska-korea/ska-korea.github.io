@@ -6,7 +6,7 @@ SKA Korea 소식을 전합니다 2026년 4월 뉴스레터가 돌아왔습니다
 
 2026년 10월 뉴스레터가 업로드 되었습니다.
 
-![](images/newsletters_58)
+![](images/newsletters_53)
 SKA-Korea_News_20261031.pdf
 
 지난 뉴스레터

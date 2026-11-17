@@ -85,10 +85,5 @@ Local Organizing Committee
 Sponsors
 
 ![](images/meetings__dec-2026-ska-korea-winter-workshop_14)
-![](images/meetings__dec-2026-ska-korea-winter-workshop_15)
-![](images/meetings__dec-2026-ska-korea-winter-workshop_16)
-![](images/meetings__dec-2026-ska-korea-winter-workshop_17)
-![](images/meetings__dec-2026-ska-korea-winter-workshop_18)
-![](images/meetings__dec-2026-ska-korea-winter-workshop_19)
 
-Last edit: 16 Nov 2026
+Last edit: 17 Nov 2026
